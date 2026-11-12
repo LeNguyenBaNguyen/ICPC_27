@@ -1,0 +1,90 @@
+{
+  "scope": "Descriptive checks of archived records, not new inference or semantic validation",
+  "fresh_model_calls": 0,
+  "tracking": {
+    "main": {
+      "archived_function_records": 129,
+      "censor_reasons": {
+        "head": 128,
+        "function_removed_or_renamed": 1
+      },
+      "non_head_tracking_stops": 1,
+      "interpretation": "Recorded track stops; not a ground-truth function-matching failure rate. Raw records precede endpoint-specific overload/exposure handling."
+    },
+    "random": {
+      "archived_function_records": 61,
+      "censor_reasons": {
+        "head": 54,
+        "function_removed_or_renamed": 3,
+        "file_removed": 4
+      },
+      "non_head_tracking_stops": 7,
+      "interpretation": "Recorded track stops; not a ground-truth function-matching failure rate. Raw records precede endpoint-specific overload/exposure handling."
+    }
+  },
+  "extraction": {
+    "prompt_source": "src/claims.py: SYSTEM and PROMPT",
+    "requirements": [
+      "One self-contained source-checkable statement",
+      "Name function explicitly; no cross-claim pronouns",
+      "No additional or merged facts",
+      "Preserve wording when possible",
+      "Exactly one of four types",
+      "At most 12 claims"
+    ],
+    "cross_family_extraction_functions": 30,
+    "equal_claim_count_functions": 17,
+    "retyping_functions": 42,
+    "same_claim_type_pairs": 460,
+    "matching_type_labels": 335,
+    "raw_retyping_agreement": 0.7282608695652174,
+    "interpretation": "Different-family extraction/count and retyping checks, not repeated-run reliability, aligned extraction precision/recall, or human truth. Equal counts do not imply identical facts."
+  },
+  "supplemental_request_time": {
+    "cross_family": {
+      "requests": 57,
+      "with_elapsed_seconds": 57,
+      "sum_request_elapsed_seconds": 120.47190300014336,
+      "median_request_seconds": 1.5457947000104468,
+      "meaning": "Sum of recorded client request elapsed times only; not end-to-end wall time, developer effort, GPU utilization, historical runtime, or monetary cost."
+    },
+    "random_redraw_inference": {
+      "requests": 308,
+      "with_elapsed_seconds": 308,
+      "sum_request_elapsed_seconds": 1631.6985977999866,
+      "median_request_seconds": 4.289353950000077,
+      "meaning": "Sum of recorded client request elapsed times only; not end-to-end wall time, developer effort, GPU utilization, historical runtime, or monetary cost."
+    },
+    "resurrection": {
+      "requests": 649,
+      "with_elapsed_seconds": 649,
+      "sum_request_elapsed_seconds": 1314.2926852000237,
+      "median_request_seconds": 1.3760201999975834,
+      "meaning": "Sum of recorded client request elapsed times only; not end-to-end wall time, developer effort, GPU utilization, historical runtime, or monetary cost."
+    },
+    "docstring_free": {
+      "requests": 786,
+      "with_elapsed_seconds": 786,
+      "sum_request_elapsed_seconds": 28153.01355440027,
+      "median_request_seconds": 2.563209249994543,
+      "meaning": "Sum of recorded client request elapsed times only; not end-to-end wall time, developer effort, GPU utilization, historical runtime, or monetary cost."
+    }
+  },
+  "source_sha256": {
+    "functions.json": "37ef9e69b0b831a1c48261cb3541e423c240caf832d33b3593bd56837301af6c",
+    "random_functions.json": "96707096215a42913c777ecd07a11ee5e927b78660996c0b6595dcb248b08c05",
+    "extraction_agreement.json": "a7bafe13f2c084154b94f9ba06eb0a0b45c5bc392e1c16f07f2db02904da0f9b",
+    "type_relabel.json": "30de2a577b10364cd59b9fdeb6da732fe831f166d9e8ece0780d64420c121c4b"
+  },
+  "runtime_limitations": [
+    "Historical full-pipeline timing/billing not captured",
+    "Fresh runtime differs from unknown archived weight identity",
+    "Condition totals have different generation/control/exposure mixes; no clean per-touch cost comparison or refresh-policy benefit is identified"
+  ],
+  "matching_rule": {
+    "source": "src/mine.py: function tracking logic",
+    "file_renames": "Git first-parent -M history",
+    "fallback": "Unique new same-name candidate in same file, text SequenceMatcher ratio >= 0.7",
+    "unknown": "No independently labeled matching-error rate; unaccepted matches lead to censoring rather than a contradiction event"
+  }
+}

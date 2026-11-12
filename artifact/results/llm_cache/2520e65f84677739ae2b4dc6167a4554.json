@@ -1,0 +1,1 @@
+{"text": "S1: supported\nS2: supported\nS3: supported\nS4: unresolved\nS5: supported\nS6: supported\nS7: contradicted -- _return_annotation_match is now also used, so the list is incomplete\nS8: supported\nS9: supported\nS10: unresolved\nS11: supported\nS12: supported", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 1933, "out": 102}}

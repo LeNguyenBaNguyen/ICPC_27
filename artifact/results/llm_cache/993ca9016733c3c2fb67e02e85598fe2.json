@@ -1,0 +1,1 @@
+{"text": "S1: unresolved\nS2: supported\nS3: contradicted -- signature now has three parameters including executor_semaphore\nS4: supported\nS5: supported\nS6: supported\nS7: supported\nS8: supported\nS9: supported\nS10: unresolved\nS11: supported\nS12: supported", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 2607, "out": 97}}

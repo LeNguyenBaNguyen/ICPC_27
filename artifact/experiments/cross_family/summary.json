@@ -1,0 +1,55 @@
+{
+  "experiment": "cross_family",
+  "plan_sha256": "4933e66eb164430f231c3a761d8a952fee390987cac4088b2b6f5aa8cde90dfb",
+  "complete": true,
+  "completed_tasks": 57,
+  "planned_tasks": 57,
+  "fresh_calls_this_invocation": 0,
+  "cache_hits_this_invocation": 0,
+  "stop_reason": null,
+  "failed": false,
+  "error": null,
+  "quality_counts": {
+    "cached_responses": 57,
+    "cached_length_limited_responses": 0,
+    "failed_request_records": 0,
+    "rejected_length_limited_responses": 0
+  },
+  "unparsed_verdicts": 2,
+  "pilot": true,
+  "completed_cases": 60,
+  "planned_cases": 60,
+  "unparsed_scored_verdicts": 0,
+  "weighted_agreement": 0.9734890772517402,
+  "raw_agreement": 0.55,
+  "weighted_confusion_totals": {
+    "supported->supported": 13842.000000000002,
+    "supported->contradicted": 0.0,
+    "supported->unresolved": 0.0,
+    "contradicted->supported": 102.4,
+    "contradicted->contradicted": 243.70000000000002,
+    "contradicted->unresolved": 7.900000000000001,
+    "unresolved->supported": 200.19999999999996,
+    "unresolved->contradicted": 74.2,
+    "unresolved->unresolved": 40.6
+  },
+  "weighted_binary_contradiction_kappa": 0.7189168832234811,
+  "second_not_con_given_bulk_con": 0.3115819209039548,
+  "second_con_given_bulk_not_con": 0.005241223423041605,
+  "descriptive_function_cluster_intervals": {
+    "agreement": {
+      "low": 0.9437963814608145,
+      "high": 0.988006078612975,
+      "valid_replicates": 1000
+    },
+    "binary_contradiction_kappa": {
+      "low": 0.48442300659693793,
+      "high": 0.8819346719750514,
+      "valid_replicates": 1000
+    }
+  },
+  "interval_method": "Function-cluster bootstrap of inverse-probability-weighted agreement and binary contradiction kappa; descriptive approximation ignores finite-population and full stratified two-stage design complexity.",
+  "interpretation": "LLM agreement, not human accuracy. Partial pilot summaries are descriptive, not design-complete estimates.",
+  "quality_complete": false,
+  "scored_quality_complete": true
+}

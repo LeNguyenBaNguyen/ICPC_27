@@ -1,0 +1,43 @@
+% Figure 1 (comic). Real example from the artifact: aiohttp, WebSocketResponse._post_start (aiohttp/web_ws.py),
+% anchor 7d0f980, touch 1 = commit 5241897f (#9685); claims 6 (dies at touch 1) and 8 (survives 8 touches).
+% Palette (shared family): panel fills soft blue / yellow / green; accents: orange = the claimed identifier,
+% red = claim dies, green = claim survives.
+\definecolor{pBlue}{RGB}{229,239,252}\definecolor{pYellow}{RGB}{255,246,214}\definecolor{pGreen}{RGB}{230,245,232}
+\definecolor{accO}{RGB}{230,120,20}\definecolor{bad}{RGB}{196,40,50}\definecolor{good}{RGB}{35,130,60}
+\newcommand{\keytok}[1]{{\setlength{\fboxsep}{0.8pt}\colorbox{accO!28}{\strut\texttt{\underline{#1}}}}}
+\newcommand{\newtok}[1]{{\setlength{\fboxsep}{0.8pt}\colorbox{good!18}{\strut\texttt{#1}}}}
+\begin{tikzpicture}[font=\scriptsize,
+  panel/.style={draw=black!55,rounded corners=4pt,line width=0.6pt},
+  num/.style={circle,draw=black!80,line width=0.6pt,fill=white,text=black!85,font=\scriptsize\bfseries,inner sep=0.9pt,minimum size=9pt},
+  ttl/.style={font=\scriptsize\bfseries,anchor=west},
+  claim/.style={rounded corners=3pt,inner sep=2.6pt,align=left,line width=0.7pt,text width=3.15cm},
+  bub/.style={draw=black!70,fill=white,rounded corners=3pt,inner sep=2.6pt,align=left,line width=0.5pt},
+  icon/.style={inner sep=0pt}]
+% ---------------- panel 1: the saved explanation (written by the AI at the anchor)
+\filldraw[fill=pBlue,panel] (0,2.05) rectangle (4.3,4.6);
+\node[num] (n1) at (0.25,4.35) {1}; \node[ttl] at (n1.east) {Saved AI explanation (anchor)};
+\node[icon] (bot) at (0.42,3.12) {\includegraphics[width=0.66cm]{figures/icons/1f916.pdf}};
+\node[claim,draw=bad,fill=white,anchor=west] (c1) at (0.84,3.6) {\textbf{C1}: builds its read queue with\\\keytok{FlowControlDataQueue}};
+\node[claim,draw=good,fill=white,anchor=west] (c2) at (0.84,2.55) {\textbf{C2}: disables HTTP \mbox{keep-alive}};
+\draw[black!60,line width=0.5pt] (bot.east) ++(0,0.12) -- (c1.west); \draw[black!60,line width=0.5pt] (bot.east) ++(0,-0.12) -- (c2.west);
+% ---------------- panel 2: a later commit (by a developer)
+\filldraw[fill=pYellow,panel] (4.45,2.05) rectangle (8.85,4.6);
+\node[num] (n2) at (4.7,4.35) {2}; \node[ttl] at (n2.east) {Later commit \texttt{5241897f}};
+\node[icon] (dev) at (4.82,3.12) {\includegraphics[width=0.66cm]{figures/icons/1f9d1-200d-1f4bb.pdf}};
+\node[bub,anchor=west,text width=3.36cm] (diff) at (5.22,3.12)
+  {\textcolor{bad}{\texttt{\textbf{-}}}\keytok{FlowControlDataQueue}\\[2pt]\textcolor{good}{\texttt{\textbf{+}}}\newtok{WebSocketDataQueue}\\[2pt]\textit{one-line call-set change}};
+\draw[black!60,line width=0.5pt] (dev.east) -- (diff.west);
+% connector panel 1 -> panel 2 (time passes)
+\draw[-{Stealth[length=4pt]},accO,line width=1pt] (4.27,3.12) -- (4.48,3.12);
+% ---------------- panel 3: claim-level verdicts by the LLM judge
+\filldraw[fill=pGreen,panel] (0,0) rectangle (8.85,1.6);
+\node[num] (n3) at (0.25,1.35) {3}; \node[ttl] at (n3.east) {Verdicts at each later touch};
+\node[icon] (mag) at (0.42,0.66) {\includegraphics[width=0.66cm]{figures/icons/1f50d.pdf}};
+\node[icon] (x) at (1.3,0.92) {\includegraphics[width=0.34cm]{figures/icons/274c.pdf}};
+\node[icon] (v) at (1.3,0.45) {\includegraphics[width=0.34cm]{figures/icons/2705.pdf}};
+\node[anchor=west] at (1.55,0.92) {\textcolor{bad}{\textbf{C1}} contradicted at touch 1 $\rightarrow$ \textbf{detection event}};
+\node[anchor=west] at (1.55,0.45) {\textcolor{good}{\textbf{C2}} never contradicted in 8 touches $\rightarrow$ \textbf{not detected}};
+\node[anchor=east,font=\scriptsize\itshape] at (8.75,0.18) {Main cohort, no detected contradiction: $\hat S(\XFollowK)=\XMainSK$ over \XNFunctions{} functions};
+% accent arrow panel 2 -> panel 3, labelled on the arrow
+\draw[-{Stealth[length=5pt]},accO,line width=1.1pt] (5.9,2.05) -- node[right,font=\scriptsize\bfseries,text=accO,inner sep=2pt] {LLM judge re-checks} (5.9,1.6);
+\end{tikzpicture}%

@@ -1,0 +1,91 @@
+{
+  "finalized": "2026-11-11T19:02:38.212703+07:00",
+  "execution_complete": true,
+  "primary_input_integrity": {
+    "candidates.json": true,
+    "functions.json": true,
+    "random_functions.json": true,
+    "claims.json": true,
+    "verdicts.json": true,
+    "summary.json": true
+  },
+  "human_annotation_complete": true,
+  "human_annotation_design": "single-rater exploratory audit",
+  "human_annotators": 1,
+  "inter_rater_agreement_available": false,
+  "conditions": {
+    "cross_family": {
+      "execution_complete": true,
+      "quality_complete": false,
+      "scored_quality_complete": true,
+      "responses": 57,
+      "summary_sha256": "05f62b672c02d918ec2e9db42d6079cab22d5f7f3446f9886fa82a706ee78669",
+      "plan_sha256": "4933e66eb164430f231c3a761d8a952fee390987cac4088b2b6f5aa8cde90dfb",
+      "runtime_sha256": "877e3c7ce17e11f46550d5d3ea05b184bf0bb4241c4ff372d22cba37a9b6249f"
+    },
+    "random_redraw_inference": {
+      "execution_complete": true,
+      "quality_complete": false,
+      "scored_quality_complete": null,
+      "responses": 308,
+      "summary_sha256": "d95c5ebdbe653db31c54dab786e7a6bf32dee72970a8cde21d11392845758ee3",
+      "plan_sha256": "8f1dfd204ab55f0e71fe6e9b3fe43ebc39bd336ed837c2543453fef1a2da686a",
+      "runtime_sha256": "974e338f93e78287bbb1b1915a0bcc6b74649ced23ab8b11c5c4b20f82d5c704"
+    },
+    "resurrection": {
+      "execution_complete": true,
+      "quality_complete": false,
+      "scored_quality_complete": null,
+      "responses": 649,
+      "summary_sha256": "a9455b7182d742ef1e91c0bb1efc6a5950a63973e24753f7f65fe9b9b42fde4f",
+      "plan_sha256": "68aa7371255318a7ac699180a059202b8b7e4d7c5f29b50dae455654a77f1e9c",
+      "runtime_sha256": "974e338f93e78287bbb1b1915a0bcc6b74649ced23ab8b11c5c4b20f82d5c704"
+    },
+    "docstring_free": {
+      "execution_complete": true,
+      "quality_complete": true,
+      "scored_quality_complete": null,
+      "responses": 786,
+      "summary_sha256": "bd13ad594bf26ff0fd148a0f6daf30259823b21c1c9ec9785adb9e3a2fbd4dc7",
+      "plan_sha256": "efe0cf7eaf5131187858a98bfc07c679e3cf615cf912403e40a95f634980a8f2",
+      "runtime_sha256": "974e338f93e78287bbb1b1915a0bcc6b74649ced23ab8b11c5c4b20f82d5c704"
+    }
+  },
+  "remaining_external_dependencies": [
+    "Additional independent raters/adjudication for inter-rater reliability; single-rater agreement does not validate semantic failure times",
+    "Original claim-level docstring-audit file if historical aggregates are to be restored"
+  ],
+  "human_analysis_summary_sha256": "ecca26f8753439c4d90326e73a72a56b7ff5d25d1946ec3ea52a1ec71f891338",
+  "publication": {
+    "checked_at_utc": "2026-11-11T12:00:39.158975+00:00",
+    "landing_url": "https://claim-survival-artifact.dimpledshrimp2.chatgpt.site",
+    "landing_http_status": 200,
+    "download_url": "https://claim-survival-artifact.dimpledshrimp2.chatgpt.site/claim-survival-artifact-v3.zip",
+    "download_http_status": 200,
+    "content_type": "application/zip",
+    "bytes": 25919148,
+    "sha256": "82827fc694bb0f98b22dea859faf0e29d2507576e63196538c1fb65024849904",
+    "zip_files": 6392,
+    "zip_crc_passed": true,
+    "expected_sha256_matches": true,
+    "used_authorization_header": false,
+    "used_login": false,
+    "used_cookies": false,
+    "known_owner_markers_absent_from_landing": true,
+    "public_access_verified": true,
+    "provider": "Sites",
+    "zip": "claim-survival-artifact-v3.zip",
+    "release": "v3",
+    "site_project_id": "appgprj_6af42cdeecd481918c074d19efd828ba",
+    "site_version_id": "appgprj_6af42cdeecd481918c074d19efd828ba~appgver_d6e3ece4d91481919c8cb41517f494c2",
+    "deployment_id": "appgdep_6af4589ab6c08191b7bee3a7f8b168c6",
+    "manuscript_pdf_sha256": "8109cd584a6de22e683bc4f2912b015f9e072a74f9d001ff27b2f7f70a2c7fb6",
+    "manuscript_availability_url_inserted": true,
+    "hosted_manuscript_byte_verified": true,
+    "uploaded": true,
+    "manual_upload_required": false,
+    "revision_scope": "Decomposition/audit/limitations clarification after AI feedback; raw data and estimates unchanged"
+  },
+  "total_new_cached_responses": 1800,
+  "historical_failed_campaign_preserved": true
+}

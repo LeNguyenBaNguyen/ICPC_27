@@ -1,0 +1,2017 @@
+{
+  "experiment": "mutation_recall",
+  "planned_before_fresh_calls": true,
+  "model": "qwen2.5-coder:14b",
+  "options": {
+    "temperature": 0,
+    "seed": 7,
+    "num_ctx": 8192,
+    "num_predict": 80
+  },
+  "endpoint": "Judge verdict for the known affected claim; contradicted is a hit on mutations and a false positive on controls.",
+  "population": "100 deterministic synthetic behavior-changing Python mutations and 100 matched unchanged controls.",
+  "limits": "Synthetic fixture recall does not measure recall on historical repository changes, semantic validity of every claim, or survival-curve calibration.",
+  "tasks": [
+    {
+      "task_id": "arithmetic-01:mutated",
+      "fixture_id": "arithmetic-01",
+      "arm": "mutated",
+      "qualname": "plus_1",
+      "old": "def plus_1(value: int) -> int:\n    return value + 1\n",
+      "current": "def plus_1(value: int) -> int:\n    return value - 1\n",
+      "claim": "plus_1 returns value plus 1.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-01:control",
+      "fixture_id": "arithmetic-01",
+      "arm": "control",
+      "qualname": "plus_1",
+      "old": "def plus_1(value: int) -> int:\n    return value + 1\n",
+      "current": "def plus_1(value: int) -> int:\n    return value + 1\n",
+      "claim": "plus_1 returns value plus 1.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-01:mutated",
+      "fixture_id": "condition-01",
+      "arm": "mutated",
+      "qualname": "band_1",
+      "old": "def band_1(value: int) -> str:\n    if value < 3:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_1(value: int) -> str:\n    if value >= 3:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_1 returns 'low' when value is below 3.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-01:control",
+      "fixture_id": "condition-01",
+      "arm": "control",
+      "qualname": "band_1",
+      "old": "def band_1(value: int) -> str:\n    if value < 3:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_1(value: int) -> str:\n    if value < 3:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_1 returns 'low' when value is below 3.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-01:mutated",
+      "fixture_id": "exception-01",
+      "arm": "mutated",
+      "qualname": "nonnegative_1",
+      "old": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-1')\n    return value\n",
+      "current": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_1 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-01:control",
+      "fixture_id": "exception-01",
+      "arm": "control",
+      "qualname": "nonnegative_1",
+      "old": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-1')\n    return value\n",
+      "current": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-1')\n    return value\n",
+      "claim": "nonnegative_1 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-01:mutated",
+      "fixture_id": "call-01",
+      "arm": "mutated",
+      "qualname": "trim_1",
+      "old": "def trim_1(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_1(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_1 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-01:control",
+      "fixture_id": "call-01",
+      "arm": "control",
+      "qualname": "trim_1",
+      "old": "def trim_1(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_1(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_1 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-02:mutated",
+      "fixture_id": "arithmetic-02",
+      "arm": "mutated",
+      "qualname": "plus_2",
+      "old": "def plus_2(value: int) -> int:\n    return value + 2\n",
+      "current": "def plus_2(value: int) -> int:\n    return value - 2\n",
+      "claim": "plus_2 returns value plus 2.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-02:control",
+      "fixture_id": "arithmetic-02",
+      "arm": "control",
+      "qualname": "plus_2",
+      "old": "def plus_2(value: int) -> int:\n    return value + 2\n",
+      "current": "def plus_2(value: int) -> int:\n    return value + 2\n",
+      "claim": "plus_2 returns value plus 2.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-02:mutated",
+      "fixture_id": "condition-02",
+      "arm": "mutated",
+      "qualname": "band_2",
+      "old": "def band_2(value: int) -> str:\n    if value < 6:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_2(value: int) -> str:\n    if value >= 6:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_2 returns 'low' when value is below 6.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-02:control",
+      "fixture_id": "condition-02",
+      "arm": "control",
+      "qualname": "band_2",
+      "old": "def band_2(value: int) -> str:\n    if value < 6:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_2(value: int) -> str:\n    if value < 6:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_2 returns 'low' when value is below 6.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-02:mutated",
+      "fixture_id": "exception-02",
+      "arm": "mutated",
+      "qualname": "nonnegative_2",
+      "old": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-2')\n    return value\n",
+      "current": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_2 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-02:control",
+      "fixture_id": "exception-02",
+      "arm": "control",
+      "qualname": "nonnegative_2",
+      "old": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-2')\n    return value\n",
+      "current": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-2')\n    return value\n",
+      "claim": "nonnegative_2 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-02:mutated",
+      "fixture_id": "call-02",
+      "arm": "mutated",
+      "qualname": "trim_2",
+      "old": "def trim_2(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_2(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_2 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-02:control",
+      "fixture_id": "call-02",
+      "arm": "control",
+      "qualname": "trim_2",
+      "old": "def trim_2(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_2(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_2 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-03:mutated",
+      "fixture_id": "arithmetic-03",
+      "arm": "mutated",
+      "qualname": "plus_3",
+      "old": "def plus_3(value: int) -> int:\n    return value + 3\n",
+      "current": "def plus_3(value: int) -> int:\n    return value - 3\n",
+      "claim": "plus_3 returns value plus 3.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-03:control",
+      "fixture_id": "arithmetic-03",
+      "arm": "control",
+      "qualname": "plus_3",
+      "old": "def plus_3(value: int) -> int:\n    return value + 3\n",
+      "current": "def plus_3(value: int) -> int:\n    return value + 3\n",
+      "claim": "plus_3 returns value plus 3.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-03:mutated",
+      "fixture_id": "condition-03",
+      "arm": "mutated",
+      "qualname": "band_3",
+      "old": "def band_3(value: int) -> str:\n    if value < 9:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_3(value: int) -> str:\n    if value >= 9:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_3 returns 'low' when value is below 9.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-03:control",
+      "fixture_id": "condition-03",
+      "arm": "control",
+      "qualname": "band_3",
+      "old": "def band_3(value: int) -> str:\n    if value < 9:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_3(value: int) -> str:\n    if value < 9:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_3 returns 'low' when value is below 9.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-03:mutated",
+      "fixture_id": "exception-03",
+      "arm": "mutated",
+      "qualname": "nonnegative_3",
+      "old": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-3')\n    return value\n",
+      "current": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_3 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-03:control",
+      "fixture_id": "exception-03",
+      "arm": "control",
+      "qualname": "nonnegative_3",
+      "old": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-3')\n    return value\n",
+      "current": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-3')\n    return value\n",
+      "claim": "nonnegative_3 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-03:mutated",
+      "fixture_id": "call-03",
+      "arm": "mutated",
+      "qualname": "trim_3",
+      "old": "def trim_3(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_3(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_3 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-03:control",
+      "fixture_id": "call-03",
+      "arm": "control",
+      "qualname": "trim_3",
+      "old": "def trim_3(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_3(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_3 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-04:mutated",
+      "fixture_id": "arithmetic-04",
+      "arm": "mutated",
+      "qualname": "plus_4",
+      "old": "def plus_4(value: int) -> int:\n    return value + 4\n",
+      "current": "def plus_4(value: int) -> int:\n    return value - 4\n",
+      "claim": "plus_4 returns value plus 4.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-04:control",
+      "fixture_id": "arithmetic-04",
+      "arm": "control",
+      "qualname": "plus_4",
+      "old": "def plus_4(value: int) -> int:\n    return value + 4\n",
+      "current": "def plus_4(value: int) -> int:\n    return value + 4\n",
+      "claim": "plus_4 returns value plus 4.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-04:mutated",
+      "fixture_id": "condition-04",
+      "arm": "mutated",
+      "qualname": "band_4",
+      "old": "def band_4(value: int) -> str:\n    if value < 12:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_4(value: int) -> str:\n    if value >= 12:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_4 returns 'low' when value is below 12.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-04:control",
+      "fixture_id": "condition-04",
+      "arm": "control",
+      "qualname": "band_4",
+      "old": "def band_4(value: int) -> str:\n    if value < 12:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_4(value: int) -> str:\n    if value < 12:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_4 returns 'low' when value is below 12.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-04:mutated",
+      "fixture_id": "exception-04",
+      "arm": "mutated",
+      "qualname": "nonnegative_4",
+      "old": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-4')\n    return value\n",
+      "current": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_4 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-04:control",
+      "fixture_id": "exception-04",
+      "arm": "control",
+      "qualname": "nonnegative_4",
+      "old": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-4')\n    return value\n",
+      "current": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-4')\n    return value\n",
+      "claim": "nonnegative_4 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-04:mutated",
+      "fixture_id": "call-04",
+      "arm": "mutated",
+      "qualname": "trim_4",
+      "old": "def trim_4(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_4(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_4 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-04:control",
+      "fixture_id": "call-04",
+      "arm": "control",
+      "qualname": "trim_4",
+      "old": "def trim_4(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_4(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_4 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-05:mutated",
+      "fixture_id": "arithmetic-05",
+      "arm": "mutated",
+      "qualname": "plus_5",
+      "old": "def plus_5(value: int) -> int:\n    return value + 5\n",
+      "current": "def plus_5(value: int) -> int:\n    return value - 5\n",
+      "claim": "plus_5 returns value plus 5.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-05:control",
+      "fixture_id": "arithmetic-05",
+      "arm": "control",
+      "qualname": "plus_5",
+      "old": "def plus_5(value: int) -> int:\n    return value + 5\n",
+      "current": "def plus_5(value: int) -> int:\n    return value + 5\n",
+      "claim": "plus_5 returns value plus 5.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-05:mutated",
+      "fixture_id": "condition-05",
+      "arm": "mutated",
+      "qualname": "band_5",
+      "old": "def band_5(value: int) -> str:\n    if value < 15:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_5(value: int) -> str:\n    if value >= 15:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_5 returns 'low' when value is below 15.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-05:control",
+      "fixture_id": "condition-05",
+      "arm": "control",
+      "qualname": "band_5",
+      "old": "def band_5(value: int) -> str:\n    if value < 15:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_5(value: int) -> str:\n    if value < 15:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_5 returns 'low' when value is below 15.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-05:mutated",
+      "fixture_id": "exception-05",
+      "arm": "mutated",
+      "qualname": "nonnegative_5",
+      "old": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-5')\n    return value\n",
+      "current": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_5 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-05:control",
+      "fixture_id": "exception-05",
+      "arm": "control",
+      "qualname": "nonnegative_5",
+      "old": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-5')\n    return value\n",
+      "current": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-5')\n    return value\n",
+      "claim": "nonnegative_5 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-05:mutated",
+      "fixture_id": "call-05",
+      "arm": "mutated",
+      "qualname": "trim_5",
+      "old": "def trim_5(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_5(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_5 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-05:control",
+      "fixture_id": "call-05",
+      "arm": "control",
+      "qualname": "trim_5",
+      "old": "def trim_5(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_5(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_5 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-06:mutated",
+      "fixture_id": "arithmetic-06",
+      "arm": "mutated",
+      "qualname": "plus_6",
+      "old": "def plus_6(value: int) -> int:\n    return value + 6\n",
+      "current": "def plus_6(value: int) -> int:\n    return value - 6\n",
+      "claim": "plus_6 returns value plus 6.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-06:control",
+      "fixture_id": "arithmetic-06",
+      "arm": "control",
+      "qualname": "plus_6",
+      "old": "def plus_6(value: int) -> int:\n    return value + 6\n",
+      "current": "def plus_6(value: int) -> int:\n    return value + 6\n",
+      "claim": "plus_6 returns value plus 6.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-06:mutated",
+      "fixture_id": "condition-06",
+      "arm": "mutated",
+      "qualname": "band_6",
+      "old": "def band_6(value: int) -> str:\n    if value < 18:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_6(value: int) -> str:\n    if value >= 18:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_6 returns 'low' when value is below 18.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-06:control",
+      "fixture_id": "condition-06",
+      "arm": "control",
+      "qualname": "band_6",
+      "old": "def band_6(value: int) -> str:\n    if value < 18:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_6(value: int) -> str:\n    if value < 18:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_6 returns 'low' when value is below 18.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-06:mutated",
+      "fixture_id": "exception-06",
+      "arm": "mutated",
+      "qualname": "nonnegative_6",
+      "old": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-6')\n    return value\n",
+      "current": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_6 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-06:control",
+      "fixture_id": "exception-06",
+      "arm": "control",
+      "qualname": "nonnegative_6",
+      "old": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-6')\n    return value\n",
+      "current": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-6')\n    return value\n",
+      "claim": "nonnegative_6 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-06:mutated",
+      "fixture_id": "call-06",
+      "arm": "mutated",
+      "qualname": "trim_6",
+      "old": "def trim_6(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_6(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_6 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-06:control",
+      "fixture_id": "call-06",
+      "arm": "control",
+      "qualname": "trim_6",
+      "old": "def trim_6(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_6(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_6 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-07:mutated",
+      "fixture_id": "arithmetic-07",
+      "arm": "mutated",
+      "qualname": "plus_7",
+      "old": "def plus_7(value: int) -> int:\n    return value + 7\n",
+      "current": "def plus_7(value: int) -> int:\n    return value - 7\n",
+      "claim": "plus_7 returns value plus 7.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-07:control",
+      "fixture_id": "arithmetic-07",
+      "arm": "control",
+      "qualname": "plus_7",
+      "old": "def plus_7(value: int) -> int:\n    return value + 7\n",
+      "current": "def plus_7(value: int) -> int:\n    return value + 7\n",
+      "claim": "plus_7 returns value plus 7.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-07:mutated",
+      "fixture_id": "condition-07",
+      "arm": "mutated",
+      "qualname": "band_7",
+      "old": "def band_7(value: int) -> str:\n    if value < 21:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_7(value: int) -> str:\n    if value >= 21:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_7 returns 'low' when value is below 21.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-07:control",
+      "fixture_id": "condition-07",
+      "arm": "control",
+      "qualname": "band_7",
+      "old": "def band_7(value: int) -> str:\n    if value < 21:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_7(value: int) -> str:\n    if value < 21:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_7 returns 'low' when value is below 21.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-07:mutated",
+      "fixture_id": "exception-07",
+      "arm": "mutated",
+      "qualname": "nonnegative_7",
+      "old": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-7')\n    return value\n",
+      "current": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_7 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-07:control",
+      "fixture_id": "exception-07",
+      "arm": "control",
+      "qualname": "nonnegative_7",
+      "old": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-7')\n    return value\n",
+      "current": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-7')\n    return value\n",
+      "claim": "nonnegative_7 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-07:mutated",
+      "fixture_id": "call-07",
+      "arm": "mutated",
+      "qualname": "trim_7",
+      "old": "def trim_7(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_7(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_7 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-07:control",
+      "fixture_id": "call-07",
+      "arm": "control",
+      "qualname": "trim_7",
+      "old": "def trim_7(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_7(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_7 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-08:mutated",
+      "fixture_id": "arithmetic-08",
+      "arm": "mutated",
+      "qualname": "plus_8",
+      "old": "def plus_8(value: int) -> int:\n    return value + 8\n",
+      "current": "def plus_8(value: int) -> int:\n    return value - 8\n",
+      "claim": "plus_8 returns value plus 8.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-08:control",
+      "fixture_id": "arithmetic-08",
+      "arm": "control",
+      "qualname": "plus_8",
+      "old": "def plus_8(value: int) -> int:\n    return value + 8\n",
+      "current": "def plus_8(value: int) -> int:\n    return value + 8\n",
+      "claim": "plus_8 returns value plus 8.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-08:mutated",
+      "fixture_id": "condition-08",
+      "arm": "mutated",
+      "qualname": "band_8",
+      "old": "def band_8(value: int) -> str:\n    if value < 24:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_8(value: int) -> str:\n    if value >= 24:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_8 returns 'low' when value is below 24.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-08:control",
+      "fixture_id": "condition-08",
+      "arm": "control",
+      "qualname": "band_8",
+      "old": "def band_8(value: int) -> str:\n    if value < 24:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_8(value: int) -> str:\n    if value < 24:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_8 returns 'low' when value is below 24.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-08:mutated",
+      "fixture_id": "exception-08",
+      "arm": "mutated",
+      "qualname": "nonnegative_8",
+      "old": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-8')\n    return value\n",
+      "current": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_8 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-08:control",
+      "fixture_id": "exception-08",
+      "arm": "control",
+      "qualname": "nonnegative_8",
+      "old": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-8')\n    return value\n",
+      "current": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-8')\n    return value\n",
+      "claim": "nonnegative_8 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-08:mutated",
+      "fixture_id": "call-08",
+      "arm": "mutated",
+      "qualname": "trim_8",
+      "old": "def trim_8(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_8(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_8 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-08:control",
+      "fixture_id": "call-08",
+      "arm": "control",
+      "qualname": "trim_8",
+      "old": "def trim_8(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_8(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_8 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-09:mutated",
+      "fixture_id": "arithmetic-09",
+      "arm": "mutated",
+      "qualname": "plus_9",
+      "old": "def plus_9(value: int) -> int:\n    return value + 9\n",
+      "current": "def plus_9(value: int) -> int:\n    return value - 9\n",
+      "claim": "plus_9 returns value plus 9.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-09:control",
+      "fixture_id": "arithmetic-09",
+      "arm": "control",
+      "qualname": "plus_9",
+      "old": "def plus_9(value: int) -> int:\n    return value + 9\n",
+      "current": "def plus_9(value: int) -> int:\n    return value + 9\n",
+      "claim": "plus_9 returns value plus 9.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-09:mutated",
+      "fixture_id": "condition-09",
+      "arm": "mutated",
+      "qualname": "band_9",
+      "old": "def band_9(value: int) -> str:\n    if value < 27:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_9(value: int) -> str:\n    if value >= 27:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_9 returns 'low' when value is below 27.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-09:control",
+      "fixture_id": "condition-09",
+      "arm": "control",
+      "qualname": "band_9",
+      "old": "def band_9(value: int) -> str:\n    if value < 27:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_9(value: int) -> str:\n    if value < 27:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_9 returns 'low' when value is below 27.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-09:mutated",
+      "fixture_id": "exception-09",
+      "arm": "mutated",
+      "qualname": "nonnegative_9",
+      "old": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-9')\n    return value\n",
+      "current": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_9 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-09:control",
+      "fixture_id": "exception-09",
+      "arm": "control",
+      "qualname": "nonnegative_9",
+      "old": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-9')\n    return value\n",
+      "current": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-9')\n    return value\n",
+      "claim": "nonnegative_9 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-09:mutated",
+      "fixture_id": "call-09",
+      "arm": "mutated",
+      "qualname": "trim_9",
+      "old": "def trim_9(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_9(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_9 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-09:control",
+      "fixture_id": "call-09",
+      "arm": "control",
+      "qualname": "trim_9",
+      "old": "def trim_9(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_9(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_9 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-10:mutated",
+      "fixture_id": "arithmetic-10",
+      "arm": "mutated",
+      "qualname": "plus_10",
+      "old": "def plus_10(value: int) -> int:\n    return value + 10\n",
+      "current": "def plus_10(value: int) -> int:\n    return value - 10\n",
+      "claim": "plus_10 returns value plus 10.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-10:control",
+      "fixture_id": "arithmetic-10",
+      "arm": "control",
+      "qualname": "plus_10",
+      "old": "def plus_10(value: int) -> int:\n    return value + 10\n",
+      "current": "def plus_10(value: int) -> int:\n    return value + 10\n",
+      "claim": "plus_10 returns value plus 10.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-10:mutated",
+      "fixture_id": "condition-10",
+      "arm": "mutated",
+      "qualname": "band_10",
+      "old": "def band_10(value: int) -> str:\n    if value < 30:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_10(value: int) -> str:\n    if value >= 30:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_10 returns 'low' when value is below 30.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-10:control",
+      "fixture_id": "condition-10",
+      "arm": "control",
+      "qualname": "band_10",
+      "old": "def band_10(value: int) -> str:\n    if value < 30:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_10(value: int) -> str:\n    if value < 30:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_10 returns 'low' when value is below 30.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-10:mutated",
+      "fixture_id": "exception-10",
+      "arm": "mutated",
+      "qualname": "nonnegative_10",
+      "old": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-10')\n    return value\n",
+      "current": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_10 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-10:control",
+      "fixture_id": "exception-10",
+      "arm": "control",
+      "qualname": "nonnegative_10",
+      "old": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-10')\n    return value\n",
+      "current": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-10')\n    return value\n",
+      "claim": "nonnegative_10 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-10:mutated",
+      "fixture_id": "call-10",
+      "arm": "mutated",
+      "qualname": "trim_10",
+      "old": "def trim_10(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_10(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_10 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-10:control",
+      "fixture_id": "call-10",
+      "arm": "control",
+      "qualname": "trim_10",
+      "old": "def trim_10(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_10(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_10 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-11:mutated",
+      "fixture_id": "arithmetic-11",
+      "arm": "mutated",
+      "qualname": "plus_11",
+      "old": "def plus_11(value: int) -> int:\n    return value + 11\n",
+      "current": "def plus_11(value: int) -> int:\n    return value - 11\n",
+      "claim": "plus_11 returns value plus 11.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-11:control",
+      "fixture_id": "arithmetic-11",
+      "arm": "control",
+      "qualname": "plus_11",
+      "old": "def plus_11(value: int) -> int:\n    return value + 11\n",
+      "current": "def plus_11(value: int) -> int:\n    return value + 11\n",
+      "claim": "plus_11 returns value plus 11.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-11:mutated",
+      "fixture_id": "condition-11",
+      "arm": "mutated",
+      "qualname": "band_11",
+      "old": "def band_11(value: int) -> str:\n    if value < 33:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_11(value: int) -> str:\n    if value >= 33:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_11 returns 'low' when value is below 33.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-11:control",
+      "fixture_id": "condition-11",
+      "arm": "control",
+      "qualname": "band_11",
+      "old": "def band_11(value: int) -> str:\n    if value < 33:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_11(value: int) -> str:\n    if value < 33:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_11 returns 'low' when value is below 33.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-11:mutated",
+      "fixture_id": "exception-11",
+      "arm": "mutated",
+      "qualname": "nonnegative_11",
+      "old": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-11')\n    return value\n",
+      "current": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_11 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-11:control",
+      "fixture_id": "exception-11",
+      "arm": "control",
+      "qualname": "nonnegative_11",
+      "old": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-11')\n    return value\n",
+      "current": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-11')\n    return value\n",
+      "claim": "nonnegative_11 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-11:mutated",
+      "fixture_id": "call-11",
+      "arm": "mutated",
+      "qualname": "trim_11",
+      "old": "def trim_11(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_11(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_11 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-11:control",
+      "fixture_id": "call-11",
+      "arm": "control",
+      "qualname": "trim_11",
+      "old": "def trim_11(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_11(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_11 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-12:mutated",
+      "fixture_id": "arithmetic-12",
+      "arm": "mutated",
+      "qualname": "plus_12",
+      "old": "def plus_12(value: int) -> int:\n    return value + 12\n",
+      "current": "def plus_12(value: int) -> int:\n    return value - 12\n",
+      "claim": "plus_12 returns value plus 12.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-12:control",
+      "fixture_id": "arithmetic-12",
+      "arm": "control",
+      "qualname": "plus_12",
+      "old": "def plus_12(value: int) -> int:\n    return value + 12\n",
+      "current": "def plus_12(value: int) -> int:\n    return value + 12\n",
+      "claim": "plus_12 returns value plus 12.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-12:mutated",
+      "fixture_id": "condition-12",
+      "arm": "mutated",
+      "qualname": "band_12",
+      "old": "def band_12(value: int) -> str:\n    if value < 36:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_12(value: int) -> str:\n    if value >= 36:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_12 returns 'low' when value is below 36.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-12:control",
+      "fixture_id": "condition-12",
+      "arm": "control",
+      "qualname": "band_12",
+      "old": "def band_12(value: int) -> str:\n    if value < 36:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_12(value: int) -> str:\n    if value < 36:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_12 returns 'low' when value is below 36.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-12:mutated",
+      "fixture_id": "exception-12",
+      "arm": "mutated",
+      "qualname": "nonnegative_12",
+      "old": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-12')\n    return value\n",
+      "current": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_12 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-12:control",
+      "fixture_id": "exception-12",
+      "arm": "control",
+      "qualname": "nonnegative_12",
+      "old": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-12')\n    return value\n",
+      "current": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-12')\n    return value\n",
+      "claim": "nonnegative_12 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-12:mutated",
+      "fixture_id": "call-12",
+      "arm": "mutated",
+      "qualname": "trim_12",
+      "old": "def trim_12(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_12(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_12 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-12:control",
+      "fixture_id": "call-12",
+      "arm": "control",
+      "qualname": "trim_12",
+      "old": "def trim_12(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_12(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_12 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-13:mutated",
+      "fixture_id": "arithmetic-13",
+      "arm": "mutated",
+      "qualname": "plus_13",
+      "old": "def plus_13(value: int) -> int:\n    return value + 13\n",
+      "current": "def plus_13(value: int) -> int:\n    return value - 13\n",
+      "claim": "plus_13 returns value plus 13.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-13:control",
+      "fixture_id": "arithmetic-13",
+      "arm": "control",
+      "qualname": "plus_13",
+      "old": "def plus_13(value: int) -> int:\n    return value + 13\n",
+      "current": "def plus_13(value: int) -> int:\n    return value + 13\n",
+      "claim": "plus_13 returns value plus 13.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-13:mutated",
+      "fixture_id": "condition-13",
+      "arm": "mutated",
+      "qualname": "band_13",
+      "old": "def band_13(value: int) -> str:\n    if value < 39:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_13(value: int) -> str:\n    if value >= 39:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_13 returns 'low' when value is below 39.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-13:control",
+      "fixture_id": "condition-13",
+      "arm": "control",
+      "qualname": "band_13",
+      "old": "def band_13(value: int) -> str:\n    if value < 39:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_13(value: int) -> str:\n    if value < 39:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_13 returns 'low' when value is below 39.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-13:mutated",
+      "fixture_id": "exception-13",
+      "arm": "mutated",
+      "qualname": "nonnegative_13",
+      "old": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-13')\n    return value\n",
+      "current": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_13 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-13:control",
+      "fixture_id": "exception-13",
+      "arm": "control",
+      "qualname": "nonnegative_13",
+      "old": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-13')\n    return value\n",
+      "current": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-13')\n    return value\n",
+      "claim": "nonnegative_13 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-13:mutated",
+      "fixture_id": "call-13",
+      "arm": "mutated",
+      "qualname": "trim_13",
+      "old": "def trim_13(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_13(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_13 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-13:control",
+      "fixture_id": "call-13",
+      "arm": "control",
+      "qualname": "trim_13",
+      "old": "def trim_13(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_13(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_13 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-14:mutated",
+      "fixture_id": "arithmetic-14",
+      "arm": "mutated",
+      "qualname": "plus_14",
+      "old": "def plus_14(value: int) -> int:\n    return value + 14\n",
+      "current": "def plus_14(value: int) -> int:\n    return value - 14\n",
+      "claim": "plus_14 returns value plus 14.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-14:control",
+      "fixture_id": "arithmetic-14",
+      "arm": "control",
+      "qualname": "plus_14",
+      "old": "def plus_14(value: int) -> int:\n    return value + 14\n",
+      "current": "def plus_14(value: int) -> int:\n    return value + 14\n",
+      "claim": "plus_14 returns value plus 14.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-14:mutated",
+      "fixture_id": "condition-14",
+      "arm": "mutated",
+      "qualname": "band_14",
+      "old": "def band_14(value: int) -> str:\n    if value < 42:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_14(value: int) -> str:\n    if value >= 42:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_14 returns 'low' when value is below 42.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-14:control",
+      "fixture_id": "condition-14",
+      "arm": "control",
+      "qualname": "band_14",
+      "old": "def band_14(value: int) -> str:\n    if value < 42:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_14(value: int) -> str:\n    if value < 42:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_14 returns 'low' when value is below 42.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-14:mutated",
+      "fixture_id": "exception-14",
+      "arm": "mutated",
+      "qualname": "nonnegative_14",
+      "old": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-14')\n    return value\n",
+      "current": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_14 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-14:control",
+      "fixture_id": "exception-14",
+      "arm": "control",
+      "qualname": "nonnegative_14",
+      "old": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-14')\n    return value\n",
+      "current": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-14')\n    return value\n",
+      "claim": "nonnegative_14 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-14:mutated",
+      "fixture_id": "call-14",
+      "arm": "mutated",
+      "qualname": "trim_14",
+      "old": "def trim_14(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_14(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_14 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-14:control",
+      "fixture_id": "call-14",
+      "arm": "control",
+      "qualname": "trim_14",
+      "old": "def trim_14(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_14(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_14 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-15:mutated",
+      "fixture_id": "arithmetic-15",
+      "arm": "mutated",
+      "qualname": "plus_15",
+      "old": "def plus_15(value: int) -> int:\n    return value + 15\n",
+      "current": "def plus_15(value: int) -> int:\n    return value - 15\n",
+      "claim": "plus_15 returns value plus 15.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-15:control",
+      "fixture_id": "arithmetic-15",
+      "arm": "control",
+      "qualname": "plus_15",
+      "old": "def plus_15(value: int) -> int:\n    return value + 15\n",
+      "current": "def plus_15(value: int) -> int:\n    return value + 15\n",
+      "claim": "plus_15 returns value plus 15.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-15:mutated",
+      "fixture_id": "condition-15",
+      "arm": "mutated",
+      "qualname": "band_15",
+      "old": "def band_15(value: int) -> str:\n    if value < 45:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_15(value: int) -> str:\n    if value >= 45:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_15 returns 'low' when value is below 45.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-15:control",
+      "fixture_id": "condition-15",
+      "arm": "control",
+      "qualname": "band_15",
+      "old": "def band_15(value: int) -> str:\n    if value < 45:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_15(value: int) -> str:\n    if value < 45:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_15 returns 'low' when value is below 45.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-15:mutated",
+      "fixture_id": "exception-15",
+      "arm": "mutated",
+      "qualname": "nonnegative_15",
+      "old": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-15')\n    return value\n",
+      "current": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_15 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-15:control",
+      "fixture_id": "exception-15",
+      "arm": "control",
+      "qualname": "nonnegative_15",
+      "old": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-15')\n    return value\n",
+      "current": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-15')\n    return value\n",
+      "claim": "nonnegative_15 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-15:mutated",
+      "fixture_id": "call-15",
+      "arm": "mutated",
+      "qualname": "trim_15",
+      "old": "def trim_15(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_15(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_15 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-15:control",
+      "fixture_id": "call-15",
+      "arm": "control",
+      "qualname": "trim_15",
+      "old": "def trim_15(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_15(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_15 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-16:mutated",
+      "fixture_id": "arithmetic-16",
+      "arm": "mutated",
+      "qualname": "plus_16",
+      "old": "def plus_16(value: int) -> int:\n    return value + 16\n",
+      "current": "def plus_16(value: int) -> int:\n    return value - 16\n",
+      "claim": "plus_16 returns value plus 16.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-16:control",
+      "fixture_id": "arithmetic-16",
+      "arm": "control",
+      "qualname": "plus_16",
+      "old": "def plus_16(value: int) -> int:\n    return value + 16\n",
+      "current": "def plus_16(value: int) -> int:\n    return value + 16\n",
+      "claim": "plus_16 returns value plus 16.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-16:mutated",
+      "fixture_id": "condition-16",
+      "arm": "mutated",
+      "qualname": "band_16",
+      "old": "def band_16(value: int) -> str:\n    if value < 48:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_16(value: int) -> str:\n    if value >= 48:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_16 returns 'low' when value is below 48.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-16:control",
+      "fixture_id": "condition-16",
+      "arm": "control",
+      "qualname": "band_16",
+      "old": "def band_16(value: int) -> str:\n    if value < 48:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_16(value: int) -> str:\n    if value < 48:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_16 returns 'low' when value is below 48.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-16:mutated",
+      "fixture_id": "exception-16",
+      "arm": "mutated",
+      "qualname": "nonnegative_16",
+      "old": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-16')\n    return value\n",
+      "current": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_16 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-16:control",
+      "fixture_id": "exception-16",
+      "arm": "control",
+      "qualname": "nonnegative_16",
+      "old": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-16')\n    return value\n",
+      "current": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-16')\n    return value\n",
+      "claim": "nonnegative_16 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-16:mutated",
+      "fixture_id": "call-16",
+      "arm": "mutated",
+      "qualname": "trim_16",
+      "old": "def trim_16(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_16(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_16 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-16:control",
+      "fixture_id": "call-16",
+      "arm": "control",
+      "qualname": "trim_16",
+      "old": "def trim_16(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_16(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_16 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-17:mutated",
+      "fixture_id": "arithmetic-17",
+      "arm": "mutated",
+      "qualname": "plus_17",
+      "old": "def plus_17(value: int) -> int:\n    return value + 17\n",
+      "current": "def plus_17(value: int) -> int:\n    return value - 17\n",
+      "claim": "plus_17 returns value plus 17.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-17:control",
+      "fixture_id": "arithmetic-17",
+      "arm": "control",
+      "qualname": "plus_17",
+      "old": "def plus_17(value: int) -> int:\n    return value + 17\n",
+      "current": "def plus_17(value: int) -> int:\n    return value + 17\n",
+      "claim": "plus_17 returns value plus 17.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-17:mutated",
+      "fixture_id": "condition-17",
+      "arm": "mutated",
+      "qualname": "band_17",
+      "old": "def band_17(value: int) -> str:\n    if value < 51:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_17(value: int) -> str:\n    if value >= 51:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_17 returns 'low' when value is below 51.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-17:control",
+      "fixture_id": "condition-17",
+      "arm": "control",
+      "qualname": "band_17",
+      "old": "def band_17(value: int) -> str:\n    if value < 51:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_17(value: int) -> str:\n    if value < 51:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_17 returns 'low' when value is below 51.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-17:mutated",
+      "fixture_id": "exception-17",
+      "arm": "mutated",
+      "qualname": "nonnegative_17",
+      "old": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-17')\n    return value\n",
+      "current": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_17 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-17:control",
+      "fixture_id": "exception-17",
+      "arm": "control",
+      "qualname": "nonnegative_17",
+      "old": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-17')\n    return value\n",
+      "current": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-17')\n    return value\n",
+      "claim": "nonnegative_17 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-17:mutated",
+      "fixture_id": "call-17",
+      "arm": "mutated",
+      "qualname": "trim_17",
+      "old": "def trim_17(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_17(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_17 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-17:control",
+      "fixture_id": "call-17",
+      "arm": "control",
+      "qualname": "trim_17",
+      "old": "def trim_17(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_17(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_17 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-18:mutated",
+      "fixture_id": "arithmetic-18",
+      "arm": "mutated",
+      "qualname": "plus_18",
+      "old": "def plus_18(value: int) -> int:\n    return value + 18\n",
+      "current": "def plus_18(value: int) -> int:\n    return value - 18\n",
+      "claim": "plus_18 returns value plus 18.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-18:control",
+      "fixture_id": "arithmetic-18",
+      "arm": "control",
+      "qualname": "plus_18",
+      "old": "def plus_18(value: int) -> int:\n    return value + 18\n",
+      "current": "def plus_18(value: int) -> int:\n    return value + 18\n",
+      "claim": "plus_18 returns value plus 18.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-18:mutated",
+      "fixture_id": "condition-18",
+      "arm": "mutated",
+      "qualname": "band_18",
+      "old": "def band_18(value: int) -> str:\n    if value < 54:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_18(value: int) -> str:\n    if value >= 54:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_18 returns 'low' when value is below 54.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-18:control",
+      "fixture_id": "condition-18",
+      "arm": "control",
+      "qualname": "band_18",
+      "old": "def band_18(value: int) -> str:\n    if value < 54:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_18(value: int) -> str:\n    if value < 54:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_18 returns 'low' when value is below 54.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-18:mutated",
+      "fixture_id": "exception-18",
+      "arm": "mutated",
+      "qualname": "nonnegative_18",
+      "old": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-18')\n    return value\n",
+      "current": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_18 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-18:control",
+      "fixture_id": "exception-18",
+      "arm": "control",
+      "qualname": "nonnegative_18",
+      "old": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-18')\n    return value\n",
+      "current": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-18')\n    return value\n",
+      "claim": "nonnegative_18 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-18:mutated",
+      "fixture_id": "call-18",
+      "arm": "mutated",
+      "qualname": "trim_18",
+      "old": "def trim_18(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_18(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_18 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-18:control",
+      "fixture_id": "call-18",
+      "arm": "control",
+      "qualname": "trim_18",
+      "old": "def trim_18(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_18(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_18 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-19:mutated",
+      "fixture_id": "arithmetic-19",
+      "arm": "mutated",
+      "qualname": "plus_19",
+      "old": "def plus_19(value: int) -> int:\n    return value + 19\n",
+      "current": "def plus_19(value: int) -> int:\n    return value - 19\n",
+      "claim": "plus_19 returns value plus 19.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-19:control",
+      "fixture_id": "arithmetic-19",
+      "arm": "control",
+      "qualname": "plus_19",
+      "old": "def plus_19(value: int) -> int:\n    return value + 19\n",
+      "current": "def plus_19(value: int) -> int:\n    return value + 19\n",
+      "claim": "plus_19 returns value plus 19.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-19:mutated",
+      "fixture_id": "condition-19",
+      "arm": "mutated",
+      "qualname": "band_19",
+      "old": "def band_19(value: int) -> str:\n    if value < 57:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_19(value: int) -> str:\n    if value >= 57:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_19 returns 'low' when value is below 57.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-19:control",
+      "fixture_id": "condition-19",
+      "arm": "control",
+      "qualname": "band_19",
+      "old": "def band_19(value: int) -> str:\n    if value < 57:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_19(value: int) -> str:\n    if value < 57:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_19 returns 'low' when value is below 57.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-19:mutated",
+      "fixture_id": "exception-19",
+      "arm": "mutated",
+      "qualname": "nonnegative_19",
+      "old": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-19')\n    return value\n",
+      "current": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_19 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-19:control",
+      "fixture_id": "exception-19",
+      "arm": "control",
+      "qualname": "nonnegative_19",
+      "old": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-19')\n    return value\n",
+      "current": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-19')\n    return value\n",
+      "claim": "nonnegative_19 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-19:mutated",
+      "fixture_id": "call-19",
+      "arm": "mutated",
+      "qualname": "trim_19",
+      "old": "def trim_19(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_19(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_19 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-19:control",
+      "fixture_id": "call-19",
+      "arm": "control",
+      "qualname": "trim_19",
+      "old": "def trim_19(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_19(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_19 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-20:mutated",
+      "fixture_id": "arithmetic-20",
+      "arm": "mutated",
+      "qualname": "plus_20",
+      "old": "def plus_20(value: int) -> int:\n    return value + 20\n",
+      "current": "def plus_20(value: int) -> int:\n    return value - 20\n",
+      "claim": "plus_20 returns value plus 20.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-20:control",
+      "fixture_id": "arithmetic-20",
+      "arm": "control",
+      "qualname": "plus_20",
+      "old": "def plus_20(value: int) -> int:\n    return value + 20\n",
+      "current": "def plus_20(value: int) -> int:\n    return value + 20\n",
+      "claim": "plus_20 returns value plus 20.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-20:mutated",
+      "fixture_id": "condition-20",
+      "arm": "mutated",
+      "qualname": "band_20",
+      "old": "def band_20(value: int) -> str:\n    if value < 60:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_20(value: int) -> str:\n    if value >= 60:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_20 returns 'low' when value is below 60.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-20:control",
+      "fixture_id": "condition-20",
+      "arm": "control",
+      "qualname": "band_20",
+      "old": "def band_20(value: int) -> str:\n    if value < 60:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_20(value: int) -> str:\n    if value < 60:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_20 returns 'low' when value is below 60.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-20:mutated",
+      "fixture_id": "exception-20",
+      "arm": "mutated",
+      "qualname": "nonnegative_20",
+      "old": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-20')\n    return value\n",
+      "current": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_20 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-20:control",
+      "fixture_id": "exception-20",
+      "arm": "control",
+      "qualname": "nonnegative_20",
+      "old": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-20')\n    return value\n",
+      "current": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-20')\n    return value\n",
+      "claim": "nonnegative_20 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-20:mutated",
+      "fixture_id": "call-20",
+      "arm": "mutated",
+      "qualname": "trim_20",
+      "old": "def trim_20(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_20(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_20 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-20:control",
+      "fixture_id": "call-20",
+      "arm": "control",
+      "qualname": "trim_20",
+      "old": "def trim_20(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_20(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_20 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-21:mutated",
+      "fixture_id": "arithmetic-21",
+      "arm": "mutated",
+      "qualname": "plus_21",
+      "old": "def plus_21(value: int) -> int:\n    return value + 21\n",
+      "current": "def plus_21(value: int) -> int:\n    return value - 21\n",
+      "claim": "plus_21 returns value plus 21.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-21:control",
+      "fixture_id": "arithmetic-21",
+      "arm": "control",
+      "qualname": "plus_21",
+      "old": "def plus_21(value: int) -> int:\n    return value + 21\n",
+      "current": "def plus_21(value: int) -> int:\n    return value + 21\n",
+      "claim": "plus_21 returns value plus 21.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-21:mutated",
+      "fixture_id": "condition-21",
+      "arm": "mutated",
+      "qualname": "band_21",
+      "old": "def band_21(value: int) -> str:\n    if value < 63:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_21(value: int) -> str:\n    if value >= 63:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_21 returns 'low' when value is below 63.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-21:control",
+      "fixture_id": "condition-21",
+      "arm": "control",
+      "qualname": "band_21",
+      "old": "def band_21(value: int) -> str:\n    if value < 63:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_21(value: int) -> str:\n    if value < 63:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_21 returns 'low' when value is below 63.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-21:mutated",
+      "fixture_id": "exception-21",
+      "arm": "mutated",
+      "qualname": "nonnegative_21",
+      "old": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-21')\n    return value\n",
+      "current": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_21 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-21:control",
+      "fixture_id": "exception-21",
+      "arm": "control",
+      "qualname": "nonnegative_21",
+      "old": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-21')\n    return value\n",
+      "current": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-21')\n    return value\n",
+      "claim": "nonnegative_21 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-21:mutated",
+      "fixture_id": "call-21",
+      "arm": "mutated",
+      "qualname": "trim_21",
+      "old": "def trim_21(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_21(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_21 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-21:control",
+      "fixture_id": "call-21",
+      "arm": "control",
+      "qualname": "trim_21",
+      "old": "def trim_21(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_21(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_21 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-22:mutated",
+      "fixture_id": "arithmetic-22",
+      "arm": "mutated",
+      "qualname": "plus_22",
+      "old": "def plus_22(value: int) -> int:\n    return value + 22\n",
+      "current": "def plus_22(value: int) -> int:\n    return value - 22\n",
+      "claim": "plus_22 returns value plus 22.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-22:control",
+      "fixture_id": "arithmetic-22",
+      "arm": "control",
+      "qualname": "plus_22",
+      "old": "def plus_22(value: int) -> int:\n    return value + 22\n",
+      "current": "def plus_22(value: int) -> int:\n    return value + 22\n",
+      "claim": "plus_22 returns value plus 22.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-22:mutated",
+      "fixture_id": "condition-22",
+      "arm": "mutated",
+      "qualname": "band_22",
+      "old": "def band_22(value: int) -> str:\n    if value < 66:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_22(value: int) -> str:\n    if value >= 66:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_22 returns 'low' when value is below 66.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-22:control",
+      "fixture_id": "condition-22",
+      "arm": "control",
+      "qualname": "band_22",
+      "old": "def band_22(value: int) -> str:\n    if value < 66:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_22(value: int) -> str:\n    if value < 66:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_22 returns 'low' when value is below 66.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-22:mutated",
+      "fixture_id": "exception-22",
+      "arm": "mutated",
+      "qualname": "nonnegative_22",
+      "old": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-22')\n    return value\n",
+      "current": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_22 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-22:control",
+      "fixture_id": "exception-22",
+      "arm": "control",
+      "qualname": "nonnegative_22",
+      "old": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-22')\n    return value\n",
+      "current": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-22')\n    return value\n",
+      "claim": "nonnegative_22 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-22:mutated",
+      "fixture_id": "call-22",
+      "arm": "mutated",
+      "qualname": "trim_22",
+      "old": "def trim_22(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_22(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_22 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-22:control",
+      "fixture_id": "call-22",
+      "arm": "control",
+      "qualname": "trim_22",
+      "old": "def trim_22(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_22(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_22 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-23:mutated",
+      "fixture_id": "arithmetic-23",
+      "arm": "mutated",
+      "qualname": "plus_23",
+      "old": "def plus_23(value: int) -> int:\n    return value + 23\n",
+      "current": "def plus_23(value: int) -> int:\n    return value - 23\n",
+      "claim": "plus_23 returns value plus 23.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-23:control",
+      "fixture_id": "arithmetic-23",
+      "arm": "control",
+      "qualname": "plus_23",
+      "old": "def plus_23(value: int) -> int:\n    return value + 23\n",
+      "current": "def plus_23(value: int) -> int:\n    return value + 23\n",
+      "claim": "plus_23 returns value plus 23.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-23:mutated",
+      "fixture_id": "condition-23",
+      "arm": "mutated",
+      "qualname": "band_23",
+      "old": "def band_23(value: int) -> str:\n    if value < 69:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_23(value: int) -> str:\n    if value >= 69:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_23 returns 'low' when value is below 69.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-23:control",
+      "fixture_id": "condition-23",
+      "arm": "control",
+      "qualname": "band_23",
+      "old": "def band_23(value: int) -> str:\n    if value < 69:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_23(value: int) -> str:\n    if value < 69:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_23 returns 'low' when value is below 69.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-23:mutated",
+      "fixture_id": "exception-23",
+      "arm": "mutated",
+      "qualname": "nonnegative_23",
+      "old": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-23')\n    return value\n",
+      "current": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_23 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-23:control",
+      "fixture_id": "exception-23",
+      "arm": "control",
+      "qualname": "nonnegative_23",
+      "old": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-23')\n    return value\n",
+      "current": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-23')\n    return value\n",
+      "claim": "nonnegative_23 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-23:mutated",
+      "fixture_id": "call-23",
+      "arm": "mutated",
+      "qualname": "trim_23",
+      "old": "def trim_23(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_23(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_23 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-23:control",
+      "fixture_id": "call-23",
+      "arm": "control",
+      "qualname": "trim_23",
+      "old": "def trim_23(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_23(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_23 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-24:mutated",
+      "fixture_id": "arithmetic-24",
+      "arm": "mutated",
+      "qualname": "plus_24",
+      "old": "def plus_24(value: int) -> int:\n    return value + 24\n",
+      "current": "def plus_24(value: int) -> int:\n    return value - 24\n",
+      "claim": "plus_24 returns value plus 24.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-24:control",
+      "fixture_id": "arithmetic-24",
+      "arm": "control",
+      "qualname": "plus_24",
+      "old": "def plus_24(value: int) -> int:\n    return value + 24\n",
+      "current": "def plus_24(value: int) -> int:\n    return value + 24\n",
+      "claim": "plus_24 returns value plus 24.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-24:mutated",
+      "fixture_id": "condition-24",
+      "arm": "mutated",
+      "qualname": "band_24",
+      "old": "def band_24(value: int) -> str:\n    if value < 72:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_24(value: int) -> str:\n    if value >= 72:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_24 returns 'low' when value is below 72.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-24:control",
+      "fixture_id": "condition-24",
+      "arm": "control",
+      "qualname": "band_24",
+      "old": "def band_24(value: int) -> str:\n    if value < 72:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_24(value: int) -> str:\n    if value < 72:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_24 returns 'low' when value is below 72.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-24:mutated",
+      "fixture_id": "exception-24",
+      "arm": "mutated",
+      "qualname": "nonnegative_24",
+      "old": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-24')\n    return value\n",
+      "current": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_24 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-24:control",
+      "fixture_id": "exception-24",
+      "arm": "control",
+      "qualname": "nonnegative_24",
+      "old": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-24')\n    return value\n",
+      "current": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-24')\n    return value\n",
+      "claim": "nonnegative_24 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-24:mutated",
+      "fixture_id": "call-24",
+      "arm": "mutated",
+      "qualname": "trim_24",
+      "old": "def trim_24(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_24(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_24 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-24:control",
+      "fixture_id": "call-24",
+      "arm": "control",
+      "qualname": "trim_24",
+      "old": "def trim_24(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_24(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_24 returns text after calling strip.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "arithmetic-25:mutated",
+      "fixture_id": "arithmetic-25",
+      "arm": "mutated",
+      "qualname": "plus_25",
+      "old": "def plus_25(value: int) -> int:\n    return value + 25\n",
+      "current": "def plus_25(value: int) -> int:\n    return value - 25\n",
+      "claim": "plus_25 returns value plus 25.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "arithmetic-25:control",
+      "fixture_id": "arithmetic-25",
+      "arm": "control",
+      "qualname": "plus_25",
+      "old": "def plus_25(value: int) -> int:\n    return value + 25\n",
+      "current": "def plus_25(value: int) -> int:\n    return value + 25\n",
+      "claim": "plus_25 returns value plus 25.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "condition-25:mutated",
+      "fixture_id": "condition-25",
+      "arm": "mutated",
+      "qualname": "band_25",
+      "old": "def band_25(value: int) -> str:\n    if value < 75:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_25(value: int) -> str:\n    if value >= 75:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_25 returns 'low' when value is below 75.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "condition-25:control",
+      "fixture_id": "condition-25",
+      "arm": "control",
+      "qualname": "band_25",
+      "old": "def band_25(value: int) -> str:\n    if value < 75:\n        return 'low'\n    return 'high'\n",
+      "current": "def band_25(value: int) -> str:\n    if value < 75:\n        return 'low'\n    return 'high'\n",
+      "claim": "band_25 returns 'low' when value is below 75.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "exception-25:mutated",
+      "fixture_id": "exception-25",
+      "arm": "mutated",
+      "qualname": "nonnegative_25",
+      "old": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-25')\n    return value\n",
+      "current": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+      "claim": "nonnegative_25 raises ValueError for negative values.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "exception-25:control",
+      "fixture_id": "exception-25",
+      "arm": "control",
+      "qualname": "nonnegative_25",
+      "old": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-25')\n    return value\n",
+      "current": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-25')\n    return value\n",
+      "claim": "nonnegative_25 raises ValueError for negative values.",
+      "expected": "supported"
+    },
+    {
+      "task_id": "call-25:mutated",
+      "fixture_id": "call-25",
+      "arm": "mutated",
+      "qualname": "trim_25",
+      "old": "def trim_25(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_25(text: str) -> str:\n    return text.lower()\n",
+      "claim": "trim_25 returns text after calling strip.",
+      "expected": "contradicted"
+    },
+    {
+      "task_id": "call-25:control",
+      "fixture_id": "call-25",
+      "arm": "control",
+      "qualname": "trim_25",
+      "old": "def trim_25(text: str) -> str:\n    return text.strip()\n",
+      "current": "def trim_25(text: str) -> str:\n    return text.strip()\n",
+      "claim": "trim_25 returns text after calling strip.",
+      "expected": "supported"
+    }
+  ],
+  "plan_sha256": "066944c7b3af5e55d5afa525b92ee41d9c11da9caa6852855cb88f9ae4f70fa9"
+}

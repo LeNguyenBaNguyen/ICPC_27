@@ -1,0 +1,1 @@
+{"text": "S1: supported\nS2: supported\nS3: supported\nS4: supported\nS5: supported\nS6: supported\nS7: contradicted -- style lookup removed; component_class string is passed", "model": "claude-haiku-5-5", "stop_reason": "max_tokens", "usage": {"in": 1776, "out": 504}}

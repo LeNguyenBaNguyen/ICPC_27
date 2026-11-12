@@ -1,0 +1,1 @@
+{"text": "S1: unresolved\nS2: supported\nS3: unresolved\nS4: supported\nS5: supported\nS6: supported\nS7: supported\nS8: supported\nS9: supported\nS10: contradicted -- no annotation evaluation check; function only applies annotations and validators", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 2418, "out": 89}}

@@ -1,0 +1,15 @@
+{
+  "version": "github-handoff-20261112",
+  "uploaded": false,
+  "source": "claim-survival-artifact-v3.zip",
+  "source_sha256": "82827fc694bb0f98b22dea859faf0e29d2507576e63196538c1fb65024849904",
+  "scope": "Current manuscript, scientific records, results, analysis code and selected documentation",
+  "omitted": [
+    "Internal correspondence",
+    "local machine logs",
+    "rater identity/provenance notes",
+    "other ZIP backups",
+    "Git metadata and model weights"
+  ],
+  "note": "Historical caches come from the earlier anonymized v3 release; current analyses are overlaid."
+}

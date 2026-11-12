@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "design": "Two-rater blinded audit with consensus on agreements and adjudicator labels for two disagreements",
+  "validated_rows": 400,
+  "adjudicated_rows": 2,
+  "consensus_vs_bulk_model": {
+    "raw": {
+      "three_way_agreement": 0.9225,
+      "three_way_kappa": 0.8837460037688796,
+      "human_unresolved_share": 0.2575,
+      "binary_resolved_agreement": 0.98989898989899,
+      "binary_resolved_kappa": 0.9796440565671336,
+      "contradiction_sensitivity_resolved_reference": 0.9781021897810219,
+      "contradiction_specificity_resolved_reference": 1.0,
+      "contradiction_precision_resolved_reference": 1.0,
+      "resolved_reference_weight": 297.0,
+      "total_weight": 400.0,
+      "matrix_model_rows_human_columns": {
+        "supported": {
+          "supported": 132.0,
+          "contradicted": 1.0,
+          "unresolved": 0.0
+        },
+        "contradicted": {
+          "supported": 0.0,
+          "contradicted": 134.0,
+          "unresolved": 0.0
+        },
+        "unresolved": {
+          "supported": 28.0,
+          "contradicted": 2.0,
+          "unresolved": 103.0
+        }
+      }
+    },
+    "weighted": {
+      "three_way_agreement": 0.9927197418287554,
+      "three_way_kappa": 0.9163564625576324,
+      "human_unresolved_share": 0.016800290090136064,
+      "binary_resolved_agreement": 0.9971554110330724,
+      "binary_resolved_kappa": 0.9443289954438313,
+      "contradiction_sensitivity_resolved_reference": 0.8971465774747657,
+      "contradiction_specificity_resolved_reference": 1.0,
+      "contradiction_precision_resolved_reference": 1.0,
+      "resolved_reference_weight": 14267.210990502044,
+      "total_weight": 14511.000000000005,
+      "matrix_model_rows_human_columns": {
+        "supported": {
+          "supported": 13807.56716417911,
+          "contradicted": 34.43283582089552,
+          "unresolved": 0.0
+        },
+        "contradicted": {
+          "supported": 0.0,
+          "contradicted": 353.9999999999995,
+          "unresolved": 0.0
+        },
+        "unresolved": {
+          "supported": 65.05947535052015,
+          "contradicted": 6.151515151515151,
+          "unresolved": 243.7890094979645
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "two_rater_summary.json": "10c696d3bb97fdd60ea15694f22c8d3bffb6d3c470a0744f80c3174bafb4f93c",
+    "adjudication.csv": "c41158c10edb21a91c6b77a9cb1012a6e6c21494ea5eab55321a4dbdd2cd3d96",
+    "annotator_1.csv": "7128dea977dd2a0922571465d320f13bf10d0450a6456753497786f92fafa42a",
+    "annotator_2.csv": "01fd0d4701adfad8e98c034e937a58377f66c281f6434b11c0057de8120dcb69"
+  },
+  "adjudicator_metadata_present": true,
+  "limits": "Adjudicator provenance is recorded in adjudicator_metadata.md; all self-reports remain unverified."
+}

@@ -1,0 +1,438 @@
+{
+  "experiment": "docstring_free",
+  "plan_sha256": "efe0cf7eaf5131187858a98bfc07c679e3cf615cf912403e40a95f634980a8f2",
+  "complete": true,
+  "planned_functions": 65,
+  "survival_target_complete": true,
+  "fresh_generation_control_completed_functions": 65,
+  "completed_functions": 65,
+  "started_functions": 65,
+  "requested_function_limit": null,
+  "requested_scope_complete": true,
+  "fresh_control_requested": true,
+  "paired_lexical_coverage": [
+    {
+      "fid": "F000",
+      "docstring_free_fraction": 0.13636363636363635,
+      "archived_with_docstring_fraction": 0.4090909090909091,
+      "fresh_with_docstring_fraction": 0.3181818181818182
+    },
+    {
+      "fid": "F003",
+      "docstring_free_fraction": 0.7142857142857143,
+      "archived_with_docstring_fraction": 0.7142857142857143,
+      "fresh_with_docstring_fraction": 0.7142857142857143
+    },
+    {
+      "fid": "F004",
+      "docstring_free_fraction": 0.36363636363636365,
+      "archived_with_docstring_fraction": 0.18181818181818182,
+      "fresh_with_docstring_fraction": 0.2727272727272727
+    },
+    {
+      "fid": "F005",
+      "docstring_free_fraction": 0.6153846153846154,
+      "archived_with_docstring_fraction": 0.38461538461538464,
+      "fresh_with_docstring_fraction": 0.6153846153846154
+    },
+    {
+      "fid": "F008",
+      "docstring_free_fraction": 0.25,
+      "archived_with_docstring_fraction": 0.3333333333333333,
+      "fresh_with_docstring_fraction": 0.4166666666666667
+    },
+    {
+      "fid": "F009",
+      "docstring_free_fraction": 0.47619047619047616,
+      "archived_with_docstring_fraction": 0.2857142857142857,
+      "fresh_with_docstring_fraction": 0.23809523809523808
+    },
+    {
+      "fid": "F010",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.2857142857142857,
+      "fresh_with_docstring_fraction": 0.35714285714285715
+    },
+    {
+      "fid": "F013",
+      "docstring_free_fraction": 0.16129032258064516,
+      "archived_with_docstring_fraction": 0.12903225806451613,
+      "fresh_with_docstring_fraction": 0.1935483870967742
+    },
+    {
+      "fid": "F014",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.42857142857142855,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F015",
+      "docstring_free_fraction": 0.17857142857142858,
+      "archived_with_docstring_fraction": 0.32142857142857145,
+      "fresh_with_docstring_fraction": 0.35714285714285715
+    },
+    {
+      "fid": "F016",
+      "docstring_free_fraction": 0.27586206896551724,
+      "archived_with_docstring_fraction": 0.1724137931034483,
+      "fresh_with_docstring_fraction": 0.10344827586206896
+    },
+    {
+      "fid": "F017",
+      "docstring_free_fraction": 0.5555555555555556,
+      "archived_with_docstring_fraction": 0.5555555555555556,
+      "fresh_with_docstring_fraction": 0.3888888888888889
+    },
+    {
+      "fid": "F018",
+      "docstring_free_fraction": 0.4375,
+      "archived_with_docstring_fraction": 0.4375,
+      "fresh_with_docstring_fraction": 0.375
+    },
+    {
+      "fid": "F020",
+      "docstring_free_fraction": 0.4375,
+      "archived_with_docstring_fraction": 0.375,
+      "fresh_with_docstring_fraction": 0.3125
+    },
+    {
+      "fid": "F023",
+      "docstring_free_fraction": 0.7272727272727273,
+      "archived_with_docstring_fraction": 0.6363636363636364,
+      "fresh_with_docstring_fraction": 0.45454545454545453
+    },
+    {
+      "fid": "F026",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.8571428571428571,
+      "fresh_with_docstring_fraction": 0.42857142857142855
+    },
+    {
+      "fid": "F027",
+      "docstring_free_fraction": 0.1111111111111111,
+      "archived_with_docstring_fraction": 0.5555555555555556,
+      "fresh_with_docstring_fraction": 0.4444444444444444
+    },
+    {
+      "fid": "F029",
+      "docstring_free_fraction": 0.6,
+      "archived_with_docstring_fraction": 0.6666666666666666,
+      "fresh_with_docstring_fraction": 0.6666666666666666
+    },
+    {
+      "fid": "F030",
+      "docstring_free_fraction": 0.6,
+      "archived_with_docstring_fraction": 0.6,
+      "fresh_with_docstring_fraction": 0.6
+    },
+    {
+      "fid": "F031",
+      "docstring_free_fraction": 0.3684210526315789,
+      "archived_with_docstring_fraction": 0.42105263157894735,
+      "fresh_with_docstring_fraction": 0.3157894736842105
+    },
+    {
+      "fid": "F032",
+      "docstring_free_fraction": 0.7272727272727273,
+      "archived_with_docstring_fraction": 0.7272727272727273,
+      "fresh_with_docstring_fraction": 0.7272727272727273
+    },
+    {
+      "fid": "F033",
+      "docstring_free_fraction": 0.6111111111111112,
+      "archived_with_docstring_fraction": 0.5,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F034",
+      "docstring_free_fraction": 0.3448275862068966,
+      "archived_with_docstring_fraction": 0.27586206896551724,
+      "fresh_with_docstring_fraction": 0.3448275862068966
+    },
+    {
+      "fid": "F036",
+      "docstring_free_fraction": 0.875,
+      "archived_with_docstring_fraction": 0.875,
+      "fresh_with_docstring_fraction": 0.875
+    },
+    {
+      "fid": "F037",
+      "docstring_free_fraction": 0.5625,
+      "archived_with_docstring_fraction": 0.625,
+      "fresh_with_docstring_fraction": 0.5625
+    },
+    {
+      "fid": "F040",
+      "docstring_free_fraction": 0.4444444444444444,
+      "archived_with_docstring_fraction": 0.4444444444444444,
+      "fresh_with_docstring_fraction": 0.4444444444444444
+    },
+    {
+      "fid": "F041",
+      "docstring_free_fraction": 0.4666666666666667,
+      "archived_with_docstring_fraction": 0.4,
+      "fresh_with_docstring_fraction": 0.4666666666666667
+    },
+    {
+      "fid": "F044",
+      "docstring_free_fraction": 0.8,
+      "archived_with_docstring_fraction": 0.8,
+      "fresh_with_docstring_fraction": 0.8
+    },
+    {
+      "fid": "F045",
+      "docstring_free_fraction": 0.375,
+      "archived_with_docstring_fraction": 0.3125,
+      "fresh_with_docstring_fraction": 0.3125
+    },
+    {
+      "fid": "F046",
+      "docstring_free_fraction": 0.46153846153846156,
+      "archived_with_docstring_fraction": 0.46153846153846156,
+      "fresh_with_docstring_fraction": 0.38461538461538464
+    },
+    {
+      "fid": "F048",
+      "docstring_free_fraction": 0.375,
+      "archived_with_docstring_fraction": 0.75,
+      "fresh_with_docstring_fraction": 0.3125
+    },
+    {
+      "fid": "F049",
+      "docstring_free_fraction": 0.3793103448275862,
+      "archived_with_docstring_fraction": 0.4827586206896552,
+      "fresh_with_docstring_fraction": 0.3793103448275862
+    },
+    {
+      "fid": "F054",
+      "docstring_free_fraction": 0.5882352941176471,
+      "archived_with_docstring_fraction": 0.5294117647058824,
+      "fresh_with_docstring_fraction": 0.5294117647058824
+    },
+    {
+      "fid": "F055",
+      "docstring_free_fraction": 0.5833333333333334,
+      "archived_with_docstring_fraction": 0.4166666666666667,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F062",
+      "docstring_free_fraction": 0.19047619047619047,
+      "archived_with_docstring_fraction": 0.47619047619047616,
+      "fresh_with_docstring_fraction": 0.19047619047619047
+    },
+    {
+      "fid": "F064",
+      "docstring_free_fraction": 0.4666666666666667,
+      "archived_with_docstring_fraction": 0.4666666666666667,
+      "fresh_with_docstring_fraction": 0.4
+    },
+    {
+      "fid": "F078",
+      "docstring_free_fraction": 0.14285714285714285,
+      "archived_with_docstring_fraction": 0.14285714285714285,
+      "fresh_with_docstring_fraction": 0.14285714285714285
+    },
+    {
+      "fid": "F079",
+      "docstring_free_fraction": 0.3333333333333333,
+      "archived_with_docstring_fraction": 0.6666666666666666,
+      "fresh_with_docstring_fraction": 0.6666666666666666
+    },
+    {
+      "fid": "F087",
+      "docstring_free_fraction": 0.3333333333333333,
+      "archived_with_docstring_fraction": 0.38095238095238093,
+      "fresh_with_docstring_fraction": 0.3333333333333333
+    },
+    {
+      "fid": "F101",
+      "docstring_free_fraction": 0.7142857142857143,
+      "archived_with_docstring_fraction": 0.5714285714285714,
+      "fresh_with_docstring_fraction": 0.5714285714285714
+    },
+    {
+      "fid": "F105",
+      "docstring_free_fraction": 0.35294117647058826,
+      "archived_with_docstring_fraction": 0.4117647058823529,
+      "fresh_with_docstring_fraction": 0.4117647058823529
+    },
+    {
+      "fid": "F106",
+      "docstring_free_fraction": 0.5454545454545454,
+      "archived_with_docstring_fraction": 0.6363636363636364,
+      "fresh_with_docstring_fraction": 0.5454545454545454
+    },
+    {
+      "fid": "F107",
+      "docstring_free_fraction": 0.3333333333333333,
+      "archived_with_docstring_fraction": 0.6666666666666666,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F108",
+      "docstring_free_fraction": 0.3157894736842105,
+      "archived_with_docstring_fraction": 0.2631578947368421,
+      "fresh_with_docstring_fraction": 0.47368421052631576
+    },
+    {
+      "fid": "F111",
+      "docstring_free_fraction": 0.6666666666666666,
+      "archived_with_docstring_fraction": 0.2222222222222222,
+      "fresh_with_docstring_fraction": 0.5555555555555556
+    },
+    {
+      "fid": "F114",
+      "docstring_free_fraction": 0.34782608695652173,
+      "archived_with_docstring_fraction": 0.21739130434782608,
+      "fresh_with_docstring_fraction": 0.34782608695652173
+    },
+    {
+      "fid": "F116",
+      "docstring_free_fraction": 0.6842105263157895,
+      "archived_with_docstring_fraction": 0.42105263157894735,
+      "fresh_with_docstring_fraction": 0.5263157894736842
+    },
+    {
+      "fid": "F121",
+      "docstring_free_fraction": 0.5454545454545454,
+      "archived_with_docstring_fraction": 0.45454545454545453,
+      "fresh_with_docstring_fraction": 0.36363636363636365
+    },
+    {
+      "fid": "F124",
+      "docstring_free_fraction": 0.42857142857142855,
+      "archived_with_docstring_fraction": 0.6428571428571429,
+      "fresh_with_docstring_fraction": 0.5714285714285714
+    },
+    {
+      "fid": "F125",
+      "docstring_free_fraction": 0.17391304347826086,
+      "archived_with_docstring_fraction": 0.2608695652173913,
+      "fresh_with_docstring_fraction": 0.17391304347826086
+    },
+    {
+      "fid": "F128",
+      "docstring_free_fraction": 0.5333333333333333,
+      "archived_with_docstring_fraction": 0.4,
+      "fresh_with_docstring_fraction": 0.4
+    },
+    {
+      "fid": "F129",
+      "docstring_free_fraction": 0.42857142857142855,
+      "archived_with_docstring_fraction": 0.47619047619047616,
+      "fresh_with_docstring_fraction": 0.42857142857142855
+    },
+    {
+      "fid": "F130",
+      "docstring_free_fraction": 0.2,
+      "archived_with_docstring_fraction": 0.25,
+      "fresh_with_docstring_fraction": 0.3
+    },
+    {
+      "fid": "F135",
+      "docstring_free_fraction": 0.0,
+      "archived_with_docstring_fraction": 0.6,
+      "fresh_with_docstring_fraction": 0.8
+    },
+    {
+      "fid": "F139",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.3333333333333333,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F140",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.4375,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F141",
+      "docstring_free_fraction": 0.6923076923076923,
+      "archived_with_docstring_fraction": 0.7692307692307693,
+      "fresh_with_docstring_fraction": 0.23076923076923078
+    },
+    {
+      "fid": "F142",
+      "docstring_free_fraction": 0.8,
+      "archived_with_docstring_fraction": 0.8,
+      "fresh_with_docstring_fraction": 0.8
+    },
+    {
+      "fid": "F143",
+      "docstring_free_fraction": 0.8,
+      "archived_with_docstring_fraction": 0.8,
+      "fresh_with_docstring_fraction": 0.8
+    },
+    {
+      "fid": "F146",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.5,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F148",
+      "docstring_free_fraction": 0.6666666666666666,
+      "archived_with_docstring_fraction": 0.6666666666666666,
+      "fresh_with_docstring_fraction": 0.6666666666666666
+    },
+    {
+      "fid": "F149",
+      "docstring_free_fraction": 0.5,
+      "archived_with_docstring_fraction": 0.5,
+      "fresh_with_docstring_fraction": 0.5
+    },
+    {
+      "fid": "F156",
+      "docstring_free_fraction": 0.25,
+      "archived_with_docstring_fraction": 0.32142857142857145,
+      "fresh_with_docstring_fraction": 0.21428571428571427
+    },
+    {
+      "fid": "F157",
+      "docstring_free_fraction": 0.2916666666666667,
+      "archived_with_docstring_fraction": 0.2916666666666667,
+      "fresh_with_docstring_fraction": 0.25
+    },
+    {
+      "fid": "F158",
+      "docstring_free_fraction": 0.3,
+      "archived_with_docstring_fraction": 0.3,
+      "fresh_with_docstring_fraction": 0.3
+    }
+  ],
+  "new_claims_at_anchor": 772,
+  "new_anchor_supported": 760,
+  "new_anchor_support_fraction": 0.9844559585492227,
+  "descriptive_S6_completed_functions": {
+    "docstring_free": 0.8643076341012272,
+    "archived_with_docstring": 0.8270535573167153,
+    "new_claims": 760,
+    "archived_claims": 666,
+    "limitation": "Descriptive claim-mix comparison on completed functions, not content-matched or independently validated; partial prefixes are not representative."
+  },
+  "coverage_comparison_archived": {
+    "paired_functions": 65,
+    "mean_docstring_free_minus_comparator": -0.016279005825095387
+  },
+  "coverage_comparison_fresh_control": {
+    "paired_functions": 65,
+    "mean_docstring_free_minus_comparator": 0.00714048063659418
+  },
+  "fresh_calls_this_invocation": 786,
+  "cache_hits_this_invocation": 0,
+  "stop_reason": null,
+  "failed": false,
+  "error": null,
+  "quality_counts": {
+    "cached_responses": 786,
+    "cached_length_limited_responses": 0,
+    "failed_request_records": 0,
+    "rejected_length_limited_responses": 0
+  },
+  "new_claims_completed_functions": 772,
+  "unparsed_judge_verdicts": 0,
+  "interpretation": "Paired archived-vs-fresh docstring-free descriptions. Not a clean causal docstring ablation: original digest unknown and runtime or weights may differ. Human validation absent.",
+  "quality_complete": true
+}

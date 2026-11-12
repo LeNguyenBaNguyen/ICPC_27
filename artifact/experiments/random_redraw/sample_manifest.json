@@ -1,0 +1,571 @@
+{
+  "population_frame": "Archived eligible anchor functions, vendor-path excluded; not a new repository census",
+  "seed": 107,
+  "sample_n": 80,
+  "population_n": 10903,
+  "inclusion_probability": 0.007337430065119692,
+  "python": "3.13.5 (main, Jul 23 2025, 00:30:06) [MSC v.1944 64 bit (AMD64)]",
+  "source_candidates_sha256": "6b73bac5eaed6843eb521ea873f4eae7b2744839f2a2ff663def005c24e78a26",
+  "draw": [
+    {
+      "id": "NEW-R000",
+      "path": "pydantic/types.py",
+      "qualname": "EncodedBytes.decode",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R001",
+      "path": "src/textual/validation.py",
+      "qualname": "Function.validate",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R002",
+      "path": "src/textual/css/_styles_builder.py",
+      "qualname": "StylesBuilder._process_fractional",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R003",
+      "path": "src/textual/widgets/_text_area.py",
+      "qualname": "TextArea.clamp_visitable",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R004",
+      "path": "rich/text.py",
+      "qualname": "Text.__getitem__.get_text_at",
+      "repo": "rich",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R005",
+      "path": "sphinx/domains/std/__init__.py",
+      "qualname": "StandardDomain.clear_doc",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R006",
+      "path": "pylint/checkers/variables.py",
+      "qualname": "VariablesChecker._check_self_cls_assign",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R007",
+      "path": "hypothesis-python/src/hypothesis/internal/intervalsets.py",
+      "qualname": "IntervalSet.intersection",
+      "repo": "hypothesis",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R008",
+      "path": "rich/table.py",
+      "qualname": "Table._get_cells.get_padding",
+      "repo": "rich",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R009",
+      "path": "sphinx/writers/latex.py",
+      "qualname": "LaTeXTranslator.depart_footnote",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R010",
+      "path": "hypothesis-python/src/hypothesis/internal/conjecture/data.py",
+      "qualname": "Examples.children",
+      "repo": "hypothesis",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R011",
+      "path": "pydantic/v1/color.py",
+      "qualname": "Color.as_rgb_tuple",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R012",
+      "path": "pylint/checkers/strings.py",
+      "qualname": "StringFormatChecker._check_interpolation",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R013",
+      "path": "src/textual/document/_wrapped_document.py",
+      "qualname": "WrappedDocument.get_sections",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R014",
+      "path": "gallery/gallery.py",
+      "qualname": "download_and_extract_top_packages",
+      "repo": "black",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R015",
+      "path": "src/textual/widgets/_text_area.py",
+      "qualname": "TextArea.scroll_cursor_visible",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R016",
+      "path": "pylint/checkers/ellipsis_checker.py",
+      "qualname": "EllipsisChecker.visit_const",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R017",
+      "path": "pylint/config/config_file_parser.py",
+      "qualname": "_RawConfParser.parse_config_file",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R018",
+      "path": "src/pip/_internal/req/req_install.py",
+      "qualname": "InstallRequirement._get_archive_name._clean_zip_name",
+      "repo": "pip",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R019",
+      "path": "src/pip/_internal/operations/prepare.py",
+      "qualname": "RequirementPreparer._fetch_metadata_using_link_data_attr",
+      "repo": "pip",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R020",
+      "path": "src/textual/css/tokenizer.py",
+      "qualname": "Tokenizer.get_token",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R021",
+      "path": "src/pip/_internal/req/req_uninstall.py",
+      "qualname": "compress_for_rename",
+      "repo": "pip",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R022",
+      "path": "hypothesis-python/src/hypothesis/strategies/_internal/types.py",
+      "qualname": "try_issubclass",
+      "repo": "hypothesis",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R023",
+      "path": "sphinx/util/inventory.py",
+      "qualname": "InventoryFile.load",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R024",
+      "path": "hypothesis-python/src/hypothesis/internal/scrutineer.py",
+      "qualname": "_get_git_repo_root",
+      "repo": "hypothesis",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R025",
+      "path": "pydantic/plugin/__init__.py",
+      "qualname": "ValidateJsonHandlerProtocol.on_enter",
+      "repo": "pydantic",
+      "trajectory_source": "archived_candidates.funcs"
+    },
+    {
+      "id": "NEW-R026",
+      "path": "src/_pytest/junitxml.py",
+      "qualname": "_NodeReporter.write_captured_output",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R027",
+      "path": "hypothesis-python/src/hypothesis/extra/codemods.py",
+      "qualname": "match_qualname",
+      "repo": "hypothesis",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R028",
+      "path": "src/click/utils.py",
+      "qualname": "make_str",
+      "repo": "click",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R029",
+      "path": "src/pip/_internal/cli/cmdoptions.py",
+      "qualname": "trusted_host",
+      "repo": "pip",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R030",
+      "path": "src/click/_winconsole.py",
+      "qualname": "_WindowsConsoleReader.readinto",
+      "repo": "click",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R031",
+      "path": "sphinx/ext/autodoc/__init__.py",
+      "qualname": "ExceptionDocumenter.can_document_member",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R032",
+      "path": "src/pip/_internal/operations/prepare.py",
+      "qualname": "RequirementPreparer.prepare_linked_requirement",
+      "repo": "pip",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R033",
+      "path": "hypothesis-python/src/hypothesis/strategies/_internal/types.py",
+      "qualname": "type_sorting_key",
+      "repo": "hypothesis",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R034",
+      "path": "sphinx/domains/c/_parser.py",
+      "qualname": "DefinitionParser._parse_declarator_name_suffix",
+      "repo": "sphinx",
+      "trajectory_source": "archived_candidates.funcs"
+    },
+    {
+      "id": "NEW-R035",
+      "path": "pylint/checkers/base/basic_error_checker.py",
+      "qualname": "BasicErrorChecker._check_in_loop",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R036",
+      "path": "src/flask/sessions.py",
+      "qualname": "NullSession._fail",
+      "repo": "flask",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R037",
+      "path": "pydantic/mypy.py",
+      "qualname": "PydanticPlugin._pydantic_model_metaclass_marker_callback",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R038",
+      "path": "pylint/checkers/base/name_checker/checker.py",
+      "qualname": "NameChecker.leave_module",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R039",
+      "path": "rich/style.py",
+      "qualname": "Style.get_html_style",
+      "repo": "rich",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R040",
+      "path": "sphinx/builders/__init__.py",
+      "qualname": "Builder.get_relative_uri",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R041",
+      "path": "pydantic/json_schema.py",
+      "qualname": "GenerateJsonSchema.field_is_present",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R042",
+      "path": "src/click/shell_completion.py",
+      "qualname": "BashComplete._check_version",
+      "repo": "click",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R043",
+      "path": "src/textual/renderables/_blend_colors.py",
+      "qualname": "blend_colors",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R044",
+      "path": "pylint/checkers/variables.py",
+      "qualname": "VariablesChecker._check_potential_index_error",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R045",
+      "path": "src/_pytest/tmpdir.py",
+      "qualname": "pytest_runtest_makereport",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R046",
+      "path": "pylint/checkers/refactoring/refactoring_checker.py",
+      "qualname": "RefactoringChecker._init",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R047",
+      "path": "pylint/checkers/typecheck.py",
+      "qualname": "TypeChecker._detect_unsupported_alternative_union_syntax",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R048",
+      "path": "src/black/nodes.py",
+      "qualname": "fstring_to_string",
+      "repo": "black",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R049",
+      "path": "src/_pytest/python_api.py",
+      "qualname": "_is_numpy_array",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R050",
+      "path": "pylint/checkers/typecheck.py",
+      "qualname": "TypeChecker._includes_version_compatible_overload",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R051",
+      "path": "src/pip/_internal/commands/download.py",
+      "qualname": "DownloadCommand.add_options",
+      "repo": "pip",
+      "trajectory_source": "archived_candidates.funcs"
+    },
+    {
+      "id": "NEW-R052",
+      "path": "pydantic/json_schema.py",
+      "qualname": "GenerateJsonSchema._get_alias_name",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R053",
+      "path": "pydantic/_internal/_generate_schema.py",
+      "qualname": "GenerateSchema._sequence_schema",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R054",
+      "path": "src/textual/app.py",
+      "qualname": "App._process_messages.app_prelude",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R055",
+      "path": "httpx/_client.py",
+      "qualname": "Client._init_proxy_transport",
+      "repo": "httpx",
+      "trajectory_source": "archived_candidates.random_round2"
+    },
+    {
+      "id": "NEW-R056",
+      "path": "src/textual/lazy.py",
+      "qualname": "Lazy.mount_composed_widgets",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R057",
+      "path": "sphinx/builders/html/__init__.py",
+      "qualname": "StandaloneHTMLBuilder._get_local_toctree",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R058",
+      "path": "src/pip/_internal/vcs/versioncontrol.py",
+      "qualname": "VersionControl.get_base_rev_args",
+      "repo": "pip",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R059",
+      "path": "src/textual/widget.py",
+      "qualname": "Widget.get_child_by_type",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R060",
+      "path": "pydantic/_internal/_generate_schema.py",
+      "qualname": "GenerateSchema._common_field_schema",
+      "repo": "pydantic",
+      "trajectory_source": "archived_candidates.funcs"
+    },
+    {
+      "id": "NEW-R061",
+      "path": "pylint/checkers/refactoring/refactoring_checker.py",
+      "qualname": "_is_part_of_assignment_target",
+      "repo": "pylint",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R062",
+      "path": "sphinx/domains/rst.py",
+      "qualname": "ReSTDirective.handle_signature",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R063",
+      "path": "sphinx/ext/autodoc/importer.py",
+      "qualname": "unmangle",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R064",
+      "path": "sphinx/writers/latex.py",
+      "qualname": "LaTeXTranslator.visit_rubric",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R065",
+      "path": "sphinx/ext/todo.py",
+      "qualname": "setup",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R066",
+      "path": "sphinx/builders/html/__init__.py",
+      "qualname": "validate_html_logo",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R067",
+      "path": "src/_pytest/_io/saferepr.py",
+      "qualname": "_try_repr_or_str",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R068",
+      "path": "aiohttp/cookiejar.py",
+      "qualname": "CookieJar._delete_cookies",
+      "repo": "aiohttp",
+      "trajectory_source": "archived_candidates.funcs"
+    },
+    {
+      "id": "NEW-R069",
+      "path": "src/_pytest/outcomes.py",
+      "qualname": "skip",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R070",
+      "path": "src/textual/reactive.py",
+      "qualname": "Reactive._compute",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R071",
+      "path": "src/textual/app.py",
+      "qualname": "App._on_compose",
+      "repo": "textual",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R072",
+      "path": "src/black/__init__.py",
+      "qualname": "path_empty",
+      "repo": "black",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R073",
+      "path": "sphinx/ext/autodoc/__init__.py",
+      "qualname": "RuntimeInstanceAttributeMixin.import_object",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R074",
+      "path": "src/_pytest/python.py",
+      "qualname": "Package.setup",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R075",
+      "path": "hypothesis-python/src/hypothesis/extra/django/_fields.py",
+      "qualname": "register_field_strategy",
+      "repo": "hypothesis",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R076",
+      "path": "sphinx/ext/duration.py",
+      "qualname": "on_build_finished",
+      "repo": "sphinx",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R077",
+      "path": "src/_pytest/_code/code.py",
+      "qualname": "ExceptionInfo.value",
+      "repo": "pytest",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R078",
+      "path": "pydantic/v1/dataclasses.py",
+      "qualname": "make_dataclass_validator",
+      "repo": "pydantic",
+      "trajectory_source": "pinned_repository_history"
+    },
+    {
+      "id": "NEW-R079",
+      "path": "aiohttp/payload.py",
+      "qualname": "BufferedReaderPayload.size",
+      "repo": "aiohttp",
+      "trajectory_source": "pinned_repository_history"
+    }
+  ]
+}

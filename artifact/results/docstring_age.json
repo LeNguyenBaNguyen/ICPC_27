@@ -1,0 +1,533 @@
+{
+ "aiohttp:aiohttp/_websocket/writer.py:WebSocketWriter.send_frame": {
+  "age_complete": true,
+  "age_days": 2,
+  "age_touches": 1,
+  "doc_commit": "dd9a1fdf568de33bc444779ca5a273713223666c",
+  "doc_date": "2024-10-27"
+ },
+ "aiohttp:aiohttp/client_proto.py:ResponseHandler.data_received": null,
+ "aiohttp:aiohttp/client_reqrep.py:ClientRequest.send": null,
+ "aiohttp:aiohttp/client_reqrep.py:ClientResponse.start": {
+  "age_complete": false,
+  "age_days": 3459,
+  "age_touches": 3,
+  "doc_commit": "fc258d809f6b204c3580c9aa47125caff27c7bee",
+  "doc_date": "2015-05-12"
+ },
+ "aiohttp:aiohttp/connector.py:BaseConnector._get": null,
+ "aiohttp:aiohttp/connector.py:BaseConnector.connect": {
+  "age_complete": false,
+  "age_days": 2370,
+  "age_touches": 8,
+  "doc_commit": "9116128886ebf4dde5136259546aca6dc9393e46",
+  "doc_date": "2018-05-04"
+ },
+ "aiohttp:aiohttp/connector.py:TCPConnector._create_proxy_connection": null,
+ "aiohttp:aiohttp/connector.py:TCPConnector._start_tls_connection": {
+  "age_complete": true,
+  "age_days": 1120,
+  "age_touches": 8,
+  "doc_commit": "c29e5fb58efb65c6198ea75b95805ab972e98adc",
+  "doc_date": "2021-10-05"
+ },
+ "aiohttp:aiohttp/connector.py:TCPConnector._wrap_create_connection": null,
+ "aiohttp:aiohttp/cookiejar.py:CookieJar.filter_cookies": {
+  "age_complete": true,
+  "age_days": 2968,
+  "age_touches": 19,
+  "doc_commit": "0199e4a6673967381cb9917edfd7f15244368865",
+  "doc_date": "2016-09-13"
+ },
+ "aiohttp:aiohttp/http_parser.py:HeadersParser.parse_headers": null,
+ "aiohttp:aiohttp/http_parser.py:HttpParser.parse_headers": {
+  "age_complete": false,
+  "age_days": 3216,
+  "age_touches": 13,
+  "doc_commit": "fa06acc2392c516491bdb25301ad3ef2b700ff5f",
+  "doc_date": "2016-01-09"
+ },
+ "aiohttp:aiohttp/http_parser.py:HttpPayloadParser.feed_data": null,
+ "aiohttp:aiohttp/http_parser.py:HttpRequestParser.parse_message": null,
+ "aiohttp:aiohttp/http_writer.py:StreamWriter.write": {
+  "age_complete": false,
+  "age_days": 2810,
+  "age_touches": 8,
+  "doc_commit": "5ace287dfa1e3c5899e67cc79948b1bcf4d4f584",
+  "doc_date": "2017-02-18"
+ },
+ "aiohttp:aiohttp/multipart.py:parse_content_disposition": null,
+ "aiohttp:aiohttp/web_protocol.py:RequestHandler.data_received": null,
+ "aiohttp:aiohttp/web_protocol.py:RequestHandler.finish_response": {
+  "age_complete": true,
+  "age_days": 1083,
+  "age_touches": 1,
+  "doc_commit": "47ff9b358bb6147353b1b37b0ac18d641df9869b",
+  "doc_date": "2021-11-11"
+ },
+ "aiohttp:aiohttp/web_request.py:BaseRequest.post": {
+  "age_complete": false,
+  "age_days": 2810,
+  "age_touches": 13,
+  "doc_commit": "6baa9e7390099dd2d28d5157a38be4641bb45559",
+  "doc_date": "2017-02-18"
+ },
+ "aiohttp:aiohttp/web_ws.py:WebSocketResponse._post_start": null,
+ "attrs:src/attr/_make.py:_transform_attrs": {
+  "age_complete": true,
+  "age_days": 226,
+  "age_touches": 0,
+  "doc_commit": "f590f44cfd43fbba0eb3c6747fa0f635f8f7affa",
+  "doc_date": "2024-03-16"
+ },
+ "black:src/black/__init__.py:_format_str_once": null,
+ "black:src/black/__init__.py:format_stdin_to_stdout": {
+  "age_complete": false,
+  "age_days": 1241,
+  "age_touches": 4,
+  "doc_commit": "7567cdf3b4f32d4fb12bd5ca0da838f7ff252cfc",
+  "doc_date": "2021-06-01"
+ },
+ "black:src/black/comments.py:_generate_ignored_nodes_from_fmt_skip": {
+  "age_complete": true,
+  "age_days": 828,
+  "age_touches": 4,
+  "doc_commit": "6ea4eddf936e88c24a6757c0c858812d5ca1a9c6",
+  "doc_date": "2022-07-19"
+ },
+ "black:src/black/comments.py:convert_one_fmt_off_pair": {
+  "age_complete": true,
+  "age_days": 1265,
+  "age_touches": 11,
+  "doc_commit": "f2ea461e9e9fa5c47bb61fd72d512c748928badc",
+  "doc_date": "2021-05-08"
+ },
+ "black:src/black/comments.py:generate_ignored_nodes": {
+  "age_complete": true,
+  "age_days": 1265,
+  "age_touches": 8,
+  "doc_commit": "f2ea461e9e9fa5c47bb61fd72d512c748928badc",
+  "doc_date": "2021-05-08"
+ },
+ "black:src/black/concurrency.py:reformat_many": {
+  "age_complete": true,
+  "age_days": 790,
+  "age_touches": 3,
+  "doc_commit": "e269f44b25737360e0dc65379f889dfa931dc68a",
+  "doc_date": "2022-08-26"
+ },
+ "black:src/black/concurrency.py:schedule_formatting": {
+  "age_complete": true,
+  "age_days": 790,
+  "age_touches": 4,
+  "doc_commit": "e269f44b25737360e0dc65379f889dfa931dc68a",
+  "doc_date": "2022-08-26"
+ },
+ "black:src/black/linegen.py:_maybe_split_omitting_optional_parens": null,
+ "black:src/black/linegen.py:maybe_make_parens_invisible_in_atom": {
+  "age_complete": false,
+  "age_days": 1265,
+  "age_touches": 8,
+  "doc_commit": "f2ea461e9e9fa5c47bb61fd72d512c748928badc",
+  "doc_date": "2021-05-08"
+ },
+ "black:src/black/linegen.py:normalize_invisible_parens": {
+  "age_complete": false,
+  "age_days": 1265,
+  "age_touches": 12,
+  "doc_commit": "f2ea461e9e9fa5c47bb61fd72d512c748928badc",
+  "doc_date": "2021-05-08"
+ },
+ "black:src/black/lines.py:EmptyLineTracker._maybe_empty_lines": null,
+ "black:src/black/lines.py:can_omit_invisible_parens": {
+  "age_complete": true,
+  "age_days": 594,
+  "age_touches": 3,
+  "doc_commit": "d16a1dbd05832632d7f3be28f0a4b6e9b208807c",
+  "doc_date": "2023-03-09"
+ },
+ "black:src/black/lines.py:is_line_short_enough": {
+  "age_complete": true,
+  "age_days": 597,
+  "age_touches": 6,
+  "doc_commit": "4a063a9f8d7069ea82186ac9aff5a2cd1c2618d7",
+  "doc_date": "2023-03-07"
+ },
+ "black:src/black/trans.py:StringParenWrapper.do_splitter_match": null,
+ "black:src/blackd/__init__.py:handle": null,
+ "click:src/click/_termui_impl.py:_nullpager": {
+  "age_complete": false,
+  "age_days": 3804,
+  "age_touches": 2,
+  "doc_commit": "aef16506b5da26684103db2e47346dbf49a7e7a1",
+  "doc_date": "2014-05-26"
+ },
+ "click:src/click/_termui_impl.py:_pipepager": {
+  "age_complete": false,
+  "age_days": 3785,
+  "age_touches": 3,
+  "doc_commit": "52f9d9b688933de363f76be8601996480fdc4935",
+  "doc_date": "2014-06-15"
+ },
+ "click:src/click/_termui_impl.py:_tempfilepager": {
+  "age_complete": false,
+  "age_days": 3804,
+  "age_touches": 6,
+  "doc_commit": "aef16506b5da26684103db2e47346dbf49a7e7a1",
+  "doc_date": "2014-05-26"
+ },
+ "click:src/click/core.py:Parameter.handle_parse_result": null,
+ "click:src/click/termui.py:prompt": {
+  "age_complete": true,
+  "age_days": 1032,
+  "age_touches": 6,
+  "doc_commit": "9bf84f86bb878d8e337acc562ded3294f2e9a6ea",
+  "doc_date": "2021-12-26"
+ },
+ "hypothesis:hypothesis-python/src/hypothesis/control.py:BuildContext.prep_args_kwargs_from_strategies": null,
+ "hypothesis:hypothesis-python/src/hypothesis/core.py:StateForActualGivenExecution._flaky_replay_to_failure": null,
+ "hypothesis:hypothesis-python/src/hypothesis/core.py:StateForActualGivenExecution.execute_once.run": null,
+ "hypothesis:hypothesis-python/src/hypothesis/core.py:given.run_test_as_given._get_fuzz_target": null,
+ "hypothesis:hypothesis-python/src/hypothesis/core.py:given.run_test_as_given._get_fuzz_target.fuzz_one_input": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/data.py:ConjectureData.draw": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/datatree.py:DataTree._draw": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/datatree.py:DataTree._draw_from_cache": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/datatree.py:DataTree.generate_novel_prefix": {
+  "age_complete": true,
+  "age_days": 1945,
+  "age_touches": 5,
+  "doc_commit": "a72a9c944925cd0a73e549c8126f81cf6c348b38",
+  "doc_date": "2019-07-05"
+ },
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/engine.py:ConjectureRunner.clear_secondary_key": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/engine.py:ConjectureRunner.debug_data": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/engine.py:ConjectureRunner.shrink_interesting_examples": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/optimiser.py:Optimiser.hill_climb": {
+  "age_complete": true,
+  "age_days": 1832,
+  "age_touches": 3,
+  "doc_commit": "eb875c60b2d5ebb1162c3ca3432f2f57ee5b5d32",
+  "doc_date": "2019-10-26"
+ },
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/optimiser.py:Optimiser.hill_climb.attempt_replace": {
+  "age_complete": true,
+  "age_days": 1779,
+  "age_touches": 3,
+  "doc_commit": "9fd3d23ea3564fe8f73a7609a3f8e85a30104e69",
+  "doc_date": "2019-12-18"
+ },
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/shrinker.py:Shrinker.greedy_shrink": {
+  "age_complete": false,
+  "age_days": 2124,
+  "age_touches": 11,
+  "doc_commit": "debcaff0b390c013ecc7cb3e3f7c9a944a5070f9",
+  "doc_date": "2019-01-07"
+ },
+ "hypothesis:hypothesis-python/src/hypothesis/internal/conjecture/shrinker.py:Shrinker.redistribute_integer_pairs.boost": null,
+ "hypothesis:hypothesis-python/src/hypothesis/internal/entropy.py:get_seeder_and_restorer": {
+  "age_complete": true,
+  "age_days": 2109,
+  "age_touches": 7,
+  "doc_commit": "8e51518e3e4a0ffeabdb08d044f57aa6b81d0392",
+  "doc_date": "2019-01-22"
+ },
+ "hypothesis:hypothesis-python/src/hypothesis/internal/observability.py:make_testcase": null,
+ "hypothesis:hypothesis-python/src/hypothesis/stateful.py:run_state_machine_as_test.run_state_machine": null,
+ "hypothesis:hypothesis-python/src/hypothesis/strategies/_internal/strategies.py:OneOfStrategy.do_draw": null,
+ "hypothesis:hypothesis-python/src/hypothesis/vendor/pretty.py:RepresentationPrinter.maybe_repr_known_object_as_call": null,
+ "hypothesis:tooling/src/hypothesistooling/__main__.py:check_format": null,
+ "hypothesis:tooling/src/hypothesistooling/__main__.py:format": null,
+ "hypothesis:tooling/src/hypothesistooling/__main__.py:update_python_versions": null,
+ "hypothesis:tooling/src/hypothesistooling/__main__.py:upgrade_requirements": null,
+ "pip:noxfile.py:docs": null,
+ "pip:noxfile.py:test": null,
+ "pip:src/pip/_internal/cli/base_command.py:Command._main": null,
+ "pip:src/pip/_internal/cli/index_command.py:SessionCommandMixin._build_session": null,
+ "pip:src/pip/_internal/cli/req_command.py:RequirementCommand.get_requirements": {
+  "age_complete": true,
+  "age_days": 1725,
+  "age_touches": 12,
+  "doc_commit": "e7998a36179341b86177577d0a8405476bb9c0fd",
+  "doc_date": "2020-02-05"
+ },
+ "pip:src/pip/_internal/cli/req_command.py:RequirementCommand.make_requirement_preparer": {
+  "age_complete": true,
+  "age_days": 1911,
+  "age_touches": 23,
+  "doc_commit": "da9ebed9df8f1aa41360c653a12273689bd6012a",
+  "doc_date": "2019-08-04"
+ },
+ "pip:src/pip/_internal/commands/download.py:DownloadCommand.add_options": null,
+ "pip:src/pip/_internal/commands/download.py:DownloadCommand.run": null,
+ "pip:src/pip/_internal/commands/wheel.py:WheelCommand.add_options": null,
+ "pip:src/pip/_internal/commands/wheel.py:WheelCommand.run": null,
+ "pip:src/pip/_internal/distributions/sdist.py:SourceDistribution.prepare_distribution_metadata": null,
+ "pip:src/pip/_internal/models/link.py:Link._egg_fragment": null,
+ "pip:src/pip/_internal/req/__init__.py:install_given_reqs": {
+  "age_complete": true,
+  "age_days": 2468,
+  "age_touches": 11,
+  "doc_commit": "01b2b856b60303aa68ed647b46726282f2880f35",
+  "doc_date": "2018-01-24"
+ },
+ "pip:src/pip/_internal/req/req_install.py:InstallRequirement.install": null,
+ "pip:src/pip/_internal/resolution/resolvelib/provider.py:PipProvider.get_preference": {
+  "age_complete": true,
+  "age_days": 629,
+  "age_touches": 1,
+  "doc_commit": "6245fedc9d2bc6a5a6b332080ad34ad8f2f87e23",
+  "doc_date": "2023-02-06"
+ },
+ "pip:src/pip/_internal/resolution/resolvelib/resolver.py:Resolver.resolve": null,
+ "pydantic:pydantic/_internal/_config.py:ConfigWrapper.core_config": {
+  "age_complete": true,
+  "age_days": 23,
+  "age_touches": 1,
+  "doc_commit": "bb7bd963e206a3a2eb0676e4de92d53eedb26332",
+  "doc_date": "2024-10-08"
+ },
+ "pydantic:pydantic/_internal/_dataclasses.py:complete_dataclass": {
+  "age_complete": true,
+  "age_days": 21,
+  "age_touches": 0,
+  "doc_commit": "c772b43edb952c5fe54bb28da5124b10d5470caf",
+  "doc_date": "2024-10-10"
+ },
+ "pydantic:pydantic/_internal/_fields.py:collect_dataclass_fields": {
+  "age_complete": true,
+  "age_days": 21,
+  "age_touches": 1,
+  "doc_commit": "c772b43edb952c5fe54bb28da5124b10d5470caf",
+  "doc_date": "2024-10-10"
+ },
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema._apply_annotations": {
+  "age_complete": false,
+  "age_days": 511,
+  "age_touches": 4,
+  "doc_commit": "93307ae3b764e6d1fea64a0b9f2045309c598b3f",
+  "doc_date": "2023-06-09"
+ },
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema._apply_single_annotation": null,
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema._common_field_schema": null,
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema._model_schema": {
+  "age_complete": false,
+  "age_days": 508,
+  "age_touches": 11,
+  "doc_commit": "692d6d416ee444e22d012e43155aeaf916fdbc2a",
+  "doc_date": "2023-06-12"
+ },
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema._namedtuple_schema": {
+  "age_complete": false,
+  "age_days": 511,
+  "age_touches": 7,
+  "doc_commit": "93307ae3b764e6d1fea64a0b9f2045309c598b3f",
+  "doc_date": "2023-06-09"
+ },
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema._typed_dict_schema": {
+  "age_complete": false,
+  "age_days": 476,
+  "age_touches": 11,
+  "doc_commit": "d090949d32bec30bf97a6ee2e3bf7cb3e557edec",
+  "doc_date": "2023-07-13"
+ },
+ "pydantic:pydantic/_internal/_generate_schema.py:GenerateSchema.match_type": {
+  "age_complete": false,
+  "age_days": 464,
+  "age_touches": 14,
+  "doc_commit": "f8c081e0a3c6e9181d275414636344324d31df4c",
+  "doc_date": "2023-07-25"
+ },
+ "pydantic:pydantic/_internal/_model_construction.py:complete_model_class": {
+  "age_complete": true,
+  "age_days": 21,
+  "age_touches": 0,
+  "doc_commit": "c772b43edb952c5fe54bb28da5124b10d5470caf",
+  "doc_date": "2024-10-10"
+ },
+ "pydantic:pydantic/_internal/_signature.py:_generate_signature_parameters": {
+  "age_complete": true,
+  "age_days": 287,
+  "age_touches": 1,
+  "doc_commit": "2171b20f311be66d9e7e55184ee29011688f26a3",
+  "doc_date": "2024-01-18"
+ },
+ "pydantic:pydantic/dataclasses.py:dataclass.create_dataclass": {
+  "age_complete": true,
+  "age_days": 511,
+  "age_touches": 10,
+  "doc_commit": "93307ae3b764e6d1fea64a0b9f2045309c598b3f",
+  "doc_date": "2023-06-09"
+ },
+ "pydantic:pydantic/fields.py:FieldInfo.from_annotated_attribute": {
+  "age_complete": true,
+  "age_days": 321,
+  "age_touches": 5,
+  "doc_commit": "a8f3f7a5e7cd30281bc993fe64bb2cc9763757a3",
+  "doc_date": "2023-12-15"
+ },
+ "pydantic:pydantic/main.py:BaseModel.model_dump": {
+  "age_complete": true,
+  "age_days": 53,
+  "age_touches": 0,
+  "doc_commit": "fa79d935b45afac09baf52ffde223cabe3254596",
+  "doc_date": "2024-09-09"
+ },
+ "pydantic:pydantic/main.py:BaseModel.model_rebuild": {
+  "age_complete": false,
+  "age_days": 511,
+  "age_touches": 4,
+  "doc_commit": "93307ae3b764e6d1fea64a0b9f2045309c598b3f",
+  "doc_date": "2023-06-09"
+ },
+ "pydantic:pydantic/type_adapter.py:TypeAdapter.dump_python": {
+  "age_complete": true,
+  "age_days": 156,
+  "age_touches": 0,
+  "doc_commit": "28b36d962db166dd4d666a88cc9189731b891ca7",
+  "doc_date": "2024-05-28"
+ },
+ "pydantic:pydantic/type_adapter.py:TypeAdapter.json_schemas": {
+  "age_complete": true,
+  "age_days": 240,
+  "age_touches": 1,
+  "doc_commit": "b09e06cedd18fe8f3bd5983682e81ffe72bb63e9",
+  "doc_date": "2024-03-05"
+ },
+ "pydantic:pydantic/type_adapter.py:TypeAdapter.validate_json": {
+  "age_complete": true,
+  "age_days": 53,
+  "age_touches": 0,
+  "doc_commit": "fa79d935b45afac09baf52ffde223cabe3254596",
+  "doc_date": "2024-09-09"
+ },
+ "pydantic:pydantic/type_adapter.py:TypeAdapter.validate_strings": {
+  "age_complete": true,
+  "age_days": 240,
+  "age_touches": 1,
+  "doc_commit": "b09e06cedd18fe8f3bd5983682e81ffe72bb63e9",
+  "doc_date": "2024-03-05"
+ },
+ "pylint:pylint/checkers/base/name_checker/checker.py:NameChecker.visit_assignname": {
+  "age_complete": true,
+  "age_days": 951,
+  "age_touches": 13,
+  "doc_commit": "3f11fe629a7b89d2a3b92dce09ac5818f3904cee",
+  "doc_date": "2022-03-24"
+ },
+ "pylint:pylint/checkers/stdlib.py:StdlibChecker._check_open_call": {
+  "age_complete": true,
+  "age_days": 911,
+  "age_touches": 2,
+  "doc_commit": "710997724e9f77556dfc1fe4bfb54b0469046d7b",
+  "doc_date": "2022-05-04"
+ },
+ "pylint:pylint/checkers/utils.py:is_terminating_func": {
+  "age_complete": true,
+  "age_days": 132,
+  "age_touches": 2,
+  "doc_commit": "a5a77f6e891f6e143439d19b5e7f0a29eb5ea1cd",
+  "doc_date": "2024-06-21"
+ },
+ "pytest:src/_pytest/_code/code.py:FormattedExcinfo.repr_excinfo": null,
+ "pytest:src/_pytest/assertion/util.py:assertrepr_compare": {
+  "age_complete": true,
+  "age_days": 1551,
+  "age_touches": 11,
+  "doc_commit": "0242de4f5651818379bc0ff6326c97565a20a0f1",
+  "doc_date": "2020-08-01"
+ },
+ "pytest:src/_pytest/config/__init__.py:Config._getini": null,
+ "pytest:src/_pytest/config/__init__.py:Config.parse": null,
+ "pytest:src/_pytest/config/argparsing.py:Parser.addini": {
+  "age_complete": true,
+  "age_days": 259,
+  "age_touches": 1,
+  "doc_commit": "46e6fb12c7d6d95750959964c1f59039dd51b579",
+  "doc_date": "2024-02-14"
+ },
+ "pytest:src/_pytest/config/findpaths.py:load_config_dict_from_file": {
+  "age_complete": true,
+  "age_days": 1551,
+  "age_touches": 5,
+  "doc_commit": "0242de4f5651818379bc0ff6326c97565a20a0f1",
+  "doc_date": "2020-08-01"
+ },
+ "pytest:src/_pytest/fixtures.py:FixtureManager._register_fixture": {
+  "age_complete": true,
+  "age_days": 296,
+  "age_touches": 4,
+  "doc_commit": "3234c79ee57feb7ec481811af1925bb0f81acdea",
+  "doc_date": "2024-01-08"
+ },
+ "pytest:src/_pytest/helpconfig.py:showhelp": null,
+ "pytest:src/_pytest/python_api.py:ApproxMapping._repr_compare": null,
+ "sphinx:sphinx/builders/__init__.py:Builder.read_doc": {
+  "age_complete": false,
+  "age_days": 2371,
+  "age_touches": 11,
+  "doc_commit": "90949a3b4fab5b2cd5d2a84980413bbd74d0cc88",
+  "doc_date": "2018-05-01"
+ },
+ "sphinx:sphinx/builders/changes.py:ChangesBuilder.write_documents": null,
+ "sphinx:sphinx/builders/gettext.py:MessageCatalogBuilder.finish": null,
+ "sphinx:sphinx/builders/manpage.py:ManualPageBuilder.write_documents": null,
+ "sphinx:sphinx/ext/autodoc/__init__.py:setup": null,
+ "sphinx:sphinx/ext/autodoc/directive.py:AutodocDirective.run": null,
+ "sphinx:sphinx/ext/autosummary/__init__.py:Autosummary.get_items": {
+  "age_complete": false,
+  "age_days": 5181,
+  "age_touches": 12,
+  "doc_commit": "630791c42c29c68a3cee4d722152886d70ddeff5",
+  "doc_date": "2010-08-22"
+ },
+ "sphinx:sphinx/ext/autosummary/__init__.py:Autosummary.run": null,
+ "sphinx:sphinx/ext/imgmath.py:html_visit_displaymath": null,
+ "sphinx:sphinx/ext/intersphinx/_cli.py:inspect_main": {
+  "age_complete": true,
+  "age_days": 185,
+  "age_touches": 3,
+  "doc_commit": "b9a3f7e3df1e0136d76d3f2940eb96388e21924d",
+  "doc_date": "2024-04-25"
+ },
+ "sphinx:sphinx/ext/intersphinx/_load.py:_fetch_inventory_group": null,
+ "sphinx:sphinx/ext/viewcode.py:collect_pages": null,
+ "textual:src/textual/_arrange.py:_arrange_dock_widgets": {
+  "age_complete": true,
+  "age_days": 76,
+  "age_touches": 1,
+  "doc_commit": "a44eb0b21770738f52803479c89d4c9c52089986",
+  "doc_date": "2024-08-14"
+ },
+ "textual:src/textual/_arrange.py:arrange": {
+  "age_complete": true,
+  "age_days": 650,
+  "age_touches": 10,
+  "doc_commit": "15330e46e4acb6c244ec4e59322aeada54f13574",
+  "doc_date": "2023-01-17"
+ },
+ "textual:src/textual/drivers/linux_driver.py:LinuxDriver.start_application_mode": {
+  "age_complete": true,
+  "age_days": 588,
+  "age_touches": 15,
+  "doc_commit": "5cd1263875f414f6ec2888a4cdd7eff251dde508",
+  "doc_date": "2023-03-21"
+ },
+ "textual:src/textual/layouts/horizontal.py:HorizontalLayout.arrange": null,
+ "textual:src/textual/layouts/vertical.py:VerticalLayout.arrange": null,
+ "textual:src/textual/screen.py:Screen._forward_event": null,
+ "textual:src/textual/screen.py:Screen._on_screen_resume": {
+  "age_complete": false,
+  "age_days": 581,
+  "age_touches": 5,
+  "doc_commit": "0940546aabe851358b6f9adec3d10d2d25c122ca",
+  "doc_date": "2023-03-27"
+ },
+ "textual:src/textual/widget.py:Widget._check_refresh": {
+  "age_complete": false,
+  "age_days": 585,
+  "age_touches": 0,
+  "doc_commit": "1e4dd1cee482309589dc47a7b2b448d24811c3e2",
+  "doc_date": "2023-03-23"
+ },
+ "textual:src/textual/widgets/_option_list.py:OptionList.render_line": null
+}

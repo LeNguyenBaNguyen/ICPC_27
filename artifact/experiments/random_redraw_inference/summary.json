@@ -1,0 +1,43 @@
+{
+  "experiment": "random_redraw_inference",
+  "plan_sha256": "8f1dfd204ab55f0e71fe6e9b3fe43ebc39bd336ed837c2543453fef1a2da686a",
+  "inference_completed": true,
+  "complete": true,
+  "completed_functions": 80,
+  "started_functions": 80,
+  "planned_functions": 80,
+  "stop_reason": null,
+  "failed": false,
+  "error": null,
+  "fresh_calls_this_invocation": 0,
+  "cache_hits_this_invocation": 0,
+  "fresh_call_upper_bound": 308,
+  "quality_counts": {
+    "cached_responses": 308,
+    "cached_length_limited_responses": 0,
+    "failed_request_records": 0,
+    "rejected_length_limited_responses": 0
+  },
+  "anchor_supported_claims_completed_functions": 886,
+  "unparsed_judge_verdicts": 1,
+  "at_risk_at_6_completed_functions": {
+    "claims": 19,
+    "functions": 2
+  },
+  "S6": null,
+  "S6_withheld_reason": "Insufficient at-risk support",
+  "calendar_365": {
+    "removal_censored_S365": 0.974649640345551,
+    "removal_as_event_S365": 0.8893905191873589,
+    "contradicted_functions_within_365": 11,
+    "removed_functions_within_365": 7,
+    "uncertainty": "Calendar point estimates are descriptive; no interval claimed.",
+    "contradiction_CIF365": 0.02483069977426636,
+    "removal_CIF365": 0.08577878103837472
+  },
+  "interpretation": "Fresh model-conditional estimates on the archived eligible anchor population; model digest unknown historically. Not semantic survival or human validation.",
+  "quality_complete": false,
+  "maximum_reliable_touch": 3,
+  "S_at_maximum_reliable_touch": 0.9363095238095238,
+  "reliable_horizon_reporting": "Descriptive point at the largest touch satisfying the frozen30-claim/5-function support rule; does not replace withheld S6."
+}

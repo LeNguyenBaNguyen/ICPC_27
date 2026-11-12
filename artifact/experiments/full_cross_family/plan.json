@@ -1,0 +1,2078 @@
+{
+  "experiment": "full_cross_family",
+  "planned_before_fresh_calls": true,
+  "model": "llama3.1:8b",
+  "options": {
+    "temperature": 0,
+    "seed": 7,
+    "num_ctx": 8192,
+    "num_predict": 440
+  },
+  "endpoint": "First Llama-judge-detected contradiction, conditional on Llama anchor support; not semantic survival.",
+  "population": "All 129 future-active, trackable main-cohort functions and their archived LLM/docstring claims.",
+  "design": "Replay anchors then effective touches in order. Llama's own supported claims remain at risk, so later prompts may differ from Qwen's historical alive-only lists. Both claim arms are retained in each prompt; LLM-arm claims define the reported main curve.",
+  "limits": "Different model family/runtime/context and model-conditioned risk set. This is not a human validation, causal comparison, or an ensemble correction of the Qwen curve.",
+  "functions": 129,
+  "maximum_calls": 1149,
+  "tasks": [
+    {
+      "fid": "F000",
+      "repo": "pytest",
+      "qualname": "assertrepr_compare",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F001",
+      "repo": "pytest",
+      "qualname": "Config._getini",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F002",
+      "repo": "pytest",
+      "qualname": "Config.parse",
+      "effective_touches": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F003",
+      "repo": "pytest",
+      "qualname": "Parser.addini",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F004",
+      "repo": "pytest",
+      "qualname": "load_config_dict_from_file",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F005",
+      "repo": "pytest",
+      "qualname": "FixtureManager._register_fixture",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F007",
+      "repo": "pytest",
+      "qualname": "showhelp",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F008",
+      "repo": "pydantic",
+      "qualname": "complete_dataclass",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F009",
+      "repo": "pydantic",
+      "qualname": "collect_dataclass_fields",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F010",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema._apply_annotations",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F011",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema._apply_single_annotation",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F012",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema._common_field_schema",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F013",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema._model_schema",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F014",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema._namedtuple_schema",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F015",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema._typed_dict_schema",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F016",
+      "repo": "pydantic",
+      "qualname": "GenerateSchema.match_type",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F017",
+      "repo": "pydantic",
+      "qualname": "complete_model_class",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F018",
+      "repo": "pydantic",
+      "qualname": "_generate_signature_parameters",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F020",
+      "repo": "pydantic",
+      "qualname": "dataclass.create_dataclass",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F023",
+      "repo": "pydantic",
+      "qualname": "BaseModel.model_rebuild",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F026",
+      "repo": "pydantic",
+      "qualname": "TypeAdapter.dump_python",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F027",
+      "repo": "pydantic",
+      "qualname": "TypeAdapter.json_schemas",
+      "effective_touches": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 6
+    },
+    {
+      "fid": "F028",
+      "repo": "black",
+      "qualname": "_format_str_once",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F029",
+      "repo": "black",
+      "qualname": "format_stdin_to_stdout",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F030",
+      "repo": "black",
+      "qualname": "_generate_ignored_nodes_from_fmt_skip",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F031",
+      "repo": "black",
+      "qualname": "convert_one_fmt_off_pair",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F032",
+      "repo": "black",
+      "qualname": "generate_ignored_nodes",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F033",
+      "repo": "black",
+      "qualname": "reformat_many",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F034",
+      "repo": "black",
+      "qualname": "schedule_formatting",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F035",
+      "repo": "black",
+      "qualname": "_maybe_split_omitting_optional_parens",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F036",
+      "repo": "black",
+      "qualname": "maybe_make_parens_invisible_in_atom",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F037",
+      "repo": "black",
+      "qualname": "normalize_invisible_parens",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F038",
+      "repo": "black",
+      "qualname": "EmptyLineTracker._maybe_empty_lines",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F040",
+      "repo": "black",
+      "qualname": "can_omit_invisible_parens",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F041",
+      "repo": "black",
+      "qualname": "is_line_short_enough",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F042",
+      "repo": "black",
+      "qualname": "StringParenWrapper.do_splitter_match",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F043",
+      "repo": "black",
+      "qualname": "handle",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F044",
+      "repo": "click",
+      "qualname": "_nullpager",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F045",
+      "repo": "click",
+      "qualname": "_pipepager",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F046",
+      "repo": "click",
+      "qualname": "_tempfilepager",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F047",
+      "repo": "click",
+      "qualname": "Parameter.handle_parse_result",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F048",
+      "repo": "click",
+      "qualname": "prompt",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "maximum_calls": 6
+    },
+    {
+      "fid": "F049",
+      "repo": "attrs",
+      "qualname": "_transform_attrs",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F050",
+      "repo": "pip",
+      "qualname": "docs",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F051",
+      "repo": "pip",
+      "qualname": "test",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F052",
+      "repo": "pip",
+      "qualname": "Command._main",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F053",
+      "repo": "pip",
+      "qualname": "SessionCommandMixin._build_session",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F054",
+      "repo": "pip",
+      "qualname": "RequirementCommand.get_requirements",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F055",
+      "repo": "pip",
+      "qualname": "RequirementCommand.make_requirement_preparer",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F056",
+      "repo": "pip",
+      "qualname": "DownloadCommand.add_options",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F057",
+      "repo": "pip",
+      "qualname": "DownloadCommand.run",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F058",
+      "repo": "pip",
+      "qualname": "WheelCommand.add_options",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F059",
+      "repo": "pip",
+      "qualname": "WheelCommand.run",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F060",
+      "repo": "pip",
+      "qualname": "SourceDistribution.prepare_distribution_metadata",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F061",
+      "repo": "pip",
+      "qualname": "Link._egg_fragment",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F062",
+      "repo": "pip",
+      "qualname": "install_given_reqs",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F063",
+      "repo": "pip",
+      "qualname": "InstallRequirement.install",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F064",
+      "repo": "pip",
+      "qualname": "PipProvider.get_preference",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F065",
+      "repo": "pip",
+      "qualname": "Resolver.resolve",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F066",
+      "repo": "hypothesis",
+      "qualname": "StateForActualGivenExecution.execute_once.run",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F069",
+      "repo": "hypothesis",
+      "qualname": "given.run_test_as_given._get_fuzz_target",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F070",
+      "repo": "hypothesis",
+      "qualname": "given.run_test_as_given._get_fuzz_target.fuzz_one_input",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F072",
+      "repo": "hypothesis",
+      "qualname": "ConjectureData.draw",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F078",
+      "repo": "hypothesis",
+      "qualname": "Optimiser.hill_climb",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F079",
+      "repo": "hypothesis",
+      "qualname": "Shrinker.greedy_shrink",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F080",
+      "repo": "hypothesis",
+      "qualname": "make_testcase",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F081",
+      "repo": "hypothesis",
+      "qualname": "check_format",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F082",
+      "repo": "hypothesis",
+      "qualname": "format",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F083",
+      "repo": "hypothesis",
+      "qualname": "update_python_versions",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F084",
+      "repo": "hypothesis",
+      "qualname": "upgrade_requirements",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F087",
+      "repo": "sphinx",
+      "qualname": "Builder.read_doc",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F088",
+      "repo": "sphinx",
+      "qualname": "ChangesBuilder.write_documents",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F095",
+      "repo": "sphinx",
+      "qualname": "setup",
+      "effective_touches": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F096",
+      "repo": "sphinx",
+      "qualname": "Autosummary.run",
+      "effective_touches": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F100",
+      "repo": "sphinx",
+      "qualname": "html_visit_displaymath",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F101",
+      "repo": "sphinx",
+      "qualname": "inspect_main",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F102",
+      "repo": "sphinx",
+      "qualname": "_fetch_inventory_group",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F104",
+      "repo": "sphinx",
+      "qualname": "collect_pages",
+      "effective_touches": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 5
+    },
+    {
+      "fid": "F105",
+      "repo": "pylint",
+      "qualname": "NameChecker.visit_assignname",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F106",
+      "repo": "pylint",
+      "qualname": "StdlibChecker._check_open_call",
+      "effective_touches": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 6
+    },
+    {
+      "fid": "F107",
+      "repo": "pylint",
+      "qualname": "is_terminating_func",
+      "effective_touches": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 6
+    },
+    {
+      "fid": "F108",
+      "repo": "aiohttp",
+      "qualname": "WebSocketWriter.send_frame",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F109",
+      "repo": "aiohttp",
+      "qualname": "ResponseHandler.data_received",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F110",
+      "repo": "aiohttp",
+      "qualname": "ClientRequest.send",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F111",
+      "repo": "aiohttp",
+      "qualname": "ClientResponse.start",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F113",
+      "repo": "aiohttp",
+      "qualname": "BaseConnector._get",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F114",
+      "repo": "aiohttp",
+      "qualname": "BaseConnector.connect",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F115",
+      "repo": "aiohttp",
+      "qualname": "TCPConnector._create_proxy_connection",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F116",
+      "repo": "aiohttp",
+      "qualname": "TCPConnector._start_tls_connection",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F117",
+      "repo": "aiohttp",
+      "qualname": "TCPConnector._wrap_create_connection",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F118",
+      "repo": "aiohttp",
+      "qualname": "HeadersParser.parse_headers",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F119",
+      "repo": "aiohttp",
+      "qualname": "HttpPayloadParser.feed_data",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F120",
+      "repo": "aiohttp",
+      "qualname": "HttpRequestParser.parse_message",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "maximum_calls": 11
+    },
+    {
+      "fid": "F121",
+      "repo": "aiohttp",
+      "qualname": "StreamWriter.write",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F122",
+      "repo": "aiohttp",
+      "qualname": "parse_content_disposition",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F123",
+      "repo": "aiohttp",
+      "qualname": "RequestHandler.data_received",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F124",
+      "repo": "aiohttp",
+      "qualname": "RequestHandler.finish_response",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F125",
+      "repo": "aiohttp",
+      "qualname": "BaseRequest.post",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F126",
+      "repo": "aiohttp",
+      "qualname": "WebSocketResponse._post_start",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F128",
+      "repo": "textual",
+      "qualname": "_arrange_dock_widgets",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F129",
+      "repo": "textual",
+      "qualname": "arrange",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F130",
+      "repo": "textual",
+      "qualname": "LinuxDriver.start_application_mode",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F131",
+      "repo": "textual",
+      "qualname": "HorizontalLayout.arrange",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F132",
+      "repo": "textual",
+      "qualname": "VerticalLayout.arrange",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F133",
+      "repo": "textual",
+      "qualname": "Screen._forward_event",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F134",
+      "repo": "textual",
+      "qualname": "Screen._on_screen_resume",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F135",
+      "repo": "textual",
+      "qualname": "Widget._check_refresh",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F136",
+      "repo": "textual",
+      "qualname": "OptionList.render_line",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F137",
+      "repo": "pytest",
+      "qualname": "FormattedExcinfo.repr_excinfo",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F138",
+      "repo": "pytest",
+      "qualname": "ApproxMapping._repr_compare",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F139",
+      "repo": "pydantic",
+      "qualname": "ConfigWrapper.core_config",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F140",
+      "repo": "pydantic",
+      "qualname": "FieldInfo.from_annotated_attribute",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F141",
+      "repo": "pydantic",
+      "qualname": "BaseModel.model_dump",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F142",
+      "repo": "pydantic",
+      "qualname": "TypeAdapter.validate_json",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    },
+    {
+      "fid": "F143",
+      "repo": "pydantic",
+      "qualname": "TypeAdapter.validate_strings",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F144",
+      "repo": "hypothesis",
+      "qualname": "StateForActualGivenExecution._flaky_replay_to_failure",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F145",
+      "repo": "hypothesis",
+      "qualname": "DataTree._draw",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F146",
+      "repo": "hypothesis",
+      "qualname": "DataTree.generate_novel_prefix",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_calls": 9
+    },
+    {
+      "fid": "F147",
+      "repo": "hypothesis",
+      "qualname": "ConjectureRunner.clear_secondary_key",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F148",
+      "repo": "hypothesis",
+      "qualname": "Optimiser.hill_climb.attempt_replace",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 13
+    },
+    {
+      "fid": "F149",
+      "repo": "hypothesis",
+      "qualname": "get_seeder_and_restorer",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F150",
+      "repo": "hypothesis",
+      "qualname": "run_state_machine_as_test.run_state_machine",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "maximum_calls": 10
+    },
+    {
+      "fid": "F151",
+      "repo": "hypothesis",
+      "qualname": "OneOfStrategy.do_draw",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F153",
+      "repo": "sphinx",
+      "qualname": "MessageCatalogBuilder.finish",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F154",
+      "repo": "sphinx",
+      "qualname": "ManualPageBuilder.write_documents",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F155",
+      "repo": "sphinx",
+      "qualname": "AutodocDirective.run",
+      "effective_touches": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F156",
+      "repo": "sphinx",
+      "qualname": "Autosummary.get_items",
+      "effective_touches": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "maximum_calls": 12
+    },
+    {
+      "fid": "F157",
+      "repo": "aiohttp",
+      "qualname": "CookieJar.filter_cookies",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_calls": 7
+    },
+    {
+      "fid": "F158",
+      "repo": "aiohttp",
+      "qualname": "HttpParser.parse_headers",
+      "effective_touches": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "maximum_calls": 8
+    }
+  ],
+  "source_sha256": {
+    "functions.json": "37ef9e69b0b831a1c48261cb3541e423c240caf832d33b3593bd56837301af6c",
+    "claims.json": "ae125d0cf1093debd6e92948a1eac1f3029bc1b265ecf95541b2590d5a66027d",
+    "verdicts.json": "0208885d08f542f8cbd34cbd04c94e6dc4bacf26200744f73bf838998d6674d6"
+  },
+  "judge_prompt_sha256": "a14d43f13daca37e3e69aa4f1a543288f3a4cbb0bef9b50b4f3341e2d6ba9a34",
+  "plan_sha256": "8a3309105c06f973aaa1a232361a090f5efe2ae39ebf91460f4934b1b22d0d03"
+}

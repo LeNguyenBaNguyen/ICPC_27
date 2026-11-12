@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "design": "Post-plan single-rater exploratory audit; no second rater or adjudication",
+  "annotation_complete": true,
+  "annotators": 1,
+  "validated_rows": 400,
+  "input_sha256": {
+    "annotator_1.csv": "7128dea977dd2a0922571465d320f13bf10d0450a6456753497786f92fafa42a",
+    "annotator_notes.md": "bec7ec5cd35235c3c70e1cc54d26aacb0ee6bd00241bbcae16a82e1a44dabf31",
+    "blinded/tasks.jsonl": "74e7f335d743318941e74d8bcedeb11161c4d54c534db57de6d480bc909ec93f",
+    "private/sampling_key.csv": "e4550011dfc998c2ecba9509434d11a2462f8c4e5808a4c2658ffd19e9d23607",
+    "private/sampling_manifest.json": "84b345655f0a304bce6f0ac62ac25034bbbb0d031c34a823a223b759f0d0ec2f"
+  },
+  "provenance": "A human rater supplied these labels; experience/blinding are self-reported in annotator_notes.md, not independently verified",
+  "raw": {
+    "three_way_agreement": 0.9225,
+    "three_way_kappa": 0.8837460037688796,
+    "human_unresolved_share": 0.2575,
+    "binary_resolved_agreement": 0.98989898989899,
+    "binary_resolved_kappa": 0.9796440565671336,
+    "contradiction_sensitivity_resolved_reference": 0.9781021897810219,
+    "contradiction_specificity_resolved_reference": 1.0,
+    "contradiction_precision_resolved_reference": 1.0,
+    "resolved_reference_weight": 297,
+    "total_weight": 400.0,
+    "matrix_model_rows_human_columns": {
+      "supported": {
+        "supported": 132.0,
+        "contradicted": 1.0,
+        "unresolved": 0.0
+      },
+      "contradicted": {
+        "supported": 0.0,
+        "contradicted": 134.0,
+        "unresolved": 0.0
+      },
+      "unresolved": {
+        "supported": 28.0,
+        "contradicted": 2.0,
+        "unresolved": 103.0
+      }
+    }
+  },
+  "weighted": {
+    "three_way_agreement": 0.9927197418287554,
+    "three_way_kappa": 0.9163564625576324,
+    "human_unresolved_share": 0.016800290090136064,
+    "binary_resolved_agreement": 0.9971554110330724,
+    "binary_resolved_kappa": 0.9443289954438313,
+    "contradiction_sensitivity_resolved_reference": 0.8971465774747657,
+    "contradiction_specificity_resolved_reference": 1.0,
+    "contradiction_precision_resolved_reference": 1.0,
+    "resolved_reference_weight": 14267.210990502044,
+    "total_weight": 14511.000000000005,
+    "matrix_model_rows_human_columns": {
+      "supported": {
+        "supported": 13807.56716417911,
+        "contradicted": 34.43283582089552,
+        "unresolved": 0.0
+      },
+      "contradicted": {
+        "supported": 0.0,
+        "contradicted": 353.9999999999995,
+        "unresolved": 0.0
+      },
+      "unresolved": {
+        "supported": 65.05947535052015,
+        "contradicted": 6.151515151515151,
+        "unresolved": 243.7890094979645
+      }
+    }
+  },
+  "status_counts": {
+    "unresolved": 103,
+    "supported": 160,
+    "contradicted": 137
+  },
+  "decomposition_counts": {
+    "yes": 372,
+    "no": 28
+  },
+  "claim_type_counts": {
+    "dataflow": 105,
+    "behavioural": 112,
+    "structural": 133,
+    "intent": 50
+  },
+  "needs_context_counts": {
+    "yes": 103,
+    "no": 297
+  },
+  "design_based_agreement": {
+    "estimate": 0.9927197418287554,
+    "standard_error": 0.0024262912768541565,
+    "normal_95_interval": [
+      0.9879642109261213,
+      0.9974752727313896
+    ],
+    "method": "Stratified observation-level SRSWOR finite-population variance; fixed-rater labels; normal approximation may be poor for sparse errors"
+  },
+  "function_cluster_sensitivity": {
+    "method": "Function-cluster exponential multiplier bootstrap, calibrated to each of six stratum totals; approximate descriptive intervals, no finite-population correction; not exact survey-design or rater-error intervals",
+    "replicates": 2000,
+    "seed": 20261111,
+    "functions": 146,
+    "intervals": {
+      "three_way_agreement": [
+        0.9853415138458274,
+        0.996082363795139
+      ],
+      "three_way_kappa": [
+        0.8401679515270024,
+        0.9547077876972639
+      ],
+      "human_unresolved_share": [
+        0.014673971876987204,
+        0.018668047753322564
+      ],
+      "binary_resolved_agreement": [
+        0.9902841572358878,
+        0.9996412951587531
+      ],
+      "binary_resolved_kappa": [
+        0.8314914064175503,
+        0.9926526896746498
+      ],
+      "contradiction_sensitivity_resolved_reference": [
+        0.7187447093507622,
+        0.9857751741117692
+      ],
+      "contradiction_specificity_resolved_reference": [
+        1.0,
+        1.0
+      ],
+      "contradiction_precision_resolved_reference": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "by_stage": {
+    "anchor": {
+      "sample_n": 201,
+      "raw": {
+        "three_way_agreement": 0.9203980099502488,
+        "three_way_kappa": 0.880597014925373,
+        "human_unresolved_share": 0.25870646766169153,
+        "binary_resolved_agreement": 0.9932885906040269,
+        "binary_resolved_kappa": 0.9864582386621831,
+        "contradiction_sensitivity_resolved_reference": 0.9852941176470589,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 149,
+        "total_weight": 201.0,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 66.0,
+            "contradicted": 1.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 67.0,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 15.0,
+            "contradicted": 0.0,
+            "unresolved": 52.0
+          }
+        }
+      },
+      "weighted": {
+        "three_way_agreement": 0.976177957291206,
+        "three_way_kappa": 0.8385379492623829,
+        "human_unresolved_share": 0.03479798764384648,
+        "binary_resolved_agreement": 0.9857188842530116,
+        "binary_resolved_kappa": 0.8138760347770495,
+        "contradiction_sensitivity_resolved_reference": 0.6964473684210529,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 2411.0746268656685,
+        "total_weight": 2497.9999999999973,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 2272.567164179102,
+            "contradicted": 34.43283582089552,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 79.00000000000011,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 25.074626865671647,
+            "contradicted": 0.0,
+            "unresolved": 86.92537313432841
+          }
+        }
+      }
+    },
+    "later": {
+      "sample_n": 199,
+      "raw": {
+        "three_way_agreement": 0.9246231155778895,
+        "three_way_kappa": 0.8869232517614971,
+        "human_unresolved_share": 0.2562814070351759,
+        "binary_resolved_agreement": 0.9864864864864865,
+        "binary_resolved_kappa": 0.9727991178092263,
+        "contradiction_sensitivity_resolved_reference": 0.9710144927536232,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 148,
+        "total_weight": 199.0,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 66.0,
+            "contradicted": 0.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 67.0,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 13.0,
+            "contradicted": 2.0,
+            "unresolved": 51.0
+          }
+        }
+      },
+      "weighted": {
+        "three_way_agreement": 0.9961594636113906,
+        "three_way_kappa": 0.9481322271145665,
+        "human_unresolved_share": 0.01305782372127164,
+        "binary_resolved_agreement": 0.9994811534750576,
+        "binary_resolved_kappa": 0.9886735173432215,
+        "contradiction_sensitivity_resolved_reference": 0.9781202845440828,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 11856.136363636377,
+        "total_weight": 12013.00000000001,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 11535.00000000001,
+            "contradicted": 0.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 274.99999999999994,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 39.984848484848484,
+            "contradicted": 6.151515151515151,
+            "unresolved": 156.86363636363632
+          }
+        }
+      }
+    }
+  },
+  "by_arm": {
+    "doc": {
+      "sample_n": 116,
+      "raw": {
+        "three_way_agreement": 0.9051724137931034,
+        "three_way_kappa": 0.8503401360544217,
+        "human_unresolved_share": 0.3448275862068966,
+        "binary_resolved_agreement": 1.0,
+        "binary_resolved_kappa": 1.0,
+        "contradiction_sensitivity_resolved_reference": 1.0,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 76,
+        "total_weight": 116.0,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 15.0,
+            "contradicted": 0.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 50.0,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 11.0,
+            "contradicted": 0.0,
+            "unresolved": 40.0
+          }
+        }
+      },
+      "weighted": {
+        "three_way_agreement": 0.9833013345281696,
+        "three_way_kappa": 0.9133286901854243,
+        "human_unresolved_share": 0.05618995539974152,
+        "binary_resolved_agreement": 1.0,
+        "binary_resolved_kappa": 1.0,
+        "contradiction_sensitivity_resolved_reference": 1.0,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 1594.8199909543187,
+        "total_weight": 1689.7679782903663,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 1498.871777476255,
+            "contradicted": 0.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 67.73134328358216,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 28.21687019448213,
+            "contradicted": 0.0,
+            "unresolved": 94.94798733604708
+          }
+        }
+      }
+    },
+    "llm": {
+      "sample_n": 284,
+      "raw": {
+        "three_way_agreement": 0.9295774647887324,
+        "three_way_kappa": 0.8915409585640633,
+        "human_unresolved_share": 0.22183098591549297,
+        "binary_resolved_agreement": 0.9864253393665159,
+        "binary_resolved_kappa": 0.9713915857605179,
+        "contradiction_sensitivity_resolved_reference": 0.9655172413793104,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 221,
+        "total_weight": 284.0,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 117.0,
+            "contradicted": 1.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 84.0,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 17.0,
+            "contradicted": 2.0,
+            "unresolved": 63.0
+          }
+        }
+      },
+      "weighted": {
+        "three_way_agreement": 0.9939610361939208,
+        "three_way_kappa": 0.9164337954514488,
+        "human_unresolved_share": 0.01160894849339686,
+        "binary_resolved_agreement": 0.9967974196050406,
+        "binary_resolved_kappa": 0.932173398256989,
+        "contradiction_sensitivity_resolved_reference": 0.8758330196825115,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 12672.390999547722,
+        "total_weight": 12821.232021709639,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 12308.695386702855,
+            "contradicted": 34.43283582089552,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 286.2686567164178,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 36.842605156038,
+            "contradicted": 6.151515151515151,
+            "unresolved": 148.8410221619177
+          }
+        }
+      }
+    }
+  },
+  "by_cohort": {
+    "main": {
+      "sample_n": 343,
+      "raw": {
+        "three_way_agreement": 0.924198250728863,
+        "three_way_kappa": 0.8864426419466975,
+        "human_unresolved_share": 0.2653061224489796,
+        "binary_resolved_agreement": 0.9880952380952381,
+        "binary_resolved_kappa": 0.9761092150170649,
+        "contradiction_sensitivity_resolved_reference": 0.975,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 252,
+        "total_weight": 343.0,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 109.0,
+            "contradicted": 1.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 117.0,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 23.0,
+            "contradicted": 2.0,
+            "unresolved": 91.0
+          }
+        }
+      },
+      "weighted": {
+        "three_way_agreement": 0.9926509563791246,
+        "three_way_kappa": 0.915751768345222,
+        "human_unresolved_share": 0.016900714497042838,
+        "binary_resolved_agreement": 0.9968815167869739,
+        "binary_resolved_kappa": 0.9391650915755756,
+        "contradiction_sensitivity_resolved_reference": 0.8881474879555241,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 13014.13161465401,
+        "total_weight": 13237.860922659436,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 12594.592265943018,
+            "contradicted": 34.43283582089552,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 322.25373134328316,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 56.70126639529626,
+            "contradicted": 6.151515151515151,
+            "unresolved": 223.7293080054272
+          }
+        }
+      }
+    },
+    "random": {
+      "sample_n": 57,
+      "raw": {
+        "three_way_agreement": 0.9122807017543859,
+        "three_way_kappa": 0.8650568181818181,
+        "human_unresolved_share": 0.21052631578947367,
+        "binary_resolved_agreement": 1.0,
+        "binary_resolved_kappa": 1.0,
+        "contradiction_sensitivity_resolved_reference": 1.0,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 45,
+        "total_weight": 57.0,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 23.0,
+            "contradicted": 0.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 17.0,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 5.0,
+            "contradicted": 0.0,
+            "unresolved": 12.0
+          }
+        }
+      },
+      "weighted": {
+        "three_way_agreement": 0.9934349600102738,
+        "three_way_kappa": 0.9228111644672745,
+        "human_unresolved_share": 0.015756095975342735,
+        "binary_resolved_agreement": 1.0,
+        "binary_resolved_kappa": 1.0,
+        "contradiction_sensitivity_resolved_reference": 1.0,
+        "contradiction_specificity_resolved_reference": 1.0,
+        "contradiction_precision_resolved_reference": 1.0,
+        "resolved_reference_weight": 1253.0793758480324,
+        "total_weight": 1273.1390773405699,
+        "matrix_model_rows_human_columns": {
+          "supported": {
+            "supported": 1212.9748982360923,
+            "contradicted": 0.0,
+            "unresolved": 0.0
+          },
+          "contradicted": {
+            "supported": 0.0,
+            "contradicted": 31.746268656716413,
+            "unresolved": 0.0
+          },
+          "unresolved": {
+            "supported": 8.35820895522388,
+            "contradicted": 0.0,
+            "unresolved": 20.059701492537314
+          }
+        }
+      }
+    }
+  },
+  "by_stratum": {
+    "anchor/contradicted": {
+      "stage": "anchor",
+      "bulk_status": "contradicted",
+      "population_n": 79,
+      "sample_n": 67,
+      "human_counts": {
+        "contradicted": 67
+      }
+    },
+    "anchor/supported": {
+      "stage": "anchor",
+      "bulk_status": "supported",
+      "population_n": 2307,
+      "sample_n": 67,
+      "human_counts": {
+        "supported": 66,
+        "contradicted": 1
+      }
+    },
+    "anchor/unresolved": {
+      "stage": "anchor",
+      "bulk_status": "unresolved",
+      "population_n": 112,
+      "sample_n": 67,
+      "human_counts": {
+        "unresolved": 52,
+        "supported": 15
+      }
+    },
+    "later/contradicted": {
+      "stage": "later",
+      "bulk_status": "contradicted",
+      "population_n": 275,
+      "sample_n": 67,
+      "human_counts": {
+        "contradicted": 67
+      }
+    },
+    "later/supported": {
+      "stage": "later",
+      "bulk_status": "supported",
+      "population_n": 11535,
+      "sample_n": 66,
+      "human_counts": {
+        "supported": 66
+      }
+    },
+    "later/unresolved": {
+      "stage": "later",
+      "bulk_status": "unresolved",
+      "population_n": 203,
+      "sample_n": 66,
+      "human_counts": {
+        "supported": 13,
+        "contradicted": 2,
+        "unresolved": 51
+      }
+    }
+  }
+}

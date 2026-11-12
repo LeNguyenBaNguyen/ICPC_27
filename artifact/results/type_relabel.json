@@ -1,0 +1,1174 @@
+{
+ "F008": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F009": {
+  "bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F010": {
+  "bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "intent",
+   "structural",
+   "intent",
+   "dataflow",
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural"
+  ]
+ },
+ "F011": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "intent",
+   "intent",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F012": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "intent",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "dataflow"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "intent",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F013": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "dataflow"
+  ]
+ },
+ "F015": {
+  "bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "structural",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F023": {
+  "bulk": [
+   "structural",
+   "intent",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "intent",
+   "behavioural",
+   "intent",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F024": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F026": {
+  "bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "intent",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "intent",
+   "intent"
+  ]
+ },
+ "F031": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F036": {
+  "bulk": [
+   "intent",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ],
+  "second": [
+   "intent",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F038": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "intent",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F040": {
+  "bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F043": {
+  "bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural"
+  ]
+ },
+ "F046": {
+  "bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F047": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F054": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F056": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F057": {
+  "bulk": [
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F058": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F059": {
+  "bulk": [
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "intent",
+   "intent",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F063": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F067": {
+  "bulk": [
+   "structural",
+   "structural",
+   "intent",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "intent",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F068": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "intent",
+   "intent",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "intent",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "intent",
+   "intent"
+  ]
+ },
+ "F070": {
+  "bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F072": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F073": {
+  "bulk": [
+   "structural",
+   "dataflow",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "behavioural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F074": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F078": {
+  "bulk": [
+   "intent",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "intent",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F079": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "intent",
+   "dataflow",
+   "structural",
+   "intent",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "structural",
+   "intent",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "intent",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F089": {
+  "bulk": [
+   "structural",
+   "intent",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "intent",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F091": {
+  "bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F099": {
+  "bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F101": {
+  "bulk": [
+   "intent",
+   "structural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "structural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F102": {
+  "bulk": [
+   "intent",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "structural",
+   "behavioural"
+  ],
+  "second": [
+   "intent",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F112": {
+  "bulk": [
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F125": {
+  "bulk": [
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "intent"
+  ],
+  "second": [
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "intent"
+  ]
+ },
+ "F127": {
+  "bulk": [
+   "structural",
+   "intent",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ],
+  "second": [
+   "structural",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F130": {
+  "bulk": [
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "intent",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "behavioural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "intent",
+   "intent",
+   "behavioural"
+  ]
+ },
+ "F132": {
+  "bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F136": {
+  "bulk": [
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "second": [
+   "structural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "intent"
+  ]
+ }
+}

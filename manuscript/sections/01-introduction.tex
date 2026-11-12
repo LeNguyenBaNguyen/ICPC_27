@@ -1,0 +1,20 @@
+\section{Introduction}\label{sec:intro}
+
+LLM-generated explanations of code are increasingly kept rather than discarded: tools such as RepoAgent~\cite{luo2024repoagent}, DocAgent~\cite{yang2025docagent} and RepoDoc~\cite{xu2026repodoc} write them into repository documentation, and developers paste them into reviews and wikis. The code keeps changing; the saved text does not. Whether such text is still true later is a program-comprehension question, because a fluent but stale statement seeds a wrong mental model~\cite{vonmayrhauser1995}. Yet explanations are evaluated almost only when they are produced~\cite{khatib2026mutation,bae2026referee,maharaj2024etf}, and human-comment research treats a comment as one unit that is consistent or not~\cite{wen2019large,panthaplackel2021deep}.
+
+\begin{figure}[!t]
+\centering
+\input{figures/fig1}%
+\caption{Hand-picked aiohttp case, \texttt{\_post\_start}, touch~1 = \texttt{5241897f} (shortened claims). The judge contradicts C1; C2 remains uncontradicted.}
+\label{fig:example}
+\end{figure}
+
+An explanation need not become outdated all at once: a changed exception can invalidate one sentence while leaving the description of the return value intact. We therefore follow individual \emph{claims} through later versions of their function (Fig.~\ref{fig:example}). A \emph{touch} is a commit that changes the function's code. We record each claim's first judge-detected contradiction and estimate $S(k)$, the proportion remaining free from detection after $k$ touches, allowing for incomplete follow-up. This makes the unit of maintenance explicit: which retained claim first warrants review, and after how much code change?
+
+We study three questions: when does the primary judge first flag retained claims; how much does the answer change under alternative judgments; and whether edit size or claim type offers useful review signals. The strongest finding is the dependence of the curve on how contradictions are measured. Our results motivate calibrating the detector before using such curves to set refresh schedules. Throughout, the endpoint is detected contradiction; semantic failure time and developer benefit remain unmeasured.
+
+The study began with qualitative expectations about churn, claim type, whole-text checks and docstrings, but both the operational tests and the implementation plan changed after data collection began (Section~\ref{sec:eval}). We therefore report every covariate and comparator result as exploratory diagnostics, rather than as confirmatory hypothesis tests.
+
+Our distinction from the closest work is temporal: Khatib et al.~\cite{khatib2026mutation} test newly generated summaries after synthetic mutations; we retain the original explanation and follow its claims over real commits. Earlier documentation-decay and refresh studies~\cite{hata2019links,tan2022outdated,kelious2026codens} motivate this setting.
+
+\textbf{Contributions.} (1)~An operational detection-time measure with censoring and explicit observation assumptions. (2)~Cached longitudinal records, model and single-rater human-label sensitivity analyses, and a two-human-rater audit with blind adjudication. (3)~Exploratory diagnostics and a validation agenda, including frozen-input detector comparisons and adjudication-aware survival estimation.

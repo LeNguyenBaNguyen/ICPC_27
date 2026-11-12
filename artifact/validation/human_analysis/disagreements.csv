@@ -1,0 +1,32 @@
+task_id,stage,bulk_status,status,weight,evidence,decomposition_ok,claim_type,needs_context
+V0002,later,unresolved,supported,3.0757575757575757,"Trong thân hàm có lệnh `transport, proto = await loop.start_tls(transport, protocol, sslcontext, ...)` thực hiện TLS handshake bọc socket thô thành socket an toàn.",yes,behavioural,no
+V0004,later,unresolved,supported,3.0757575757575757,Hàm tính toán cờ direct qua `direct = any(...)` từ `information[identifier]` và xếp `not direct` lên trước trong tuple ưu tiên trả về.,yes,behavioural,no
+V0006,anchor,supported,contradicted,34.43283582089552,"Mã gán vô điều kiện `cls.__doc__ = original_doc`, không hề có nhánh loại bỏ docstring đối với built-in dataclass như nhận định.",no,behavioural,no
+V0011,later,unresolved,contradicted,3.0757575757575757,"Hàm là `_nullpager` không có tham số `generator` và giá trị yield là tuple `(stream, encoding, color)` chứ không phải text strings.",yes,structural,no
+V0013,anchor,unresolved,supported,1.671641791044776,"Hàm `dump_python` gọi phương thức `self._serializer.to_python(instance, ...)` để chuyển đổi instance theo các tham số được cung cấp.",yes,dataflow,no
+V0021,anchor,unresolved,supported,1.671641791044776,"Phương thức được định nghĩa rõ ràng bằng cú pháp `async def write(self, chunk: bytes, ...)` nên là phương thức bất đồng bộ.",yes,structural,no
+V0038,anchor,unresolved,supported,1.671641791044776,Chữ ký hàm có tham số `traces: List['Trace']` được truyền vào phục vụ theo dõi và trace kết nối.,yes,structural,no
+V0048,later,unresolved,contradicted,3.0757575757575757,"Hàm `render_line(self, y: int) -> Strip:` chỉ trả về đối tượng `Strip`, không trực tiếp render ra màn hình hay output buffer.",yes,behavioural,no
+V0074,anchor,unresolved,supported,1.671641791044776,"Trong nhánh `else:` của kiểm tra `collect_by_mro`, mã gọi hàm xử lý theo thứ tự cũ.",yes,behavioural,no
+V0077,anchor,unresolved,supported,1.671641791044776,Chữ ký hàm khai báo tham số `dock_widgets: Sequence[Widget]` đại diện cho danh sách các widget gắn dock.,yes,structural,no
+V0079,later,unresolved,supported,3.0757575757575757,"Hàm `model_rebuild` xử lý việc tái tạo schema, đặc biệt khi gặp các tham chiếu chưa giải quyết được (ForwardRef).",yes,intent,no
+V0081,later,unresolved,supported,3.0757575757575757,Hàm có chữ ký trả về `-> None` và thực hiện gửi dữ liệu frame qua kết nối websocket.,no,intent,no
+V0082,later,unresolved,supported,3.0757575757575757,Hàm `setup` chỉ lặp đăng ký các chỉ thị tài liệu mà không chứa khối try/except hoặc xử lý ngoại lệ tường minh.,yes,behavioural,no
+V0085,later,unresolved,supported,3.0757575757575757,Mã kiểm tra thuộc tính và type annotation của field xem có cần định nghĩa hoặc đánh giá thêm không.,yes,dataflow,no
+V0089,anchor,unresolved,supported,1.671641791044776,"Hàm ủy quyền thao tác ghi file cho `self._pytester.makefile`, để lớp này tự xử lý các lỗi phát sinh.",yes,intent,no
+V0090,anchor,unresolved,supported,1.671641791044776,Hàm `_nullpager` là một thành phần phân trang dự phòng nằm trong gói Click.,yes,structural,no
+V0303,anchor,unresolved,supported,1.671641791044776,Chữ ký hàm có tham số `symbol: Symbol` đại diện cho biểu tượng đang được mô tả trong tài liệu.,yes,structural,no
+V0305,anchor,unresolved,supported,1.671641791044776,"Property `offset` trả về `Offset(self.x, self.y)` đại diện cho tọa độ chuột.",yes,dataflow,no
+V0322,anchor,unresolved,supported,1.671641791044776,Hàm kiểm tra các biến toàn cục và phát hiện biến chưa được định nghĩa trong phạm vi global.,yes,behavioural,no
+V0326,later,unresolved,supported,3.0757575757575757,Phương thức `model_rebuild` được thiết kế để người dùng gọi thủ công khi cơ chế tự động xây dựng schema thất bại.,yes,intent,no
+V0328,later,unresolved,supported,3.0757575757575757,Hàm `attempt_replace` thực hiện logic tối ưu hóa điểm số và thay thế node trong quá trình shrink của Hypothesis.,yes,intent,no
+V0329,later,unresolved,supported,3.0757575757575757,Mã `model_rebuild` cung cấp cơ chế giải quyết ForwardRef trong type annotations khi quá trình khởi tạo ban đầu chưa hoàn tất.,yes,intent,no
+V0339,anchor,unresolved,supported,1.671641791044776,Phương thức `add_options` thêm các tham số lệnh như `--wheel-dir` cho lệnh WheelCommand.,yes,structural,no
+V0343,anchor,unresolved,supported,1.671641791044776,Hàm `check_package_set` duyệt kiểm tra các package mà không chứa khối xử lý ngoại lệ hay kiểm tra tính hợp lệ của input data.,no,behavioural,no
+V0344,later,unresolved,supported,3.0757575757575757,Hàm trợ giúp `attempt_replace` nằm trong thuật toán tối ưu hóa cây ví dụ kiểm thử của Hypothesis.,yes,intent,no
+V0351,anchor,unresolved,supported,1.671641791044776,Hàm `run_state_machine` được gắn decorator `@settings` và `@given` để thực thi stateful testing trong Hypothesis.,yes,intent,no
+V0367,later,unresolved,supported,3.0757575757575757,"Trong `get_preference`, Pip tính toán độ sâu của các yêu cầu phụ thuộc và ưu tiên yêu cầu gần với user hơn.",yes,dataflow,no
+V0369,later,unresolved,supported,3.0757575757575757,"Khi không xác định được phụ thuộc cha, hàm gán giá trị độ sâu tương đương vô cùng để xếp sau trong ưu tiên giải quyết.",yes,dataflow,no
+V0374,later,unresolved,supported,3.0757575757575757,Mã `model_rebuild` hỗ trợ giải quyết ForwardRef khi định nghĩa kiểu chưa hoàn thiện lúc khai báo lớp.,yes,intent,no
+V0375,anchor,unresolved,supported,1.671641791044776,Hàm `run` khởi tạo và cấu trúc các node bảng tài liệu cho directive.,yes,dataflow,no
+V0393,anchor,unresolved,supported,1.671641791044776,Hàm gọi `self.fixate_shrink_passes(...)` để lặp thực hiện các passes thu gọn đến điểm cố định (fixed point).,yes,behavioural,no

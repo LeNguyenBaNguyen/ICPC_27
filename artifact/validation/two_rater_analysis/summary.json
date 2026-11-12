@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "design": "Post-plan two-rater blinded audit; adjudication pending for disagreements",
+  "validated_rows": 400,
+  "input_sha256": {
+    "annotator_1.csv": "7128dea977dd2a0922571465d320f13bf10d0450a6456753497786f92fafa42a",
+    "annotator_2.csv": "01fd0d4701adfad8e98c034e937a58377f66c281f6434b11c0057de8120dcb69",
+    "annotator_notes.md": "d99f4cdbbc7c307fcc69a879417463bc4918ea3d56295450f3dc2be4f54211a0",
+    "annotator_2_notes.md": "2c0fac62f52a052d651b6280a83b37b59fd995ece2db69a9f637d94437d2ded7",
+    "blinded/tasks.jsonl": "74e7f335d743318941e74d8bcedeb11161c4d54c534db57de6d480bc909ec93f",
+    "private/sampling_key.csv": "e4550011dfc998c2ecba9509434d11a2462f8c4e5808a4c2658ffd19e9d23607",
+    "private/sampling_manifest.json": "84b345655f0a304bce6f0ac62ac25034bbbb0d031c34a823a223b759f0d0ec2f"
+  },
+  "raw": {
+    "agreement": 0.995,
+    "kappa": 0.9923808798179029,
+    "matrix_rater_1_rows_rater_2_columns": {
+      "supported": {
+        "supported": 160.0,
+        "contradicted": 0.0,
+        "unresolved": 0.0
+      },
+      "contradicted": {
+        "supported": 0.0,
+        "contradicted": 136.0,
+        "unresolved": 1.0
+      },
+      "unresolved": {
+        "supported": 1.0,
+        "contradicted": 0.0,
+        "unresolved": 102.0
+      }
+    }
+  },
+  "weighted": {
+    "agreement": 0.9998035458432459,
+    "kappa": 0.9976866085284151,
+    "matrix_rater_1_rows_rater_2_columns": {
+      "supported": {
+        "supported": 13872.626639529633,
+        "contradicted": 0.0,
+        "unresolved": 0.0
+      },
+      "contradicted": {
+        "supported": 0.0,
+        "contradicted": 393.4052464947982,
+        "unresolved": 1.1791044776119404
+      },
+      "unresolved": {
+        "supported": 1.671641791044776,
+        "contradicted": 0.0,
+        "unresolved": 242.11736770691974
+      }
+    }
+  },
+  "disagreements": 2,
+  "rater_1_vs_bulk_model": {
+    "raw": {
+      "three_way_agreement": 0.9225,
+      "three_way_kappa": 0.8837460037688796,
+      "human_unresolved_share": 0.2575,
+      "binary_resolved_agreement": 0.98989898989899,
+      "binary_resolved_kappa": 0.9796440565671336,
+      "contradiction_sensitivity_resolved_reference": 0.9781021897810219,
+      "contradiction_specificity_resolved_reference": 1.0,
+      "contradiction_precision_resolved_reference": 1.0,
+      "resolved_reference_weight": 297.0,
+      "total_weight": 400.0,
+      "matrix_model_rows_human_columns": {
+        "supported": {
+          "supported": 132.0,
+          "contradicted": 1.0,
+          "unresolved": 0.0
+        },
+        "contradicted": {
+          "supported": 0.0,
+          "contradicted": 134.0,
+          "unresolved": 0.0
+        },
+        "unresolved": {
+          "supported": 28.0,
+          "contradicted": 2.0,
+          "unresolved": 103.0
+        }
+      }
+    },
+    "weighted": {
+      "three_way_agreement": 0.9927197418287554,
+      "three_way_kappa": 0.9163564625576324,
+      "human_unresolved_share": 0.016800290090136064,
+      "binary_resolved_agreement": 0.9971554110330724,
+      "binary_resolved_kappa": 0.9443289954438313,
+      "contradiction_sensitivity_resolved_reference": 0.8971465774747657,
+      "contradiction_specificity_resolved_reference": 1.0,
+      "contradiction_precision_resolved_reference": 1.0,
+      "resolved_reference_weight": 14267.210990502044,
+      "total_weight": 14511.000000000005,
+      "matrix_model_rows_human_columns": {
+        "supported": {
+          "supported": 13807.56716417911,
+          "contradicted": 34.43283582089552,
+          "unresolved": 0.0
+        },
+        "contradicted": {
+          "supported": 0.0,
+          "contradicted": 353.9999999999995,
+          "unresolved": 0.0
+        },
+        "unresolved": {
+          "supported": 65.05947535052015,
+          "contradicted": 6.151515151515151,
+          "unresolved": 243.7890094979645
+        }
+      }
+    }
+  },
+  "rater_2_vs_bulk_model": {
+    "raw": {
+      "three_way_agreement": 0.9175,
+      "three_way_kappa": 0.8762469061726543,
+      "human_unresolved_share": 0.2575,
+      "binary_resolved_agreement": 0.98989898989899,
+      "binary_resolved_kappa": 0.9796189125511816,
+      "contradiction_sensitivity_resolved_reference": 0.9779411764705882,
+      "contradiction_specificity_resolved_reference": 1.0,
+      "contradiction_precision_resolved_reference": 1.0,
+      "resolved_reference_weight": 297.0,
+      "total_weight": 400.0,
+      "matrix_model_rows_human_columns": {
+        "supported": {
+          "supported": 132.0,
+          "contradicted": 1.0,
+          "unresolved": 0.0
+        },
+        "contradicted": {
+          "supported": 0.0,
+          "contradicted": 133.0,
+          "unresolved": 1.0
+        },
+        "unresolved": {
+          "supported": 29.0,
+          "contradicted": 2.0,
+          "unresolved": 102.0
+        }
+      }
+    },
+    "weighted": {
+      "three_way_agreement": 0.9925232876720014,
+      "three_way_kappa": 0.9139934863632282,
+      "human_unresolved_share": 0.016766347748916794,
+      "binary_resolved_agreement": 0.9971555092315109,
+      "binary_resolved_kappa": 0.9441578696308992,
+      "contradiction_sensitivity_resolved_reference": 0.8968383077398859,
+      "contradiction_specificity_resolved_reference": 1.0,
+      "contradiction_precision_resolved_reference": 1.0,
+      "resolved_reference_weight": 14267.703527815476,
+      "total_weight": 14511.000000000005,
+      "matrix_model_rows_human_columns": {
+        "supported": {
+          "supported": 13807.56716417911,
+          "contradicted": 34.43283582089552,
+          "unresolved": 0.0
+        },
+        "contradicted": {
+          "supported": 0.0,
+          "contradicted": 352.82089552238756,
+          "unresolved": 1.1791044776119404
+        },
+        "unresolved": {
+          "supported": 66.73111714156492,
+          "contradicted": 6.151515151515151,
+          "unresolved": 242.11736770691974
+        }
+      }
+    }
+  },
+  "rater_1_status_counts": {
+    "unresolved": 103,
+    "supported": 160,
+    "contradicted": 137
+  },
+  "rater_2_status_counts": {
+    "unresolved": 103,
+    "supported": 161,
+    "contradicted": 136
+  },
+  "adjudication_required": [
+    "V0144",
+    "V0281"
+  ],
+  "limits": "Agreement is between two self-reported blinded raters on the recorded-judgment frame. It does not validate semantic truth, recall, unobserved versions, or rater independence; one rater disclosed a social acquaintance of an author. No consensus label is created here."
+}

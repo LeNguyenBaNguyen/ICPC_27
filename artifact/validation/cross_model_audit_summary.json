@@ -1,0 +1,51 @@
+{
+  "disagreement_cases": 170,
+  "expanded_qwen_contra_llama_sup_cases": 45,
+  "disagreement_verdicts": {
+    "supported": 151,
+    "unresolved": 3,
+    "contradicted": 16
+  },
+  "disagreement_sources": {
+    "qwen_contra_llama_sup_anchor": {
+      "contradicted": 7,
+      "supported": 29,
+      "unresolved": 1
+    },
+    "qwen_contra_llama_sup_commit": {
+      "supported": 14,
+      "contradicted": 9
+    },
+    "qwen_sup_haiku_contra": {
+      "supported": 28
+    },
+    "qwen_sup_llama_contra_anchor": {
+      "supported": 75,
+      "unresolved": 2
+    },
+    "qwen_sup_llama_unres_anchor": {
+      "supported": 5
+    }
+  },
+  "qwen_supported_cases": 110,
+  "qwen_supported_human_supported": 108,
+  "qwen_supported_human_supported_rate": 0.9818181818181818,
+  "qwen_contradicted_cases": 60,
+  "qwen_contradicted_human_contradicted": 16,
+  "qwen_contradicted_human_contradicted_rate": 0.26666666666666666,
+  "subtle_mutation_cases": 25,
+  "subtle_mutation_types": {
+    "boundary_comparison": 5,
+    "condition_ordering": 5,
+    "exception_type": 5,
+    "default_parameter_value": 5,
+    "callee_or_kwarg": 5
+  },
+  "subtle_mutation_expected_affected": {
+    "yes": 25
+  },
+  "subtle_mutation_detected": {
+    "yes": 25
+  },
+  "interpretation": "Blinded single-rater adjudication of model-disagreement cases and subtle synthetic mutations; not a gold-standard semantic validation."
+}

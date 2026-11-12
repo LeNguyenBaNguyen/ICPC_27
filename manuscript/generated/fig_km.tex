@@ -1,0 +1,27 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth,height=4.0cm,xlabel={code-changing touches since anchor $k$},ylabel={freedom from detection $\hat S(k)$},
+  xmin=0,xmax=12,ymin=0.6,ymax=1.0,xtick={0,2,...,12},grid=major,grid style={dashed,gray!30},
+  legend style={at={(0.5,-0.42)},anchor=north,font=\tiny,cells={anchor=west},draw=none},legend columns=3,
+  tick label style={font=\scriptsize},label style={font=\footnotesize}]
+\addplot[name path=lo,const plot,draw=none,forget plot] coordinates {(0,1.0000) (1,0.9517) (2,0.9195) (3,0.8948) (4,0.8736) (5,0.8441) (6,0.8168) (7,0.7980) (8,0.7790) (9,0.7687) (10,0.7538) (11,0.7124) (12,0.7021)};
+\addplot[name path=hi,const plot,draw=none,forget plot] coordinates {(0,1.0000) (1,0.9775) (2,0.9569) (3,0.9365) (4,0.9194) (5,0.8932) (6,0.8712) (7,0.8572) (8,0.8424) (9,0.8361) (10,0.8240) (11,0.8079) (12,0.8067)};
+\addplot[black!15,forget plot] fill between[of=lo and hi];
+\addplot+[const plot, black, mark=none, ultra thick] coordinates {(0,1.0000) (1,0.9653) (2,0.9402) (3,0.9158) (4,0.8973) (5,0.8698) (6,0.8452) (7,0.8283) (8,0.8124) (9,0.8037) (10,0.7898) (11,0.7627) (12,0.7574)};
+\addlegendentry{Main, all claims (95\% band)}
+\addplot+[const plot, blue,mark=square*, mark size=1.1pt, thick] coordinates {(0,1.0000) (1,0.9549) (2,0.9097) (3,0.8781) (4,0.8578) (5,0.8281) (6,0.8094) (7,0.7948) (8,0.7846) (9,0.7846) (10,0.7645) (11,0.7513) (12,0.7513)};
+\addlegendentry{Structural}
+\addplot+[const plot, teal,mark=triangle*, mark size=1.1pt, thick] coordinates {(0,1.0000) (1,0.9652) (2,0.9468) (3,0.9264) (4,0.9080) (5,0.8792) (6,0.8385) (7,0.8104) (8,0.7879) (9,0.7817) (10,0.7598) (11,0.7086) (12,0.6935)};
+\addlegendentry{Data-flow}
+\addplot+[const plot, red,mark=*, mark size=1.1pt, thick] coordinates {(0,1.0000) (1,0.9734) (2,0.9615) (3,0.9408) (4,0.9231) (5,0.8963) (6,0.8809) (7,0.8718) (8,0.8539) (9,0.8304) (10,0.8304) (11,0.8180) (12,0.8180)};
+\addlegendentry{Behavioural}
+\addplot+[const plot, black!70,mark=diamond*, mark size=1.1pt, thick] coordinates {(0,1.0000) (1,0.9881) (2,0.9762) (3,0.9524) (4,0.9405) (5,0.9284) (6,0.9284) (7,0.9284) (8,0.9284) (9,0.9284) (10,0.9284) (11,0.9284) (12,0.9284)};
+\addlegendentry{Intent}
+\addplot+[const plot, orange,dash pattern=on 5pt off 2pt,mark=none,very thick, mark size=1.1pt, thick] coordinates {(0,1.0000) (1,0.9817) (2,0.9707)};
+\addlegendentry{Random cohort ($k\le2$)}
+\end{axis}
+\end{tikzpicture}
+\caption{Kaplan--Meier freedom from judge-detected contradiction: future-active main cohort (all, cluster-bootstrap band, by type) and random cohort.}
+\label{fig:km}
+\end{figure}

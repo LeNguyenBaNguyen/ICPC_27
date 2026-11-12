@@ -1,0 +1,1 @@
+{"text": "```json\n[\"intent\", \"intent\", \"structural\", \"structural\", \"behavioural\", \"behavioural\", \"dataflow\", \"behavioural\"]\n```", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 475, "out": 48}}

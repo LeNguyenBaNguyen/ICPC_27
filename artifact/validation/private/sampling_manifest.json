@@ -1,0 +1,50 @@
+{
+  "seed": 20261110,
+  "sample_size": 400,
+  "frame": "Recorded anchor judgments and effective later-touch judgments, both arms and cohorts; placebo/retest excluded. Later judgments are conditional on alive-only follow-up.",
+  "strata": [
+    {
+      "stage": "anchor",
+      "bulk_status": "contradicted",
+      "population_n": 79,
+      "sample_n": 67
+    },
+    {
+      "stage": "anchor",
+      "bulk_status": "supported",
+      "population_n": 2307,
+      "sample_n": 67
+    },
+    {
+      "stage": "anchor",
+      "bulk_status": "unresolved",
+      "population_n": 112,
+      "sample_n": 67
+    },
+    {
+      "stage": "later",
+      "bulk_status": "contradicted",
+      "population_n": 275,
+      "sample_n": 67
+    },
+    {
+      "stage": "later",
+      "bulk_status": "supported",
+      "population_n": 11535,
+      "sample_n": 66
+    },
+    {
+      "stage": "later",
+      "bulk_status": "unresolved",
+      "population_n": 203,
+      "sample_n": 66
+    }
+  ],
+  "source_sha256": {
+    "functions.json": "37ef9e69b0b831a1c48261cb3541e423c240caf832d33b3593bd56837301af6c",
+    "random_functions.json": "96707096215a42913c777ecd07a11ee5e927b78660996c0b6595dcb248b08c05",
+    "claims.json": "ae125d0cf1093debd6e92948a1eac1f3029bc1b265ecf95541b2590d5a66027d",
+    "verdicts.json": "0208885d08f542f8cbd34cbd04c94e6dc4bacf26200744f73bf838998d6674d6"
+  },
+  "independent_annotation_completed": false
+}

@@ -1,0 +1,1 @@
+{"text": "[\"intent\", \"structural\", \"dataflow\", \"structural\", \"behavioural\", \"behavioural\", \"structural\", \"behavioural\"]", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 381, "out": 43}}

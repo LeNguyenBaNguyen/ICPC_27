@@ -1,0 +1,1 @@
+{"text": "S1: supported\nS2: supported\nS3: supported\nS4: supported\nS5: unresolved\nS6: contradicted -- function explicitly raises FloatingPointError, handling a precondition internally rather than only assertions\nS7: supported", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 1797, "out": 79}}

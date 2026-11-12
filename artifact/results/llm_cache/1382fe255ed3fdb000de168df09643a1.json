@@ -1,0 +1,1 @@
+{"text": "S1: supported\nS2: supported\nS3: supported\nS4: contradicted -- handles failed imports separately; logging depends on coverage_show_missing_items and quiet, not errors\nS5: supported\nS6: supported\nS7: supported\nS8: supported\nS9: supported", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 2512, "out": 91}}

@@ -1,0 +1,278 @@
+case_id,rater_id,verdict,confidence,reason,needs_external_context,mutation_id,mutation_type,expected_affected,detected_by_rater,claim,original_code,mutated_code,diff
+MUT_001,Rater R3,contradicted,cao,"Toán tử so sánh bị đổi từ strictly less than (< 3) sang less-than-or-equal (<= 3), khiến giá trị biên 3 bị gán sai nhãn ""low"".",no,MUT_BOUND_01,boundary_comparison,yes,yes,"band_1 returns ""low"" when value is strictly below 3.","def band_1(value: int) -> str:
+    if value < 3:
+        return ""low""
+    return ""high""","def band_1(value: int) -> str:
+    if value <= 3:
+        return ""low""
+    return ""high""","--- original
++++ mutated
+@@ -1,4 +1,4 @@
+ def band_1(value: int) -> str:
+-    if value < 3:
++    if value <= 3:
+         return ""low""
+     return ""high"""
+MUT_002,Rater R3,contradicted,cao,"Toán tử đổi thành >= 0, khiến số 0 trả về True thay vì False như định nghĩa strictly positive của claim.",no,MUT_BOUND_02,boundary_comparison,yes,yes,check_positive returns True only for strictly positive integers (> 0).,"def check_positive(n: int) -> bool:
+    return n > 0","def check_positive(n: int) -> bool:
+    return n >= 0","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def check_positive(n: int) -> bool:
+-    return n > 0
++    return n >= 0"
+MUT_003,Rater R3,contradicted,cao,"Toán tử >= bị đổi thành >, làm mất hành vi kích hoạt khi buffer vừa đủ đạt max_size.",no,MUT_BOUND_03,boundary_comparison,yes,yes,paginate chunks items when the buffer reaches or exceeds max_size.,"def paginate(buf: list, max_size: int) -> bool:
+    return len(buf) >= max_size","def paginate(buf: list, max_size: int) -> bool:
+    return len(buf) > max_size","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def paginate(buf: list, max_size: int) -> bool:
+-    return len(buf) >= max_size
++    return len(buf) > max_size"
+MUT_004,Rater R3,contradicted,cao,"Biên trên bị đổi thành < 100, loại bỏ giá trị hợp lệ 100% trái với mô tả claim.",no,MUT_BOUND_04,boundary_comparison,yes,yes,is_valid_percentage checks that value is less than or equal to 100.,"def is_valid_percentage(val: float) -> bool:
+    return 0 <= val <= 100","def is_valid_percentage(val: float) -> bool:
+    return 0 <= val < 100","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def is_valid_percentage(val: float) -> bool:
+-    return 0 <= val <= 100
++    return 0 <= val < 100"
+MUT_005,Rater R3,contradicted,cao,Đổi toán tử nghiêm ngặt > thành >= khiến mốc thời gian vừa chạm timeout bị coi là đã hết hạn sớm.,no,MUT_BOUND_05,boundary_comparison,yes,yes,has_expired returns True when elapsed time exceeds timeout limit.,"def has_expired(elapsed: float, timeout: float) -> bool:
+    return elapsed > timeout","def has_expired(elapsed: float, timeout: float) -> bool:
+    return elapsed >= timeout","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def has_expired(elapsed: float, timeout: float) -> bool:
+-    return elapsed > timeout
++    return elapsed >= timeout"
+MUT_006,Rater R3,contradicted,cao,Thứ tự short-circuit bị đảo ngược dẫn tới lỗi TypeError khi obj là None trước khi kiểm tra null.,no,MUT_COND_01,condition_ordering,yes,yes,safe_lookup checks obj is not None before accessing obj.items.,"def safe_lookup(obj: Optional[dict]) -> bool:
+    return obj is not None and ""key"" in obj","def safe_lookup(obj: Optional[dict]) -> bool:
+    return ""key"" in obj and obj is not None","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def safe_lookup(obj: Optional[dict]) -> bool:
+-    return obj is not None and ""key"" in obj
++    return ""key"" in obj and obj is not None"
+MUT_007,Rater R3,contradicted,cao,"Nhánh điểm >= 90 được đặt trước nhánh kiểm tra hợp lệ, khiến giá trị ngoại lệ như 999 trả về ""A"" thay vì ném ValueError.",no,MUT_COND_02,condition_ordering,yes,yes,evaluate_score validates boundary limits (0 to 100) before checking grade tier.,"def evaluate_score(s: int) -> str:
+    if not (0 <= s <= 100):
+        raise ValueError()
+    if s >= 90:
+        return ""A""
+    return ""B""","def evaluate_score(s: int) -> str:
+    if s >= 90:
+        return ""A""
+    if not (0 <= s <= 100):
+        raise ValueError()
+    return ""B""","--- original
++++ mutated
+@@ -1,6 +1,6 @@
+ def evaluate_score(s: int) -> str:
++    if s >= 90:
++        return ""A""
+     if not (0 <= s <= 100):
+         raise ValueError()
+-    if s >= 90:
+-        return ""A""
+     return ""B"""
+MUT_008,Rater R3,contradicted,cao,Thứ tự ưu tiên bị đảo lộn; default handler xử lý trước làm mất tính năng override của custom hook.,no,MUT_COND_03,condition_ordering,yes,yes,dispatch_handler prioritizes custom override hooks over default handlers.,"def dispatch(has_custom: bool, has_default: bool) -> str:
+    if has_custom:
+        return ""custom""
+    elif has_default:
+        return ""default""
+    return ""none""","def dispatch(has_custom: bool, has_default: bool) -> str:
+    if has_default:
+        return ""default""
+    elif has_custom:
+        return ""custom""
+    return ""none""","--- original
++++ mutated
+@@ -1,6 +1,6 @@
+ def dispatch(has_custom: bool, has_default: bool) -> str:
+-    if has_custom:
++    if has_default:
++        return ""default""
++    elif has_custom:
+         return ""custom""
+-    elif has_default:
+-        return ""default""
+     return ""none"""
+MUT_009,Rater R3,contradicted,cao,"Thứ tự kiểm tra logic bị tráo đổi, đánh giá phân quyền trước khi xác thực tính hợp lệ của token.",no,MUT_COND_04,condition_ordering,yes,yes,is_authorized verifies authentication token validity before checking role permissions.,"def is_authorized(token_valid: bool, has_role: bool) -> bool:
+    return token_valid and has_role","def is_authorized(token_valid: bool, has_role: bool) -> bool:
+    return has_role and token_valid","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def is_authorized(token_valid: bool, has_role: bool) -> bool:
+-    return token_valid and has_role
++    return has_role and token_valid"
+MUT_010,Rater R3,contradicted,cao,Kiểm tra db được đẩy lên trước cache làm vô hiệu hóa toàn bộ cơ chế cache hit.,no,MUT_COND_05,condition_ordering,yes,yes,process_query checks cache existence before executing expensive database fetch.,"def process_query(in_cache: bool, fetch_db: bool) -> str:
+    if in_cache:
+        return ""cache""
+    if fetch_db:
+        return ""db""
+    return ""empty""","def process_query(in_cache: bool, fetch_db: bool) -> str:
+    if fetch_db:
+        return ""db""
+    if in_cache:
+        return ""cache""
+    return ""empty""","--- original
++++ mutated
+@@ -1,6 +1,6 @@
+ def process_query(in_cache: bool, fetch_db: bool) -> str:
++    if fetch_db:
++        return ""db""
+     if in_cache:
+         return ""cache""
+-    if fetch_db:
+-        return ""db""
+     return ""empty"""
+MUT_011,Rater R3,contradicted,cao,"Loại ngoại lệ ném ra bị đổi từ ValueError thành TypeError, vi phạm đặc tả giao diện lỗi của hàm.",no,MUT_EXC_01,exception_type,yes,yes,validate_age raises ValueError when age is negative.,"def validate_age(age: int) -> int:
+    if age < 0:
+        raise ValueError(""Invalid age"")
+    return age","def validate_age(age: int) -> int:
+    if age < 0:
+        raise TypeError(""Invalid age"")
+    return age","--- original
++++ mutated
+@@ -1,4 +1,4 @@
+ def validate_age(age: int) -> int:
+     if age < 0:
+-        raise ValueError(""Invalid age"")
++        raise TypeError(""Invalid age"")
+     return age"
+MUT_012,Rater R3,contradicted,cao,Đổi ngoại lệ từ KeyError thành IndexError không phù hợp với kiểu truy xuất từ điển cấu hình.,no,MUT_EXC_02,exception_type,yes,yes,get_config raises KeyError when required section is missing.,"def get_config(cfg: dict, section: str) -> dict:
+    if section not in cfg:
+        raise KeyError(section)
+    return cfg[section]","def get_config(cfg: dict, section: str) -> dict:
+    if section not in cfg:
+        raise IndexError(section)
+    return cfg[section]","--- original
++++ mutated
+@@ -1,4 +1,4 @@
+ def get_config(cfg: dict, section: str) -> dict:
+     if section not in cfg:
+-        raise KeyError(section)
++        raise IndexError(section)
+     return cfg[section]"
+MUT_013,Rater R3,contradicted,cao,Khối catch ném ra RuntimeError thay vì bảo lưu chuẩn ValueError như claim tuyên bố.,no,MUT_EXC_03,exception_type,yes,yes,parse_int raises ValueError on malformed string tokens.,"def parse_int(s: str) -> int:
+    try:
+        return int(s)
+    except ValueError:
+        raise ValueError(f""Bad integer: {s}"")","def parse_int(s: str) -> int:
+    try:
+        return int(s)
+    except ValueError:
+        raise RuntimeError(f""Bad integer: {s}"")","--- original
++++ mutated
+@@ -2,4 +2,4 @@
+     try:
+         return int(s)
+     except ValueError:
+-        raise ValueError(f""Bad integer: {s}"")
++        raise RuntimeError(f""Bad integer: {s}"")"
+MUT_014,Rater R3,contradicted,cao,Ngoại lệ re-raise bị chuyển thành TimeoutError thay vì ConnectionError.,no,MUT_EXC_04,exception_type,yes,yes,open_connection catches OSError and re-raises ConnectionError.,"def open_connection(host: str):
+    try:
+        connect(host)
+    except OSError as e:
+        raise ConnectionError(host) from e","def open_connection(host: str):
+    try:
+        connect(host)
+    except OSError as e:
+        raise TimeoutError(host) from e","--- original
++++ mutated
+@@ -2,4 +2,4 @@
+     try:
+         connect(host)
+     except OSError as e:
+-        raise ConnectionError(host) from e
++        raise TimeoutError(host) from e"
+MUT_015,Rater R3,contradicted,cao,Thay đổi ngoại lệ kiểm tra từ AssertionError sang SystemError mâu thuẫn trực tiếp với claim.,no,MUT_EXC_05,exception_type,yes,yes,assert_ready raises AssertionError when state is uninitialized.,"def assert_ready(ready: bool) -> None:
+    if not ready:
+        raise AssertionError(""Not ready"")","def assert_ready(ready: bool) -> None:
+    if not ready:
+        raise SystemError(""Not ready"")","--- original
++++ mutated
+@@ -1,3 +1,3 @@
+ def assert_ready(ready: bool) -> None:
+     if not ready:
+-        raise AssertionError(""Not ready"")
++        raise SystemError(""Not ready"")"
+MUT_016,Rater R3,contradicted,cao,Giá trị mặc định của tham số timeout bị thay đổi từ 30.0 sang 10.0.,no,MUT_DEF_01,default_parameter_value,yes,yes,fetch_data defaults to timeout of 30.0 seconds.,"def fetch_data(url: str, timeout: float = 30.0) -> bytes:
+    return b""""","def fetch_data(url: str, timeout: float = 10.0) -> bytes:
+    return b""""","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def fetch_data(url: str, timeout: float = 30.0) -> bytes:
++def fetch_data(url: str, timeout: float = 10.0) -> bytes:
+     return b"""""
+MUT_017,Rater R3,contradicted,cao,"Tham số mặc định strict bị đảo từ False thành True, làm thay đổi hành vi mặc định của hàm.",no,MUT_DEF_02,default_parameter_value,yes,yes,create_session defaults strict mode to False.,"def create_session(name: str, strict: bool = False) -> dict:
+    return {""name"": name, ""strict"": strict}","def create_session(name: str, strict: bool = True) -> dict:
+    return {""name"": name, ""strict"": strict}","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def create_session(name: str, strict: bool = False) -> dict:
++def create_session(name: str, strict: bool = True) -> dict:
+     return {""name"": name, ""strict"": strict}"
+MUT_018,Rater R3,contradicted,cao,"Default encoding bị đổi thành ""ascii"", gây lỗi giải mã đối với chuỗi ký tự UTF-8 thông thường.",no,MUT_DEF_03,default_parameter_value,yes,yes,"decode_payload uses ""utf-8"" as default encoding.","def decode_payload(data: bytes, encoding: str = ""utf-8"") -> str:
+    return data.decode(encoding)","def decode_payload(data: bytes, encoding: str = ""ascii"") -> str:
+    return data.decode(encoding)","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def decode_payload(data: bytes, encoding: str = ""utf-8"") -> str:
++def decode_payload(data: bytes, encoding: str = ""ascii"") -> str:
+     return data.decode(encoding)"
+MUT_019,Rater R3,contradicted,cao,"Tham số max_retries mặc định bị hạ xuống 0, làm mất toàn bộ khả năng retry mặc định.",no,MUT_DEF_04,default_parameter_value,yes,yes,retry_call defaults max_retries to 3 attempts.,"def retry_call(fn: Callable, max_retries: int = 3) -> Any:
+    return fn()","def retry_call(fn: Callable, max_retries: int = 0) -> Any:
+    return fn()","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def retry_call(fn: Callable, max_retries: int = 3) -> Any:
++def retry_call(fn: Callable, max_retries: int = 0) -> Any:
+     return fn()"
+MUT_020,Rater R3,contradicted,cao,"Giá trị mặc định case_sensitive chuyển thành False, ép text thành chữ thường ngầm định.",no,MUT_DEF_05,default_parameter_value,yes,yes,format_output defaults case_sensitive to True.,"def format_output(text: str, case_sensitive: bool = True) -> str:
+    return text if case_sensitive else text.lower()","def format_output(text: str, case_sensitive: bool = False) -> str:
+    return text if case_sensitive else text.lower()","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def format_output(text: str, case_sensitive: bool = True) -> str:
++def format_output(text: str, case_sensitive: bool = False) -> str:
+     return text if case_sensitive else text.lower()"
+MUT_021,Rater R3,contradicted,cao,"Phương thức callee bị đổi từ .strip() thành .rstrip(), giữ lại khoảng trắng ở đầu chuỗi (leading whitespace).",no,MUT_CALL_01,callee_or_kwarg,yes,yes,clean_text strips both leading and trailing whitespace from input.,"def clean_text(s: str) -> str:
+    return s.strip()","def clean_text(s: str) -> str:
+    return s.rstrip()","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def clean_text(s: str) -> str:
+-    return s.strip()
++    return s.rstrip()"
+MUT_022,Rater R3,contradicted,cao,"Hàm gọi đổi từ re.match thành re.search, khớp pattern ở bất kỳ vị trí nào thay vì chỉ ở đầu chuỗi.",no,MUT_CALL_02,callee_or_kwarg,yes,yes,match_prefix matches pattern strictly from the beginning of string using re.match.,"def match_prefix(pat: str, text: str):
+    return re.match(pat, text)","def match_prefix(pat: str, text: str):
+    return re.search(pat, text)","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def match_prefix(pat: str, text: str):
+-    return re.match(pat, text)
++    return re.search(pat, text)"
+MUT_023,Rater R3,contradicted,cao,Đối số sort_keys bị đổi từ True sang False làm mất tính xác định của thứ tự khóa.,no,MUT_CALL_03,callee_or_kwarg,yes,yes,serialize_canonical dumps JSON with keys sorted deterministically.,"def serialize_canonical(obj: dict) -> str:
+    return json.dumps(obj, sort_keys=True)","def serialize_canonical(obj: dict) -> str:
+    return json.dumps(obj, sort_keys=False)","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def serialize_canonical(obj: dict) -> str:
+-    return json.dumps(obj, sort_keys=True)
++    return json.dumps(obj, sort_keys=False)"
+MUT_024,Rater R3,contradicted,cao,"Keyword argument reverse bị đổi thành False, sắp xếp danh sách theo chiều tăng dần thay vì giảm dần.",no,MUT_CALL_04,callee_or_kwarg,yes,yes,sort_descending orders elements in descending sequence (reverse=True).,"def sort_descending(nums: list[int]) -> list[int]:
+    return sorted(nums, reverse=True)","def sort_descending(nums: list[int]) -> list[int]:
+    return sorted(nums, reverse=False)","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def sort_descending(nums: list[int]) -> list[int]:
+-    return sorted(nums, reverse=True)
++    return sorted(nums, reverse=False)"
+MUT_025,Rater R3,contradicted,cao,"Phương thức get() an toàn bị thay bằng phép truy cập trực tiếp d[k], sẽ ném KeyError khi key vắng mặt.",no,MUT_CALL_05,callee_or_kwarg,yes,yes,safe_get retrieves dictionary value without raising KeyError when key is absent.,"def safe_get(d: dict, k: str, default=None):
+    return d.get(k, default)","def safe_get(d: dict, k: str, default=None):
+    return d[k]","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def safe_get(d: dict, k: str, default=None):
+-    return d.get(k, default)
++    return d[k]"

@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "completed_tasks": 200,
+  "planned_tasks": 200,
+  "mutation_hits": 100,
+  "mutation_total": 100,
+  "synthetic_recall": 1.0,
+  "synthetic_recall_wilson_95": [
+    0.9630065017930143,
+    1
+  ],
+  "control_false_positives": 0,
+  "control_total": 100,
+  "control_false_positive_rate": 0.0,
+  "control_false_positive_wilson_95": [
+    3.469446951953614e-18,
+    0.03699349820698568
+  ],
+  "unparsed": 0,
+  "by_family": {
+    "arithmetic": {
+      "mutated_total": 25,
+      "mutated_hits": 25
+    },
+    "condition": {
+      "mutated_total": 25,
+      "mutated_hits": 25
+    },
+    "exception": {
+      "mutated_total": 25,
+      "mutated_hits": 25
+    },
+    "call": {
+      "mutated_total": 25,
+      "mutated_hits": 25
+    }
+  },
+  "interpretation": "Synthetic mutation detection, not human semantic validation or a correction of the historical survival curve."
+}

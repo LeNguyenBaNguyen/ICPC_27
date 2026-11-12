@@ -1,0 +1,2516 @@
+{
+  "checked_date": "2026-11-11",
+  "scope": "Primary-source bibliography identity/metadata audit, not paper-quality or novelty verification. Unverified or inaccessible records are not marked valid. No bibliography/manuscript edits.",
+  "bibliography_sha256": "bf20316d0b857b98c95e77bfba6f4c3da3a91e701bf51dcce181565afbec4142",
+  "venue": {
+    "source_url": "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-",
+    "claim": "At most four main-text pages plus one references page, IEEEtran 10pt conference.",
+    "verified": true,
+    "http_status": 200,
+    "resolved_url": "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-",
+    "body_sha256": "2dcaa318424fd15dbfb8f296e446f200206967cd1ee07bab790798c2ed374623",
+    "observed_evidence": {
+      "main_text_limit": "4 pages including figures, tables and appendices",
+      "references_extension": "1 additional page; five pages total",
+      "template": "IEEE conference 10pt; IEEEtran conference; no compsoc/compsocconf",
+      "extra_pages_purchase_allowed": false
+    },
+    "evidence_quote": "References may optionally continue on 1 additional page",
+    "retrieval_note": "The web browsing tool failed for this URL; direct HTTPS urllib retrieval returned HTTP 200."
+  },
+  "entries": [
+    {
+      "key": "khatib2026mutation",
+      "claim": {
+        "author": "Lara Khatib and Michael Pu and Bogdan Vasilescu and Meiyappan Nagappan",
+        "title": "Using Mutation-Analysis to Examine an {LLM}'s Ability to Summarize Code",
+        "howpublished": "arXiv:2602.17838",
+        "year": "2026"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2602.17838",
+      "resolved_url": "https://arxiv.org/abs/2602.17838",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Using Mutation-Analysis to Examine an LLM's Ability to Summarize Code"
+        ],
+        "citation_author": [
+          "Khatib, Lara",
+          "Pu, Michael",
+          "Vasilescu, Bogdan",
+          "Nagappan, Meiyappan"
+        ],
+        "citation_date": [
+          "2026/02/19"
+        ],
+        "citation_online_date": [
+          "2026/06/25"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2602.17838"
+        ],
+        "citation_arxiv_id": [
+          "2602.17838"
+        ],
+        "citation_abstract": [
+          "As developers increasingly rely on LLM-generated code summaries for documentation, testing, and review, it is important to study whether these summaries accurately reflect what the program actually does. LLMs often produce confident descriptions of what the code looks like it should do (intent), while missing subtle edge cases or logic changes that define what it actually does (behavior). We present a mutation-based evaluation methodology that directly tests whether a summary truly matches the code's logic. Our approach generates a summary, injects a targeted mutation into the code, and checks if the LLM updates its summary to reflect the new behavior. We validate it through three experiments totalling 624 mutation-summary evaluations across 62 programs. First, on 12 controlled synthetic programs with 324 mutations varying in type (statement, value, decision) and location (beginning, middle, end). We find that summary accuracy decreases sharply with complexity from 76.5% for single functions to 17.3% for multi-threaded systems, while mutation type and location exhibit weaker effects. Second, testing 150 mutated samples on 50 human-written programs from the Less Basic Python Problems (LBPP) dataset confirms the same failure patterns persist as models often describe algorithmic intent rather than actual mutated behavior with a summary accuracy rate of 49.3%. Furthermore, while a comparison between GPT-4 and GPT-5.2 shows a substantial performance leap (from 49.3% to 85.3%) and an improved ability to identify mutations as \"bugs\", both models continue to struggle with distinguishing implementation details from standard algorithmic patterns. This work establishes mutation analysis as a systematic approach for assessing whether LLM-generated summaries reflect program behavior rather than superficial textual patterns."
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "xu2026repodoc",
+      "claim": {
+        "author": "Dong Xu and Mingwei Liu and Xiwen Wang and Jianfeng Zhong and Zibin Zheng",
+        "title": "{RepoDoc}: A Knowledge Graph-Based Framework to Automatic Documentation Generation and Incremental Updates",
+        "howpublished": "arXiv:2604.26523",
+        "year": "2026"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2604.26523",
+      "resolved_url": "https://arxiv.org/abs/2604.26523",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "RepoDoc: A Knowledge Graph-Based Framework to Automatic Documentation Generation and Incremental Updates"
+        ],
+        "citation_author": [
+          "Xu, Dong",
+          "Liu, Mingwei",
+          "Wang, Xiwen",
+          "Zhong, Jianfeng",
+          "Zheng, Zibin"
+        ],
+        "citation_date": [
+          "2026/04/29"
+        ],
+        "citation_online_date": [
+          "2026/04/29"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2604.26523"
+        ],
+        "citation_arxiv_id": [
+          "2604.26523"
+        ],
+        "citation_abstract": [
+          "Maintaining up-to-date, comprehensive documentation for large codebases is a persistent challenge. Recent progress in automated documentation has moved from template-based rules to large language models (LLMs), yet existing tools still process source code as flat fragments, producing isolated documents that lack semantic structure. This design also leads to excessive token consumption and slow generation, while failing to capture how code changes propagate across dependencies. We propose RepoDoc, a system that uses a repository knowledge graph (RepoKG) as the semantic foundation for the entire documentation lifecycle. Our framework consists of three stages: (1) RepoKG construction, which extracts code entities and their relationships; (2) module clustering, which groups code into functionally cohesive, hierarchical units; and (3) skillful agent-based generation, which queries the graph to create modular, cross-referenced documentation with auto-generated Mermaid diagrams. For incremental maintenance, a semantic impact propagation mechanism navigates the RepoKG bidirectionally to pinpoint all affected parts, allowing selective, targeted regeneration. Evaluated on 24 repositories across 8 programming languages, RepoDoc substantially outperforms state-of-the-art alternatives. It improves API coverage by 32.5% and completeness by 10.4%, while generating documentation 3x faster with 85% fewer tokens. For incremental updates, it cuts update time by 73% and token usage by 77%, and achieves 10.2% higher update recall, more accurately reflecting code changes in the regenerated documentation. The source code and experimental artifacts are available at https://github.com/SYSUSELab/RepoDoc."
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "luo2024repoagent",
+      "claim": {
+        "author": "Qinyu Luo and Yining Ye and Shihao Liang and Zhong Zhang and Yujia Qin and Yaxi Lu and Yesai Wu and Xin Cong and Yankai Lin and Yingli Zhang and Xiaoyin Che and Zhiyuan Liu and Maosong Sun",
+        "title": "{RepoAgent}: An {LLM}-Powered Open-Source Framework for Repository-level Code Documentation Generation",
+        "booktitle": "Proc. EMNLP: System Demonstrations",
+        "year": "2024"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://aclanthology.org/2024.emnlp-demo.46/",
+      "resolved_url": "https://aclanthology.org/2024.emnlp-demo.46/",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "RepoAgent: An LLM-Powered Open-Source Framework for Repository-level Code Documentation Generation"
+        ],
+        "citation_author": [
+          "Qinyu Luo",
+          "Yining Ye",
+          "Shihao Liang",
+          "Zhong Zhang",
+          "Yujia Qin",
+          "Yaxi Lu",
+          "Yesai Wu",
+          "Xin Cong",
+          "Yankai Lin (林衍凯)",
+          "Yingli Zhang",
+          "Xiaoyin Che",
+          "Zhiyuan Liu",
+          "Maosong Sun (孙茂松)"
+        ],
+        "citation_conference_title": [
+          "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing: System Demonstrations"
+        ],
+        "citation_publication_date": [
+          "2024/11"
+        ],
+        "citation_pdf_url": [
+          "https://aclanthology.org/2024.emnlp-demo.46.pdf"
+        ],
+        "citation_firstpage": [
+          "436"
+        ],
+        "citation_lastpage": [
+          "464"
+        ],
+        "citation_doi": [
+          "10.18653/v1/2024.emnlp-demo.46"
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "kelious2026codens",
+      "claim": {
+        "author": "Abdelhak Kelious and Chyrine Tahri and Eliot Bardet",
+        "title": "{CODENS}: Transforming Code Changes into Living, Accessible, and Queryable Documentation",
+        "howpublished": "arXiv:2607.18356",
+        "year": "2026"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2607.18356",
+      "resolved_url": "https://arxiv.org/abs/2607.18356",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "CODENS: Transforming Code Changes into Living, Accessible, and Queryable Documentation"
+        ],
+        "citation_author": [
+          "Kelious, Abdelhak",
+          "Tahri, Chyrine",
+          "Bardet, Eliot"
+        ],
+        "citation_doi": [
+          "10.1145/3820755.3832807"
+        ],
+        "citation_date": [
+          "2026/07/20"
+        ],
+        "citation_online_date": [
+          "2026/07/20"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2607.18356"
+        ],
+        "citation_arxiv_id": [
+          "2607.18356"
+        ],
+        "citation_abstract": [
+          "Maintaining up-to-date code documentation is difficult in fast-moving repositories because design knowledge is scattered across source files and pull requests. We present CODENS , a system that turns pull requests into living, accessible, and queryable documentation for production codebases. CODENS incrementally builds a typed software knowledge graph from pull requests, enriches components through schema-driven semantic extraction, derives typed relations between them, and exposes the resulting knowledge through three retrieval modes, including agent-guided graph traversal for repository-level question answering. The system also preserves semantic change history across pull requests and integrates both answer-quality and operational evaluation metrics. We evaluate CODENS on a client Ruby on Rails project in production. Results show that CODENS produces highly relevant and well-grounded answers, while qualitative feedback highlights a remaining challenge in concise, documentation-oriented synthesis."
+        ]
+      },
+      "observed_comments_excerpt": "Accepted at the 26th ACM Symposium on Document Engineering (DocEng 2026). DOI: https://doi.org/10.1145/3820755.3832807",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      },
+      "notes": [
+        "Primary arXiv page reports DocEng2026 acceptance and related DOI10.1145/3820755.3832807. The existing2026 preprint citation is valid; adding publication metadata is optional."
+      ]
+    },
+    {
+      "key": "radmanesh2024impact",
+      "claim": {
+        "author": "Shiva Radmanesh and Aaron Imani and Iftekhar Ahmed and Mohammad Moshirpour",
+        "title": "Investigating the Impact of Code Comment Inconsistency on Bug Introducing",
+        "howpublished": "arXiv:2409.10781",
+        "year": "2024"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2409.10781",
+      "resolved_url": "https://arxiv.org/abs/2409.10781",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Investigating the Impact of Code Comment Inconsistency on Bug Introducing"
+        ],
+        "citation_author": [
+          "Radmanesh, Shiva",
+          "Imani, Aaron",
+          "Ahmed, Iftekhar",
+          "Moshirpour, Mohammad"
+        ],
+        "citation_date": [
+          "2024/09/16"
+        ],
+        "citation_online_date": [
+          "2024/09/16"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2409.10781"
+        ],
+        "citation_arxiv_id": [
+          "2409.10781"
+        ],
+        "citation_abstract": [
+          "Code comments are essential for clarifying code functionality, improving readability, and facilitating collaboration among developers. Despite their importance, comments often become outdated, leading to inconsistencies with the corresponding code. This can mislead developers and potentially introduce bugs. Our research investigates the impact of code-comment inconsistency on bug introduction using large language models, specifically GPT-3.5. We first compare the performance of the GPT-3.5 model with other state-of-the-art methods in detecting these inconsistencies, demonstrating the superiority of GPT-3.5 in this domain. Additionally, we analyze the temporal evolution of code-comment inconsistencies and their effect on bug proneness over various timeframes using GPT-3.5 and Odds ratio analysis. Our findings reveal that inconsistent changes are around 1.5 times more likely to lead to a bug-introducing commit than consistent changes, highlighting the necessity of maintaining consistent and up-to-date comments in software development. This study provides new insights into the relationship between code-comment inconsistency and software quality, offering a comprehensive analysis of its impact over time, demonstrating that the impact of code-comment inconsistency on bug introduction is highest immediately after the inconsistency is introduced and diminishes over time."
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "sistla2025verified",
+      "claim": {
+        "author": "Meghana Sistla and Gogul Balakrishnan and Pat Rondon and Jos{\\'e} Cambronero and Michele Tufano and Satish Chandra",
+        "title": "Towards Verified Code Reasoning by {LLMs}",
+        "howpublished": "arXiv:2509.26546",
+        "year": "2025"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2509.26546",
+      "resolved_url": "https://arxiv.org/abs/2509.26546",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Towards Verified Code Reasoning by LLMs"
+        ],
+        "citation_author": [
+          "Sistla, Meghana",
+          "Balakrishnan, Gogul",
+          "Rondon, Pat",
+          "Cambronero, José",
+          "Tufano, Michele",
+          "Chandra, Satish"
+        ],
+        "citation_date": [
+          "2025/09/30"
+        ],
+        "citation_online_date": [
+          "2025/11/13"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2509.26546"
+        ],
+        "citation_arxiv_id": [
+          "2509.26546"
+        ],
+        "citation_abstract": [
+          "While LLM-based agents are able to tackle a wide variety of code reasoning questions, the answers are not always correct. This prevents the agent from being useful in situations where high precision is desired: (1) helping a software engineer understand a new code base, (2) helping a software engineer during code review sessions, and (3) ensuring that the code generated by an automated code generation system meets certain requirements (e.g. fixes a bug, improves readability, implements a feature). As a result of this lack of trustworthiness, the agent's answers need to be manually verified before they can be trusted. Manually confirming responses from a code reasoning agent requires human effort and can result in slower developer productivity, which weakens the assistance benefits of the agent. In this paper, we describe a method to automatically validate the answers provided by a code reasoning agent by verifying its reasoning steps. At a very high level, the method consists of extracting a formal representation of the agent's response and, subsequently, using formal verification and program analysis tools to verify the agent's reasoning steps. We applied this approach to a benchmark set of 20 uninitialized variable errors detected by sanitizers and 20 program equivalence queries. For the uninitialized variable errors, the formal verification step was able to validate the agent's reasoning on 13/20 examples, and for the program equivalence queries, the formal verification step successfully caught 6/8 incorrect judgments made by the agent."
+        ]
+      },
+      "observed_comments_excerpt": "43 pages",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "pai2025codocbench",
+      "claim": {
+        "author": "Kunal Pai and Premkumar Devanbu and Toufique Ahmed",
+        "title": "{CoDocBench}: A Dataset for Code-Documentation Alignment in Software Maintenance",
+        "booktitle": "Proc. Int. Conf. Mining Software Repositories (MSR), Data and Tool Showcase Track",
+        "year": "2025"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2502.00519",
+      "resolved_url": "https://arxiv.org/abs/2502.00519",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "CoDocBench: A Dataset for Code-Documentation Alignment in Software Maintenance"
+        ],
+        "citation_author": [
+          "Pai, Kunal",
+          "Devanbu, Premkumar",
+          "Ahmed, Toufique"
+        ],
+        "citation_date": [
+          "2025/02/01"
+        ],
+        "citation_online_date": [
+          "2025/02/04"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2502.00519"
+        ],
+        "citation_arxiv_id": [
+          "2502.00519"
+        ],
+        "citation_abstract": [
+          "One of the central tasks in software maintenance is being able to understand and develop code changes. Thus, given a natural language description of the desired new operation of a function, an agent (human or AI) might be asked to generate the set of edits to that function to implement the desired new operation; likewise, given a set of edits to a function, an agent might be asked to generate a changed description, of that function's new workings. Thus, there is an incentive to train a neural model for change-related tasks. Motivated by this, we offer a new, \"natural\", large dataset of coupled changes to code and documentation mined from actual high-quality GitHub projects, where each sample represents a single commit where the code and the associated docstring were changed together. We present the methodology for gathering the dataset, and some sample, challenging (but realistic) tasks where our dataset provides opportunities for both learning and evaluation. We find that current models (specifically Llama-3.1 405B, Mixtral 8$\\times$22B) do find these maintenance-related tasks challenging."
+        ]
+      },
+      "observed_comments_excerpt": "Accepted at the 2025 IEEE/ACM 22nd International Conference on Mining Software Repositories (MSR) - Data and Tool Showcase Track",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      },
+      "additional_primary_sources": [
+        {
+          "url": "https://conf.researchr.org/track/msr-2025/msr-2025-data-and-tool-showcase-track",
+          "evidence": "Official accepted-paper list places CoDocBench in the2025 Data and Tool Showcase Track."
+        }
+      ]
+    },
+    {
+      "key": "maharaj2024etf",
+      "claim": {
+        "author": "Kishan Maharaj and Vitobha Munigala and Srikanth G. Tamilselvam and Prince Kumar and Sayandeep Sen and Palani Kodeswaran and Abhijit Mishra and Pushpak Bhattacharyya",
+        "title": "{ETF}: An Entity Tracing Framework for Hallucination Detection in Code Summaries",
+        "howpublished": "arXiv:2410.14748",
+        "year": "2024"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2410.14748",
+      "resolved_url": "https://arxiv.org/abs/2410.14748",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "ETF: An Entity Tracing Framework for Hallucination Detection in Code Summaries"
+        ],
+        "citation_author": [
+          "Maharaj, Kishan",
+          "Munigala, Vitobha",
+          "Tamilselvam, Srikanth G.",
+          "Kumar, Prince",
+          "Sen, Sayandeep",
+          "Kodeswaran, Palani",
+          "Mishra, Abhijit",
+          "Bhattacharyya, Pushpak"
+        ],
+        "citation_date": [
+          "2024/10/17"
+        ],
+        "citation_online_date": [
+          "2025/09/06"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2410.14748"
+        ],
+        "citation_arxiv_id": [
+          "2410.14748"
+        ],
+        "citation_abstract": [
+          "Recent advancements in large language models (LLMs) have significantly enhanced their ability to understand both natural language and code, driving their use in tasks like natural language-to-code (NL2Code) and code summarisation. However, LLMs are prone to hallucination, outputs that stray from intended meanings. Detecting hallucinations in code summarisation is especially difficult due to the complex interplay between programming and natural languages. We introduce a first-of-its-kind dataset, CodeSumEval, with ~10K samples, curated specifically for hallucination detection in code summarisation. We further propose a novel Entity Tracing Framework (ETF) that a) utilises static program analysis to identify code entities from the program and b) uses LLMs to map and verify these entities and their intents within generated code summaries. Our experimental analysis demonstrates the framework's effectiveness, leading to a 73% F1 score. The proposed approach provides a method for detecting hallucinations by tracing entities from the summary to the code, allowing us to evaluate summary accuracy and localise the error within the summary."
+        ]
+      },
+      "observed_comments_excerpt": "Accepted in ACL 2025 Main, 14 pages, 3 Figures, 5 Tables",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      },
+      "notes": [
+        "2024 is correct for the cited arXiv first version; the latest arXiv record also reports ACL2025 Main acceptance. Updating to the published conference record is optional, not correction of a false2024 preprint year."
+      ]
+    },
+    {
+      "key": "zhong2025ccisolver",
+      "claim": {
+        "author": "Renyi Zhong and Yintong Huo and Wenwei Gu and Jinxi Kuang and Zhihan Jiang and Guangba Yu and Yichen Li and David Lo and Michael R. Lyu",
+        "title": "{CCISolver}: End-to-End Detection and Repair of Method-Level Code-Comment Inconsistency",
+        "howpublished": "arXiv:2506.20558",
+        "year": "2025"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2506.20558",
+      "resolved_url": "https://arxiv.org/abs/2506.20558",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "CCISolver: End-to-End Detection and Repair of Method-Level Code-Comment Inconsistency"
+        ],
+        "citation_author": [
+          "Zhong, Renyi",
+          "Huo, Yintong",
+          "Gu, Wenwei",
+          "Kuang, Jinxi",
+          "Jiang, Zhihan",
+          "Yu, Guangba",
+          "Li, Yichen",
+          "Lo, David",
+          "Lyu, Michael R."
+        ],
+        "citation_date": [
+          "2025/06/25"
+        ],
+        "citation_online_date": [
+          "2025/06/25"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2506.20558"
+        ],
+        "citation_arxiv_id": [
+          "2506.20558"
+        ],
+        "citation_abstract": [
+          "Comments within code serve as a crucial foundation for software documentation, facilitating developers to communicate and understand the code effectively. However, code-comment inconsistency (CCI) can negatively affect software development, testing, and maintenance. Recent efforts to mitigate this issue have emerged, but existing studies often suffer from inaccurate datasets and inadequate solutions, weakening their practical effectiveness. In this study, we first conduct a quantitative analysis of existing datasets, revealing a substantial portion of sampled data are mislabeled. To address these data limitations, we introduce CCIBench, a refined dataset comprising high-quality data, to support the training and evaluation of method-level CCI methods. Furthermore, we present an innovative end-to-end LLM-based framework, CCISolver, designed to improve code quality by identifying and rectifying CCIs. Comprehensive evaluations demonstrate CCISolver's superior performance. For detection, it establishes a new state-of-the-art with an F1-score of 89.54%. In fixing task, it achieves a remarkable 18.84% relative improvement in GLEU score over the strongest baseline. This superiority is confirmed by human evaluation, where CCISolver's fixing success rate of 0.6533 significantly surpasses existing methods. Critically, in a practical end-to-end setting, CCISolver's innovative architecture is approximately 36% faster for inference than the baseline model, underscoring its scalability and real-world applicability."
+        ]
+      },
+      "observed_comments_excerpt": "This manuscript is under review",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "hovhannisyan2024churn",
+      "claim": {
+        "author": "Ani Hovhannisyan and Youmei Fan and Gema Rodriguez-Perez and Raula Gaikovina Kula",
+        "title": "Linking Code and Documentation Churn: Preliminary Analysis",
+        "howpublished": "arXiv:2410.05992",
+        "year": "2024"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2410.05992",
+      "resolved_url": "https://arxiv.org/abs/2410.05992",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Linking Code and Documentation Churn: Preliminary Analysis"
+        ],
+        "citation_author": [
+          "Hovhannisyan, Ani",
+          "Fan, Youmei",
+          "Rodriguez-Perez, Gema",
+          "Kula, Raula Gaikovina"
+        ],
+        "citation_date": [
+          "2024/10/08"
+        ],
+        "citation_online_date": [
+          "2024/10/08"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2410.05992"
+        ],
+        "citation_arxiv_id": [
+          "2410.05992"
+        ],
+        "citation_abstract": [
+          "Code churn refers to the measure of the amount of code added, modified, or deleted in a project and is often used to assess codebase stability and maintainability. Program comprehension or how understandable the changes are, is equally important for maintainability. Documentation is crucial for knowledge transfer, especially when new maintainers take over abandoned code. We emphasize the need for corresponding documentation updates, as this reflects project health and trustworthiness as a third-party library. Therefore, we argue that every code change should prompt a documentation update (defined as documentation churn). Linking code churn changes with documentation updates is important for project sustainability, as it facilitates knowledge transfer and reduces the effort required for program comprehension. This study investigates the synchrony between code churn and documentation updates in three GitHub open-source projects. We will use qualitative analysis and repository mining to examine the alignment and correlation of code churn and documentation updates over time. We want to identify which code changes are likely synchronized with documentation and to what extent documentation can be auto-generated. Preliminary results indicate varying degrees of synchrony across projects, highlighting the importance of integrated concurrent documentation practices and providing insights into how recent technologies like AI, in the form of Large Language Models (i.e., LLMs), could be leveraged to keep code and documentation churn in sync. The novelty of this study lies in demonstrating how synchronizing code changes with documentation updates can improve the development lifecycle by enhancing diversity and efficiency."
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "yang2025docagent",
+      "claim": {
+        "author": "Dayu Yang and Antoine Simoulin and Xin Qian and Xiaoyi Liu and Yuwei Cao and Zhaopu Teng and Grey Yang",
+        "title": "{DocAgent}: A Multi-Agent System for Automated Code Documentation Generation",
+        "booktitle": "Proc. ACL: System Demonstrations",
+        "year": "2025"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://aclanthology.org/2025.acl-demo.44/",
+      "resolved_url": "https://aclanthology.org/2025.acl-demo.44/",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "DocAgent: A Multi-Agent System for Automated Code Documentation Generation"
+        ],
+        "citation_author": [
+          "Dayu Yang",
+          "Antoine Simoulin",
+          "Xin Qian",
+          "Xiaoyi Liu",
+          "Yuwei Cao",
+          "Zhaopu Teng",
+          "Grey Yang"
+        ],
+        "citation_conference_title": [
+          "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)"
+        ],
+        "citation_publication_date": [
+          "2025/7"
+        ],
+        "citation_pdf_url": [
+          "https://aclanthology.org/2025.acl-demo.44.pdf"
+        ],
+        "citation_firstpage": [
+          "460"
+        ],
+        "citation_lastpage": [
+          "471"
+        ],
+        "citation_doi": [
+          "10.18653/v1/2025.acl-demo.44"
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "wen2019large",
+      "claim": {
+        "author": "Fengcai Wen and Csaba Nagy and Gabriele Bavota and Michele Lanza",
+        "title": "A Large-Scale Empirical Study on Code-Comment Inconsistencies",
+        "booktitle": "Proc. IEEE/ACM Int. Conf. Program Comprehension (ICPC)",
+        "pages": "53--64",
+        "year": "2019"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=A+Large-Scale+Empirical+Study+on+Code-Comment+Inconsistencies&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "A Large-Scale Empirical Study on Code-Comment Inconsistencies",
+          "doi": "10.1109/icpc.2019.00019",
+          "similarity": 1.0
+        },
+        {
+          "title": "DocChecker: Bootstrapping Code Large Language Model for Detecting and Resolving Code-Comment Inconsistencies",
+          "doi": "10.18653/v1/2024.eacl-demo.20",
+          "similarity": 0.527027027027027
+        },
+        {
+          "title": "An Empirical Study on Code Comment Completion",
+          "doi": "10.26226/morressier.613b5418842293c031b5b5da",
+          "similarity": 0.6739130434782609
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1109/icpc.2019.00019",
+      "observed": {
+        "title": [
+          "A Large-Scale Empirical Study on Code-Comment Inconsistencies"
+        ],
+        "author": [
+          {
+            "given": "Fengcai",
+            "family": "Wen",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Software Institute, Universit&#x00E0; della Svizzera italiana (USI), Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Csaba",
+            "family": "Nagy",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Software Institute, Universit&#x00E0; della Svizzera italiana (USI), Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gabriele",
+            "family": "Bavota",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Software Institute, Universit&#x00E0; della Svizzera italiana (USI), Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Michele",
+            "family": "Lanza",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Software Institute, Universit&#x00E0; della Svizzera italiana (USI), Switzerland"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "2019 IEEE/ACM 27th International Conference on Program Comprehension (ICPC)"
+        ],
+        "volume": null,
+        "issue": null,
+        "page": "53-64",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              5
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1109/icpc.2019.00019",
+        "publisher": "IEEE"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "panthaplackel2021deep",
+      "claim": {
+        "author": "Sheena Panthaplackel and Junyi Jessy Li and Milos Gligoric and Raymond J. Mooney",
+        "title": "Deep Just-In-Time Inconsistency Detection Between Comments and Source Code",
+        "booktitle": "Proc. AAAI Conf. Artificial Intelligence",
+        "year": "2021"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/16119",
+      "resolved_url": "https://ojs.aaai.org/index.php/AAAI/article/view/16119",
+      "http_status": 200,
+      "observed": {
+        "DC.Creator.PersonalName": [
+          "Sheena Panthaplackel",
+          "Junyi Jessy Li",
+          "Milos Gligoric",
+          "Raymond J. Mooney"
+        ],
+        "DC.Title": [
+          "Deep Just-In-Time Inconsistency Detection Between Comments and Source Code"
+        ],
+        "citation_journal_title": [
+          "Proceedings of the AAAI Conference on Artificial Intelligence"
+        ],
+        "citation_journal_abbrev": [
+          "AAAI"
+        ],
+        "citation_issn": [
+          "2374-3468"
+        ],
+        "citation_author": [
+          "Sheena Panthaplackel",
+          "Junyi Jessy Li",
+          "Milos Gligoric",
+          "Raymond J. Mooney"
+        ],
+        "citation_author_institution": [
+          "The University of Texas at Austin",
+          "The University of Texas at Austin",
+          "The University of Texas at Austin",
+          "The University of Texas at Austin"
+        ],
+        "citation_title": [
+          "Deep Just-In-Time Inconsistency Detection Between Comments and Source Code"
+        ],
+        "citation_language": [
+          "en"
+        ],
+        "citation_date": [
+          "2021/05/18"
+        ],
+        "citation_volume": [
+          "35"
+        ],
+        "citation_issue": [
+          "1"
+        ],
+        "citation_firstpage": [
+          "427"
+        ],
+        "citation_lastpage": [
+          "435"
+        ],
+        "citation_doi": [
+          "10.1609/aaai.v35i1.16119"
+        ],
+        "citation_abstract_html_url": [
+          "https://ojs.aaai.org/index.php/AAAI/article/view/16119"
+        ],
+        "citation_keywords": [
+          "Software Engineering"
+        ],
+        "citation_pdf_url": [
+          "https://ojs.aaai.org/index.php/AAAI/article/download/16119/15926"
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "liu2023jit",
+      "claim": {
+        "author": "Zhongxin Liu and Xin Xia and David Lo and Meng Yan and Shanping Li",
+        "title": "Just-In-Time Obsolete Comment Detection and Update",
+        "journal": "IEEE Trans. Software Engineering",
+        "volume": "49",
+        "number": "1",
+        "pages": "1--23",
+        "year": "2023"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Just-In-Time+Obsolete+Comment+Detection+and+Update&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Just-In-Time Obsolete Comment Detection and Update",
+          "doi": "10.1109/tse.2021.3138909",
+          "similarity": 1.0
+        },
+        {
+          "title": "Deep Just-In-Time Consistent Comment Update via Source Code Changes",
+          "doi": "10.1109/paap56126.2022.10010469",
+          "similarity": 0.54
+        },
+        {
+          "title": "Is Just War Theory Obsolete?",
+          "doi": "10.4324/9780203107164.ch2",
+          "similarity": 0.42424242424242425
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1109/tse.2021.3138909",
+      "observed": {
+        "title": [
+          "Just-In-Time Obsolete Comment Detection and Update"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-1981-1626",
+            "authenticated-orcid": false,
+            "given": "Zhongxin",
+            "family": "Liu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "College of Computer Science and Technology and Ningbo Research Institute, Zhejiang University, Hangzhou, Zhejiang, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6302-3256",
+            "authenticated-orcid": false,
+            "given": "Xin",
+            "family": "Xia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Software Engineering Application Technology Lab, Huawei, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4367-7201",
+            "authenticated-orcid": false,
+            "given": "David",
+            "family": "Lo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Information Systems, Singapore Management University, Singapore"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Meng",
+            "family": "Yan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Big Data and Software Engineering, Chongqing University, Chongqing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shanping",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Computer Science and Technology, Zhejiang Univeristy, Hangzhou, Zhejiang, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "IEEE Transactions on Software Engineering"
+        ],
+        "volume": "49",
+        "issue": "1",
+        "page": "1-23",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              1
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1109/tse.2021.3138909",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "tan2007icomment",
+      "claim": {
+        "author": "Lin Tan and Ding Yuan and Gopal Krishna and Yuanyuan Zhou",
+        "title": "/*{iComment}: Bugs or Bad Comments?*/",
+        "booktitle": "Proc. ACM Symp. Operating Systems Principles (SOSP)",
+        "pages": "145--158",
+        "year": "2007"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_exact_doi_metadata",
+      "prior_lookup": {
+        "source_url": null,
+        "status": "unverified",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "observed": null
+      },
+      "source_url": "https://api.crossref.org/works/10.1145%2F1294261.1294276",
+      "publisher_source_url": "https://doi.org/10.1145/1294261.1294276",
+      "http_status": 200,
+      "observed": {
+        "title": [
+          "/*icomment"
+        ],
+        "author": [
+          {
+            "given": "Lin",
+            "family": "Tan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Illinois: Urbana-Champaign, Urbana, IL"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ding",
+            "family": "Yuan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois: Urbana-Champaign, Urbana, IL"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Gopal",
+            "family": "Krishna",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois: Urbana-Champaign, Urbana, IL"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yuanyuan",
+            "family": "Zhou",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois: Urbana-Champaign, Urbana, IL"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Proceedings of twenty-first ACM SIGOPS symposium on Operating systems principles"
+        ],
+        "volume": null,
+        "issue": null,
+        "page": "145-158",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              10,
+              14
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2007,
+              10,
+              14
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2007,
+              10,
+              14
+            ]
+          ]
+        },
+        "DOI": "10.1145/1294261.1294276",
+        "publisher": "ACM",
+        "subtitle": [
+          "bugs or bad comments?*/"
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      },
+      "notes": [
+        "Publisher-deposited metadata splits the title and subtitle; compare their combination to the BibTeX title. Direct ACM full-page retrieval returned403; DOI registration metadata remains accessible."
+      ]
+    },
+    {
+      "key": "fluri2007coevolve",
+      "claim": {
+        "author": "Beat Fluri and Michael W{\\\"u}rsch and Harald C. Gall",
+        "title": "Do Code and Comments Co-Evolve? {On} the Relation between Source Code and Comment Changes",
+        "booktitle": "Proc. Working Conf. Reverse Engineering (WCRE)",
+        "pages": "70--79",
+        "year": "2007"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Do+Code+and+Comments+Co-Evolve%3F+%7BOn%7D+the+Relation+between+Source+Code+and+Comment+Changes&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Do Code and Comments Co-Evolve? On the Relation between Source Code and Comment Changes",
+          "doi": "10.1109/wcre.2007.21",
+          "similarity": 1.0
+        },
+        {
+          "title": "Source code 2. Code for calculating distributions via the recurrence relation.",
+          "doi": "10.7554/elife.10167.008",
+          "similarity": 0.2318840579710145
+        },
+        {
+          "title": "Art of Code Review",
+          "doi": "10.18122/td.2388.boisestate",
+          "similarity": 0.20689655172413793
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1109/wcre.2007.21",
+      "observed": {
+        "title": [
+          "Do Code and Comments Co-Evolve? On the Relation between Source Code and Comment Changes"
+        ],
+        "author": [
+          {
+            "given": "Beat",
+            "family": "Fluri",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Michael",
+            "family": "Wursch",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Harald C.",
+            "family": "Gall",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "14th Working Conference on Reverse Engineering (WCRE 2007)"
+        ],
+        "volume": null,
+        "issue": null,
+        "page": "70-79",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              10
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              2007,
+              10
+            ]
+          ]
+        },
+        "DOI": "10.1109/wcre.2007.21",
+        "publisher": "IEEE"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "kaplan1958",
+      "claim": {
+        "author": "E. L. Kaplan and Paul Meier",
+        "title": "Nonparametric Estimation from Incomplete Observations",
+        "journal": "J. American Statistical Association",
+        "volume": "53",
+        "number": "282",
+        "pages": "457--481",
+        "year": "1958"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_exact_doi_metadata",
+      "source_url": "https://api.crossref.org/works/10.1080%2F01621459.1958.10501452",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Nonparametric Estimation Based on Incomplete Observations",
+          "doi": "10.1007/springerreference_205495",
+          "similarity": 0.9108910891089109
+        },
+        {
+          "title": "Nonparametric Estimation from Incomplete Observations",
+          "doi": "10.1007/978-1-4612-4380-9_25",
+          "similarity": 1.0
+        },
+        {
+          "title": "Nonparametric Estimation Based on Incomplete Observations",
+          "doi": "10.1007/978-3-662-69359-9_420",
+          "similarity": 0.9108910891089109
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1080/01621459.1958.10501452",
+      "observed": {
+        "title": [
+          "Nonparametric Estimation from Incomplete Observations"
+        ],
+        "author": [
+          {
+            "given": "E. L.",
+            "family": "Kaplan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of California Radiation Laboratory"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Paul",
+            "family": "Meier",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Chicago"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of the American Statistical Association"
+        ],
+        "volume": "53",
+        "issue": "282",
+        "page": "457-481",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              1958,
+              6
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2012,
+              4,
+              12
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1958,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1080/01621459.1958.10501452",
+        "publisher": "Informa UK Limited"
+      },
+      "prior_lookup": {
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Nonparametric+Estimation+from+Incomplete+Observations&rows=3",
+        "status": "primary_metadata_match_requires_field_review",
+        "error": null,
+        "observed": {
+          "title": [
+            "Nonparametric Estimation from Incomplete Observations"
+          ],
+          "author": [
+            {
+              "given": "E. L.",
+              "family": "Kaplan",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Paul",
+              "family": "Meier",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Springer Series in Statistics",
+            "Breakthroughs in Statistics"
+          ],
+          "volume": null,
+          "issue": null,
+          "page": "319-337",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                1992
+              ]
+            ]
+          },
+          "published-online": null,
+          "published-print": {
+            "date-parts": [
+              [
+                1992
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4612-4380-9_25",
+          "publisher": "Springer New York"
+        }
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      },
+      "notes": [
+        "Initial title-only query returned a1992 reprint. Exact original DOI and publisher record identify1958,volume53,issue282,pages457-481; online digitization date2012 is not publication year."
+      ]
+    },
+    {
+      "key": "cox1972",
+      "claim": {
+        "author": "David R. Cox",
+        "title": "Regression Models and Life-Tables",
+        "journal": "J. Royal Statistical Society: Series B",
+        "volume": "34",
+        "number": "2",
+        "pages": "187--220",
+        "year": "1972"
+      },
+      "status": "metadata_page_scope_needs_author_choice",
+      "source_type": "publisher_deposited_exact_doi_metadata",
+      "source_url": "https://api.crossref.org/works/10.1111%2Fj.2517-6161.1972.tb00899.x",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Regression Models and Life-Tables",
+          "doi": "10.1007/978-1-4612-4380-9_37",
+          "similarity": 1.0
+        },
+        {
+          "title": "Multistate life‐tables and regression models",
+          "doi": "10.1080/08898489209525345",
+          "similarity": 0.47058823529411764
+        },
+        {
+          "title": "Introduction to Cox (1972) Regression Models and Life-Tables",
+          "doi": "10.1007/978-1-4612-4380-9_36",
+          "similarity": 0.7341772151898734
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1111/j.2517-6161.1972.tb00899.x",
+      "observed": {
+        "title": [
+          "Regression Models and Life-Tables"
+        ],
+        "author": [
+          {
+            "given": "D. R.",
+            "family": "Cox",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Imperial College , London"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of the Royal Statistical Society Series B: Statistical Methodology"
+        ],
+        "volume": "34",
+        "issue": "2",
+        "page": "187-202",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              1972,
+              1,
+              1
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2018,
+              12,
+              5
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1972,
+              1,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1111/j.2517-6161.1972.tb00899.x",
+        "publisher": "Oxford University Press (OUP)"
+      },
+      "prior_lookup": {
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Regression+Models+and+Life-Tables&rows=3",
+        "status": "primary_metadata_match_requires_field_review",
+        "error": null,
+        "observed": {
+          "title": [
+            "Regression Models and Life-Tables"
+          ],
+          "author": [
+            {
+              "given": "David R.",
+              "family": "Cox",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Springer Series in Statistics",
+            "Breakthroughs in Statistics"
+          ],
+          "volume": null,
+          "issue": null,
+          "page": "527-541",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                1992
+              ]
+            ]
+          },
+          "published-online": null,
+          "published-print": {
+            "date-parts": [
+              [
+                1992
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4612-4380-9_37",
+          "publisher": "Springer New York"
+        }
+      },
+      "field_assessment": {
+        "title": "matches",
+        "authors": "matches",
+        "year": "1972 matches",
+        "pages": "Publisher catalogs paper as187-202; bibliography187-220 includes separately catalogued discussion202-220."
+      },
+      "notes": [
+        "Use187--202 for the article alone, or explicitly identify inclusion of discussion when retaining187--220. Initial title-only Crossref search returned a1992 reprint; that candidate was not treated as evidence against the original1972 citation."
+      ],
+      "additional_primary_sources": [
+        {
+          "url": "https://academic.oup.com/jrsssb/issue/34/2",
+          "evidence": "Issue table catalogs the Cox article and its discussion as separate records."
+        },
+        {
+          "url": "https://doi.org/10.1111/j.2517-6161.1972.tb00900.x",
+          "evidence": "DOI for separately catalogued discussion."
+        }
+      ]
+    },
+    {
+      "key": "andersen1982",
+      "claim": {
+        "author": "Per Kragh Andersen and Richard D. Gill",
+        "title": "Cox's Regression Model for Counting Processes: A Large Sample Study",
+        "journal": "The Annals of Statistics",
+        "volume": "10",
+        "number": "4",
+        "pages": "1100--1120",
+        "year": "1982"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Cox%27s+Regression+Model+for+Counting+Processes%3A+A+Large+Sample+Study&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Cox's Regression Model for Counting Processes: A Large Sample Study",
+          "doi": "10.1214/aos/1176345976",
+          "similarity": 1.0
+        },
+        {
+          "title": "Commentary on Andersen and Gill's \"Cox's Regression Model for Counting Processes: A Large Sample Study\"",
+          "doi": "10.1214/aos/1176345977",
+          "similarity": 0.8
+        },
+        {
+          "title": "Regression Models",
+          "doi": "10.1142/9781848162792_0011",
+          "similarity": 0.4444444444444444
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1214/aos/1176345976",
+      "observed": {
+        "title": [
+          "Cox's Regression Model for Counting Processes: A Large Sample Study"
+        ],
+        "author": [
+          {
+            "given": "P. K.",
+            "family": "Andersen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "R. D.",
+            "family": "Gill",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "The Annals of Statistics"
+        ],
+        "volume": "10",
+        "issue": "4",
+        "page": "1100-1120",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              1982,
+              12,
+              1
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              1982,
+              12,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1214/aos/1176345976",
+        "publisher": "Institute of Mathematical Statistics"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "davidson2019lifelines",
+      "claim": {
+        "author": "Cameron Davidson-Pilon",
+        "title": "lifelines: Survival Analysis in {Python}",
+        "journal": "J. Open Source Software",
+        "volume": "4",
+        "number": "40",
+        "pages": "1317",
+        "year": "2019"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=lifelines%3A+Survival+Analysis+in+%7BPython%7D&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "lifelines: survival analysis in Python",
+          "doi": "10.21105/joss.01317",
+          "similarity": 1.0
+        },
+        {
+          "title": "Survival Analysis withPySpark and Lifelines",
+          "doi": "10.1007/978-1-4842-7762-1_4",
+          "similarity": 0.5
+        },
+        {
+          "title": "General Theory of Survival Analysis",
+          "doi": "10.1201/9781003255499-2",
+          "similarity": 0.59375
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.21105/joss.01317",
+      "observed": {
+        "title": [
+          "lifelines: survival analysis in Python"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-1794-9143",
+            "authenticated-orcid": false,
+            "given": "Cameron",
+            "family": "Davidson-Pilon",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of Open Source Software"
+        ],
+        "volume": "4",
+        "issue": "40",
+        "page": "1317",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              8,
+              4
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              8,
+              4
+            ]
+          ]
+        },
+        "DOI": "10.21105/joss.01317",
+        "publisher": "The Open Journal"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "treesitter",
+      "claim": {
+        "author": "Max Brunsfeld and others",
+        "title": "Tree-sitter: An Incremental Parsing System for Programming Tools",
+        "howpublished": "\\url{https://tree-sitter.github.io/tree-sitter/}",
+        "year": "2018"
+      },
+      "status": "partially_verified_resource_identity_year_unverified",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://tree-sitter.github.io/tree-sitter/",
+      "resolved_url": "https://tree-sitter.github.io/tree-sitter/",
+      "http_status": 200,
+      "observed": {},
+      "evidence": "Page retrieved but no machine-readable title metadata was extracted.",
+      "field_assessment": {
+        "resource_identity": "Official tool documentation retrieved; incremental parsing description verified.",
+        "title_authorship_year": "The exact paper-like title, author attribution and2018 publication date are not established by this undated documentation page."
+      },
+      "recommendation": "Cite the official software/documentation with an access date, or cite a specific dated2018 talk using its actual title/author. Do not mark2018 as verified merely because the documentation links2018 talks."
+    },
+    {
+      "key": "hui2024qwen25coder",
+      "claim": {
+        "author": "Binyuan Hui and Jian Yang and Zeyu Cui and Jiaxi Yang and Dayiheng Liu and Lei Zhang and Tianyu Liu and Jiajun Zhang and Bowen Yu and others",
+        "title": "{Qwen2.5-Coder} Technical Report",
+        "howpublished": "arXiv:2409.12186",
+        "year": "2024"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2409.12186",
+      "resolved_url": "https://arxiv.org/abs/2409.12186",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Qwen2.5-Coder Technical Report"
+        ],
+        "citation_author": [
+          "Hui, Binyuan",
+          "Yang, Jian",
+          "Cui, Zeyu",
+          "Yang, Jiaxi",
+          "Liu, Dayiheng",
+          "Zhang, Lei",
+          "Liu, Tianyu",
+          "Zhang, Jiajun",
+          "Yu, Bowen",
+          "Lu, Keming",
+          "Dang, Kai",
+          "Fan, Yang",
+          "Zhang, Yichang",
+          "Yang, An",
+          "Men, Rui",
+          "Huang, Fei",
+          "Zheng, Bo",
+          "Miao, Yibo",
+          "Quan, Shanghaoran",
+          "Feng, Yunlong",
+          "Ren, Xingzhang",
+          "Ren, Xuancheng",
+          "Zhou, Jingren",
+          "Lin, Junyang"
+        ],
+        "citation_date": [
+          "2024/09/18"
+        ],
+        "citation_online_date": [
+          "2024/11/12"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2409.12186"
+        ],
+        "citation_arxiv_id": [
+          "2409.12186"
+        ],
+        "citation_abstract": [
+          "In this report, we introduce the Qwen2.5-Coder series, a significant upgrade from its predecessor, CodeQwen1.5. This series includes six models: Qwen2.5-Coder-(0.5B/1.5B/3B/7B/14B/32B). As a code-specific model, Qwen2.5-Coder is built upon the Qwen2.5 architecture and continues pretrained on a vast corpus of over 5.5 trillion tokens. Through meticulous data cleaning, scalable synthetic data generation, and balanced data mixing, Qwen2.5-Coder demonstrates impressive code generation capabilities while retaining general and math skills. These models have been evaluated on a wide range of code-related tasks, achieving state-of-the-art (SOTA) performance across more than 10 benchmarks, including code generation, completion, reasoning, and repair, consistently outperforming larger models of the same model size. We believe that the release of the Qwen2.5-Coder series will advance research in code intelligence and, with its permissive licensing, support wider adoption by developers in real-world applications."
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "min2023factscore",
+      "claim": {
+        "author": "Sewon Min and Kalpesh Krishna and Xinxi Lyu and Mike Lewis and Wen-tau Yih and Pang Wei Koh and Mohit Iyyer and Luke Zettlemoyer and Hannaneh Hajishirzi",
+        "title": "{FActScore}: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+        "booktitle": "Proc. Conf. Empirical Methods in Natural Language Processing (EMNLP)",
+        "year": "2023"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://aclanthology.org/2023.emnlp-main.741/",
+      "resolved_url": "https://aclanthology.org/2023.emnlp-main.741/",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation"
+        ],
+        "citation_author": [
+          "Sewon Min",
+          "Kalpesh Krishna",
+          "Xinxi Lyu",
+          "Mike Lewis",
+          "Wen-tau Yih",
+          "Pang Koh",
+          "Mohit Iyyer",
+          "Luke Zettlemoyer",
+          "Hannaneh Hajishirzi"
+        ],
+        "citation_conference_title": [
+          "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+        ],
+        "citation_publication_date": [
+          "2023/12"
+        ],
+        "citation_pdf_url": [
+          "https://aclanthology.org/2023.emnlp-main.741.pdf"
+        ],
+        "citation_firstpage": [
+          "12076"
+        ],
+        "citation_lastpage": [
+          "12100"
+        ],
+        "citation_doi": [
+          "10.18653/v1/2023.emnlp-main.741"
+        ]
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      },
+      "notes": [
+        "ACL HTML metadata abbreviates Pang Wei Koh to Pang Koh; the publisher PDF shows Pang Wei Koh. This is not a wrong-author finding."
+      ]
+    },
+    {
+      "key": "vonmayrhauser1995",
+      "claim": {
+        "author": "Anneliese von Mayrhauser and A. Marie Vans",
+        "title": "Program Comprehension During Software Maintenance and Evolution",
+        "journal": "IEEE Computer",
+        "volume": "28",
+        "number": "8",
+        "pages": "44--55",
+        "year": "1995"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=Program+Comprehension+During+Software+Maintenance+and+Evolution&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Program comprehension during software maintenance and evolution",
+          "doi": "10.1109/2.402076",
+          "similarity": 1.0
+        },
+        {
+          "title": "Program Comprehension",
+          "doi": "10.1002/9781118964637.ch8",
+          "similarity": 0.5194805194805194
+        },
+        {
+          "title": "A workbench for program comprehension during software maintenance",
+          "doi": "10.1109/wpc.1996.501118",
+          "similarity": 0.782608695652174
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1109/2.402076",
+      "observed": {
+        "title": [
+          "Program comprehension during software maintenance and evolution"
+        ],
+        "author": [
+          {
+            "given": "A.",
+            "family": "Von Mayrhauser",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "A.M.",
+            "family": "Vans",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Computer"
+        ],
+        "volume": "28",
+        "issue": "8",
+        "page": "44-55",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              1995
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              1995
+            ]
+          ]
+        },
+        "DOI": "10.1109/2.402076",
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "bae2026referee",
+      "claim": {
+        "author": "Suyoung Bae and CheolWon Na and Jaehoon Lee and Yumin Lee and YunSeok Choi and Jee-Hyong Lee",
+        "title": "{ReFEree}: Reference-Free and Fine-Grained Method for Evaluating Factual Consistency in Real-World Code Summarization",
+        "booktitle": "Proc. Annual Meeting of the Association for Computational Linguistics (ACL)",
+        "note": "arXiv:2604.10520",
+        "year": "2026"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2604.10520",
+      "resolved_url": "https://arxiv.org/abs/2604.10520",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "ReFEree: Reference-Free and Fine-Grained Method for Evaluating Factual Consistency in Real-World Code Summarization"
+        ],
+        "citation_author": [
+          "Bae, Suyoung",
+          "Na, CheolWon",
+          "Lee, Jaehoon",
+          "Lee, Yumin",
+          "Choi, YunSeok",
+          "Lee, Jee-Hyong"
+        ],
+        "citation_date": [
+          "2026/04/12"
+        ],
+        "citation_online_date": [
+          "2026/04/12"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2604.10520"
+        ],
+        "citation_arxiv_id": [
+          "2604.10520"
+        ],
+        "citation_abstract": [
+          "As Large Language Models (LLMs) have become capable of generating long and descriptive code summaries, accurate and reliable evaluation of factual consistency has become a critical challenge. However, previous evaluation methods are primarily designed for short summaries of isolated code snippets. Consequently, they struggle to provide fine-grained evaluation of multi-sentence functionalities and fail to accurately assess dependency context commonly found in real-world code summaries. To address this, we propose ReFEree, a reference-free and fine-grained method for evaluating factual consistency in real-world code summaries. We define factual inconsistency criteria specific to code summaries and evaluate them at the segment level using these criteria along with dependency information. These segment-level results are then aggregated into a fine-grained score. We construct a code summarization benchmark with human-annotated factual consistency labels. The evaluation results demonstrate that ReFEree achieves the highest correlation with human judgment among 13 baselines, improving 15-18% over the previous state-of-the-art. Our code and data are available at https://github.com/bsy99615/ReFEree.git."
+        ]
+      },
+      "observed_comments_excerpt": "Accepted to ACL 2026 main. 25 pages",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      },
+      "notes": [
+        "Primary arXiv record explicitly reports ACL2026 main acceptance, consistent with the cited booktitle/year. Final conference pages/DOI were not checked here."
+      ]
+    },
+    {
+      "key": "nguyen2026larger",
+      "claim": {
+        "author": "Phong Nguyen and Anh M. T. Bui and Phuong T. Nguyen",
+        "title": "Larger Is Not Always Better: Leveraging Structured Code Diffs for Comment Inconsistency Detection",
+        "howpublished": "arXiv:2512.19883; SANER 2026 short paper",
+        "year": "2026"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2512.19883",
+      "resolved_url": "https://arxiv.org/abs/2512.19883",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Larger Is Not Always Better: Leveraging Structured Code Diffs for Comment Inconsistency Detection"
+        ],
+        "citation_author": [
+          "Nguyen, Phong",
+          "Bui, Anh M. T.",
+          "Nguyen, Phuong T."
+        ],
+        "citation_date": [
+          "2025/12/22"
+        ],
+        "citation_online_date": [
+          "2025/12/24"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2512.19883"
+        ],
+        "citation_arxiv_id": [
+          "2512.19883"
+        ],
+        "citation_abstract": [
+          "Ensuring semantic consistency between source code and its accompanying comments is crucial for program comprehension, effective debugging, and long-term maintainability. Comment inconsistency arises when developers modify code but neglect to update the corresponding comments, potentially misleading future maintainers and introducing errors. Recent approaches to code-comment inconsistency (CCI) detection leverage Large Language Models (LLMs) and rely on capturing the semantic relationship between code changes and outdated comments. However, they often ignore the structural complexity of code evolution, including historical change activities, and introduce privacy and resource challenges. In this paper, we propose a Just-In-Time CCI detection approach built upon the CodeT5+ backbone. Our method decomposes code changes into ordered sequences of modification activities such as replacing, deleting, and adding to more effectively capture the correlation between these changes and the corresponding outdated comments. Extensive experiments conducted on publicly available benchmark datasets-JITDATA and CCIBENCH--demonstrate that our proposed approach outperforms recent state-of-the-art models by up to 13.54% in F1-Score and achieves an improvement ranging from 4.18% to 10.94% over fine-tuned LLMs including DeepSeek-Coder, CodeLlama and Qwen2.5-Coder."
+        ]
+      },
+      "observed_comments_excerpt": "This paper has been reviewed and accepted to the Short Papers and Posters Track of SANER 2026",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "2025 arXiv submission,2026 SANER acceptance statement:2026 year is consistent with the mixed conference/preprint citation.",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "hata2019links",
+      "claim": {
+        "author": "Hideaki Hata and Christoph Treude and Raula Gaikovina Kula and Takashi Ishio",
+        "title": "9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay",
+        "booktitle": "Proc. IEEE/ACM Int. Conf. Software Engineering (ICSE)",
+        "pages": "1211--1221",
+        "year": "2019"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=9.6+Million+Links+in+Source+Code+Comments%3A+Purpose%2C+Evolution%2C+and+Decay&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay",
+          "doi": "10.1109/icse.2019.00123",
+          "similarity": 1.0
+        },
+        {
+          "title": "18 million links in commit messages: purpose, evolution, and decay",
+          "doi": "10.1007/s10664-023-10325-8",
+          "similarity": 0.7857142857142857
+        },
+        {
+          "title": "The Evolution and Decay of Statically Detected Source Code Vulnerabilities",
+          "doi": "10.1109/scam.2008.20",
+          "similarity": 0.3089430894308943
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1109/icse.2019.00123",
+      "observed": {
+        "title": [
+          "9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay"
+        ],
+        "author": [
+          {
+            "given": "Hideaki",
+            "family": "Hata",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Christoph",
+            "family": "Treude",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Raula Gaikovina",
+            "family": "Kula",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Takashi",
+            "family": "Ishio",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE)"
+        ],
+        "volume": null,
+        "issue": null,
+        "page": "1211-1221",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              5
+            ]
+          ]
+        },
+        "published-online": null,
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1109/icse.2019.00123",
+        "publisher": "IEEE"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    },
+    {
+      "key": "tan2022outdated",
+      "claim": {
+        "author": "Wen Siang Tan and Markus Wagner and Christoph Treude",
+        "title": "Detecting Outdated Code Element References in Software Repository Documentation",
+        "journal": "Empirical Software Engineering",
+        "volume": "29",
+        "number": "1",
+        "pages": "5",
+        "doi": "10.1007/s10664-023-10397-6",
+        "year": "2024"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_exact_doi_metadata",
+      "prior_lookup": {
+        "source_url": null,
+        "status": "unverified",
+        "error": "HTTPError: HTTP Error 429: Too Many Requests",
+        "observed": null
+      },
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs10664-023-10397-6",
+      "publisher_source_url": "https://doi.org/10.1007/s10664-023-10397-6",
+      "http_status": 200,
+      "observed": {
+        "title": [
+          "Detecting outdated code element references in software repository documentation"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-1503-8576",
+            "authenticated-orcid": false,
+            "given": "Wen Siang",
+            "family": "Tan",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Markus",
+            "family": "Wagner",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Christoph",
+            "family": "Treude",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Empirical Software Engineering"
+        ],
+        "volume": "29",
+        "issue": "1",
+        "page": null,
+        "article-number": "5",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              21
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              21
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10664-023-10397-6",
+        "publisher": "Springer Science and Business Media LLC"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      },
+      "notes": [
+        "The citation key contains2022 but its actual year field2024 correctly follows volume29/article5(2024); publisher lists online publication21November2023. Citation key text is not bibliographic metadata."
+      ],
+      "additional_primary_sources": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s10664-023-10397-6",
+          "evidence": "Publisher page identifies authors, title, volume29,article5(2024), online publication21November2023."
+        }
+      ]
+    },
+    {
+      "key": "rahman2026survive",
+      "claim": {
+        "author": "Musfiqur Rahman and Emad Shihab",
+        "title": "Will It Survive? {Deciphering} the Fate of {AI}-Generated Code in Open Source",
+        "howpublished": "arXiv preprint arXiv:2601.16809",
+        "year": "2026"
+      },
+      "status": "verified_identity_authors_year_with_noted_scope",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://arxiv.org/abs/2601.16809",
+      "resolved_url": "https://arxiv.org/abs/2601.16809",
+      "http_status": 200,
+      "observed": {
+        "citation_title": [
+          "Will It Survive? Deciphering the Fate of AI-Generated Code in Open Source"
+        ],
+        "citation_author": [
+          "Rahman, Musfiqur",
+          "Shihab, Emad"
+        ],
+        "citation_date": [
+          "2026/01/23"
+        ],
+        "citation_online_date": [
+          "2026/01/23"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2601.16809"
+        ],
+        "citation_arxiv_id": [
+          "2601.16809"
+        ],
+        "citation_abstract": [
+          "The integration of AI agents as coding assistants into software development has raised questions about the long-term viability of AI agent-generated code. A prevailing hypothesis within the software engineering community suggests this code is \"disposable\", meaning it is merged quickly but discarded shortly thereafter. If true, organizations risk shifting maintenance burden from generation to post-deployment remediation. We investigate this hypothesis through survival analysis of 201 open-source projects, tracking over 200,000 code units authored by AI agents versus humans. Contrary to the disposable code narrative, agent-authored code survives significantly longer: at the line level, it exhibits a 15.8 percentage-point lower modification rate and 16% lower hazard of modification (HR = 0.842, p < 0.001). However, modification profiles differ. Agent-authored code shows modestly elevated corrective rates (26.3% vs. 23.0%), while human code shows higher adaptive rates. However, the effect sizes are small (Cram\\'er's V = 0.116), and per-agent variation exceeds the agent-human gap. Turning to prediction, textual features can identify modification-prone code (AUC-ROC = 0.671), but predicting when modifications occur remains challenging (Macro F1 = 0.285), suggesting timing depends on external organizational dynamics. The bottleneck for agent-generated code may not be generation quality, but the organizational practices that govern its long-term evolution."
+        ]
+      },
+      "observed_comments_excerpt": "This paper has been submitted to EASE 2026 research track and currently under review",
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches author identity/order on primary metadata; accepted display-name and diacritic variants noted separately.",
+        "year": "matches first-submission or conference year unless noted",
+        "venue_or_publication_status": "verified only to the extent explicitly shown by source"
+      }
+    },
+    {
+      "key": "muse2022satd",
+      "claim": {
+        "author": "Biruk Asmare Muse and Csaba Nagy and Anthony Cleve and Foutse Khomh and Giuliano Antoniol",
+        "title": "{FIXME}: Synchronize with Database! {An} Empirical Study of Data Access Self-Admitted Technical Debt",
+        "journal": "Empirical Software Engineering",
+        "volume": "27",
+        "number": "6",
+        "pages": "130",
+        "year": "2022"
+      },
+      "status": "verified_deposited_metadata_with_noted_scope",
+      "source_type": "publisher_deposited_doi_registration_metadata",
+      "source_url": "https://api.crossref.org/works?query.bibliographic=%7BFIXME%7D%3A+Synchronize+with+Database%21+%7BAn%7D+Empirical+Study+of+Data+Access+Self-Admitted+Technical+Debt&rows=3",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "FIXME: synchronize with database! An empirical study of data access self-admitted technical debt",
+          "doi": "10.1007/s10664-022-10119-4",
+          "similarity": 1.0
+        },
+        {
+          "title": "An Empirical Study on Self-Admitted Technical Debt and Architectural Issues Using Llm-Assisted Inspection Labeling",
+          "doi": "10.2139/ssrn.5174810",
+          "similarity": 0.4666666666666667
+        },
+        {
+          "title": "An empirical study on self-admitted technical debt in Dockerfiles",
+          "doi": "10.1007/s10664-021-10081-7",
+          "similarity": 0.6131386861313869
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1007/s10664-022-10119-4",
+      "observed": {
+        "title": [
+          "FIXME: synchronize with database! An empirical study of data access self-admitted technical debt"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-8861-9526",
+            "authenticated-orcid": false,
+            "given": "Biruk Asmare",
+            "family": "Muse",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Csaba",
+            "family": "Nagy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anthony",
+            "family": "Cleve",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Foutse",
+            "family": "Khomh",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Giuliano",
+            "family": "Antoniol",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Empirical Software Engineering"
+        ],
+        "volume": "27",
+        "issue": "6",
+        "page": null,
+        "article-number": "130",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              8
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              8
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10664-022-10119-4",
+        "publisher": "Springer Science and Business Media LLC"
+      },
+      "field_assessment": {
+        "title": "matches ignoring BibTeX braces/case/punctuation",
+        "authors": "Matches identities/order; initials and diacritic variants accepted",
+        "year": "matches published-print/conference year",
+        "pages_volume_issue": "matches when present, subject to notes"
+      }
+    }
+  ],
+  "all_entries_fully_verified": false,
+  "summary": {
+    "entries": 30,
+    "substantive_title_author_or_year_mismatches_found": [],
+    "author_choices_or_unverified_fields": [
+      "Cox page range article versus discussion",
+      "Tree-sitter exact bibliographic title/authorship/year not established by undated docs"
+    ],
+    "inaccessible_or_failed_attempts_preserved": true,
+    "all_entry_fields_fully_verified": false,
+    "venue_rule_verified_primary_source": true,
+    "status_counts": {
+      "metadata_page_scope_needs_author_choice": 1,
+      "partially_verified_resource_identity_year_unverified": 1,
+      "verified_deposited_metadata_with_noted_scope": 11,
+      "verified_identity_authors_year_with_noted_scope": 17
+    },
+    "arxiv_records_checked": 13,
+    "arxiv_first_submission_2026_records_checked": 5
+  }
+}

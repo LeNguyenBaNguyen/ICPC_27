@@ -1,0 +1,54 @@
+{
+  "exploratory": true,
+  "excluded_fids": [
+    "F044",
+    "F045",
+    "F046"
+  ],
+  "reason": "Three click pager functions account for four of six recorded intent events; chosen after review.",
+  "covariates_fixed_from_full_sample": [
+    "ty_structural",
+    "ty_behavioural",
+    "ty_intent",
+    "log_lines_fn",
+    "log_lines_file",
+    "ct_signature",
+    "ct_call_change",
+    "ct_call_receiver",
+    "ct_exception",
+    "ct_control_flow",
+    "ct_return_value",
+    "ct_identifier_rename"
+  ],
+  "full": {
+    "functions": 128,
+    "events": 250,
+    "intent_events": 6,
+    "iterations": 10,
+    "finite_fit": true,
+    "max_abs_covariate_beta": 1.147656534236516,
+    "joint_type_wald_p": 0.016044589172268135,
+    "intent_HR": {
+      "HR": 0.3173796669450701,
+      "lo": 0.12772905065393486,
+      "hi": 0.7886213236100684,
+      "p": 0.013459784930257136
+    }
+  },
+  "without_click_pagers": {
+    "functions": 125,
+    "events": 229,
+    "intent_events": 2,
+    "iterations": 9,
+    "finite_fit": true,
+    "max_abs_covariate_beta": 2.1805423542040336,
+    "joint_type_wald_p": 0.008834346136794843,
+    "intent_HR": {
+      "HR": 0.11298023871354614,
+      "lo": 0.027772712207180267,
+      "hi": 0.45960705042231237,
+      "p": 0.0023199535077998183
+    }
+  },
+  "interpretation": "Sparse-event, exploratory sensitivity. Wald inference remains fragile; this is not independent endpoint validation."
+}

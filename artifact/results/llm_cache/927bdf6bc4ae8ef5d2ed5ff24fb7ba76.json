@@ -1,0 +1,1 @@
+{"text": "S1: supported\nS2: supported\nS3: supported\nS4: supported\nS5: contradicted -- <evidence, at most 12 words>\nS6: supported\nS7: unresolved\nS8: supported\nS9: supported\nS10: supported\nS11: supported\nS12: supported", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 1841, "out": 91}}

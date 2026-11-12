@@ -1,0 +1,151 @@
+{
+  "audit_type": "Independent code-based output accounting; no human semantic annotation or new inference.",
+  "experiments": {
+    "resurrection": {
+      "checks": {
+        "all_planned_tasks_present": true,
+        "all_eligible_claims_have_fresh_death_control": true,
+        "all_eligible_claims_have_later_observation": true,
+        "followup_pair_count_matches_plan": true,
+        "stratified_summary_matches": true,
+        "later_support_count_matches": true,
+        "source_input_hashes_match": true,
+        "frozen_plan_hash_matches": true,
+        "summary_plan_hash_matches": true
+      },
+      "eligible_claims": 232,
+      "followup_pairs": 1027,
+      "later_supported_claims": 121,
+      "fresh_death_status_strata": {
+        "contradicted": {
+          "eligible_claims": 219,
+          "observed_followup_claims": 219,
+          "later_supported_claims": 111
+        },
+        "supported": {
+          "eligible_claims": 13,
+          "observed_followup_claims": 13,
+          "later_supported_claims": 10
+        }
+      },
+      "unparsed_scored_followup_labels": 30,
+      "unparsed_scored_death_labels": 0,
+      "interpretation": "Later model support after archived contradiction; fresh death strata distinguish repeatability from later changes. Dead-only follow-up prompt context differs; human semantic validation absent.",
+      "runtime": {
+        "model": "qwen2.5-coder:14b",
+        "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+        "options": {
+          "temperature": 0,
+          "seed": 7,
+          "num_ctx": 8192
+        },
+        "cached_responses": 649,
+        "cache_task_hashes_valid": true,
+        "cache_task_ids_unique": true,
+        "observed_labels_match_raw_responses": true,
+        "raw_judgment_labels_checked": 2876,
+        "cache_model_identity_consistent": true,
+        "cached_context_checks_pass": true,
+        "done_reasons": {
+          "stop": 649
+        },
+        "original_model_digest_known": false
+      }
+    },
+    "docstring_free": {
+      "checks": {
+        "all_planned_functions_present": true,
+        "first_event_survival_rows_match": true,
+        "lexical_coverage_matches": true,
+        "paired_coverage_rows_match": true,
+        "new_S6_matches": true,
+        "archived_S6_matches": true,
+        "anchor_support_matches": true,
+        "unparsed_count_matches": true,
+        "fresh_control_mean_difference_matches": true,
+        "source_input_hashes_match": true,
+        "frozen_plan_hash_matches": true,
+        "summary_plan_hash_matches": true
+      },
+      "functions": 65,
+      "new_anchor_claims": 772,
+      "new_anchor_supported_claims": 760,
+      "new_S6": 0.8643076341012272,
+      "archived_S6": 0.8270535573167153,
+      "mean_paired_lexical_differences": {
+        "archived_with_docstring": -0.01627900582509539,
+        "fresh_with_docstring": 0.0071404806365941795
+      },
+      "unparsed_judge_labels": 0,
+      "judge_labels": 7029,
+      "interpretation": "Fresh paired generation controls isolate lexical coverage only. Survival compares fresh no-docstring claims with archived with-docstring claims and remains model/runtime/content-confounded; not human validation.",
+      "runtime": {
+        "model": "qwen2.5-coder:14b",
+        "digest": "9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+        "options": {
+          "temperature": 0,
+          "seed": 7,
+          "num_ctx": 8192
+        },
+        "cached_responses": 786,
+        "cache_task_hashes_valid": true,
+        "cache_task_ids_unique": true,
+        "observed_labels_match_raw_responses": true,
+        "raw_judgment_labels_checked": 7029,
+        "cache_model_identity_consistent": true,
+        "cached_context_checks_pass": true,
+        "done_reasons": {
+          "stop": 786
+        },
+        "original_model_digest_known": false
+      }
+    },
+    "cross_family": {
+      "checks": {
+        "all_planned_tasks_present": true,
+        "scored_cases_match": true,
+        "weighted_agreement_matches": true,
+        "raw_agreement_matches": true,
+        "binary_kappa_matches": true,
+        "unparsed_scored_matches": true,
+        "source_input_hashes_match": true,
+        "frozen_plan_hash_matches": true,
+        "summary_plan_hash_matches": true
+      },
+      "scored_cases": 60,
+      "weighted_agreement": 0.9734890772517402,
+      "raw_agreement": 0.55,
+      "binary_contradiction_kappa": 0.7189168832234836,
+      "unparsed_scored_labels": 0,
+      "interpretation": "Raw and weighted agreement target different sample/population compositions. Neither judge supplies ground truth; uncertainty is an approximate function-cluster bootstrap.",
+      "runtime": {
+        "model": "llama3.1:8b",
+        "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+        "options": {
+          "temperature": 0,
+          "seed": 7,
+          "num_ctx": 8192
+        },
+        "cached_responses": 57,
+        "cache_task_hashes_valid": true,
+        "cache_task_ids_unique": true,
+        "observed_labels_match_raw_responses": true,
+        "raw_judgment_labels_checked": 763,
+        "cache_model_identity_consistent": true,
+        "cached_context_checks_pass": true,
+        "done_reasons": {
+          "stop": 57
+        },
+        "original_model_digest_known": false
+      }
+    }
+  },
+  "primary_summary_unchanged": true,
+  "all_accounting_checks_passed": true,
+  "baseline_primary_result_integrity": {
+    "files": 4060,
+    "changed": [],
+    "missing": [],
+    "unchanged": true
+  }
+}

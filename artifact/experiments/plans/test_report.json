@@ -1,0 +1,8 @@
+{
+  "python": "3.11.18 (main, Oct 26 2026, 14:08:50) [MSC v.1944 64 bit (AMD64)]",
+  "exit_code": 0,
+  "tests": 13,
+  "passed": true,
+  "live_model_calls": 0,
+  "note": "Client tests use mocked responses; generated output line is a mock, not inference."
+}

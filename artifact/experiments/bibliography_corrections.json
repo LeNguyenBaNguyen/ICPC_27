@@ -1,0 +1,193 @@
+{
+  "previous_bibliography_sha256": "bf20316d0b857b98c95e77bfba6f4c3da3a91e701bf51dcce181565afbec4142",
+  "revised_bibliography_sha256": "861b92c174caeea0f6d6da781a00b3354c3b2eab7710a3b7c5b63afe595aae63",
+  "date": "2026-11-11",
+  "corrections": {
+    "cox1972": "Cite main article pages187--202, excluding separately paginated discussion.",
+    "treesitter": "Cite undated project documentation with actual access date; remove unverified individual authorship, paper-like title and2018year."
+  },
+  "supporting_checks": [
+    {
+      "key": "cox1972",
+      "claim": {
+        "author": "David R. Cox",
+        "title": "Regression Models and Life-Tables",
+        "journal": "J. Royal Statistical Society: Series B",
+        "volume": "34",
+        "number": "2",
+        "pages": "187--220",
+        "year": "1972"
+      },
+      "status": "metadata_page_scope_needs_author_choice",
+      "source_type": "publisher_deposited_exact_doi_metadata",
+      "source_url": "https://api.crossref.org/works/10.1111%2Fj.2517-6161.1972.tb00899.x",
+      "http_status": 200,
+      "candidate_matches": [
+        {
+          "title": "Regression Models and Life-Tables",
+          "doi": "10.1007/978-1-4612-4380-9_37",
+          "similarity": 1.0
+        },
+        {
+          "title": "Multistate life\u2010tables and regression models",
+          "doi": "10.1080/08898489209525345",
+          "similarity": 0.47058823529411764
+        },
+        {
+          "title": "Introduction to Cox (1972) Regression Models and Life-Tables",
+          "doi": "10.1007/978-1-4612-4380-9_36",
+          "similarity": 0.7341772151898734
+        }
+      ],
+      "publisher_source_url": "https://doi.org/10.1111/j.2517-6161.1972.tb00899.x",
+      "observed": {
+        "title": [
+          "Regression Models and Life-Tables"
+        ],
+        "author": [
+          {
+            "given": "D. R.",
+            "family": "Cox",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Imperial College , London"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of the Royal Statistical Society Series B: Statistical Methodology"
+        ],
+        "volume": "34",
+        "issue": "2",
+        "page": "187-202",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              1972,
+              1,
+              1
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2018,
+              12,
+              5
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1972,
+              1,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1111/j.2517-6161.1972.tb00899.x",
+        "publisher": "Oxford University Press (OUP)"
+      },
+      "prior_lookup": {
+        "source_url": "https://api.crossref.org/works?query.bibliographic=Regression+Models+and+Life-Tables&rows=3",
+        "status": "primary_metadata_match_requires_field_review",
+        "error": null,
+        "observed": {
+          "title": [
+            "Regression Models and Life-Tables"
+          ],
+          "author": [
+            {
+              "given": "David R.",
+              "family": "Cox",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Springer Series in Statistics",
+            "Breakthroughs in Statistics"
+          ],
+          "volume": null,
+          "issue": null,
+          "page": "527-541",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                1992
+              ]
+            ]
+          },
+          "published-online": null,
+          "published-print": {
+            "date-parts": [
+              [
+                1992
+              ]
+            ]
+          },
+          "DOI": "10.1007/978-1-4612-4380-9_37",
+          "publisher": "Springer New York"
+        }
+      },
+      "field_assessment": {
+        "title": "matches",
+        "authors": "matches",
+        "year": "1972 matches",
+        "pages": "Publisher catalogs paper as187-202; bibliography187-220 includes separately catalogued discussion202-220."
+      },
+      "notes": [
+        "Use187--202 for the article alone, or explicitly identify inclusion of discussion when retaining187--220. Initial title-only Crossref search returned a1992 reprint; that candidate was not treated as evidence against the original1972 citation."
+      ],
+      "additional_primary_sources": [
+        {
+          "url": "https://academic.oup.com/jrsssb/issue/34/2",
+          "evidence": "Issue table catalogs the Cox article and its discussion as separate records."
+        },
+        {
+          "url": "https://doi.org/10.1111/j.2517-6161.1972.tb00900.x",
+          "evidence": "DOI for separately catalogued discussion."
+        }
+      ]
+    },
+    {
+      "key": "treesitter",
+      "claim": {
+        "author": "Max Brunsfeld and others",
+        "title": "Tree-sitter: An Incremental Parsing System for Programming Tools",
+        "howpublished": "\\url{https://tree-sitter.github.io/tree-sitter/}",
+        "year": "2018"
+      },
+      "status": "partially_verified_resource_identity_year_unverified",
+      "source_type": "primary_page_metadata",
+      "source_url": "https://tree-sitter.github.io/tree-sitter/",
+      "resolved_url": "https://tree-sitter.github.io/tree-sitter/",
+      "http_status": 200,
+      "observed": {},
+      "evidence": "Page retrieved but no machine-readable title metadata was extracted.",
+      "field_assessment": {
+        "resource_identity": "Official tool documentation retrieved; incremental parsing description verified.",
+        "title_authorship_year": "The exact paper-like title, author attribution and2018 publication date are not established by this undated documentation page."
+      },
+      "recommendation": "Cite the official software/documentation with an access date, or cite a specific dated2018 talk using its actual title/author. Do not mark2018 as verified merely because the documentation links2018 talks."
+    }
+  ]
+}

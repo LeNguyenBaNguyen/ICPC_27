@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "completed_functions": 129,
+  "planned_functions": 129,
+  "calls_this_run": 766,
+  "llm_anchor_supported_claims": 1290,
+  "km_table": [
+    {
+      "k": 1,
+      "at_risk": 1290,
+      "events": 105,
+      "survival": 0.9186046511627907
+    },
+    {
+      "k": 2,
+      "at_risk": 1185,
+      "events": 101,
+      "survival": 0.8403100775193798
+    },
+    {
+      "k": 3,
+      "at_risk": 1084,
+      "events": 82,
+      "survival": 0.7767441860465116
+    },
+    {
+      "k": 4,
+      "at_risk": 1002,
+      "events": 74,
+      "survival": 0.7193798449612403
+    },
+    {
+      "k": 5,
+      "at_risk": 928,
+      "events": 74,
+      "survival": 0.662015503875969
+    },
+    {
+      "k": 6,
+      "at_risk": 844,
+      "events": 63,
+      "survival": 0.6125996546529997
+    }
+  ],
+  "S6": 0.6125996546529997,
+  "interpretation": "Llama-model-conditional detection curve on the main cohort; not semantic survival or a direct calibration of Qwen."
+}

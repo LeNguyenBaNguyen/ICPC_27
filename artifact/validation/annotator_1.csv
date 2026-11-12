@@ -1,0 +1,401 @@
+task_id,status,evidence,decomposition_ok,claim_type,needs_context
+V0001,unresolved,"Hàm `addini` chỉ assert kiểm tra type hợp lệ và lưu vào `_inidict`; việc xử lý đường dẫn tương đối với file ini diễn ra ở module khác khi phân giải cấu hình, không hiển thị trong mã.",yes,dataflow,yes
+V0002,supported,"Trong thân hàm có lệnh `transport, proto = await loop.start_tls(transport, protocol, sslcontext, ...)` thực hiện TLS handshake bọc socket thô thành socket an toàn.",yes,behavioural,no
+V0003,contradicted,"Hàm có chữ ký trả về `-> Path` và có các lệnh `return fname` rõ ràng ở nhiều nhánh, trái ngược trực tiếp với nhận định không trả về giá trị.",yes,structural,no
+V0004,supported,Hàm tính toán cờ direct qua `direct = any(...)` từ `information[identifier]` và xếp `not direct` lên trước trong tuple ưu tiên trả về.,yes,behavioural,no
+V0005,supported,"Hàm có kiểu trả về `bool`, cập nhật cờ `updated = True` khi có cập nhật cache và kết thúc bằng `return updated`.",yes,behavioural,no
+V0006,contradicted,"Mã gán vô điều kiện `cls.__doc__ = original_doc`, không hề có nhánh loại bỏ docstring đối với built-in dataclass như nhận định.",no,behavioural,no
+V0007,unresolved,"Hàm `greedy_shrink` chỉ chuyển danh sách passes cho `self.fixate_shrink_passes`, logic đảm bảo mỗi bước cải thiện hơn bước trước nằm bên trong hàm đó chứ không hiển thị ở đây.",yes,intent,yes
+V0008,contradicted,"Chữ ký hàm là `(line, *, mode, line_str=)`, không có tham số nào tên là `line_length`, mâu thuẫn với nhận định.",yes,structural,no
+V0009,contradicted,Trong thân hàm không gọi các hàm trợ giúp `_contains_fmt_skip_comment` hay `preceding_leaf` như nhận định nêu.,yes,structural,no
+V0010,unresolved,Nhận định về tiền điều kiện gọi hàm ngoài ('should be called after having downloaded and unpacked'); hàm chỉ thực hiện cài đặt mà không kiểm tra tiền điều kiện này.,yes,intent,yes
+V0011,contradicted,"Hàm là `_nullpager` không có tham số `generator` và giá trị yield là tuple `(stream, encoding, color)` chứ không phải text strings.",yes,structural,no
+V0012,supported,Trong thân hàm `upgrade_requirements` có câu lệnh gọi trực tiếp `compile_requirements(upgrade=True)`.,yes,behavioural,no
+V0013,supported,"Hàm `dump_python` gọi phương thức `self._serializer.to_python(instance, ...)` để chuyển đổi instance theo các tham số được cung cấp.",yes,dataflow,no
+V0014,unresolved,Mã `_register_fixture` chỉ ghi nhận fixture vào danh sách; quy tắc ưu tiên giữa external plugin và conftest nằm ở hàm phân giải khác.,yes,behavioural,yes
+V0015,supported,"Hàm trả về tuple `json_schemas_map, json_schema`, phần tử thứ hai `json_schema` được gán các khóa tùy chọn `title` và `description` nếu có.",yes,structural,no
+V0016,contradicted,"Chữ ký hàm `arrange(widget, children, size, viewport)` nhận 4 tham số riêng biệt, mâu thuẫn với nhận định gộp thành 3 tham số chính.",yes,structural,no
+V0017,supported,"Trong khối try có câu lệnh gọi `rendered_path, depth = render_math(self, latex)` để render mã LaTeX.",yes,behavioural,no
+V0018,contradicted,"Tham số `context` có giá trị mặc định được chỉ định rõ ràng trong chữ ký là `= None`, mâu thuẫn với nhận định 'default value not specified'.",yes,structural,no
+V0019,supported,Hàm có kiểu trả về `-> None` và phát các thông điệp cảnh báo vi phạm quy tắc đặt tên qua `self._check_name`.,no,behavioural,no
+V0020,supported,Hàm kiểm tra điều kiện `if not self._py311_plus:` để thêm cảnh báo sử dụng exception groups trên phiên bản không hỗ trợ.,yes,behavioural,no
+V0021,supported,"Phương thức được định nghĩa rõ ràng bằng cú pháp `async def write(self, chunk: bytes, ...)` nên là phương thức bất đồng bộ.",yes,structural,no
+V0022,unresolved,"Hàm kiểm thử Nox session chạy subprocess và kiểm tra assert, nhưng mức độ cô lập môi trường và giới hạn side effect phụ thuộc vào môi trường OS bên ngoài.",no,behavioural,yes
+V0023,supported,"Hàm `dump_python` chỉ serialize đối tượng đầu vào qua serializer và trả về kết quả, không làm thay đổi trạng thái ngoài.",yes,behavioural,no
+V0024,unresolved,"Nhận định về vai trò cốt lõi trong hệ thống tài liệu Sphinx ('core component') là tuyên bố kiến trúc cấp cao, không thể chứng minh chỉ từ mã của hàm.",yes,intent,yes
+V0025,supported,Hàm kiểm tra hàm được gọi và trả về True nếu thuộc danh sách hàm kết thúc hoặc kiểu trả về là NoReturn/Never.,yes,behavioural,no
+V0026,supported,Hàm kết thúc bằng lệnh trả về một đối tượng `_Attributes(attrs)`.,yes,structural,no
+V0027,contradicted,"Hàm `repeat_scalars` được định nghĩa độc lập ở cấp module trong `grid.py`, không phải là hàm bên trong `GridLayout.arrange`.",yes,structural,no
+V0028,supported,Trong `_build_session` có kiểm tra `cache_dir` và gọi `cache_dir = os.path.abspath(cache_dir)` nếu được cung cấp.,yes,dataflow,no
+V0029,contradicted,"Hàm ném ngoại lệ rõ ràng bằng câu lệnh `raise PydanticUserError(...)`, mâu thuẫn với nhận định không ném ngoại lệ.",yes,behavioural,no
+V0030,unresolved,"Việc tiền tố tạo ra không trùng với tiền tố của bất kỳ buffer nào trước đó phụ thuộc vào trạng thái toàn cây tiền tố, không thể chứng minh hoàn toàn chỉ từ mã hàm đơn lẻ.",yes,behavioural,yes
+V0031,contradicted,Mã nguồn mâu thuẫn với nhận định: CallbackGetCoreSchemaHandler no longer used.,yes,structural,no
+V0032,contradicted,Mã nguồn mâu thuẫn với nhận định: multiline string handling check removed.,yes,dataflow,no
+V0033,contradicted,Mã nguồn mâu thuẫn với nhận định: install_editable_legacy` no longer called.,yes,structural,no
+V0034,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function does not handle errors or edge cases explicitly; instead, it r'.",no,behavioural,no
+V0035,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If an exception of type `MathExtError` occurs, a warning message is generat'.",yes,behavioural,no
+V0036,contradicted,"Mã nguồn mâu thuẫn với nhận định: function takes five parameters, not four.",yes,structural,no
+V0037,unresolved,"Nhận định nêu bình luận thiết kế và lý do lịch sử ('previous attempts have proven too expensive'), đây là intent không thể kiểm chứng từ mã nguồn.",yes,intent,yes
+V0038,supported,Chữ ký hàm có tham số `traces: List['Trace']` được truyền vào phục vụ theo dõi và trace kết nối.,yes,structural,no
+V0039,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`format_stdin_to_stdout` formats code read from standard input and writes t'.,yes,intent,no
+V0040,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_on_screen_resume determines whether to automatically set focus to a widget'.,yes,dataflow,no
+V0041,contradicted,"Hàm sử dụng `limited_values.extend(scalars)`, nếu `scalars` rỗng thì rơi vào vòng lặp vô tận chứ không nối các danh sách rỗng.",yes,behavioural,no
+V0042,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`include` and `exclude` parameters allow for selective serialization of fie'.,yes,structural,no
+V0043,contradicted,Mã nguồn mâu thuẫn với nhận định: No return early on unspecified mode..,yes,behavioural,no
+V0044,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'After selecting a strategy, the function calls `data.draw(strategy)` again '.",yes,dataflow,no
+V0045,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`hover_line` can trigger other UI updates or visual feedback mechanisms wit'.,yes,intent,yes
+V0046,contradicted,Mã nguồn mâu thuẫn với nhận định: default value `None` specified for `strict`.,yes,structural,no
+V0047,contradicted,Mã nguồn mâu thuẫn với nhận định: exclude` has a default value of `None`.,yes,structural,no
+V0048,contradicted,"Hàm `render_line(self, y: int) -> Strip:` chỉ trả về đối tượng `Strip`, không trực tiếp render ra màn hình hay output buffer.",yes,behavioural,no
+V0049,unresolved,"Tuyên bố về lịch sử ngôn ngữ ('__required_keys__ was added in Python 3.9') là thông tin bên ngoài, không kiểm chứng được từ mã hàm.",yes,structural,yes
+V0050,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`observe_as` is an optional string for observing the time taken by the draw'.,yes,structural,no
+V0051,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`parse_headers` relies on helper methods such as `_lax` and regular express'.,yes,structural,yes
+V0052,contradicted,"Mã nguồn mâu thuẫn với nhận định: returns a `CIMultiDictProxy` and raw headers, not a list of pairs.",yes,structural,no
+V0053,contradicted,Mã nguồn mâu thuẫn với nhận định: function raises exceptions internally.,yes,behavioural,no
+V0054,contradicted,Mã nguồn mâu thuẫn với nhận định: mode` parameter added in current version.,yes,structural,no
+V0055,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function `render_scope` has an optional keyword argument `sort_keys` wi'.,yes,structural,no
+V0056,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`do_draw` does not have any side effects; it only reads from and writes to '.,no,behavioural,no
+V0057,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'Docked widgets are arranged using `_arrange_dock_widgets`, and any necessar'.",yes,structural,no
+V0058,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`data_received` attempts to parse HTTP messages using the `_parser` object '.,yes,dataflow,no
+V0059,contradicted,"Mã nguồn mâu thuẫn với nhận định: function returns bool | None, not True.",yes,dataflow,no
+V0060,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function does not handle exceptions explicitly but relies on helper fun'.,yes,structural,no
+V0061,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'For other mouse-related events (`MouseEvent`), it attempts to find the widg'.",yes,dataflow,no
+V0062,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`reformat_many` reports results through the provided `report` object.'.,yes,dataflow,yes
+V0063,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If 'raise_errors' is True, errors may be raised during the process.'.",yes,behavioural,no
+V0064,contradicted,"Mã nguồn mâu thuẫn với nhận định: finally` block now unlinks `f.name`, not `fd`.",yes,behavioural,no
+V0065,contradicted,"Mã nguồn mâu thuẫn với nhận định: Function yields from multiple places, not just the leaf..",yes,behavioural,no
+V0066,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`check_format` iterates over all files returned by `tools.all_files()`, ski'.",yes,behavioural,no
+V0067,contradicted,"Mã nguồn mâu thuẫn với nhận định: specific helper methods for dates, times, etc. removed.",yes,dataflow,no
+V0068,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`get_items` logs a warning and appends a tuple with empty signature and sum'.,no,behavioural,no
+V0069,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_register_fixture updates the autouse fixture mapping if necessary.'.,yes,dataflow,no
+V0070,contradicted,Mã nguồn mâu thuẫn với nhận định: Custom error handler registration removed..,yes,behavioural,no
+V0071,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The purpose of `visit_assignname` is to enforce naming conventions and catc'.,yes,intent,no
+V0072,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The `title` and `description` parameters provide optional title and descrip'.,no,structural,no
+V0073,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It yields the identified ignored nodes one by one using a generator.'.,yes,dataflow,no
+V0074,supported,"Trong nhánh `else:` của kiểm tra `collect_by_mro`, mã gọi hàm xử lý theo thứ tự cũ.",yes,behavioural,no
+V0075,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The behavior of error handling is determined by the `warnings` parameter.'.,yes,dataflow,no
+V0076,contradicted,Mã nguồn mâu thuẫn với nhận định: renamed populate_by_name to validate_by_name.,yes,dataflow,no
+V0077,supported,Chữ ký hàm khai báo tham số `dock_widgets: Sequence[Widget]` đại diện cho danh sách các widget gắn dock.,yes,structural,no
+V0078,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `run` method is part of the `Autosummary` class.'.,yes,structural,yes
+V0079,supported,"Hàm `model_rebuild` xử lý việc tái tạo schema, đặc biệt khi gặp các tham chiếu chưa giải quyết được (ForwardRef).",yes,intent,no
+V0080,unresolved,"Đặc tính lũy đẳng ('calling twice has same effect as once') là tính chất thuật toán của greedy_shrink, không thể kiểm chứng chỉ từ danh sách passes được gọi.",yes,behavioural,yes
+V0081,supported,Hàm có chữ ký trả về `-> None` và thực hiện gửi dữ liệu frame qua kết nối websocket.,no,intent,no
+V0082,supported,Hàm `setup` chỉ lặp đăng ký các chỉ thị tài liệu mà không chứa khối try/except hoặc xử lý ngoại lệ tường minh.,yes,behavioural,no
+V0083,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Registration is done to force determinism on simulation or scheduling frame'.,yes,intent,yes
+V0084,contradicted,Mã nguồn mâu thuẫn với nhận định: index_opts inserted before selection_opts now.,yes,dataflow,no
+V0085,supported,Mã kiểm tra thuộc tính và type annotation của field xem có cần định nghĩa hoặc đánh giá thêm không.,yes,dataflow,no
+V0086,contradicted,Mã nguồn mâu thuẫn với nhận định: deprecation warning replaced by exception.,yes,structural,no
+V0087,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If rendering succeeds, the function checks configuration settings for embed'.",yes,dataflow,no
+V0088,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`BaseRequest.post` is an asynchronous method.'.,yes,structural,no
+V0089,supported,"Hàm ủy quyền thao tác ghi file cho `self._pytester.makefile`, để lớp này tự xử lý các lỗi phát sinh.",yes,intent,no
+V0090,supported,Hàm `_nullpager` là một thành phần phân trang dự phòng nằm trong gói Click.,yes,structural,no
+V0091,contradicted,Mã nguồn mâu thuẫn với nhận định: Method changed from isolated_editable_sanity_check to editable_sanity_check..,yes,dataflow,no
+V0092,contradicted,Mã nguồn mâu thuẫn với nhận định: inferred depth no longer in return tuple.,no,dataflow,no
+V0093,contradicted,Mã nguồn mâu thuẫn với nhận định: does not return a future.,yes,dataflow,no
+V0094,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The function handles edge cases gracefully by simply passing through any te'.,yes,behavioural,yes
+V0095,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`parse_message` decodes the request line to extract the method, path, and v'.",yes,dataflow,no
+V0096,contradicted,Mã nguồn mâu thuẫn với nhận định: no evidence of access logger getting exception information.,yes,behavioural,no
+V0097,contradicted,Mã nguồn mâu thuẫn với nhận định: exclude_computed_fields` parameter added.,yes,structural,no
+V0098,contradicted,Mã nguồn mâu thuẫn với nhận định: no preference for 'pinned' requirements.,yes,dataflow,no
+V0099,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'line is an instance of Line that contains the context for the current line '.,yes,structural,no
+V0100,contradicted,Mã nguồn mâu thuẫn với nhận định: format()` is called without arguments.,yes,structural,no
+V0101,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '__required_keys__ was added in Python 3.9.'.,yes,structural,yes
+V0102,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function handles potential Unicode decoding errors by registering a cus'.,yes,behavioural,no
+V0103,contradicted,Mã nguồn mâu thuẫn với nhận định: greedy parameter added.,yes,structural,no
+V0104,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function does not have any side effects mentioned in the description.'.,yes,behavioural,yes
+V0105,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'fuzz_one_input processes the input using the Hypothesis state machine.'.,yes,dataflow,yes
+V0106,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'Any conftest plugin can implement this hook.'.,yes,intent,yes
+V0107,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'It is not possible to track required/optional keys in TypedDict without __r'.,yes,behavioural,yes
+V0108,unresolved,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`add_options` adds options for specifying constraints, requirements files, '.",yes,dataflow,yes
+V0109,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`test` handles errors by using assertions and ensures that the test environ'.,no,behavioural,yes
+V0110,contradicted,Mã nguồn mâu thuẫn với nhận định: experimental_allow_partial` is now a parameter.,yes,structural,no
+V0111,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`color` is a boolean indicating whether ANSI color codes should be stripped'.,yes,structural,yes
+V0112,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_typed_dict_schema handles errors by catching exceptions such as NameError '.,yes,behavioural,no
+V0113,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It installs the build backend's static requirements in the isolated environ'.,yes,behavioural,no
+V0114,contradicted,Mã nguồn mâu thuẫn với nhận định: _generate_schema_from_property replaced by _generate_schema_from_get_schema_method.,yes,dataflow,no
+V0115,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`render_scope` assumes that the input scope is a valid mapping and does not'.,yes,behavioural,yes
+V0116,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '__required_keys__ was added in Python 3.9.'.,yes,structural,yes
+V0117,contradicted,"Mã nguồn mâu thuẫn với nhận định: select_example` not called; uses `int_from_bytes`, `int_to_bytes`.",no,structural,no
+V0118,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If both `ge`/`gt` and `le`/`lt` are set, it raises an assertion error to pr'.",yes,behavioural,no
+V0119,contradicted,Mã nguồn mâu thuẫn với nhận định: inferred depth calculation removed.,yes,dataflow,no
+V0120,contradicted,Mã nguồn mâu thuẫn với nhận định: ClientRequestBase used instead of ClientRequest.,yes,dataflow,no
+V0121,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` handles errors by using assertions and ensures that the test environ'.,no,behavioural,yes
+V0122,contradicted,Mã nguồn mâu thuẫn với nhận định: catch_warnings_for_item` not mentioned; no hook wrappers for `pytest_configure`.,yes,behavioural,no
+V0123,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`validate_json` does not have any side effects.'.,yes,behavioural,yes
+V0124,contradicted,"Mã nguồn mâu thuẫn với nhận định: Type coercion logic removed, replaced by mode checks..",yes,dataflow,no
+V0125,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`attempt_replace` is part of the Hypothesis library's internal optimization'.,yes,intent,yes
+V0126,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'There are no side effects from this function; it is purely a data aggregati'.,no,behavioural,yes
+V0127,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'annotations is a list of annotation objects.'.,yes,dataflow,no
+V0128,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If no nodes allow focus, the function completes without taking action.'.",yes,behavioural,no
+V0129,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`render_line` attempts to retrieve the option index and y-offset for the ca'.,yes,dataflow,no
+V0130,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '__required_keys__ is buggy.'.,yes,behavioural,yes
+V0131,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`parse_message` is a method in the `HttpRequestParser` class.'.,yes,structural,no
+V0132,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'This logic must be called after the class has been created because validati'.,yes,intent,yes
+V0133,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'MessagePump.on_event takes one argument: event.'.,yes,structural,no
+V0134,contradicted,Mã nguồn mâu thuẫn với nhận định: write_eof() not shown or mentioned.,yes,behavioural,no
+V0135,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'There are no side effects from calling this function.'.,yes,behavioural,yes
+V0136,contradicted,Mã nguồn mâu thuẫn với nhận định: global_options parameter removed.,no,structural,no
+V0137,contradicted,"Mã nguồn mâu thuẫn với nhận định: blend` is a method, not a function.",yes,structural,no
+V0138,contradicted,"Mã nguồn mâu thuẫn với nhận định: try-except block removed, `try_issubclass` used instead.",yes,behavioural,no
+V0139,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Calling Shrinker.greedy_shrink twice has the same effect as calling it once'.,yes,behavioural,yes
+V0140,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_format_str_once returns the formatted string of code.'.,yes,structural,no
+V0141,contradicted,Mã nguồn mâu thuẫn với nhận định: creates and returns a new object.,no,behavioural,no
+V0142,contradicted,"Mã nguồn mâu thuẫn với nhận định: parameter `parens_after` is a set of strings, not one string..",yes,structural,no
+V0143,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`visit_classdef` does not return any value.'.,yes,structural,no
+V0144,contradicted,"Mã nguồn mâu thuẫn với nhận định: type` defaults to `None`, not 'string'.",yes,structural,no
+V0145,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'It handles errors or edge cases by using default values and ensuring that o'.,yes,behavioural,yes
+V0146,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`prompt` handles user interruptions by catching `KeyboardInterrupt` and `EO'.,yes,behavioural,no
+V0147,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`core_config` relies on the underlying libraries to manage such scenarios.'.,yes,behavioural,yes
+V0148,unresolved,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'If execution happens without an ini-file defined, 'paths' and 'pathlist' wi'.",yes,dataflow,yes
+V0149,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'A `PipProvider` instance is created with various constraints and strategies'.,yes,structural,no
+V0150,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'GenerateSchema._model_schema is a Python function.'.,yes,structural,yes
+V0151,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The lower the return value is, the more preferred this group of arguments i'.",yes,dataflow,yes
+V0152,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The `_forward_event` function is part of the `Screen` class.'.,yes,structural,no
+V0153,contradicted,"Mã nguồn mâu thuẫn với nhận định: depth"" calculation not shown.",yes,dataflow,no
+V0154,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If changes are detected and there is no release file (`hp.RELEASE_FILE`), i'.",yes,structural,no
+V0155,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` relies on helper functions like `run_with_protected_pip`, `should_up'.",no,structural,yes
+V0156,contradicted,Mã nguồn mâu thuẫn với nhận định: exclude_defaults` has a default value of `False`.,yes,structural,no
+V0157,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If accessing a strip from the result of `_render_option_content` fails due '.,yes,behavioural,no
+V0158,contradicted,"Mã nguồn mâu thuẫn với nhận định: finder` parameter removed, replaced by `build_env_installer`.",yes,structural,no
+V0159,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '_tempfilepager is designed to page through text by writing the content gene'.,yes,intent,yes
+V0160,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It also handles a special case for asynchronous statements by including the'.,yes,dataflow,no
+V0161,contradicted,"Mã nguồn mâu thuẫn với nhận định: inputs` is an iterable of tuples, not a list..",yes,dataflow,no
+V0162,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` handles errors by using assertions and ensures that the test environ'.,no,behavioural,yes
+V0163,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_maybe_split_omitting_optional_parens returns an iterator over lines, poten'.",yes,dataflow,no
+V0164,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`args` is a list of strings representing direct package requirements.'.,yes,structural,no
+V0165,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`workers` defaults to the value of the environment variable `BLACK_NUM_WORK'.,yes,dataflow,no
+V0166,contradicted,"Mã nguồn mâu thuẫn với nhận định: Function generates nodes until `# fmt: on`, not just leaves..",yes,dataflow,no
+V0167,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`include` and `exclude` parameters allow for selective serialization of fie'.,yes,structural,no
+V0168,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'init is a callable representing the class's initializer method.'.,yes,structural,no
+V0169,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'This hook allows plugins to execute custom code right after leaving pdb.'.,yes,intent,yes
+V0170,contradicted,"Mã nguồn mâu thuẫn với nhận định: expects `source_type` directly, not from `Annotated`..",yes,intent,no
+V0171,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'For other exceptions, fuzz_one_input captures the current test state.'.",yes,dataflow,no
+V0172,contradicted,Mã nguồn mâu thuẫn với nhận định: No evidence of removing placeholder or notifying waiters if connector is not closed..,yes,behavioural,no
+V0173,contradicted,Mã nguồn mâu thuẫn với nhận định: no explicit error handling for distribution restrictions or legacy setup.py options.,yes,behavioural,no
+V0174,contradicted,"Mã nguồn mâu thuẫn với nhận định: accept_no_return_doc` is checked once, not twice..",yes,behavioural,no
+V0175,unresolved,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function `is_terminating_func` detects calls to `exit()`, `quit()`, `os'.",yes,structural,yes
+V0176,contradicted,"Mã nguồn mâu thuẫn với nhận định: removed `--no-binary`, `--only-binary`, `--prefer-binary`.",yes,behavioural,no
+V0177,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`convert_one_fmt_off_pair` manages indentation and line breaks carefully to'.,yes,behavioural,yes
+V0178,contradicted,Mã nguồn mâu thuẫn với nhận định: complete_model_class` called with original config.,yes,structural,no
+V0179,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`schedule_formatting` accepts a boolean parameter `fast` indicating whether'.,yes,structural,no
+V0180,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`complete_model_class` is part of the Pydantic library's internal model con'.,yes,intent,no
+V0181,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`convert_one_fmt_off_pair` handles edge cases by skipping invalid uses of `'.,yes,behavioural,yes
+V0182,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'After populating the `children` list, it replaces any empty lists with tupl'.",yes,dataflow,no
+V0183,contradicted,Mã nguồn mâu thuẫn với nhận định: no exception handling in the code.,yes,behavioural,no
+V0184,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`_post_start` asserts that the event loop (`_loop`) is not `None`.'.,yes,behavioural,no
+V0185,contradicted,Mã nguồn mâu thuẫn với nhận định: Python does not strip zeros after \n; code preserves them..,yes,dataflow,no
+V0186,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'Any issues would likely be raised by the underlying Sphinx build process.'.,yes,intent,yes
+V0187,contradicted,"Mã nguồn mâu thuẫn với nhận định: complete_model_class` takes six parameters, not seven..",yes,structural,no
+V0188,contradicted,Mã nguồn mâu thuẫn với nhận định: module path changed to `pydantic/dataclasses.py`.,yes,structural,no
+V0189,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '_namedtuple_schema replaces any type variables in the annotations with thei'.,yes,dataflow,yes
+V0190,contradicted,Mã nguồn mâu thuẫn với nhận định: set_focus is no longer called directly.,no,dataflow,no
+V0191,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`add_options` includes build isolation settings (`--no-build-isolation`).'.,yes,behavioural,no
+V0192,contradicted,Mã nguồn mâu thuẫn với nhận định: name is Optional[str].,yes,dataflow,no
+V0193,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The generated prefix is not a prefix of any buffer previously added to the '.,yes,behavioural,yes
+V0194,contradicted,Mã nguồn mâu thuẫn với nhận định: func_name` removed from `IdMaker`.,yes,structural,no
+V0195,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`read_doc` is a method in the Sphinx documentation generation system.'.,yes,intent,yes
+V0196,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`add_options` assumes that the underlying option-parsing library will manag'.,yes,intent,yes
+V0197,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`collect_pages` takes a single parameter `app`, which is an instance of the'.",yes,structural,no
+V0198,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`make_str` first checks if the input is of type `bytes` using `isinstance` '.,yes,structural,no
+V0199,contradicted,Mã nguồn mâu thuẫn với nhận định: shed now ensures compatibility with Python 3.10+.,yes,dataflow,no
+V0200,contradicted,Mã nguồn mâu thuẫn với nhận định: ssl_context` parameter no longer exists.,yes,structural,no
+V0201,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function does not handle any exceptions or edge cases explicitly.'.,yes,behavioural,no
+V0202,contradicted,Mã nguồn mâu thuẫn với nhận định: include` has a default value of `None`.,yes,structural,no
+V0203,contradicted,"Mã nguồn mâu thuẫn với nhận định: callable types, literal types, zoneinfo types handling removed.",yes,dataflow,no
+V0204,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If they are, it computes the width by converting the sum of the starting li'.",yes,dataflow,no
+V0205,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The `setup` function relies on the underlying Sphinx framework to manage su'.,yes,intent,yes
+V0206,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function processes the resolved candidates, creates a `RequirementSet`,'.",yes,dataflow,no
+V0207,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_maybe_split_omitting_optional_parens handles exceptions like CannotSplit i'.,yes,behavioural,no
+V0208,contradicted,Mã nguồn mâu thuẫn với nhận định: start_time is now Optional[float].,yes,structural,no
+V0209,unresolved,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`Config._getini` takes a single parameter `name`, which is the name of the '.",yes,structural,yes
+V0210,contradicted,"Mã nguồn mâu thuẫn với nhận định: type` defaults to `None`, not 'string'.",yes,structural,no
+V0211,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`parse_message` reads headers by calling the `parse_headers` method.'.,yes,structural,no
+V0212,contradicted,Mã nguồn mâu thuẫn với nhận định: now checks four flags including `_refresh_styles_required`.,yes,structural,no
+V0213,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `_draw` method is part of the `DataTree` class.'.,yes,structural,yes
+V0214,contradicted,Mã nguồn mâu thuẫn với nhận định: no evidence of being called within exception context.,yes,structural,no
+V0215,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The returned dictionary includes the version of the extension.'.,yes,dataflow,no
+V0216,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If there is a custom payload parser set, it uses this parser to process the'.",yes,dataflow,no
+V0217,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '_format_str_once formats a given string of Python source code according to '.,yes,intent,yes
+V0218,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_generate_signature_parameters iterates over the parameters of the init met'.,yes,dataflow,no
+V0219,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`normalize_invisible_parens` keeps existing visible parentheses for other t'.,yes,dataflow,yes
+V0220,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If a candidate is yanked, it logs a warning with the reason.'.",yes,behavioural,no
+V0221,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'If equal, Pip calculates an approximate 'depth' and resolves requirements c'.",yes,dataflow,yes
+V0222,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'On 3.11 but < 3.12 TypedDict does not preserve inheritance information.'.,yes,behavioural,yes
+V0223,contradicted,Mã nguồn mâu thuẫn với nhận định: multiline string handling check removed.,yes,behavioural,no
+V0224,contradicted,Mã nguồn mâu thuẫn với nhận định: now uses create_connection instead of self._loop.create_connection.,yes,dataflow,no
+V0225,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The payload of the frame is the message.'.,yes,dataflow,yes
+V0226,contradicted,"Mã nguồn mâu thuẫn với nhận định: cls_name is not the model or dataclass name, it's the class name..",yes,structural,no
+V0227,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`name` is the name of the package being built.'.,yes,structural,no
+V0228,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The primary side effect of `render_line` is rendering the specified line of'.,yes,behavioural,yes
+V0229,contradicted,Mã nguồn mâu thuẫn với nhận định: Margins are calculated differently now..,yes,dataflow,no
+V0230,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`Config._getini` does not have any side effects.'.,yes,behavioural,yes
+V0231,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If no encoding is found by position, it infers it using a keyword search.'.",yes,dataflow,no
+V0232,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`collect_dataclass_fields` is a utility within the Pydantic library.'.,yes,intent,yes
+V0233,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It uses `_getreprcrash` to get crash information.'.,yes,structural,no
+V0234,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`get_requirements` enables hash checking if any requirement specifies hash '.,yes,dataflow,no
+V0235,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Using the current working directory to resolve 'paths' and 'pathlist' in th'.,yes,behavioural,yes
+V0236,contradicted,Mã nguồn mâu thuẫn với nhận định: _render_option_content replaced with _get_option_render.,yes,behavioural,no
+V0237,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Error handling and edge cases are managed within the `_on_message` helper m'.,yes,intent,yes
+V0238,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'This is used by the core engine via `deterministic_PRNG`.'.,yes,intent,yes
+V0239,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_on_screen_resume has primary side effects including updating the screen's '.,no,intent,no
+V0240,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`config_wrapper` is a parameter of the function, representing the config wr'.",yes,structural,no
+V0241,contradicted,Mã nguồn mâu thuẫn với nhận định: context` has a default value of `None`.,yes,structural,no
+V0242,unresolved,Chưa đủ bằng chứng để kết luận trong phạm vi hàm: cannot determine without knowing external effects..,yes,behavioural,yes
+V0243,contradicted,Mã nguồn mâu thuẫn với nhận định: write_eof() not shown or mentioned.,yes,behavioural,no
+V0244,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` handles errors by using assertions and ensures that the test environ'.,no,behavioural,yes
+V0245,contradicted,Mã nguồn mâu thuẫn với nhận định: now accepts four parameters.,yes,structural,no
+V0246,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function is named `load_config_dict_from_file`.'.,yes,structural,no
+V0247,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'It assumes that indices are valid within the bounds of the example tree.'.,yes,behavioural,yes
+V0248,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'fuzz_one_input checks if the captured test state is a minimal failure examp'.,yes,behavioural,no
+V0249,contradicted,Mã nguồn mâu thuẫn với nhận định: Multiple return statements based on conditional logic..,yes,behavioural,no
+V0250,contradicted,Mã nguồn mâu thuẫn với nhận định: config_wrapper parameter removed.,yes,structural,no
+V0251,contradicted,Mã nguồn mâu thuẫn với nhận định: No longer stores schema in definitions..,yes,behavioural,no
+V0252,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`generate_novel_prefix` does not modify the state of the tree or external s'.,yes,intent,yes
+V0253,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'Autosummary.get_items tries to import the given names.'.,yes,dataflow,no
+V0254,contradicted,Mã nguồn mâu thuẫn với nhận định: trust_env` parameter is not used in the function body..,yes,structural,no
+V0255,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function checks if the field's annotation needs further evaluation.'.,yes,dataflow,yes
+V0256,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '_wrap_create_connection ensures that network connections are established ef'.,yes,intent,yes
+V0257,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`parse_headers` is defined in `aiohttp/http_parser.py`.'.,yes,structural,no
+V0258,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If a `value_proc` is provided, it is used to convert and validate the input'.",no,dataflow,no
+V0259,contradicted,"Mã nguồn mâu thuẫn với nhận định: iterates over `approx_side_as_map` only, not both mappings simultaneously.",yes,behavioural,no
+V0260,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function uses type adapters to provide core schemas that get converted '.,yes,dataflow,no
+V0261,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`build_wheel_legacy` constructs arguments for setuptools' bdist_wheel comma'.,yes,dataflow,no
+V0262,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`Config._getini` takes a single parameter `name`, which is the name of the '.",yes,structural,yes
+V0263,contradicted,Mã nguồn mâu thuẫn với nhận định: missing `children` parameter in statement.,yes,structural,no
+V0264,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`control` serves as an alias for the `list_view` attribute.'.,yes,intent,no
+V0265,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_model_schema manages extra fields if allowed by the configuration.'.,yes,dataflow,no
+V0266,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'If equal, Pip calculates an approximate 'depth' and resolves requirements c'.",yes,dataflow,yes
+V0267,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`add_options` relies on the underlying `cmdoptions` functions to validate i'.,yes,structural,yes
+V0268,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The function evolves over time by adding more user-facing methods as they a'.,yes,intent,yes
+V0269,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The lower the return value is, the more preferred this group of arguments i'.",yes,dataflow,yes
+V0270,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The `_init_proxy_transport` function accepts several parameters: `proxy`, `'.",yes,structural,no
+V0271,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Line continuations are supported in HttpParser.parse_headers.'.,yes,dataflow,yes
+V0272,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The generated prefix is not a prefix of any buffer previously added to the '.,yes,behavioural,yes
+V0273,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`attempt_replace` is part of the Hypothesis library's internal optimization'.,yes,intent,yes
+V0274,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The resulting prefix is essentially arbitrary.'.,yes,intent,yes
+V0275,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'Start response processing.'.,yes,intent,yes
+V0276,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It does not handle any errors or edge cases explicitly; it assumes valid in'.,no,behavioural,no
+V0277,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'GenerateSchema._model_schema is a Python function.'.,yes,structural,yes
+V0278,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`parse_headers` is defined in `aiohttp/http_parser.py`.'.,yes,structural,yes
+V0279,contradicted,Mã nguồn mâu thuẫn với nhận định: by_alias` has a default value of `False`.,yes,structural,no
+V0280,contradicted,Mã nguồn mâu thuẫn với nhận định: exclude_unset` has a default value of `False`.,yes,structural,no
+V0281,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function uses JSON parsing to validate the input data.'.,yes,behavioural,yes
+V0282,contradicted,"Mã nguồn mâu thuẫn với nhận định: parameter name is `name`, not `<name>`.",yes,structural,no
+V0283,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function resolves box models for each child's width, considering the av'.",yes,dataflow,no
+V0284,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The function relies on the behavior of the `get_revision` method to handle '.,yes,structural,yes
+V0285,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`args` are the command-line arguments specifying the packages to build.'.,yes,dataflow,yes
+V0286,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'GenerateSchema._model_schema is a Python function.'.,yes,structural,yes
+V0287,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If a match is found, it retrieves the project name from the matched group.'.",yes,dataflow,no
+V0288,unresolved,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`attempt_replace` is part of the Hypothesis library's internal optimization'.,yes,intent,yes
+V0289,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`finish_response` calls `request._finish()` to modify the state of the requ'.,yes,behavioural,no
+V0290,contradicted,Mã nguồn mâu thuẫn với nhận định: serialize_as_any` has a default value of `False`.,yes,structural,no
+V0291,contradicted,Mã nguồn mâu thuẫn với nhận định: No exceptions raised for TOML decoding issues or unsupported `[pytest]` sections..,yes,behavioural,no
+V0292,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The purpose of the `generate_ignored_nodes` function is to traverse the syn'.,yes,intent,no
+V0293,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_format_str_once determines the target Python versions based on either the '.,yes,dataflow,no
+V0294,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'init is a callable representing the class's initializer method.'.,yes,structural,no
+V0295,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_get_fuzz_target explicitly sets deadline=None in Hypothesis settings to si'.,yes,structural,no
+V0296,contradicted,Mã nguồn mâu thuẫn với nhận định: Function now takes five parameters including `leaves` and `start`..,no,structural,no
+V0297,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_apply_annotations wraps the inner schema generation logic for each annotat'.,yes,dataflow,no
+V0298,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`do_draw` filters the list of element strategies (`self.element_strategies`'.,yes,dataflow,no
+V0299,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`GenerateSchema._apply_annotations` gets called by `GenerateSchema._annotat'.,yes,structural,yes
+V0300,unresolved,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`Config._getini` takes a single parameter `name`, which is the name of the '.",yes,structural,yes
+V0301,contradicted,Mã nguồn mâu thuẫn với nhận định: tempd` renamed to `wheel_directory`.,yes,structural,no
+V0302,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The factor value should be between 0 and 1.0.'.,yes,behavioural,yes
+V0303,supported,Chữ ký hàm có tham số `symbol: Symbol` đại diện cho biểu tượng đang được mô tả trong tài liệu.,yes,structural,no
+V0304,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`visit_assignname` is a method within the `NameChecker` class.'.,yes,structural,no
+V0305,supported,"Property `offset` trả về `Offset(self.x, self.y)` đại diện cho tọa độ chuột.",yes,dataflow,no
+V0306,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The purpose of `make_requirement_preparer` is to create and configure an in'.,yes,intent,no
+V0307,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function handles potential Unicode decoding errors by registering a cus'.,yes,behavioural,no
+V0308,contradicted,Mã nguồn mâu thuẫn với nhận định: _getini_value handles unknown types now.,yes,structural,no
+V0309,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `paths` variable type was added in version 7.0.'.,yes,behavioural,yes
+V0310,contradicted,Mã nguồn mâu thuẫn với nhận định: _nullpager yields text with encoding and color info.,yes,intent,no
+V0311,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The `name` parameter is the name of the ini-variable.'.,yes,structural,no
+V0312,contradicted,Mã nguồn mâu thuẫn với nhận định: header construction logic removed.,yes,dataflow,no
+V0313,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function is crucial for managing code formatting directives within the '.,yes,intent,yes
+V0314,contradicted,Mã nguồn mâu thuẫn với nhận định: uses `tempfile.NamedTemporaryFile` instead.,yes,structural,no
+V0315,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`core_config` iterates over a predefined set of configuration keys.'.,yes,dataflow,no
+V0316,contradicted,Mã nguồn mâu thuẫn với nhận định: has_existing_examples` renamed to `has_existing_test_cases`.,yes,dataflow,no
+V0317,contradicted,Mã nguồn mâu thuẫn với nhận định: Variable `_accessed` is not initialized..,yes,dataflow,no
+V0318,contradicted,"Mã nguồn mâu thuẫn với nhận định: function replaces with integer `v`, not `i`.",yes,dataflow,no
+V0319,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'BaseModel.model_rebuild is a method.'.,yes,structural,no
+V0320,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`Config._getini` handles different types of configuration values such as pa'.,yes,dataflow,no
+V0321,contradicted,"Chữ ký hàm ở commit này đã được bổ sung thêm tham số `*, aliases: Sequence[str] = ()`, nên nhận nhiều hơn 4 tham số như nhận định ban đầu.",yes,structural,no
+V0322,supported,Hàm kiểm tra các biến toàn cục và phát hiện biến chưa được định nghĩa trong phạm vi global.,yes,behavioural,no
+V0323,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '_nullpager outputs text without any formatting or pagination.'.,yes,intent,yes
+V0324,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If an unknown or invalid option is encountered, an error message is logged,'.",yes,behavioural,no
+V0325,contradicted,Mã nguồn mâu thuẫn với nhận định: does not parse RFC 5322 headers from a stream.,yes,intent,no
+V0326,supported,Phương thức `model_rebuild` được thiết kế để người dùng gọi thủ công khi cơ chế tự động xây dựng schema thất bại.,yes,intent,no
+V0327,contradicted,Mã nguồn mâu thuẫn với nhận định: ManualPageWriter no longer used for writing.,yes,structural,no
+V0328,supported,Hàm `attempt_replace` thực hiện logic tối ưu hóa điểm số và thay thế node trong quá trình shrink của Hypothesis.,yes,intent,no
+V0329,supported,Mã `model_rebuild` cung cấp cơ chế giải quyết ForwardRef trong type annotations khi quá trình khởi tạo ban đầu chưa hoàn tất.,yes,intent,no
+V0330,contradicted,Mã nguồn mâu thuẫn với nhận định: now yields strings instead of returning a list or None.,yes,dataflow,no
+V0331,contradicted,Mã nguồn mâu thuẫn với nhận định: no longer writes to stdin from a generator.,yes,dataflow,no
+V0332,contradicted,Mã nguồn mâu thuẫn với nhận định: No return early on unspecified encoding..,yes,behavioural,no
+V0333,unresolved,"Hàm `test` kiểm thử qua Nox, nhưng việc đảm bảo môi trường cô lập tuyệt đối và không có side effect ngoài phụ thuộc cấu hình runner bên ngoài.",no,behavioural,yes
+V0334,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'Expected exceptions are extracted from these examples.'.,yes,dataflow,no
+V0335,unresolved,"Hàm `get_seeder_and_restorer` chỉ assert đối tượng Random hoặc kiểu tương tự, việc đăng ký các đối tượng tùy ý khác nằm ngoài phạm vi đoạn mã.",yes,dataflow,yes
+V0336,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If equal, Pip calculates an approximate 'depth' and resolves requirements c'.",yes,dataflow,no
+V0337,contradicted,"Mã nguồn mâu thuẫn với nhận định: parameter `parens_after` is a set of strings, not one string..",yes,structural,no
+V0338,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'fuzz_one_input handles exceptions like StopTest and UnsatisfiedAssumption g'.,yes,behavioural,no
+V0339,supported,Phương thức `add_options` thêm các tham số lệnh như `--wheel-dir` cho lệnh WheelCommand.,yes,structural,no
+V0340,contradicted,Mã nguồn mâu thuẫn với nhận định: URL paths replaced by URIs.,yes,dataflow,no
+V0341,contradicted,"Mã nguồn mâu thuẫn với nhận định: only 8 parameters shown, not 7.",yes,structural,no
+V0342,contradicted,"Mã nguồn mâu thuẫn với nhận định: session.install(""-e"", ""."")` removed from the code..",yes,behavioural,no
+V0343,supported,Hàm `check_package_set` duyệt kiểm tra các package mà không chứa khối xử lý ngoại lệ hay kiểm tra tính hợp lệ của input data.,no,behavioural,no
+V0344,supported,Hàm trợ giúp `attempt_replace` nằm trong thuật toán tối ưu hóa cây ví dụ kiểm thử của Hypothesis.,yes,intent,no
+V0345,contradicted,Mã nguồn mâu thuẫn với nhận định: no preference for 'non-free' requirements.,yes,dataflow,no
+V0346,contradicted,Mã nguồn mâu thuẫn với nhận định: _extract_metadata replaced with _typing_extra.unpack_annotated.,no,structural,no
+V0347,contradicted,Mã nguồn mâu thuẫn với nhận định: select_example` not called or defined.,yes,structural,no
+V0348,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`html_visit_displaymath` is part of the `sphinx.ext.imgmath` extension.'.,yes,intent,yes
+V0349,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`fuzz_one_input` captures any other exceptions during execution.'.,yes,behavioural,no
+V0350,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`argnames` are the argument names passed to the `parametrize()` decorator.'.,yes,dataflow,no
+V0351,supported,Hàm `run_state_machine` được gắn decorator `@settings` và `@given` để thực thi stateful testing trong Hypothesis.,yes,intent,no
+V0352,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`draw` checks if it's being used within a `find` call and raises an `Invali'.,yes,behavioural,no
+V0353,contradicted,"Mã nguồn mâu thuẫn với nhận định: chunk` now accepts Union[bytes, bytearray, memoryview].",yes,structural,no
+V0354,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_apply_annotations first expands any grouped metadata in the annotations.'.,yes,dataflow,no
+V0355,contradicted,"Mã nguồn mâu thuẫn với nhận định: expects `source_type` directly, not from `Annotated`..",yes,intent,no
+V0356,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'For chunked transfer encoding, it prepends and appends the appropriate head'.",no,dataflow,no
+V0357,contradicted,Mã nguồn mâu thuẫn với nhận định: random` and `forced` are also parameters.,yes,structural,no
+V0358,contradicted,Mã nguồn mâu thuẫn với nhận định: PrintHelp` exception now returns instead of passing.,yes,behavioural,no
+V0359,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`_on_mouse_move` is an internal method within the `Tree` class.'.,yes,structural,yes
+V0360,contradicted,Mã nguồn mâu thuẫn với nhận định: now returns IRNode instead of tuple.,yes,dataflow,no
+V0361,contradicted,"Chữ ký hàm `validate_strings` nhận 5 tham số (`self`, `obj`, `strict`, `context`, `extra` hoặc tương tự), mâu thuẫn với nhận định chỉ nhận 3 đối số.",yes,structural,no
+V0362,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`get_items` attempts to create a source code analyzer using `ModuleAnalyzer'.,yes,dataflow,no
+V0363,contradicted,Mã nguồn mâu thuẫn với nhận định: modifies request headers and sets writer attributes.,yes,behavioural,no
+V0364,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'lines is an optional collection of tuples representing lines that should re'.,yes,structural,no
+V0365,unresolved,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'If the type is unknown, `Config._getini` delegates handling to `_getini_unk'.",yes,structural,yes
+V0366,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`match_type` uses `get_origin` to extract the underlying type for generic t'.,yes,dataflow,no
+V0367,supported,"Trong `get_preference`, Pip tính toán độ sâu của các yêu cầu phụ thuộc và ưu tiên yêu cầu gần với user hơn.",yes,dataflow,no
+V0368,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`metadata` is a property in the `InstallRequirement` class.'.,yes,structural,no
+V0369,supported,"Khi không xác định được phụ thuộc cha, hàm gán giá trị độ sâu tương đương vô cùng để xếp sau trong ưu tiên giải quyết.",yes,dataflow,no
+V0370,unresolved,Chưa đủ bằng chứng để kết luận trong phạm vi hàm: cannot determine from shown code.,yes,behavioural,yes
+V0371,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_WindowsConsoleReader.readinto raises a `ValueError` if the number of bytes'.,yes,behavioural,no
+V0372,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`drain` is a boolean indicating whether to wait for the buffer to drain bef'.,yes,structural,no
+V0373,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'FixtureManager._register_fixture does not return any value (return type is '.,yes,structural,no
+V0374,supported,Mã `model_rebuild` hỗ trợ giải quyết ForwardRef khi định nghĩa kiểu chưa hoàn thiện lúc khai báo lớp.,yes,intent,no
+V0375,supported,Hàm `run` khởi tạo và cấu trúc các node bảng tài liệu cho directive.,yes,dataflow,no
+V0376,unresolved,"Nhận định về vai trò fallback cấp cao của `_nullpager` là ý định kiến trúc hệ thống, không hiển thị trong mã hàm.",yes,intent,yes
+V0377,contradicted,Mã nguồn mâu thuẫn với nhận định: no error handling or checks for differences before writing to files.,yes,behavioural,no
+V0378,contradicted,Mã nguồn mâu thuẫn với nhận định: is_backtrack_cause` no longer called.,yes,structural,no
+V0379,contradicted,Mã nguồn mâu thuẫn với nhận định: no other error handling mentioned.,yes,behavioural,no
+V0380,contradicted,Mã nguồn mâu thuẫn với nhận định: No inventory entries added or updated.,yes,dataflow,no
+V0381,contradicted,Mã nguồn mâu thuẫn với nhận định: config_dict` replaced with `effective_config`.,yes,dataflow,no
+V0382,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`render_line` retrieves the style for the component class determined and ca'.,yes,structural,no
+V0383,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`resolve` is a method in the `Resolver` class.'.,yes,structural,no
+V0384,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`context` is an optional dictionary providing additional context for valida'.,yes,dataflow,no
+V0385,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It handles cases where no more newlines are found by yielding any remaining'.,yes,behavioural,no
+V0386,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If the protocol version does not match, it returns a 501 Not Implemented re'.",yes,behavioural,no
+V0387,unresolved,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `visit_return` function is part of the `DocstringParameterChecker` clas'.,yes,structural,yes
+V0388,contradicted,"Mã nguồn mâu thuẫn với nhận định: args` are now used for package names, not command-line arguments..",yes,dataflow,no
+V0389,contradicted,Mã nguồn mâu thuẫn với nhận định: generator parameter removed.,yes,structural,no
+V0390,contradicted,"Mã nguồn mâu thuẫn với nhận định: function writes to stream, not prints directly.",yes,dataflow,no
+V0391,supported,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'Other objects with seed, getstate, and setstate methods can also be registe'.",yes,dataflow,no
+V0392,unresolved,Hàm session `test` không thể tự chứng minh việc cô lập hoàn toàn môi trường và ngăn ngừa mọi side effect ngoài các thư mục chỉ định.,no,behavioural,yes
+V0393,supported,Hàm gọi `self.fixate_shrink_passes(...)` để lặp thực hiện các passes thu gọn đến điểm cố định (fixed point).,yes,behavioural,no
+V0394,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`resolve_conint` ensures that only one of `ge`/`gt` and `le`/`lt` is set at'.,yes,behavioural,no
+V0395,contradicted,"Mã nguồn mâu thuẫn với nhận định: function returns `wheel_path` or `None`, not just `None`.",yes,dataflow,no
+V0396,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`complete_dataclass` returns `True` if the dataclass is successfully comple'.,yes,dataflow,no
+V0397,contradicted,Mã nguồn mâu thuẫn với nhận định: round_trip` has a default value of `False`.,yes,structural,no
+V0398,contradicted,"Mã nguồn mâu thuẫn với nhận định: Supported overflow methods are 'fold', not 'crop' or 'ellipsis'..",yes,structural,no
+V0399,contradicted,"Mã nguồn mâu thuẫn với nhận định: function takes four parameters, not three.",yes,structural,no
+V0400,supported,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_entries_from_toctree handles exceptions by skipping over any that raise a '.,yes,behavioural,no

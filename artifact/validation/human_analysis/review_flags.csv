@@ -1,0 +1,123 @@
+task_id,status,decomposition_ok,needs_context,evidence
+V0001,unresolved,yes,yes,"Hàm `addini` chỉ assert kiểm tra type hợp lệ và lưu vào `_inidict`; việc xử lý đường dẫn tương đối với file ini diễn ra ở module khác khi phân giải cấu hình, không hiển thị trong mã."
+V0006,contradicted,no,no,"Mã gán vô điều kiện `cls.__doc__ = original_doc`, không hề có nhánh loại bỏ docstring đối với built-in dataclass như nhận định."
+V0007,unresolved,yes,yes,"Hàm `greedy_shrink` chỉ chuyển danh sách passes cho `self.fixate_shrink_passes`, logic đảm bảo mỗi bước cải thiện hơn bước trước nằm bên trong hàm đó chứ không hiển thị ở đây."
+V0010,unresolved,yes,yes,Nhận định về tiền điều kiện gọi hàm ngoài ('should be called after having downloaded and unpacked'); hàm chỉ thực hiện cài đặt mà không kiểm tra tiền điều kiện này.
+V0014,unresolved,yes,yes,Mã `_register_fixture` chỉ ghi nhận fixture vào danh sách; quy tắc ưu tiên giữa external plugin và conftest nằm ở hàm phân giải khác.
+V0019,supported,no,no,Hàm có kiểu trả về `-> None` và phát các thông điệp cảnh báo vi phạm quy tắc đặt tên qua `self._check_name`.
+V0022,unresolved,no,yes,"Hàm kiểm thử Nox session chạy subprocess và kiểm tra assert, nhưng mức độ cô lập môi trường và giới hạn side effect phụ thuộc vào môi trường OS bên ngoài."
+V0024,unresolved,yes,yes,"Nhận định về vai trò cốt lõi trong hệ thống tài liệu Sphinx ('core component') là tuyên bố kiến trúc cấp cao, không thể chứng minh chỉ từ mã của hàm."
+V0030,unresolved,yes,yes,"Việc tiền tố tạo ra không trùng với tiền tố của bất kỳ buffer nào trước đó phụ thuộc vào trạng thái toàn cây tiền tố, không thể chứng minh hoàn toàn chỉ từ mã hàm đơn lẻ."
+V0034,supported,no,no,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The function does not handle errors or edge cases explicitly; instead, it r'."
+V0037,unresolved,yes,yes,"Nhận định nêu bình luận thiết kế và lý do lịch sử ('previous attempts have proven too expensive'), đây là intent không thể kiểm chứng từ mã nguồn."
+V0045,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`hover_line` can trigger other UI updates or visual feedback mechanisms wit'.
+V0049,unresolved,yes,yes,"Tuyên bố về lịch sử ngôn ngữ ('__required_keys__ was added in Python 3.9') là thông tin bên ngoài, không kiểm chứng được từ mã hàm."
+V0051,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`parse_headers` relies on helper methods such as `_lax` and regular express'.
+V0056,supported,no,no,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`do_draw` does not have any side effects; it only reads from and writes to '.
+V0062,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`reformat_many` reports results through the provided `report` object.'.
+V0068,supported,no,no,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '`get_items` logs a warning and appends a tuple with empty signature and sum'.
+V0072,supported,no,no,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'The `title` and `description` parameters provide optional title and descrip'.
+V0078,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `run` method is part of the `Autosummary` class.'.
+V0080,unresolved,yes,yes,"Đặc tính lũy đẳng ('calling twice has same effect as once') là tính chất thuật toán của greedy_shrink, không thể kiểm chứng chỉ từ danh sách passes được gọi."
+V0081,supported,no,no,Hàm có chữ ký trả về `-> None` và thực hiện gửi dữ liệu frame qua kết nối websocket.
+V0083,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Registration is done to force determinism on simulation or scheduling frame'.
+V0092,contradicted,no,no,Mã nguồn mâu thuẫn với nhận định: inferred depth no longer in return tuple.
+V0094,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The function handles edge cases gracefully by simply passing through any te'.
+V0101,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '__required_keys__ was added in Python 3.9.'.
+V0104,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function does not have any side effects mentioned in the description.'.
+V0105,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'fuzz_one_input processes the input using the Hypothesis state machine.'.
+V0106,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'Any conftest plugin can implement this hook.'.
+V0107,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'It is not possible to track required/optional keys in TypedDict without __r'.
+V0108,unresolved,yes,yes,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`add_options` adds options for specifying constraints, requirements files, '."
+V0109,unresolved,no,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`test` handles errors by using assertions and ensures that the test environ'.
+V0111,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`color` is a boolean indicating whether ANSI color codes should be stripped'.
+V0115,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`render_scope` assumes that the input scope is a valid mapping and does not'.
+V0116,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '__required_keys__ was added in Python 3.9.'.
+V0117,contradicted,no,no,"Mã nguồn mâu thuẫn với nhận định: select_example` not called; uses `int_from_bytes`, `int_to_bytes`."
+V0121,unresolved,no,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` handles errors by using assertions and ensures that the test environ'.
+V0123,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`validate_json` does not have any side effects.'.
+V0125,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`attempt_replace` is part of the Hypothesis library's internal optimization'.
+V0126,unresolved,no,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'There are no side effects from this function; it is purely a data aggregati'.
+V0130,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '__required_keys__ is buggy.'.
+V0132,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'This logic must be called after the class has been created because validati'.
+V0135,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'There are no side effects from calling this function.'.
+V0136,contradicted,no,no,Mã nguồn mâu thuẫn với nhận định: global_options parameter removed.
+V0139,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Calling Shrinker.greedy_shrink twice has the same effect as calling it once'.
+V0141,contradicted,no,no,Mã nguồn mâu thuẫn với nhận định: creates and returns a new object.
+V0145,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'It handles errors or edge cases by using default values and ensuring that o'.
+V0147,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`core_config` relies on the underlying libraries to manage such scenarios.'.
+V0148,unresolved,yes,yes,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'If execution happens without an ini-file defined, 'paths' and 'pathlist' wi'."
+V0150,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'GenerateSchema._model_schema is a Python function.'.
+V0151,unresolved,yes,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The lower the return value is, the more preferred this group of arguments i'."
+V0155,unresolved,no,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` relies on helper functions like `run_with_protected_pip`, `should_up'."
+V0159,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '_tempfilepager is designed to page through text by writing the content gene'.
+V0162,unresolved,no,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` handles errors by using assertions and ensures that the test environ'.
+V0169,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'This hook allows plugins to execute custom code right after leaving pdb.'.
+V0175,unresolved,yes,yes,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function `is_terminating_func` detects calls to `exit()`, `quit()`, `os'."
+V0177,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`convert_one_fmt_off_pair` manages indentation and line breaks carefully to'.
+V0181,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`convert_one_fmt_off_pair` handles edge cases by skipping invalid uses of `'.
+V0186,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'Any issues would likely be raised by the underlying Sphinx build process.'.
+V0189,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '_namedtuple_schema replaces any type variables in the annotations with thei'.
+V0190,contradicted,no,no,Mã nguồn mâu thuẫn với nhận định: set_focus is no longer called directly.
+V0193,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The generated prefix is not a prefix of any buffer previously added to the '.
+V0195,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`read_doc` is a method in the Sphinx documentation generation system.'.
+V0196,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`add_options` assumes that the underlying option-parsing library will manag'.
+V0205,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The `setup` function relies on the underlying Sphinx framework to manage su'.
+V0209,unresolved,yes,yes,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`Config._getini` takes a single parameter `name`, which is the name of the '."
+V0213,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `_draw` method is part of the `DataTree` class.'.
+V0217,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '_format_str_once formats a given string of Python source code according to '.
+V0219,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`normalize_invisible_parens` keeps existing visible parentheses for other t'.
+V0221,unresolved,yes,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'If equal, Pip calculates an approximate 'depth' and resolves requirements c'."
+V0222,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'On 3.11 but < 3.12 TypedDict does not preserve inheritance information.'.
+V0225,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The payload of the frame is the message.'.
+V0228,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The primary side effect of `render_line` is rendering the specified line of'.
+V0230,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`Config._getini` does not have any side effects.'.
+V0232,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`collect_dataclass_fields` is a utility within the Pydantic library.'.
+V0235,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Using the current working directory to resolve 'paths' and 'pathlist' in th'.
+V0237,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Error handling and edge cases are managed within the `_on_message` helper m'.
+V0238,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'This is used by the core engine via `deterministic_PRNG`.'.
+V0239,supported,no,no,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: '_on_screen_resume has primary side effects including updating the screen's '.
+V0242,unresolved,yes,yes,Chưa đủ bằng chứng để kết luận trong phạm vi hàm: cannot determine without knowing external effects..
+V0244,unresolved,no,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`test` handles errors by using assertions and ensures that the test environ'.
+V0247,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'It assumes that indices are valid within the bounds of the example tree.'.
+V0252,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`generate_novel_prefix` does not modify the state of the tree or external s'.
+V0255,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function checks if the field's annotation needs further evaluation.'.
+V0256,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '_wrap_create_connection ensures that network connections are established ef'.
+V0258,supported,no,no,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'If a `value_proc` is provided, it is used to convert and validate the input'."
+V0262,unresolved,yes,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`Config._getini` takes a single parameter `name`, which is the name of the '."
+V0266,unresolved,yes,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'If equal, Pip calculates an approximate 'depth' and resolves requirements c'."
+V0267,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`add_options` relies on the underlying `cmdoptions` functions to validate i'.
+V0268,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The function evolves over time by adding more user-facing methods as they a'.
+V0269,unresolved,yes,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The lower the return value is, the more preferred this group of arguments i'."
+V0271,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'Line continuations are supported in HttpParser.parse_headers.'.
+V0272,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The generated prefix is not a prefix of any buffer previously added to the '.
+V0273,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`attempt_replace` is part of the Hypothesis library's internal optimization'.
+V0274,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The resulting prefix is essentially arbitrary.'.
+V0275,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'Start response processing.'.
+V0276,supported,no,no,Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'It does not handle any errors or edge cases explicitly; it assumes valid in'.
+V0277,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'GenerateSchema._model_schema is a Python function.'.
+V0278,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`parse_headers` is defined in `aiohttp/http_parser.py`.'.
+V0281,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function uses JSON parsing to validate the input data.'.
+V0284,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'The function relies on the behavior of the `get_revision` method to handle '.
+V0285,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`args` are the command-line arguments specifying the packages to build.'.
+V0286,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: 'GenerateSchema._model_schema is a Python function.'.
+V0288,unresolved,yes,yes,Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`attempt_replace` is part of the Hypothesis library's internal optimization'.
+V0296,contradicted,no,no,Mã nguồn mâu thuẫn với nhận định: Function now takes five parameters including `leaves` and `start`..
+V0299,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`GenerateSchema._apply_annotations` gets called by `GenerateSchema._annotat'.
+V0300,unresolved,yes,yes,"Đoạn mã của hàm không cung cấp đủ ngữ cảnh hoặc định nghĩa hàm gọi liên quan để xác nhận nhận định: '`Config._getini` takes a single parameter `name`, which is the name of the '."
+V0302,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The factor value should be between 0 and 1.0.'.
+V0309,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `paths` variable type was added in version 7.0.'.
+V0313,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The function is crucial for managing code formatting directives within the '.
+V0323,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '_nullpager outputs text without any formatting or pagination.'.
+V0333,unresolved,no,yes,"Hàm `test` kiểm thử qua Nox, nhưng việc đảm bảo môi trường cô lập tuyệt đối và không có side effect ngoài phụ thuộc cấu hình runner bên ngoài."
+V0335,unresolved,yes,yes,"Hàm `get_seeder_and_restorer` chỉ assert đối tượng Random hoặc kiểu tương tự, việc đăng ký các đối tượng tùy ý khác nằm ngoài phạm vi đoạn mã."
+V0343,supported,no,no,Hàm `check_package_set` duyệt kiểm tra các package mà không chứa khối xử lý ngoại lệ hay kiểm tra tính hợp lệ của input data.
+V0346,contradicted,no,no,Mã nguồn mâu thuẫn với nhận định: _extract_metadata replaced with _typing_extra.unpack_annotated.
+V0348,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`html_visit_displaymath` is part of the `sphinx.ext.imgmath` extension.'.
+V0356,supported,no,no,"Mã nguồn hiện tại có câu lệnh và cấu trúc trực tiếp hỗ trợ nhận định: 'For chunked transfer encoding, it prepends and appends the appropriate head'."
+V0359,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: '`_on_mouse_move` is an internal method within the `Tree` class.'.
+V0365,unresolved,yes,yes,"Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'If the type is unknown, `Config._getini` delegates handling to `_getini_unk'."
+V0370,unresolved,yes,yes,Chưa đủ bằng chứng để kết luận trong phạm vi hàm: cannot determine from shown code.
+V0376,unresolved,yes,yes,"Nhận định về vai trò fallback cấp cao của `_nullpager` là ý định kiến trúc hệ thống, không hiển thị trong mã hàm."
+V0387,unresolved,yes,yes,Thiếu ngữ cảnh từ các hàm bên ngoài hoặc cấu hình lúc chạy để kiểm chứng nhận định: 'The `visit_return` function is part of the `DocstringParameterChecker` clas'.
+V0392,unresolved,no,yes,Hàm session `test` không thể tự chứng minh việc cô lập hoàn toàn môi trường và ngăn ngừa mọi side effect ngoài các thư mục chỉ định.

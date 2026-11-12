@@ -1,0 +1,98 @@
+{
+  "selection_completed": true,
+  "trajectory_recovery_completed": true,
+  "inference_completed": false,
+  "sample_n": 80,
+  "archived_tracks_reused": 18,
+  "new_tracks_required": 62,
+  "repos_required": [
+    "aiohttp",
+    "black",
+    "hypothesis",
+    "pip",
+    "pydantic",
+    "pylint",
+    "pytest",
+    "rich",
+    "sphinx",
+    "textual"
+  ],
+  "repos": {
+    "rich": {
+      "url": "https://github.com/Textualize/rich.git",
+      "anchor": "afcc5c5a957c75b325fd7cc45bd70b3ac6413ef4",
+      "head": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "shallow": false,
+      "first_parent_commits": 106
+    },
+    "sphinx": {
+      "url": "https://github.com/sphinx-doc/sphinx.git",
+      "anchor": "c3968e9be96d51179e701439fbe7dfa22c8ed204",
+      "head": "035a07c32c3241fd3356f4d827800c1f88525272",
+      "shallow": false,
+      "first_parent_commits": 951
+    },
+    "textual": {
+      "url": "https://github.com/Textualize/textual.git",
+      "anchor": "cc4e9c4bcfba47cd86967cb2aae675252822ff7f",
+      "head": "5e5b7ef58b8c5572c13a3ff9027d756623661495",
+      "shallow": false,
+      "first_parent_commits": 607
+    },
+    "pydantic": {
+      "url": "https://github.com/pydantic/pydantic.git",
+      "anchor": "d5f37eb916058ed6896692691901702458570b99",
+      "head": "fe5b5ce5581f10626a16dc7ff4159cf3cb6ddbec",
+      "shallow": false,
+      "first_parent_commits": 1160
+    },
+    "pip": {
+      "url": "https://github.com/pypa/pip.git",
+      "anchor": "420435903ff2fc694d6950a47b896427ecaed78f",
+      "head": "4b71f36fb4dfbc87ce65ac4710eeccf81d379f55",
+      "shallow": false,
+      "first_parent_commits": 570
+    },
+    "black": {
+      "url": "https://github.com/psf/black.git",
+      "anchor": "53a219056d1ab092ee2d4e5181c55c2e58c4756c",
+      "head": "b4f1fcae48826790b6f93ca9226d20003bce0eaa",
+      "shallow": false,
+      "first_parent_commits": 566
+    },
+    "pytest": {
+      "url": "https://github.com/pytest-dev/pytest.git",
+      "anchor": "a1a491837b35b719d77b4f03be318b505d495386",
+      "head": "bc14038c406563b18a03e15453a10b9eee969e42",
+      "shallow": false,
+      "first_parent_commits": 854
+    },
+    "hypothesis": {
+      "url": "https://github.com/HypothesisWorks/hypothesis.git",
+      "anchor": "d16b1838a00ffea7a7bc880237a6a027beb92464",
+      "head": "9ab0be61aaaa27396fc1bbf4b34e7925cc68d1e2",
+      "shallow": false,
+      "first_parent_commits": 885
+    },
+    "pylint": {
+      "url": "https://github.com/pylint-dev/pylint.git",
+      "anchor": "15a5ac03c45f6888a5a3b6acc72a72da27495567",
+      "head": "79c8d0c9813b0c402c3890778c6d777b162dde8b",
+      "shallow": false,
+      "first_parent_commits": 862
+    },
+    "aiohttp": {
+      "url": "https://github.com/aio-libs/aiohttp.git",
+      "anchor": "7d0f980af6d725970cda5cb011400f5459699301",
+      "head": "d1e21bf9e819acf4b39dba3a4b0032e0e6d6410e",
+      "shallow": false,
+      "first_parent_commits": 1678
+    }
+  },
+  "errors": {},
+  "source_sha256": "6b73bac5eaed6843eb521ea873f4eae7b2744839f2a2ff663def005c24e78a26",
+  "primary_results_modified": false,
+  "recovered_n": 80,
+  "functions_sha256": "61bf655bca9354bd2fbe2e116eb367f8c2f4f8eac378a97b12bbd5d0658c6f38",
+  "effective_touch_n": 68
+}

@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "sample_identity_order_matches_seed107": true,
+    "all80_recovered": true,
+    "unique_new_ids": true,
+    "no_vendored_draw": true,
+    "all_pinned_first_parent_counts_match_archive": true,
+    "all_repositories_non_shallow": true,
+    "original_primary_inputs_unchanged": true,
+    "python311_python313_tracks_byte_identical": true
+  },
+  "all_checks_passed": true,
+  "primary_input_integrity": {
+    "candidates.json": true,
+    "functions.json": true,
+    "random_functions.json": true,
+    "claims.json": true,
+    "verdicts.json": true,
+    "summary.json": true
+  },
+  "normalization_python": "3.13.5 (main, Jul 23 2025, 00:30:06) [MSC v.1944 64 bit (AMD64)]",
+  "effective_touches": 68
+}

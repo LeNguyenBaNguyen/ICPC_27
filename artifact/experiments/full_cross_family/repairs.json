@@ -1,0 +1,3838 @@
+{
+  "F000:k2:llm:1": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "config` is no longer a parameter",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- `config` is no longer a parameter\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 5.956639699999869,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1238,
+      "eval_count": 25
+    }
+  },
+  "F000:k2:llm:2": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "config` is no longer a parameter, it's now accessed through `verbose` and `highlighter` parameters.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- `config` is no longer a parameter, it's now accessed through `verbose` and `highlighter` parameters.",
+    "elapsed_seconds": 0.4719855000003008,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1226,
+      "eval_count": 31
+    }
+  },
+  "F000:k2:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return value is now list[str] | None, not list[str]\nS3: unresolved",
+    "elapsed_seconds": 0.45429280000007566,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1231,
+      "eval_count": 30
+    }
+  },
+  "F000:k2:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return statements now include a list[str] | None\nS3: unresolved",
+    "elapsed_seconds": 0.4427878000005876,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1246,
+      "eval_count": 27
+    }
+  },
+  "F000:k3:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- assertion_text_diff_style parameter was not present in previous version\nS3: unresolved",
+    "elapsed_seconds": 0.706330999999409,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1245,
+      "eval_count": 28
+    }
+  },
+  "F000:k3:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- explanation is now a list of strings, not a single string\nS3: unresolved",
+    "elapsed_seconds": 0.4459925999999541,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1250,
+      "eval_count": 29
+    }
+  },
+  "F000:k3:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return value is now a list[str] | None\nS3: unresolved",
+    "elapsed_seconds": 0.5403447999997297,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1265,
+      "eval_count": 27
+    }
+  },
+  "F000:k4:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- SET_COMPARISON_FUNCTIONS[op] now handles multiple operators\nS3: unresolved",
+    "elapsed_seconds": 0.6199540000006891,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1220,
+      "eval_count": 28
+    }
+  },
+  "F000:k4:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return value is now a list[str] | None, not just list[str]\nS3: unresolved",
+    "elapsed_seconds": 0.4825448999999935,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1235,
+      "eval_count": 32
+    }
+  },
+  "F001:k2:llm:5": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "The function now calls self._get_override_ini_value and handles its result.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- The function now calls self._get_override_ini_value and handles its result.\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.7360995999997613,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1173,
+      "eval_count": 31
+    }
+  },
+  "F002:k3:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_preparse` and `_parser.parse_setoption` removed\nS3: unresolved",
+    "elapsed_seconds": 1.0809559999997873,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2441,
+      "eval_count": 29
+    }
+  },
+  "F002:k3:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_preparse` call and `self._parser.after_preparse` assignment removed\nS3: unresolved",
+    "elapsed_seconds": 0.5376644999996643,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2429,
+      "eval_count": 33
+    }
+  },
+  "F002:k4:llm:3": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "_preparse` call is missing from the shown code.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- `_preparse` call is missing from the shown code.",
+    "elapsed_seconds": 0.6393964999997479,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1510,
+      "eval_count": 19
+    }
+  },
+  "F010:k2:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.47431390000019746,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 921,
+      "eval_count": 15
+    }
+  },
+  "F010:k4:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4287389000000985,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 887,
+      "eval_count": 15
+    }
+  },
+  "F010:k4:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `from_property` and its related code are removed\nS3: unresolved",
+    "elapsed_seconds": 0.4691414999997505,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 895,
+      "eval_count": 27
+    }
+  },
+  "F010:k4:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2688725999996677,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 888,
+      "eval_count": 15
+    }
+  },
+  "F010:k4:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2694553999999698,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 895,
+      "eval_count": 15
+    }
+  },
+  "F010:k6:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.49497539999993023,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1137,
+      "eval_count": 15
+    }
+  },
+  "F010:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2735022000006211,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1144,
+      "eval_count": 15
+    }
+  },
+  "F010:k7:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4590213000001313,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 994,
+      "eval_count": 15
+    }
+  },
+  "F011:k4:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.6353667999992467,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1462,
+      "eval_count": 15
+    }
+  },
+  "F011:k4:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- parameter metadata is now of type Any, not FieldInfo\nS3: unresolved",
+    "elapsed_seconds": 0.449041899999429,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1439,
+      "eval_count": 28
+    }
+  },
+  "F011:k4:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- schema is a dictionary representing the core schema\nS3: unresolved",
+    "elapsed_seconds": 0.4111826000007568,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1436,
+      "eval_count": 25
+    }
+  },
+  "F011:k6:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- schema is a dictionary representing the core schema.\nS3: unresolved",
+    "elapsed_seconds": 0.7471048999996128,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1846,
+      "eval_count": 25
+    }
+  },
+  "F012:k5:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- the function now uses a list comprehension for validators_from_decorators\nS3: unresolved",
+    "elapsed_seconds": 0.7785404000005656,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1311,
+      "eval_count": 29
+    }
+  },
+  "F012:k5:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- field_info.annotation and field_info.metadata are now assigned to source_type and annotations respectively\nS3: unresolved",
+    "elapsed_seconds": 0.5145143999998254,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1309,
+      "eval_count": 33
+    }
+  },
+  "F012:k6:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- field_info is now an instance of FieldInfo, not a dictionary\nS3: unresolved",
+    "elapsed_seconds": 0.7539698000000499,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1272,
+      "eval_count": 30
+    }
+  },
+  "F013:k11:doc:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now raises PydanticUndefinedAnnotation for certain cases.\nS3: unresolved",
+    "elapsed_seconds": 1.0179018999997425,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2117,
+      "eval_count": 29
+    }
+  },
+  "F013:k11:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.30696919999991223,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2127,
+      "eval_count": 15
+    }
+  },
+  "F013:k11:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `fields` and `decorators` are now retrieved in a different order\nS3: unresolved",
+    "elapsed_seconds": 0.505428500000562,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2133,
+      "eval_count": 31
+    }
+  },
+  "F013:k11:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `if cls.__pydantic_root_model__` condition is now handled differently\nS3: unresolved",
+    "elapsed_seconds": 0.5417098999996597,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2117,
+      "eval_count": 33
+    }
+  },
+  "F014:k5:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.531540999999379,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 879,
+      "eval_count": 15
+    }
+  },
+  "F014:k8:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return maybe_schema is now the first return statement\nS3: unresolved",
+    "elapsed_seconds": 0.6043248000005406,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1013,
+      "eval_count": 26
+    }
+  },
+  "F015:k8:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `extra_behavior` and `extras_schema` are now explicitly set\nS3: unresolved",
+    "elapsed_seconds": 1.0493091999996977,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2262,
+      "eval_count": 30
+    }
+  },
+  "F015:k8:doc:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `__required_keys__` is now checked in a different way\nS3: unresolved",
+    "elapsed_seconds": 0.5188692000001538,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2286,
+      "eval_count": 30
+    }
+  },
+  "F015:k9:doc:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `replace_wrapped_methods=False` is a new parameter\nS3: unresolved",
+    "elapsed_seconds": 0.8540855000001102,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1917,
+      "eval_count": 28
+    }
+  },
+  "F016:k4:doc:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- Removed the _get_prepare_pydantic_annotations_for_known_type call\nS3: unresolved",
+    "elapsed_seconds": 0.8928153999995629,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1682,
+      "eval_count": 30
+    }
+  },
+  "F016:k4:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `match_type` now handles `MAPPING_TYPES` and `COUNTER_TYPES` separately\nS3: unresolved",
+    "elapsed_seconds": 0.5728307999997924,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1684,
+      "eval_count": 35
+    }
+  },
+  "F016:k4:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_unknown_type_schema` is now called only after all other conditions are met\nS3: unresolved",
+    "elapsed_seconds": 0.4998740999999427,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1686,
+      "eval_count": 32
+    }
+  },
+  "F016:k4:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.14190770000004704,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1679,
+      "eval_count": 5
+    }
+  },
+  "F016:k4:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `return self._apply_annotations` call removed\nS3: unresolved",
+    "elapsed_seconds": 0.44189040000037494,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1675,
+      "eval_count": 26
+    }
+  },
+  "F016:k4:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `get_origin` is called but its return value is not used\nS3: unresolved",
+    "elapsed_seconds": 0.48089119999985996,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1684,
+      "eval_count": 30
+    }
+  },
+  "F016:k4:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return self._apply_annotations(source_type, annotations) no longer exists\nS3: unresolved",
+    "elapsed_seconds": 0.49070620000020426,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1673,
+      "eval_count": 30
+    }
+  },
+  "F016:k6:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_unknown_type_schema` is now called only after `dataclasses.is_dataclass` check\nS3: unresolved",
+    "elapsed_seconds": 1.014384400000381,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1976,
+      "eval_count": 35
+    }
+  },
+  "F016:k6:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_enum_schema` is now called with `obj` instead of `obj.__class__`\nS3: unresolved",
+    "elapsed_seconds": 0.6111248999995951,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1969,
+      "eval_count": 35
+    }
+  },
+  "F016:k6:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- _typing_extra.is_any(obj) was replaced with typing_objects.is_any(obj)\nS3: unresolved",
+    "elapsed_seconds": 0.5812980999999127,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1965,
+      "eval_count": 32
+    }
+  },
+  "F016:k6:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `get_origin` is now used with `typing_objects.is_literal`",
+    "elapsed_seconds": 0.4542399000001751,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1974,
+      "eval_count": 26
+    }
+  },
+  "F016:k6:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- _typing_extra.is_any(obj) was replaced with typing_objects.is_any(obj)\nS3: unresolved",
+    "elapsed_seconds": 0.5202177999999549,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1963,
+      "eval_count": 32
+    }
+  },
+  "F016:k8:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `return self._call_schema(obj)` was removed\nS3: unresolved",
+    "elapsed_seconds": 0.8797093999992285,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1793,
+      "eval_count": 27
+    }
+  },
+  "F016:k8:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `get_origin` is called before the generic type check\nS3: unresolved",
+    "elapsed_seconds": 0.46355169999969803,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1802,
+      "eval_count": 28
+    }
+  },
+  "F016:k8:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return self._call_schema(obj) was removed\nS3: unresolved",
+    "elapsed_seconds": 0.4497127000004184,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1791,
+      "eval_count": 26
+    }
+  },
+  "F016:k9:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `get_origin` is now called with `obj` instead of `get_origin(obj)`\nS3: unresolved",
+    "elapsed_seconds": 0.9361099999996441,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1672,
+      "eval_count": 34
+    }
+  },
+  "F016:k9:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return core_schema.any_schema() for Final type\nS3: unresolved",
+    "elapsed_seconds": 0.4277533000004041,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1661,
+      "eval_count": 26
+    }
+  },
+  "F016:k10:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return self._fraction_schema() is replaced with return core_schema.fraction_schema()\nS3: unresolved",
+    "elapsed_seconds": 0.8945045000000391,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1653,
+      "eval_count": 32
+    }
+  },
+  "F017:k12:doc:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.7755015000002459,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1730,
+      "eval_count": 15
+    }
+  },
+  "F017:k12:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `set_model_mocks` now takes two arguments instead of one\nS3: unresolved",
+    "elapsed_seconds": 0.5011115999996036,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1734,
+      "eval_count": 30
+    }
+  },
+  "F030:k1:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.6724581999997099,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1908,
+      "eval_count": 5
+    }
+  },
+  "F030:k1:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported -- the function now has an additional return statement\nS3: unresolved",
+    "elapsed_seconds": 0.40732310000021243,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1901,
+      "eval_count": 24
+    }
+  },
+  "F030:k1:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.17053990000022168,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1926,
+      "eval_count": 5
+    }
+  },
+  "F030:k1:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `list_comments` now takes `is_endmarker=True` as default\nS3: unresolved",
+    "elapsed_seconds": 0.5056455000003552,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1901,
+      "eval_count": 31
+    }
+  },
+  "F030:k1:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.15175910000016302,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1901,
+      "eval_count": 5
+    }
+  },
+  "F030:k1:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now takes an additional `mode` parameter.\nS3: unresolved",
+    "elapsed_seconds": 0.44975460000023304,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1908,
+      "eval_count": 27
+    }
+  },
+  "F030:k1:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported -- the shown code now uses a while loop instead of recursion\nS3: unresolved",
+    "elapsed_seconds": 0.44771119999950315,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1894,
+      "eval_count": 27
+    }
+  },
+  "F030:k1:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.35723180000059074,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1907,
+      "eval_count": 15
+    }
+  },
+  "F030:k1:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `Preview.fix_fmt_skip_in_one_liners not in mode` condition was added\nS3: unresolved",
+    "elapsed_seconds": 0.5334529000001567,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1907,
+      "eval_count": 33
+    }
+  },
+  "F030:k1:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `ignored_nodes: list[LN] = []` was removed\nS3: unresolved",
+    "elapsed_seconds": 0.4885988999994879,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1895,
+      "eval_count": 30
+    }
+  },
+  "F030:k3:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.5019750000001295,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1390,
+      "eval_count": 5
+    }
+  },
+  "F030:k3:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `mode` parameter added to `list_comments` call\nS3: unresolved",
+    "elapsed_seconds": 0.44956050000018877,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1365,
+      "eval_count": 28
+    }
+  },
+  "F030:k3:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `comment` is now a parameter of type `ProtoComment` but `ProtoComment` is not defined in the shown code.\nS3: unresolved",
+    "elapsed_seconds": 0.6360258000004251,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1365,
+      "eval_count": 42
+    }
+  },
+  "F030:k3:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return statements now have different conditions\nS3: unresolved",
+    "elapsed_seconds": 0.38543679999929736,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1372,
+      "eval_count": 23
+    }
+  },
+  "F030:k3:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2767208999994182,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1358,
+      "eval_count": 15
+    }
+  },
+  "F030:k3:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.35124480000013136,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1371,
+      "eval_count": 15
+    }
+  },
+  "F030:k3:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The condition `parent is not None and parent.type == syms.suite` now has an additional check `leaf.type == token.NEWLINE`.\nS3: unresolved",
+    "elapsed_seconds": 0.6833957999997438,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1371,
+      "eval_count": 45
+    }
+  },
+  "F030:k3:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `leaf` is now a function parameter, not a global variable.\nS3: unresolved",
+    "elapsed_seconds": 0.49425650000011956,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1359,
+      "eval_count": 30
+    }
+  },
+  "F030:k7:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported -- no evidence of generator usage in the shown code\nS3: unresolved",
+    "elapsed_seconds": 0.8654831000003469,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1854,
+      "eval_count": 25
+    }
+  },
+  "F030:k7:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28737180000007356,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1867,
+      "eval_count": 15
+    }
+  },
+  "F030:k7:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported -- no evidence in the shown code or diff\nS3: unresolved",
+    "elapsed_seconds": 0.42931730000054813,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1867,
+      "eval_count": 24
+    }
+  },
+  "F030:k7:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.15334399999937887,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1855,
+      "eval_count": 5
+    }
+  },
+  "F030:k8:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unresolved\nS3: supported",
+    "elapsed_seconds": 1.0249997000000803,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2838,
+      "eval_count": 15
+    }
+  },
+  "F030:k8:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unresolved\nS3: supported",
+    "elapsed_seconds": 0.29813519999970595,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2838,
+      "eval_count": 15
+    }
+  },
+  "F030:k8:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.15857779999987542,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2826,
+      "eval_count": 5
+    }
+  },
+  "F030:k9:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The condition `Preview.fix_fmt_skip_in_one_liners in mode and not prev_sibling and parent` is now `Preview.fix_fmt_skip_in_one_liners in mode and not prev_sibling and parent:`.\nS3: unresolved",
+    "elapsed_seconds": 1.3451138999998875,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2283,
+      "eval_count": 57
+    }
+  },
+  "F030:k9:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.15089259999967908,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2271,
+      "eval_count": 5
+    }
+  },
+  "F030:k10:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.569307700000536,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1725,
+      "eval_count": 5
+    }
+  },
+  "F031:k1:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The diff shows removal of whitespace normalization logic.\nS3: unresolved",
+    "elapsed_seconds": 0.7795888000000559,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1269,
+      "eval_count": 25
+    }
+  },
+  "F031:k1:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The diff shows removal of whitespace handling logic.\nS3: unresolved",
+    "elapsed_seconds": 0.4105087999996613,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1263,
+      "eval_count": 25
+    }
+  },
+  "F031:k1:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- assertion error messages have changed\nS3: unresolved",
+    "elapsed_seconds": 0.45147980000001553,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1274,
+      "eval_count": 22
+    }
+  },
+  "F031:k1:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `hidden_value += comment.leading_whitespace + comment.value` contradicts intent to normalize whitespace.\nS3: unresolved",
+    "elapsed_seconds": 0.536344399999507,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1261,
+      "eval_count": 34
+    }
+  },
+  "F031:k1:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The diff shows removal of whitespace normalization logic.\nS3: unresolved",
+    "elapsed_seconds": 0.40701349999926606,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1276,
+      "eval_count": 25
+    }
+  },
+  "F031:k3:llm:7": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "The shown code does not contain any assertion statements.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- The shown code does not contain any assertion statements.",
+    "elapsed_seconds": 0.7037223999996058,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1652,
+      "eval_count": 17
+    }
+  },
+  "F031:k4:llm:7": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "no assertion error handling is present in the shown code.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- no assertion error handling is present in the shown code.",
+    "elapsed_seconds": 0.581544099999519,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 933,
+      "eval_count": 18
+    }
+  },
+  "F031:k5:llm:7": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "The function no longer raises an assertion error.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- The function no longer raises an assertion error.\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.6092914000000746,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 936,
+      "eval_count": 25
+    }
+  },
+  "F035:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The condition `Preview.wrap_long_dict_values_in_parens in mode` is now checked after `rhs.opening_bracket.parent.parent.type == syms.dictsetmaker`.\nS3: unresolved",
+    "elapsed_seconds": 1.1235178999995696,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1468,
+      "eval_count": 51
+    }
+  },
+  "F035:k6:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `mode` is now a parameter of type `Mode` instead of `Preview`\nS3: unresolved",
+    "elapsed_seconds": 0.5307031000002098,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1449,
+      "eval_count": 33
+    }
+  },
+  "F035:k6:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- features parameter is now optional with default value\nS3: unresolved",
+    "elapsed_seconds": 0.4081670999994458,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1447,
+      "eval_count": 25
+    }
+  },
+  "F036:k6:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now takes an additional 'mode' parameter.\nS3: unresolved",
+    "elapsed_seconds": 1.006746099999873,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1680,
+      "eval_count": 27
+    }
+  },
+  "F036:k6:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now takes an additional `mode` parameter.\nS3: unresolved",
+    "elapsed_seconds": 0.43662270000004355,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1688,
+      "eval_count": 27
+    }
+  },
+  "F036:k7:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4867364000001544,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1437,
+      "eval_count": 15
+    }
+  },
+  "F037:k8:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return statement now has a conditional\nS3: unresolved",
+    "elapsed_seconds": 0.8827096000004531,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1828,
+      "eval_count": 23
+    }
+  },
+  "F038:k7:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return statements now include more than just 0 or 1\nS3: unresolved",
+    "elapsed_seconds": 1.079043499999898,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2216,
+      "eval_count": 29
+    }
+  },
+  "F038:k7:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: \nS3: unresolved",
+    "elapsed_seconds": 0.2711194000003161,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2221,
+      "eval_count": 14
+    }
+  },
+  "F038:k8:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: \nS3: unresolved",
+    "elapsed_seconds": 0.8090534999992087,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2147,
+      "eval_count": 14
+    }
+  },
+  "F040:k1:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- Return True in case of no delimiters is removed.\nS3: unresolved",
+    "elapsed_seconds": 0.7920652000002519,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1290,
+      "eval_count": 27
+    }
+  },
+  "F040:k1:doc:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `return True` after checking `max_priority == DOT_PRIORITY`\nS3: unresolved",
+    "elapsed_seconds": 0.4599798999997802,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1285,
+      "eval_count": 29
+    }
+  },
+  "F040:k1:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.14167650000035792,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1286,
+      "eval_count": 5
+    }
+  },
+  "F040:k1:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return True in the case of a single stranded method call\nS3: unresolved",
+    "elapsed_seconds": 0.4368180999999822,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1282,
+      "eval_count": 28
+    }
+  },
+  "F040:k1:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported\nS3: unresolved",
+    "elapsed_seconds": 0.41189920000033453,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1300,
+      "eval_count": 15
+    }
+  },
+  "F040:k1:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- Specific conditions like context manager statements are no longer checked.",
+    "elapsed_seconds": 0.3944495999994615,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1281,
+      "eval_count": 23
+    }
+  },
+  "F040:k1:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `closing_bracket` is now a union type Leaf | None\nS3: unresolved",
+    "elapsed_seconds": 0.5536079000003156,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1302,
+      "eval_count": 30
+    }
+  },
+  "F040:k1:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- Leaf type changed from Optional[Leaf] to Leaf | None\nS3: unresolved",
+    "elapsed_seconds": 0.463418699999238,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1298,
+      "eval_count": 29
+    }
+  },
+  "F040:k1:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `closing_bracket` is now a union type Leaf | None\nS3: unresolved",
+    "elapsed_seconds": 0.4686547999999675,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1285,
+      "eval_count": 30
+    }
+  },
+  "F041:k6:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `str_width` and `is_multiline_string` are called without error handling.\nS3: unresolved",
+    "elapsed_seconds": 1.0032000000001062,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1809,
+      "eval_count": 33
+    }
+  },
+  "F041:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `line` is not used as an instance of `Line` in the shown code.\nS3: unresolved",
+    "elapsed_seconds": 0.5312428999995973,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1790,
+      "eval_count": 34
+    }
+  },
+  "F041:k6:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `while str(ctx) in line_str:` replaced with `while (id(first_leaf(ctx)) in line_leaf_ids and id(last_leaf(ctx)) in line_leaf_ids):`\nS3: unresolved",
+    "elapsed_seconds": 0.8090503000003082,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1804,
+      "eval_count": 51
+    }
+  },
+  "F041:k6:doc:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.27906050000001414,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1801,
+      "eval_count": 15
+    }
+  },
+  "F041:k6:doc:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return str_width(line_str) <= mode.line_length is now only executed when line_str is not empty\nS3: unresolved",
+    "elapsed_seconds": 0.6011577999997826,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1792,
+      "eval_count": 37
+    }
+  },
+  "F041:k6:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `mode` is now a parameter, not an attribute of `line`\nS3: unresolved",
+    "elapsed_seconds": 0.4926961000001029,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1795,
+      "eval_count": 31
+    }
+  },
+  "F045:k5:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- cmd_path = Path(cmd_filepath).absolute() replaces resolve()\nS3: unresolved",
+    "elapsed_seconds": 0.7500850999995237,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1214,
+      "eval_count": 28
+    }
+  },
+  "F046:k4:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `get_best_encoding` is now called before determining `color`\nS3: unresolved",
+    "elapsed_seconds": 0.7491712999999436,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1296,
+      "eval_count": 29
+    }
+  },
+  "F046:k4:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- Writing text to the file was removed.\nS3: unresolved",
+    "elapsed_seconds": 0.39032529999985854,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1307,
+      "eval_count": 24
+    }
+  },
+  "F046:k4:llm:3": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "tempfile.mkstemp() is no longer used.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- tempfile.mkstemp() is no longer used.",
+    "elapsed_seconds": 0.2980040000002191,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1292,
+      "eval_count": 17
+    }
+  },
+  "F047:k8:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `ctx.set_parameter_source(self.name, source)` moved above `value, source = self.consume_value(ctx, opts)`\nS3: unresolved",
+    "elapsed_seconds": 0.9638899000001402,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1429,
+      "eval_count": 40
+    }
+  },
+  "F047:k9:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5012949000001754,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1181,
+      "eval_count": 15
+    }
+  },
+  "F047:k9:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26714650000030815,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1173,
+      "eval_count": 15
+    }
+  },
+  "F049:k6:doc:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- calls _collect_base_attrs_broken when collect_by_mro is True\nS3: unresolved",
+    "elapsed_seconds": 0.9343873000007079,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1795,
+      "eval_count": 31
+    }
+  },
+  "F049:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- _CountingAttr instances are now processed by fca\nS3: unresolved",
+    "elapsed_seconds": 0.45089290000032634,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1789,
+      "eval_count": 28
+    }
+  },
+  "F049:k6:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- _get_annotations is now called before checking these\nS3: unresolved",
+    "elapsed_seconds": 0.45208330000059505,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1811,
+      "eval_count": 26
+    }
+  },
+  "F049:k6:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- field_transformer is now applied before resolving aliases\nS3: unresolved",
+    "elapsed_seconds": 0.44217570000000705,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1788,
+      "eval_count": 26
+    }
+  },
+  "F049:k6:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- _transform_attrs now resolves default field alias before field_transformer\nS3: unresolved",
+    "elapsed_seconds": 0.45874989999992977,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1792,
+      "eval_count": 29
+    }
+  },
+  "F054:k5:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.5975750000006883,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1718,
+      "eval_count": 5
+    }
+  },
+  "F054:k5:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.27611829999932525,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1743,
+      "eval_count": 15
+    }
+  },
+  "F054:k5:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- parameters are named, not positional\nS3: unresolved",
+    "elapsed_seconds": 0.38053409999974974,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1725,
+      "eval_count": 23
+    }
+  },
+  "F054:k5:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28932670000085636,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1730,
+      "eval_count": 15
+    }
+  },
+  "F054:k5:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- the method now handles requirements_from_scripts\nS3: unresolved",
+    "elapsed_seconds": 0.3959388000002946,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1719,
+      "eval_count": 24
+    }
+  },
+  "F054:k7:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.674810499999694,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1689,
+      "eval_count": 15
+    }
+  },
+  "F054:k7:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.32407190000049013,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1694,
+      "eval_count": 15
+    }
+  },
+  "F054:k7:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `parse_constraint_files` is now called before `args` processing\nS3: unresolved",
+    "elapsed_seconds": 0.5107499999994616,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1683,
+      "eval_count": 30
+    }
+  },
+  "F054:k8:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `if not (args or ...)` now checks for multiple conditions\nS3: unresolved",
+    "elapsed_seconds": 0.8711853000004339,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1704,
+      "eval_count": 30
+    }
+  },
+  "F054:k8:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `should_ignore_regular_constraints` now takes no arguments\nS3: unresolved",
+    "elapsed_seconds": 0.4382216000003609,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1693,
+      "eval_count": 27
+    }
+  },
+  "F054:k9:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `any(req.has_hash_options for req in requirements)` is removed\nS3: unresolved",
+    "elapsed_seconds": 0.7742252999996708,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1778,
+      "eval_count": 30
+    }
+  },
+  "F055:k5:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `resume_retries` parameter is no longer included in the `RequirementPreparer` call.\nS3: unresolved",
+    "elapsed_seconds": 0.7555948999997781,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 912,
+      "eval_count": 35
+    }
+  },
+  "F055:k5:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2806021000005785,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 924,
+      "eval_count": 15
+    }
+  },
+  "F055:k5:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2910808000006,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 917,
+      "eval_count": 15
+    }
+  },
+  "F055:k6:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The `build_isolation_installer` parameter is now configurable.\nS3: unresolved",
+    "elapsed_seconds": 0.6951628000006167,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1281,
+      "eval_count": 29
+    }
+  },
+  "F055:k6:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.27292920000036247,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1274,
+      "eval_count": 15
+    }
+  },
+  "F055:k7:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.3923213999996733,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1080,
+      "eval_count": 15
+    }
+  },
+  "F056:k6:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- self.cmd_opts.add_option(cmdoptions.require_hashes()) now followed by self.cmd_opts.add_option(cmdoptions.no_require_hashes())\nS3: unresolved",
+    "elapsed_seconds": 0.7827734000002238,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 846,
+      "eval_count": 40
+    }
+  },
+  "F056:k6:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `self.cmd_opts.add_option(cmdoptions.require_hashes())` now followed by `self.cmd_opts.add_option(cmdoptions.no_require_hashes())`\nS3: unresolved",
+    "elapsed_seconds": 0.6408005000002959,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 848,
+      "eval_count": 44
+    }
+  },
+  "F056:k6:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2738303000005544,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 857,
+      "eval_count": 15
+    }
+  },
+  "F056:k7:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4625624999998763,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 863,
+      "eval_count": 15
+    }
+  },
+  "F056:k7:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26272309999967547,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 872,
+      "eval_count": 15
+    }
+  },
+  "F057:k7:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5042887999998129,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 974,
+      "eval_count": 15
+    }
+  },
+  "F059:k7:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5081870000003619,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1057,
+      "eval_count": 15
+    }
+  },
+  "F059:k7:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2685166000001118,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1061,
+      "eval_count": 15
+    }
+  },
+  "F059:k8:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4939598000000842,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1071,
+      "eval_count": 15
+    }
+  },
+  "F060:k4:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5192566000005172,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 967,
+      "eval_count": 15
+    }
+  },
+  "F060:k5:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4772635999997874,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 981,
+      "eval_count": 15
+    }
+  },
+  "F062:k5:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5179594999999608,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 970,
+      "eval_count": 15
+    }
+  },
+  "F062:k5:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2912007999993875,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 977,
+      "eval_count": 15
+    }
+  },
+  "F062:k5:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- named parameter 'script_executable' was added\nS3: unresolved",
+    "elapsed_seconds": 0.4319410999996762,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 961,
+      "eval_count": 26
+    }
+  },
+  "F062:k6:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.41795009999987087,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1006,
+      "eval_count": 15
+    }
+  },
+  "F062:k6:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The `rollback_on_error` parameter was not present in the previous version.\nS3: unresolved",
+    "elapsed_seconds": 0.4746085000006133,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 990,
+      "eval_count": 31
+    }
+  },
+  "F063:k5:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- assert self.is_wheel\nS3: unresolved",
+    "elapsed_seconds": 0.5353498000004038,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 852,
+      "eval_count": 21
+    }
+  },
+  "F065:k4:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- exception ResolutionImpossible is caught and re-raised with a new error\nS3: unresolved",
+    "elapsed_seconds": 0.7888745000000199,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1453,
+      "eval_count": 30
+    }
+  },
+  "F065:k4:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `reqs` and related preparation code removed from the return path\nS3: unresolved",
+    "elapsed_seconds": 0.46895539999968605,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1439,
+      "eval_count": 30
+    }
+  },
+  "F065:k4:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.27130810000016936,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1440,
+      "eval_count": 15
+    }
+  },
+  "F065:k5:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- reporter is now initialized with constraints\nS3: unresolved",
+    "elapsed_seconds": 0.6954459000007773,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1437,
+      "eval_count": 23
+    }
+  },
+  "F065:k5:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28639839999959804,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1438,
+      "eval_count": 15
+    }
+  },
+  "F065:k6:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- \"PIP_RESOLVER_DEBUG\" in os.environ is now checked in a try block\nS3: unresolved",
+    "elapsed_seconds": 0.8875501000002259,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1535,
+      "eval_count": 34
+    }
+  },
+  "F072:k12:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- start_time is now None when at_top_level is False\nS3: unresolved",
+    "elapsed_seconds": 0.8112758000006579,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1392,
+      "eval_count": 28
+    }
+  },
+  "F072:k12:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `except Exception` instead of `except CannotInvert`\nS3: unresolved",
+    "elapsed_seconds": 0.44473310000012134,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1392,
+      "eval_count": 28
+    }
+  },
+  "F072:k12:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `CannotInvert` exception is now caught as `Exception`\nS3: unresolved",
+    "elapsed_seconds": 0.4556861000000936,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1409,
+      "eval_count": 29
+    }
+  },
+  "F078:k7:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.7246713000004092,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1808,
+      "eval_count": 15
+    }
+  },
+  "F078:k7:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.31331460000001243,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1817,
+      "eval_count": 15
+    }
+  },
+  "F078:k8:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.6981753999998546,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1645,
+      "eval_count": 15
+    }
+  },
+  "F080:k2:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5069447000005312,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 963,
+      "eval_count": 15
+    }
+  },
+  "F080:k2:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26334789999964414,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 935,
+      "eval_count": 15
+    }
+  },
+  "F080:k3:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.495360900000378,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1039,
+      "eval_count": 15
+    }
+  },
+  "F082:k8:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5641259000003629,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1228,
+      "eval_count": 15
+    }
+  },
+  "F082:k8:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2684249000003547,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1232,
+      "eval_count": 15
+    }
+  },
+  "F082:k8:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2798609999999826,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1228,
+      "eval_count": 15
+    }
+  },
+  "F082:k9:llm:8": {
+    "status": {
+      "status": "contradicted",
+      "evidence": "The function now directly calls `codespell`, `pip_tool`, and `cargo` instead of relying on helper functions.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- The function now directly calls `codespell`, `pip_tool`, and `cargo` instead of relying on helper functions.",
+    "elapsed_seconds": 0.7535382000005484,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1384,
+      "eval_count": 31
+    }
+  },
+  "F082:k10:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `pip_tool` is now called with different arguments\nS3: unresolved",
+    "elapsed_seconds": 0.8046889999995983,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1470,
+      "eval_count": 27
+    }
+  },
+  "F082:k10:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.27728860000024724,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1466,
+      "eval_count": 15
+    }
+  },
+  "F082:k11:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported (no evidence in the shown code)\nS3: unresolved",
+    "elapsed_seconds": 0.458419500000673,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1336,
+      "eval_count": 22
+    }
+  },
+  "F082:k11:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2830842000003031,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1332,
+      "eval_count": 15
+    }
+  },
+  "F082:k12:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- pip_tool(\"zizmor\", ...) now guarded by os.getenv(\"CLAUDE_CODE_REMOTE\") \nS3: unresolved",
+    "elapsed_seconds": 0.8217702000001736,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1387,
+      "eval_count": 37
+    }
+  },
+  "F083:k2:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `install.ensure_python(PYTHONS[ci_version])` is now `install.ensure_python(PYTHONS[ci_version])` but the surrounding code has changed significantly.\nS3: unresolved",
+    "elapsed_seconds": 1.4002952999999252,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2285,
+      "eval_count": 52
+    }
+  },
+  "F083:k2:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `update_python_versions` no longer fetches from a Git repository managed by pyenv\nS3: unresolved",
+    "elapsed_seconds": 0.5644326000001456,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2308,
+      "eval_count": 34
+    }
+  },
+  "F083:k2:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `build_sh.chmod(0o755)` is no longer present\nS3: unresolved",
+    "elapsed_seconds": 0.5298532999995587,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2284,
+      "eval_count": 31
+    }
+  },
+  "F083:k2:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `where` and `cmd` variables are no longer used\nS3: unresolved",
+    "elapsed_seconds": 0.5058128000000579,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2286,
+      "eval_count": 29
+    }
+  },
+  "F083:k7:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `build_sh.chmod(0o755)` was removed from the diff\nS3: unresolved",
+    "elapsed_seconds": 0.8178923999994367,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1495,
+      "eval_count": 32
+    }
+  },
+  "F088:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_docnames` is not used within the function.\nS3: unresolved",
+    "elapsed_seconds": 0.8550461000004361,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1688,
+      "eval_count": 27
+    }
+  },
+  "F088:k6:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.16081459999986691,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1676,
+      "eval_count": 5
+    }
+  },
+  "F088:k7:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.28853439999966213,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1726,
+      "eval_count": 5
+    }
+  },
+  "F096:k3:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.6264974000005168,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1075,
+      "eval_count": 15
+    }
+  },
+  "F100:k2:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `nodes.system_message` now takes keyword arguments\nS3: unresolved",
+    "elapsed_seconds": 0.7127673999993931,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1184,
+      "eval_count": 26
+    }
+  },
+  "F100:k2:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `nodes.SkipNode` is raised with `from exc` now\nS3: unresolved",
+    "elapsed_seconds": 0.4842937000003076,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1183,
+      "eval_count": 30
+    }
+  },
+  "F100:k2:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `rendered_path` is now `None` in the `except` block\nS3: unresolved",
+    "elapsed_seconds": 0.5019662000004246,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1183,
+      "eval_count": 33
+    }
+  },
+  "F100:k2:llm:5": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- 'nowrap' is now checked before calling 'wrap_displaymath'\nS3: unresolved",
+    "elapsed_seconds": 0.4682791000004727,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1185,
+      "eval_count": 29
+    }
+  },
+  "F100:k2:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.16214249999939057,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1183,
+      "eval_count": 5
+    }
+  },
+  "F100:k2:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- node is a dict, not a nodes.math_block object\nS3: unresolved",
+    "elapsed_seconds": 0.4362098999999944,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1183,
+      "eval_count": 28
+    }
+  },
+  "F100:k2:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.13805349999984173,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1182,
+      "eval_count": 5
+    }
+  },
+  "F100:k2:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- named parameter `self: HTML5Translator` was added\nS3: unresolved",
+    "elapsed_seconds": 0.43423619999975926,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1187,
+      "eval_count": 28
+    }
+  },
+  "F100:k7:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `config` is now a local variable, not `self.builder.config`\nS3: unresolved",
+    "elapsed_seconds": 0.7705304999999498,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1203,
+      "eval_count": 31
+    }
+  },
+  "F102:k3:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- exceptions are now caught in the try block\nS3: unresolved",
+    "elapsed_seconds": 0.6397710999999617,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1006,
+      "eval_count": 25
+    }
+  },
+  "F105:k1:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- the function now handles more types of assignments\nS3: unresolved",
+    "elapsed_seconds": 0.9043121000004248,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2081,
+      "eval_count": 25
+    }
+  },
+  "F105:k1:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return statements now include a condition to return early\nS3: unresolved",
+    "elapsed_seconds": 0.45621789999950124,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2084,
+      "eval_count": 26
+    }
+  },
+  "F105:k1:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_check_name` is now called with `node_type` instead of hardcoded strings\nS3: unresolved",
+    "elapsed_seconds": 0.5488269999996191,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2091,
+      "eval_count": 33
+    }
+  },
+  "F105:k1:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "elapsed_seconds": 0.19852240000000165,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2067,
+      "eval_count": 5
+    }
+  },
+  "F105:k1:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported -- no evidence of handling unbalanced tuple unpacking\nS3: unresolved",
+    "elapsed_seconds": 0.43861569999990024,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2072,
+      "eval_count": 25
+    }
+  },
+  "F105:k1:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now checks for reassignments and imports.\nS3: unresolved",
+    "elapsed_seconds": 0.4327354999995805,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2062,
+      "eval_count": 26
+    }
+  },
+  "F105:k7:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unresolved\nS3: unresolved",
+    "elapsed_seconds": 0.8082180999999764,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1995,
+      "eval_count": 15
+    }
+  },
+  "F105:k7:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: unsupported -- no evidence of checking module level assigned names\nS3: unresolved",
+    "elapsed_seconds": 0.3997668000001795,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1985,
+      "eval_count": 24
+    }
+  },
+  "F106:anchor:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5771704000007958,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 929,
+      "eval_count": 15
+    }
+  },
+  "F106:k6:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5243577999999616,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1144,
+      "eval_count": 15
+    }
+  },
+  "F107:k5:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4725914999999077,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 848,
+      "eval_count": 15
+    }
+  },
+  "F107:k5:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `isinstance(inferred.returns, nodes.Name)` changed to `(nodes.Name, nodes.Attribute)`\nS3: unresolved",
+    "elapsed_seconds": 0.5640327999999499,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 844,
+      "eval_count": 36
+    }
+  },
+  "F107:k5:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28197540000019217,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 861,
+      "eval_count": 15
+    }
+  },
+  "F107:k5:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.30729710000014165,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 856,
+      "eval_count": 15
+    }
+  },
+  "F107:k6:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `is_terminating_func` now handles `nodes.ClassDef` explicitly.\nS3: unresolved",
+    "elapsed_seconds": 0.6420309000004636,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 920,
+      "eval_count": 32
+    }
+  },
+  "F107:k6:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.3037720000002082,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 937,
+      "eval_count": 15
+    }
+  },
+  "F107:k6:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2666001999996297,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 932,
+      "eval_count": 15
+    }
+  },
+  "F108:k6:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `compress` is now an integer | None, not an integer specifying compression options.\nS3: unresolved",
+    "elapsed_seconds": 1.062520699999368,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2154,
+      "eval_count": 33
+    }
+  },
+  "F108:k6:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function no longer generates a random mask for the message.\nS3: unresolved",
+    "elapsed_seconds": 0.4546740999994654,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2169,
+      "eval_count": 28
+    }
+  },
+  "F108:k6:doc:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The payload of the frame is now determined by self._send_compressed_frame_sync or self._send_compressed_frame_async_locked.\nS3: unresolved",
+    "elapsed_seconds": 0.661016699999891,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2152,
+      "eval_count": 42
+    }
+  },
+  "F108:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- opcode parameter is now named 'opc' in the diff\nS3: unresolved",
+    "elapsed_seconds": 0.4878015999993295,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2161,
+      "eval_count": 28
+    }
+  },
+  "F109:k6:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_parser` is used for upgraded connections now\nS3: unresolved",
+    "elapsed_seconds": 0.7160985000000437,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1035,
+      "eval_count": 26
+    }
+  },
+  "F114:k3:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `traces` is now a parameter, not a local variable.\nS3: unresolved",
+    "elapsed_seconds": 0.8779543000000558,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1645,
+      "eval_count": 30
+    }
+  },
+  "F114:k3:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `req` is no longer a `ClientRequest` object, it's a `ClientRequest` object passed as `req: ClientRequest`\nS3: unresolved",
+    "elapsed_seconds": 0.6925400000000081,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1644,
+      "eval_count": 45
+    }
+  },
+  "F114:k3:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2751068000006853,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1652,
+      "eval_count": 15
+    }
+  },
+  "F114:k4:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5205935999993017,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1135,
+      "eval_count": 15
+    }
+  },
+  "F114:k4:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26861250000001746,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1143,
+      "eval_count": 15
+    }
+  },
+  "F114:k5:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5223895999997694,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1018,
+      "eval_count": 15
+    }
+  },
+  "F117:k1:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- named parameter 'client_error' now has a default value\nS3: unresolved",
+    "elapsed_seconds": 0.7134845999999015,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1160,
+      "eval_count": 28
+    }
+  },
+  "F117:k2:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.42332600000008824,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 914,
+      "eval_count": 15
+    }
+  },
+  "F117:k2:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `sock` is now set to `None` before returning `connection`.\nS3: unresolved",
+    "elapsed_seconds": 0.4688194999998814,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 930,
+      "eval_count": 31
+    }
+  },
+  "F117:k3:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- addr_infos parameter type changed from aiohappyeyeballs.AddrInfoType to AddrInfoType\nS3: unresolved",
+    "elapsed_seconds": 0.718141100000139,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 987,
+      "eval_count": 35
+    }
+  },
+  "F117:k4:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.39663929999915126,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 969,
+      "eval_count": 15
+    }
+  },
+  "F117:k5:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- named parameter 'sock' is now a positional argument\nS3: unresolved",
+    "elapsed_seconds": 0.6342653000001519,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1042,
+      "eval_count": 27
+    }
+  },
+  "F117:k6:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.45557279999957245,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 953,
+      "eval_count": 15
+    }
+  },
+  "F117:k7:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `self._ssl_shutdown_timeout is not None` changed to `self._ssl_shutdown_timeout`\nS3: unresolved",
+    "elapsed_seconds": 0.651842499999475,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 886,
+      "eval_count": 35
+    }
+  },
+  "F117:k8:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- addr_infos parameter type changed from List to list\nS3: unresolved",
+    "elapsed_seconds": 0.6188838999996733,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 955,
+      "eval_count": 26
+    }
+  },
+  "F117:k9:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- req parameter type changed from ClientRequest to ClientRequestBase\nS3: unresolved",
+    "elapsed_seconds": 0.6204154000006383,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 894,
+      "eval_count": 28
+    }
+  },
+  "F117:k10:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4056372000004558,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 919,
+      "eval_count": 15
+    }
+  },
+  "F117:k11:llm:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.40950580000026093,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 920,
+      "eval_count": 15
+    }
+  },
+  "F118:k5:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- return type is now a tuple of CIMultiDictProxy and RawHeaders\nS3: unresolved",
+    "elapsed_seconds": 0.7727548000002571,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1292,
+      "eval_count": 31
+    }
+  },
+  "F120:k6:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `method = method.upper()` was not present in previous version.\nS3: unresolved",
+    "elapsed_seconds": 0.7243139000001975,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1176,
+      "eval_count": 29
+    }
+  },
+  "F120:k6:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `method = method.upper()` was not present in previous version.\nS3: unresolved",
+    "elapsed_seconds": 0.4760674999997718,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1182,
+      "eval_count": 29
+    }
+  },
+  "F120:k7:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `url.absolute` attribute is used instead of `url.scheme == \"\"`\nS3: unresolved",
+    "elapsed_seconds": 0.7005254999994577,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1292,
+      "eval_count": 31
+    }
+  },
+  "F121:k5:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_write` is now called only when `chunk` is truthy\nS3: unresolved",
+    "elapsed_seconds": 0.7776994000005288,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1207,
+      "eval_count": 31
+    }
+  },
+  "F121:k6:llm:11": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `_write` is called only when `chunk` is truthy\nS3: unresolved",
+    "elapsed_seconds": 0.6527772999997978,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 879,
+      "eval_count": 30
+    }
+  },
+  "F133:k4:llm:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5205247999992935,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1152,
+      "eval_count": 15
+    }
+  },
+  "F133:k4:llm:2": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2659565999992992,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1150,
+      "eval_count": 15
+    }
+  },
+  "F133:k4:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28188219999992725,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1148,
+      "eval_count": 15
+    }
+  },
+  "F133:k4:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28721150000001217,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1150,
+      "eval_count": 15
+    }
+  },
+  "F133:k4:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26684799999929965,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1156,
+      "eval_count": 15
+    }
+  },
+  "F133:k4:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.2657928999997239,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1142,
+      "eval_count": 15
+    }
+  },
+  "F133:k6:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5284420000007231,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1227,
+      "eval_count": 15
+    }
+  },
+  "F133:k6:llm:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.28000210000027437,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1229,
+      "eval_count": 15
+    }
+  },
+  "F133:k6:llm:9": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26676690000022063,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1235,
+      "eval_count": 15
+    }
+  },
+  "F133:k6:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.26605440000003,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1221,
+      "eval_count": 15
+    }
+  },
+  "F133:k11:llm:7": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.6166315000000395,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1519,
+      "eval_count": 15
+    }
+  },
+  "F134:k7:llm:10": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.41468110000005254,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 584,
+      "eval_count": 15
+    }
+  },
+  "F138:k7:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now uses _max_diff and _vetted_diffs instead of max.\nS3: unresolved",
+    "elapsed_seconds": 0.7965917999999874,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1287,
+      "eval_count": 33
+    }
+  },
+  "F140:k5:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `annotation is not MISSING` added to the condition\nS3: unresolved",
+    "elapsed_seconds": 0.7403266999999687,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1274,
+      "eval_count": 27
+    }
+  },
+  "F140:k7:doc:3": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `default` is now used to represent the actual default value, not the default FieldInfo instance.\nS3: unresolved",
+    "elapsed_seconds": 0.7235086999999112,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1342,
+      "eval_count": 36
+    }
+  },
+  "F147:k5:llm:4": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.4940301999995427,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 948,
+      "eval_count": 15
+    }
+  },
+  "F148:k10:doc:1": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function now uses `self.current_data.spans` instead of `self.current_data.examples`.\nS3: unresolved",
+    "elapsed_seconds": 0.7861044999999649,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1148,
+      "eval_count": 35
+    }
+  },
+  "F149:k3:doc:6": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.6009050000002389,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1356,
+      "eval_count": 15
+    }
+  },
+  "F149:k5:doc:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- The function no longer takes a global variable as an argument.\nS3: unresolved",
+    "elapsed_seconds": 0.6781094000007215,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1130,
+      "eval_count": 28
+    }
+  },
+  "F154:k4:llm:8": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: supported\nS3: unresolved",
+    "elapsed_seconds": 0.5210678000003099,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 1036,
+      "eval_count": 15
+    }
+  },
+  "F157:k6:llm:0": {
+    "status": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported\nS2: contradicted -- `warnings.warn` is now unreachable due to type check\nS3: unresolved",
+    "elapsed_seconds": 1.0217015999996875,
+    "response_meta": {
+      "done_reason": "stop",
+      "prompt_eval_count": 2315,
+      "eval_count": 28
+    }
+  }
+}

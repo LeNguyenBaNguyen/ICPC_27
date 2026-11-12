@@ -1,0 +1,1 @@
+{"text": "S1: supported\nS2: unresolved\nS3: supported\nS4: supported\nS5: contradicted -- asyncio.TimeoutError with errno None is re-raised; OSError handler re-raises only that case\nS6: supported\nS7: supported", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 1878, "out": 82}}

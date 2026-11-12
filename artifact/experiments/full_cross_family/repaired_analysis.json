@@ -1,0 +1,38 @@
+{
+  "complete_functions": 129,
+  "llama_anchor_supported_claims": 1290,
+  "llama_S6": 0.6125996546529997,
+  "llama_S6_cluster_bootstrap_95": [
+    0.572723962955378,
+    0.6514555468135327
+  ],
+  "qwen_llama_anchor_agreement": {
+    "n": 1725,
+    "agreement": 0.8718840579710145,
+    "kappa": 0.24145498971295773,
+    "matrix_qwen_rows_llama_columns": {
+      "supported": {
+        "supported": 1468,
+        "contradicted": 77,
+        "unresolved": 42
+      },
+      "contradicted": {
+        "supported": 37,
+        "contradicted": 22,
+        "unresolved": 3
+      },
+      "unresolved": {
+        "supported": 46,
+        "contradicted": 16,
+        "unresolved": 14
+      }
+    }
+  },
+  "unparsed_verdicts": 0,
+  "source_sha256": {
+    "functions.json": "37ef9e69b0b831a1c48261cb3541e423c240caf832d33b3593bd56837301af6c",
+    "claims.json": "ae125d0cf1093debd6e92948a1eac1f3029bc1b265ecf95541b2590d5a66027d",
+    "verdicts.json": "0208885d08f542f8cbd34cbd04c94e6dc4bacf26200744f73bf838998d6674d6"
+  },
+  "interpretation": "Full main-cohort Llama replay is a model-conditional detection curve. Agreement with Qwen is not human accuracy and does not identify semantic survival."
+}

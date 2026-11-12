@@ -1,0 +1,7 @@
+\begin{abstract}
+AI code explanations are increasingly saved in repositories, yet their accuracy is usually assessed only at creation. We follow individual claims as their functions change, recording the first contradiction detected by a specified judge. In \XNFunctions{} functions from \XNRepos{} Python projects, Qwen leaves an estimated \XMainSK{} of initially supported claims without a detected contradiction after six code-changing commits (95\% CI \XMainSKLo--\XMainSKHi); 10\% receive a detection by the fourth commit. Validation substantially changes this picture: a full Llama replay gives $\hat S(6)=\XLlamaFullSsix$, while substituting one independent rater's labels for observed Qwen events gives \XHumanLabelSsixLo--\XHumanLabelSsixHi. These analyses use different judge-conditioned risk sets or event rules and do not bound semantic accuracy. Larger edits are associated with more detections, but provide only moderate discrimination. The contribution is a reproducible way to study when retained claims trigger review, together with evidence that judge calibration is essential before detection curves can guide documentation maintenance.
+\end{abstract}
+
+\begin{IEEEkeywords}
+code explanation, program comprehension, documentation decay, survival analysis, LLM
+\end{IEEEkeywords}

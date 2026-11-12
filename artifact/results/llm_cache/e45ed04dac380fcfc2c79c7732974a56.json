@@ -1,0 +1,1 @@
+{"text": "S1: unresolved\nS2: supported\nS3: unresolved\nS4: supported\nS5: supported\nS6: supported\nS7: unresolved\nS8: supported\nS9: unresolved\nS10: unresolved\nS11: unresolved\nS12: supported\nS13: unresolved\nS14: unresolved\nS15: supported\nS16: unresolved\nS17: unresolved", "model": "claude-haiku-5-5", "stop_reason": "end_turn", "usage": {"in": 1211, "out": 123}}

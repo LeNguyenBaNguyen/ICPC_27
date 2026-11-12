@@ -1,0 +1,12 @@
+{
+  "scope": "Recorded post-event judge support, not semantic restoration",
+  "eligible_claims": 232,
+  "known_later_supported": 121,
+  "claims_with_any_unparsed_followup": 10,
+  "unparsed_without_other_known_support": 8,
+  "later_support_count_missing_label_bounds": [
+    121,
+    129
+  ],
+  "interpretation": "Worst-case labels-only bounds: unparsed observations may or may not indicate supported. This is not a semantic validity interval or sampling confidence interval."
+}

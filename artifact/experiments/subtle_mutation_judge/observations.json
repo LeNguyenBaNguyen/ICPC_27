@@ -1,0 +1,257 @@
+{
+  "created_at": "2026-11-12T12:23:53.091994+00:00",
+  "model": "qwen2.5-coder:14b",
+  "endpoint": "http://127.0.0.1:11435/api/generate",
+  "observations": [
+    {
+      "case_id": "MUT_001",
+      "mutation_id": "MUT_BOUND_01",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states \"strictly below 3\", but mutated code uses \"<=\".",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_002",
+      "mutation_id": "MUT_BOUND_02",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states strictly positive, but mutation allows zero.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_003",
+      "mutation_id": "MUT_BOUND_03",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim requires \"reaches or exceeds,\" but mutated code only checks for \"exceeds.\"",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_004",
+      "mutation_id": "MUT_BOUND_04",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states value must be <= 100, but mutated code only allows < 100.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_005",
+      "mutation_id": "MUT_BOUND_05",
+      "raw_response": "verdict=SUPPORTED; evidence=Claim aligns with mutated code behavior.",
+      "parsed_verdict": "supported",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_006",
+      "mutation_id": "MUT_COND_01",
+      "raw_response": "verdict=SUPPORTED; evidence=Both original and mutated code check obj is not None before accessing obj.items.",
+      "parsed_verdict": "supported",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_007",
+      "mutation_id": "MUT_COND_02",
+      "raw_response": "verdict=CONTRADICTED; evidence=Boundary check moved after grade tier, allowing invalid scores.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_008",
+      "mutation_id": "MUT_COND_03",
+      "raw_response": "verdict=CONTRADICTED; evidence=Original prioritizes custom, mutated prioritizes default.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_009",
+      "mutation_id": "MUT_COND_04",
+      "raw_response": "verdict=UNRESOLVED; evidence=Logical order of checks not specified in claim.",
+      "parsed_verdict": "unresolved",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_010",
+      "mutation_id": "MUT_COND_05",
+      "raw_response": "verdict=CONTRADICTED; evidence=Order of checks changed, potentially affecting cache existence check.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_011",
+      "mutation_id": "MUT_EXC_01",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states ValueError, but mutated code raises TypeError.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_012",
+      "mutation_id": "MUT_EXC_02",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states KeyError, but mutated code raises IndexError.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_013",
+      "mutation_id": "MUT_EXC_03",
+      "raw_response": "verdict=CONTRADICTED; evidence=Exception type changed from ValueError to RuntimeError.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_014",
+      "mutation_id": "MUT_EXC_04",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states ConnectionError, mutated code raises TimeoutError.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_015",
+      "mutation_id": "MUT_EXC_05",
+      "raw_response": "verdict=CONTRADICTED; evidence=assert_ready raises SystemError, not AssertionError, when state is uninitialized.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_016",
+      "mutation_id": "MUT_DEF_01",
+      "raw_response": "verdict=CONTRADICTED; evidence=Timeout default changed from 30.0 to 10.0 seconds.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_017",
+      "mutation_id": "MUT_DEF_02",
+      "raw_response": "verdict=CONTRADICTED; evidence=Strict mode default changed from False to True in mutated code.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_018",
+      "mutation_id": "MUT_DEF_03",
+      "raw_response": "verdict=CONTRADICTED; evidence=Default encoding changed from \"utf-8\" to \"ascii\".",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_019",
+      "mutation_id": "MUT_DEF_04",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states max_retries defaults to 3, but mutated code sets it to 0.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_020",
+      "mutation_id": "MUT_DEF_05",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states default is True, mutated code sets default to False.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_021",
+      "mutation_id": "MUT_CALL_01",
+      "raw_response": "verdict=CONTRADICTED; evidence=Original strips both leading and trailing, mutated strips only trailing.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_022",
+      "mutation_id": "MUT_CALL_02",
+      "raw_response": "verdict=CONTRADICTED; evidence=re.search matches anywhere, not strictly from the beginning.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_023",
+      "mutation_id": "MUT_CALL_03",
+      "raw_response": "verdict=CONTRADICTED; evidence=sort_keys=False disables deterministic key sorting.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_024",
+      "mutation_id": "MUT_CALL_04",
+      "raw_response": "verdict=CONTRADICTED; evidence=Claim states descending order, but mutation sorts in ascending order.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    },
+    {
+      "case_id": "MUT_025",
+      "mutation_id": "MUT_CALL_05",
+      "raw_response": "verdict=CONTRADICTED; evidence=Original code uses `d.get(k, default)` which returns `default` if key is absent, while mutated code `d[k]` raises KeyError if key is absent.",
+      "parsed_verdict": "contradicted",
+      "expected_affected": "yes",
+      "model": "qwen2.5-coder:14b",
+      "seed": 7,
+      "temperature": 0
+    }
+  ]
+}

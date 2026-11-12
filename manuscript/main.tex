@@ -1,0 +1,44 @@
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{pgfplots}
+% Shipped with compat=1.18 (current pgfplots). This machine's TeX Live 2020 has pgfplots 1.17, so
+% `make pdf` in artifact/ builds a copy with compat=1.17; the source here stays at 1.18.
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{arrows.meta}
+\usepackage[hidelinks]{hyperref}
+
+\input{generated/macros.tex}
+\newcommand{\cs}{claim survival\xspace}
+
+\begin{document}
+
+\title{Time to Detected Contradiction in Saved AI Code Explanations}
+
+\author{\IEEEauthorblockN{Anonymous Author(s)}}
+
+\maketitle
+
+\input{sections/00-abstract}
+\input{sections/01-introduction}
+\input{sections/02-background-and-related-work}
+\input{sections/03-approach}
+\input{sections/04-preliminary-evaluation}
+\input{sections/05-discussion-and-agenda}
+\input{sections/06-conclusion}
+
+\clearpage
+\begingroup\scriptsize
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\endgroup
+
+\end{document}

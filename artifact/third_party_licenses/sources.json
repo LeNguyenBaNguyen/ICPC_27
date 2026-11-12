@@ -1,0 +1,122 @@
+[
+  {
+    "project": "pytest",
+    "repository": "https://github.com/pytest-dev/pytest",
+    "revision": "bc14038c406563b18a03e15453a10b9eee969e42",
+    "url": "https://raw.githubusercontent.com/pytest-dev/pytest/bc14038c406563b18a03e15453a10b9eee969e42/LICENSE",
+    "file": "pytest/LICENSE",
+    "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b"
+  },
+  {
+    "project": "pydantic",
+    "repository": "https://github.com/pydantic/pydantic",
+    "revision": "fe5b5ce5581f10626a16dc7ff4159cf3cb6ddbec",
+    "url": "https://raw.githubusercontent.com/pydantic/pydantic/fe5b5ce5581f10626a16dc7ff4159cf3cb6ddbec/LICENSE",
+    "file": "pydantic/LICENSE",
+    "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+  },
+  {
+    "project": "black",
+    "repository": "https://github.com/psf/black",
+    "revision": "b4f1fcae48826790b6f93ca9226d20003bce0eaa",
+    "url": "https://raw.githubusercontent.com/psf/black/b4f1fcae48826790b6f93ca9226d20003bce0eaa/LICENSE",
+    "file": "black/LICENSE",
+    "sha256": "9c0428f0c3b4779850cf5bd96e11aaa8afc72d4a86d4a36223d7aba2e58d6e00"
+  },
+  {
+    "project": "rich",
+    "repository": "https://github.com/Textualize/rich",
+    "revision": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+    "url": "https://raw.githubusercontent.com/Textualize/rich/3a109ccdffe5b2d0e30684a304fbd388e99ce57b/LICENSE",
+    "file": "rich/LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+  },
+  {
+    "project": "httpx",
+    "repository": "https://github.com/encode/httpx",
+    "revision": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",
+    "url": "https://raw.githubusercontent.com/encode/httpx/b5addb64f0161ff6bfe94c124ef76f6a1fba5254/LICENSE.md",
+    "file": "httpx/LICENSE.md",
+    "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+  },
+  {
+    "project": "click",
+    "repository": "https://github.com/pallets/click",
+    "revision": "8abb77a8432e03ed14a95f972b44f905279415a7",
+    "url": "https://raw.githubusercontent.com/pallets/click/8abb77a8432e03ed14a95f972b44f905279415a7/LICENSE.txt",
+    "file": "click/LICENSE.txt",
+    "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+  },
+  {
+    "project": "flask",
+    "repository": "https://github.com/pallets/flask",
+    "revision": "49943b5a94413a530761350f04e896f76e8d620e",
+    "url": "https://raw.githubusercontent.com/pallets/flask/49943b5a94413a530761350f04e896f76e8d620e/LICENSE.txt",
+    "file": "flask/LICENSE.txt",
+    "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+  },
+  {
+    "project": "attrs",
+    "repository": "https://github.com/python-attrs/attrs",
+    "revision": "9d9f94a043de7fc4012459853a4ed597a5577855",
+    "url": "https://raw.githubusercontent.com/python-attrs/attrs/9d9f94a043de7fc4012459853a4ed597a5577855/LICENSE",
+    "file": "attrs/LICENSE",
+    "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f"
+  },
+  {
+    "project": "pip",
+    "repository": "https://github.com/pypa/pip",
+    "revision": "4b71f36fb4dfbc87ce65ac4710eeccf81d379f55",
+    "url": "https://raw.githubusercontent.com/pypa/pip/4b71f36fb4dfbc87ce65ac4710eeccf81d379f55/LICENSE.txt",
+    "file": "pip/LICENSE.txt",
+    "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+  },
+  {
+    "project": "hypothesis",
+    "repository": "https://github.com/HypothesisWorks/hypothesis",
+    "revision": "9ab0be61aaaa27396fc1bbf4b34e7925cc68d1e2",
+    "url": "https://raw.githubusercontent.com/HypothesisWorks/hypothesis/9ab0be61aaaa27396fc1bbf4b34e7925cc68d1e2/LICENSE.txt",
+    "file": "hypothesis/LICENSE.txt",
+    "sha256": "df2ca456f6cda1226620ee99f16bafb6345241040996734d3a46e3afe414c056"
+  },
+  {
+    "project": "sphinx",
+    "repository": "https://github.com/sphinx-doc/sphinx",
+    "revision": "035a07c32c3241fd3356f4d827800c1f88525272",
+    "url": "https://raw.githubusercontent.com/sphinx-doc/sphinx/035a07c32c3241fd3356f4d827800c1f88525272/LICENSE.rst",
+    "file": "sphinx/LICENSE.rst",
+    "sha256": "802b61d8e268d296d5569de4eb4f5852373e51250100bd5a4087040c4d886de2"
+  },
+  {
+    "project": "pylint",
+    "repository": "https://github.com/pylint-dev/pylint",
+    "revision": "79c8d0c9813b0c402c3890778c6d777b162dde8b",
+    "url": "https://raw.githubusercontent.com/pylint-dev/pylint/79c8d0c9813b0c402c3890778c6d777b162dde8b/LICENSE",
+    "file": "pylint/LICENSE",
+    "sha256": "f97b14080de8b8490d60eb3d620ebc419943e0779466d1dd0d5d6f68fe195dcd"
+  },
+  {
+    "project": "aiohttp",
+    "repository": "https://github.com/aio-libs/aiohttp",
+    "revision": "d1e21bf9e819acf4b39dba3a4b0032e0e6d6410e",
+    "url": "https://raw.githubusercontent.com/aio-libs/aiohttp/d1e21bf9e819acf4b39dba3a4b0032e0e6d6410e/LICENSE.txt",
+    "file": "aiohttp/LICENSE.txt",
+    "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23"
+  },
+  {
+    "project": "textual",
+    "repository": "https://github.com/Textualize/textual",
+    "revision": "5e5b7ef58b8c5572c13a3ff9027d756623661495",
+    "url": "https://raw.githubusercontent.com/Textualize/textual/5e5b7ef58b8c5572c13a3ff9027d756623661495/LICENSE",
+    "file": "textual/LICENSE",
+    "sha256": "94f290a762376dfdb7768e42070618b0abfd2a2799eab1b1c097816c3a39eb57"
+  },
+  {
+    "project": "twemoji",
+    "repository": "https://github.com/twitter/twemoji",
+    "revision": "v14.0.2",
+    "url": "https://raw.githubusercontent.com/twitter/twemoji/v14.0.2/LICENSE-GRAPHICS",
+    "file": "twemoji/LICENSE-GRAPHICS",
+    "sha256": "8ae9438818c26e4873b91d8c6ad620526c011e27e125677f13031eda903f007c"
+  }
+]

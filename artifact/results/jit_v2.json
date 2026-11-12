@@ -1,0 +1,1970 @@
+{
+ "F000:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `use_ascii` parameter affecting comparison, but current code sets `use_ascii` based on string normalization check."
+ },
+ "F000:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `use_ascii` as an optional parameter, but the current code no longer includes it."
+ },
+ "F000:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `config` parameter, which was removed in the diff."
+ },
+ "F000:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_notin_text` returns a string, but the diff shows it now returns an iterable."
+ },
+ "F000:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns an Iterator[str] instead of list[str] | None."
+ },
+ "F001:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling different types like paths, arguments, line lists, booleans, and strings, but it does not mention the handling for `None` type explicitly."
+ },
+ "F001:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention handling for \"int\" and \"float\" types."
+ },
+ "F001:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling override values, which was removed in the diff."
+ },
+ "F001:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `IniValue`, but current code uses `ConfigValue`."
+ },
+ "F001:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions type coercion logic removed in recent change."
+ },
+ "F002:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_decide_args` handling `warn=True`, but current code does not pass this argument."
+ },
+ "F002:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the function calls `parse_setoption`, but the current code uses `_parser.parse`."
+ },
+ "F002:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `PYTEST_ADDOPTS` environment variable."
+ },
+ "F002:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_preparse` is called before parsing."
+ },
+ "F003:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `type` defaulting to \"string\", but code specifies allowed types explicitly."
+ },
+ "F003:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation did not mention the addition of \"int\" and \"float\" types."
+ },
+ "F003:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `aliases` parameter introduced in the diff."
+ },
+ "F003:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the function adds names to `_ininames`, but the current code does not."
+ },
+ "F003:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `NOT_SET`, but the current code uses `NOTSET`."
+ },
+ "F004:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `.cfg` files can have a plain `[pytest]` section without raising an error, but the current code raises an error for this case."
+ },
+ "F004:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `.cfg` files expecting a `[tool:pytest]` section but not raising an error for plain `[pytest]` sections in `setup.cfg`."
+ },
+ "F004:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims no side effects, but current code reads file content."
+ },
+ "F004:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `.cfg` files expect `[tool:pytest]`, not raise error for `[pytest]`."
+ },
+ "F004:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `.cfg` files expect `[tool:pytest]`, not `[pytest]`."
+ },
+ "F004:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states TOML files must have a `[pytest]` table directly."
+ },
+ "F004:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions parsing logic removed in recent change."
+ },
+ "F005:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states fixtures without location are inserted at the front. Current code inserts them after existing external plugin fixtures."
+ },
+ "F005:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states fixturedefs without location are prioritized over those in conftests."
+ },
+ "F005:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `nodeid` type as `str | None | NotSetType`, while current code has `str | NotSetType | None`."
+ },
+ "F007:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling missing help texts by raising exceptions, but the current code raises `TypeError` for missing help texts instead of just logging them."
+ },
+ "F007:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions raising a `TypeError` for missing help texts, but the current code assigns `_default` instead of checking it."
+ },
+ "F007:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions ini-options, but code now refers to configuration options."
+ },
+ "F008:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions undefined annotations raising `PydanticUndefinedAnnotation`, but current code raises on `raise_errors=True`."
+ },
+ "F008:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `set_dataclass_fields` is called after checking for deferred build."
+ },
+ "F009:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions skipping fields without initializers and no default values, but current code skips them only if they are also missing `default_factory`."
+ },
+ "F009:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `is_classvar` was used instead of `_typing_extra.is_classvar_annotation`."
+ },
+ "F009:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_update_fields_from_docstrings` being called unconditionally, but current code checks `config_wrapper.use_attribute_docstrings`."
+ },
+ "F009:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the addition of `_source=AnnotationSource.DATACLASS`."
+ },
+ "F009:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions optional `config_wrapper`, but current code makes it required."
+ },
+ "F009:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the addition of `_original_assignment` and `_complete` attributes."
+ },
+ "F010:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_add_js_function` being called on `metadata_schema`, but the current code calls it on `schema`."
+ },
+ "F010:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_get_prepare_pydantic_annotations_for_known_type`, which no longer exists in the current code."
+ },
+ "F010:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the inner handler's logic for schema generation."
+ },
+ "F010:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the `check_unsupported_field_info_attributes` parameter introduced in the diff."
+ },
+ "F011:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling nullable schemas differently, but the current code does not modify the inner schema for nullable types."
+ },
+ "F011:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the new `check_unsupported_field_info_attributes` parameter and its associated warning logic."
+ },
+ "F011:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the function handles unions with 'missing-sentinel' choices."
+ },
+ "F012:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling forward references without lenient=False, but current code uses lenient=True."
+ },
+ "F012:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions annotation evaluation, which was removed in the diff."
+ },
+ "F012:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `apply_each_item_validators` and `apply_validators` taking three parameters (`schema`, `validators`, `name`), but the current code shows these"
+ },
+ "F012:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_apply_field_title_generator_to_field_info` and `_apply_alias_generator_to_field_info`, which are removed in the current code."
+ },
+ "F013:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling root models separately, but current code does not differentiate handling based on `__pydantic_root_model__`."
+ },
+ "F013:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions storing the schema in `self.defs.definitions`, but the current code uses `create_definition_reference_schema`."
+ },
+ "F013:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `define_expected_missing_refs`, which was removed in the diff."
+ },
+ "F013:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `__pydantic_fields__` retrieval before schema check, but current code retrieves it after."
+ },
+ "F014:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `origin` parameter usage differently than current code."
+ },
+ "F014:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `lenient=False` which was removed in the diff."
+ },
+ "F014:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the creation of a definition reference schema."
+ },
+ "F015:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling errors by catching `NameError`, but the current code catches `NameError` and raises a custom error without mentioning this in the explanation."
+ },
+ "F015:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions updating `self.defs.definitions` and returning a reference schema, which is no longer done in the current code."
+ },
+ "F015:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the change in determining required fields."
+ },
+ "F016:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_fraction_schema` for `Fraction`, but current code uses `core_schema.fraction_schema()`."
+ },
+ "F016:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention handling of PATH_TYPES."
+ },
+ "F016:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling for MAPPING_TYPES and COUNTER_TYPES added in the diff."
+ },
+ "F017:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions setting `__signature__` for instances, but code only sets it for the class."
+ },
+ "F017:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `cls_name` parameter, which was removed in the diff."
+ },
+ "F017:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `CallbackGetCoreSchemaHandler` which is no longer used in the current code."
+ },
+ "F017:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `populate_by_name`, but current code uses `validate_by_name`."
+ },
+ "F018:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling `init=False` fields, but current code skips them without checking their presence in `fields`."
+ },
+ "F018:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `config_wrapper` parameter, which was removed in the diff."
+ },
+ "F018:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `populate_by_name`, but current code uses `validate_by_name`."
+ },
+ "F018:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `validate_by_alias` parameter."
+ },
+ "F020:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `config` parameter which is not present in the current code."
+ },
+ "F020:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_typing_extra.is_dataclass`, but current code uses `dataclasses.is_dataclass`."
+ },
+ "F020:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `__is_pydantic_dataclass__` being set after decorators, but current code sets it earlier."
+ },
+ "F020:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `is_builtin_dataclass` was used before change."
+ },
+ "F023:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `parent_frame_namespace` being called with `force=False`, but current code uses `force=True`."
+ },
+ "F023:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions deleting only `__pydantic_core_schema__`, not other attributes."
+ },
+ "F023:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `complete_model_class` is called without modifying configuration."
+ },
+ "F026:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `warnings` as a parameter but does not describe its possible values ('none', 'warn', 'error')."
+ },
+ "F026:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `@_frame_depth(1)` decorator, which is removed in the current code."
+ },
+ "F026:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation did not mention `exclude_computed_fields` parameter."
+ },
+ "F027:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling errors without explicitly catching exceptions, but the code does not show any error handling mechanism."
+ },
+ "F027:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states `schema_generator_instance.generate_definitions` is called, but the current code calls `_generate_definitions`."
+ },
+ "F027:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_generate_definitions` being called, but the current code uses `generate_definitions`."
+ },
+ "F027:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states `by_alias` default is `True`, but current code sets it to `None`."
+ },
+ "F028:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `convert_unchanged_lines` being called after `normalize_fmt_off`, but the code shows it being called conditionally only if `lines` is not empty"
+ },
+ "F028:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the addition of `Feature.T_STRINGS` in recent changes."
+ },
+ "F028:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `block: Optional[LinesBlock] = None`, but the current code uses `block: LinesBlock | None = None`."
+ },
+ "F028:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states function handles exceptions; current code does not handle exceptions explicitly."
+ },
+ "F029:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling exceptions like `NothingChanged`, but the current code only catches `NothingChanged` and returns `False`. Other exceptions are not mentioned as being "
+ },
+ "F029:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `decode_bytes` is called without `mode`."
+ },
+ "F029:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `Preview.normalize_cr_newlines` handling was removed."
+ },
+ "F029:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `header_str` in formatting process."
+ },
+ "F030:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling asynchronous statements differently, but the current code does not include this logic."
+ },
+ "F030:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `Preview.fix_fmt_skip_in_one_liners` mode."
+ },
+ "F030:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling for compound statements with semicolon-separated bodies."
+ },
+ "F031:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling invalid uses of `# fmt: off` before closing brackets, but the code does not explicitly handle this case."
+ },
+ "F031:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the addition of `mode` to `list_comments`."
+ },
+ "F031:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling edge cases but doesn't describe the new skip logic for STANDALONE_COMMENT nodes."
+ },
+ "F031:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `# fmt: skip` processing, but current code does not handle this case."
+ },
+ "F031:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns an index instead of a boolean value."
+ },
+ "F032:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling `# fmt: on` in children but the current code does not handle this scenario as described."
+ },
+ "F032:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the function returns immediately after yielding the leaf node for skip comments, but the current code continues processing."
+ },
+ "F032:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the `mode` parameter being passed to helper functions."
+ },
+ "F032:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_contains_fmt_skip_comment`, but current code uses `_contains_fmt_directive`."
+ },
+ "F032:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the function returns immediately after yielding the leaf node if the comment is a skip comment, but the current code continues processing."
+ },
+ "F033:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `workers` defaulting to CPU count if env var not set, but code sets it to 0 first."
+ },
+ "F033:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `executor` is always initialized before use."
+ },
+ "F033:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `no_cache` parameter added in the diff."
+ },
+ "F033:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states `workers` defaults to the value of `BLACK_NUM_WORKERS` or CPU cores if not set, but the code sets it to 0 first."
+ },
+ "F033:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `maybe_install_uvloop`, but current code uses `maybe_use_uvloop`."
+ },
+ "F034:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling signals to cancel tasks gracefully, but the current code uses `asyncio.wait` instead of directly cancelling tasks in signal handlers."
+ },
+ "F034:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no handling of `manager.shutdown()` in finally block."
+ },
+ "F034:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the function returns a value, but it actually has no return statement."
+ },
+ "F035:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling exceptions like `CannotSplit`, but the current code does not explicitly handle this exception in the same way described."
+ },
+ "F035:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_prefer_split_rhs_oop_over_rhs`, not present in current code."
+ },
+ "F035:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the new `split_symmetric_collection_binops` logic introduced in the diff."
+ },
+ "F036:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling `for` and `with` statements, but current code does not handle them specifically."
+ },
+ "F036:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `syms.for_stmt` twice in the list."
+ },
+ "F036:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the addition of `mode` and `features` parameters."
+ },
+ "F037:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling `except*` clauses but current code skips them without explanation."
+ },
+ "F037:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `list_comments` without the `mode` parameter, which was added in the diff."
+ },
+ "F038:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling decorators but current code does not handle them directly."
+ },
+ "F038:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states max_allowed is always 2 for non-pyi files."
+ },
+ "F040:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states function returns True without delimiters, but code returns False."
+ },
+ "F040:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the new check for unnecessary parentheses in indexed assignments."
+ },
+ "F040:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no check for symmetric collection operations, which was added in the diff."
+ },
+ "F041:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling standalone comments before checking for multiline strings, but code checks for standalone comments after multiline string check."
+ },
+ "F041:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of ternary and dictionary values parenthesized."
+ },
+ "F041:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states function handles exceptions explicitly."
+ },
+ "F041:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions multiline_string_handling logic being skipped for leaves without bracket_depth, but current code does not skip this logic."
+ },
+ "F041:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions multiline string handling being disabled in the mode, which is no longer present in the current code."
+ },
+ "F042:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions checking for East Asian stops, but current code does not."
+ },
+ "F042:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the addition of `_trailing_comma_tuple_match` in the pattern matching logic."
+ },
+ "F042:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits `_return_annotation_match` method introduced in diff."
+ },
+ "F042:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the new check for implicit string concatenation."
+ },
+ "F042:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_prefer_paren_wrap_match(LL)` instead of `line`."
+ },
+ "F043:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions parsing mode from headers but current code does not handle HeaderError for mode parsing."
+ },
+ "F043:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions preserving CRLF line endings, which was removed in the diff."
+ },
+ "F043:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions reading request content using `request.content.read()`, but the current code uses `await request.read()`."
+ },
+ "F044:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `color` as a boolean but the current code defines it as `bool | None`."
+ },
+ "F044:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns a generator instead of performing side effects directly."
+ },
+ "F044:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `generator` parameter, absent in current code."
+ },
+ "F044:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_SkipClose`, but current code uses `KeepOpenFile`."
+ },
+ "F044:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `generator` parameter, which is absent in current code."
+ },
+ "F044:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `generator` parameter which is removed in the current code."
+ },
+ "F045:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling ANSI escape codes when `color` is False, but the current code does not handle this case explicitly."
+ },
+ "F045:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling OSError, but current code only handles BrokenPipeError."
+ },
+ "F045:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now takes `cmd_parts` instead of `cmd`."
+ },
+ "F045:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `which(cmd)` but the current code uses `shutil.which(cmd)`."
+ },
+ "F045:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `shell=True` in the subprocess call, but the current code uses `shell=False`."
+ },
+ "F045:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns an iterator instead of a boolean."
+ },
+ "F046:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `strip_ansi(text)` but the current code uses `text = \"\".join(generator)` before checking `color`."
+ },
+ "F046:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns a boolean value instead of None."
+ },
+ "F046:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `cmd` parameter, now `cmd_parts`."
+ },
+ "F046:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns an iterator instead of a boolean."
+ },
+ "F046:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims no early returns, but code has multiple return statements."
+ },
+ "F047:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions setting value to None without resilience check."
+ },
+ "F047:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the deprecation warning logic added in the diff."
+ },
+ "F047:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the deprecation warning condition."
+ },
+ "F047:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `extra_message` is set to an empty string if `self.deprecated` is not a string."
+ },
+ "F048:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `hidden_prompt_func` and `visible_prompt_func`, but the current code uses a single function `prompt_func` that conditionally calls either hidden or visible inp"
+ },
+ "F048:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `convert_type` but the current code uses `value_proc(value)` directly for validation."
+ },
+ "F049:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_collect_base_attrs_broken`, not present in current code."
+ },
+ "F049:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `force_kw_only` parameter, which was removed in the diff."
+ },
+ "F049:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims default alias resolution after field_transformer, but code resolves before."
+ },
+ "F050:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions no explicit error handling, but the code includes `-W` in the Sphinx command, which treats warnings as errors."
+ },
+ "F050:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions installing the project in editable mode, which is no longer present in the current code."
+ },
+ "F050:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation did not mention the addition of `--tag` option in Sphinx command."
+ },
+ "F051:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions building wheels for common dependencies, but the current code only builds wheels if `should_update_common_wheels()` returns True."
+ },
+ "F051:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `session.run` instead of `session.run_install`."
+ },
+ "F051:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions CPython 3.13, but current code only supports up to 3.12."
+ },
+ "F051:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions CPython 3.8, but the current code no longer includes it in the session decorator."
+ },
+ "F051:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `should_update_common_wheels()` without parameters, but the current code passes `session` to it."
+ },
+ "F052:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling environment variables for input handling and existence actions, but current code directly sets them without using environment variables."
+ },
+ "F052:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `List[str]` for type hinting, but the current code uses `list[str]`."
+ },
+ "F052:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the handling of `progress_bar` option."
+ },
+ "F053:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling custom CA bundles and client certificates, but the current code sets `session.verify` to `options.cert` instead of using it as an SSL context."
+ },
+ "F053:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions retries and timeout as optional parameters, but the current code defines them as `int | None`."
+ },
+ "F053:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention `resume_retries` parameter added in the diff."
+ },
+ "F053:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `use_ssl_context_for_proxy` parameter introduced in the diff."
+ },
+ "F054:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions constraints from files but current code processes them differently."
+ },
+ "F054:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `args` as `List[str]`, but the current code uses `list[str]`."
+ },
+ "F054:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits processing of `options.editables` and `options.requirements`."
+ },
+ "F054:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `--requirements-from-script` option."
+ },
+ "F055:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `use_user_site` as a parameter, but current code does not include it in the function signature."
+ },
+ "F055:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the addition of `resume_retries` parameter in the current code."
+ },
+ "F055:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `download_dir` as an optional parameter (`Optional[str] = None`), but the current code specifies it as `str | None = None`."
+ },
+ "F055:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the addition of `build_isolation_installer`."
+ },
+ "F055:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the new `env_installer` logic introduced in the diff."
+ },
+ "F056:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions adding options for binary preferences but current code adds `prefer_binary` instead of `binary_preferences`."
+ },
+ "F056:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `constraints` but current code uses `build_constraints`."
+ },
+ "F056:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions removed options like `no_binary`, `only_binary`, etc., which are not present in the current code."
+ },
+ "F057:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the function returns an integer status code, typically `SUCCESS`, but the current code does not explicitly return `SUCCESS`."
+ },
+ "F057:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states function returns `SUCCESS`, but current code uses `return SUCCESS`."
+ },
+ "F057:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `check_legacy_setup_py_options`, which was removed in the diff."
+ },
+ "F058:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `--no-binary`, `--only-binary`, etc., but not `--no-verify`."
+ },
+ "F058:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the addition of `--build-constraints` option in recent changes."
+ },
+ "F058:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `--no-binary`, `--only-binary`, `--prefer-binary` options which are removed in the current code."
+ },
+ "F058:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims `add_options` adds no options related to dependency handling, but current code includes such options."
+ },
+ "F059:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions copying successful builds to the target directory, but the current code logs warnings for failures instead of successes."
+ },
+ "F059:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `should_build_for_wheel_command`, but current code uses `else`."
+ },
+ "F059:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions preparer.prepare_linked_requirements_more called twice, but current code shows it's called once."
+ },
+ "F059:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `check_legacy_setup_py_options`, removed in recent change."
+ },
+ "F060:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions early returns, but current code does not have any."
+ },
+ "F060:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `finder` as a parameter, but the current code uses `build_env_installer`."
+ },
+ "F060:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states PEP 660 check only happens in isolated environment."
+ },
+ "F060:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the type of `build_isolation`."
+ },
+ "F060:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_prepare_build_backend` takes parameters."
+ },
+ "F060:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the `allow_editables` parameter and its usage."
+ },
+ "F061:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling exceptions, which the current code does not do."
+ },
+ "F061:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The return type annotation changed from `Optional[str]` to `str | None`."
+ },
+ "F061:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions deprecation warning, but current code raises an exception."
+ },
+ "F062:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions rolling back on any exception, but code only rolls back if `install_succeeded` is False."
+ },
+ "F062:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention progress bar functionality added in recent change."
+ },
+ "F062:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `global_options` as a parameter, but it's removed in the current code."
+ },
+ "F062:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention `script_executable` parameter."
+ },
+ "F063:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `install_editable_legacy` may issue warnings about ignored config settings, but current code does not show this warning being issued."
+ },
+ "F063:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions global_options parameter which no longer exists in the current code."
+ },
+ "F063:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims `install` uses legacy methods for editable installs, but current code only shows wheel installation logic."
+ },
+ "F064:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the function returns a tuple including the identifier itself, but the current code does not include it in the return statement."
+ },
+ "F064:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `inferred_depth` calculation removed in recent change."
+ },
+ "F064:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions Requires-Python check removed in diff."
+ },
+ "F064:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `candidate` is checked for `None`."
+ },
+ "F065:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions a debugging reporter being selected based on an environment variable, but the current code uses `PipDebuggingReporter` unconditionally if the environment varia"
+ },
+ "F066:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `example_kwargs` and `expected_failure`, not present in current code."
+ },
+ "F066:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `data._observability_arguments` which was removed in the diff."
+ },
+ "F066:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions TESTCASE_CALLBACKS, but current code uses observability_enabled()."
+ },
+ "F069:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `wrapped_test` but the current code does not define it."
+ },
+ "F069:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `digest` variable usage instead of `database_key`."
+ },
+ "F069:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `data = ConjectureData.for_buffer(buffer)`, but current code uses `ConjectureData` constructor with specific parameters."
+ },
+ "F069:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `prefix=b\"\"` which was removed in the diff."
+ },
+ "F069:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `process_arguments_to_given` without parameters, but current code passes arguments."
+ },
+ "F070:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `BUFFER_SIZE` but current code does not define it."
+ },
+ "F070:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states buffer conversion happens before exception handling."
+ },
+ "F070:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `data = ConjectureData.for_buffer(buffer)`."
+ },
+ "F070:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `prefix=b\"\"` which was removed in the diff."
+ },
+ "F070:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `max_length=BUFFER_SIZE`, which was removed in the diff."
+ },
+ "F070:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states function returns buffer as bytes on success, but current code raises an exception if no errors occur."
+ },
+ "F072:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `start_example`/`stop_example` without noting they are called conditionally based on `at_top_level`."
+ },
+ "F072:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `start_example`/`stop_example`, but current code uses `start_span`/`stop_span`."
+ },
+ "F072:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions a check for `is_find` that was removed in the diff."
+ },
+ "F078:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions the function returning a value, but the current code does not return anything."
+ },
+ "F078:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions blocks, but current code uses nodes."
+ },
+ "F078:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `int_from_bytes` and `int_to_bytes`, not present in current code."
+ },
+ "F079:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions node programs with varying lengths, but current code uses identical node program \"X\" * n."
+ },
+ "F079:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states \"try_trivial_examples\" was added in the diff."
+ },
+ "F079:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions \"lower_blocks_together,\" but current code uses \"lower_integers_together.\""
+ },
+ "F079:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states function returns nothing, but current code specifies return type `None`."
+ },
+ "F079:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions \"minimize_duplicated_nodes\" and \"minimize_individual_nodes\", but current code uses \"minimize_duplicated_choices\" and \"minimize_individual_choices\"."
+ },
+ "F079:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions \"try_trivial_examples\" but current code uses \"try_trivial_spans\"."
+ },
+ "F080:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `data.events.pop(\"invalid because\", \"\")`, but current code uses `data.events.get(\"invalid because\", \"\")`."
+ },
+ "F080:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states no side effects, but current code modifies `data.events`."
+ },
+ "F080:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `getattr(data.extra_information, \"_expected_traceback\", None)`."
+ },
+ "F080:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the addition of `reproduction_decorator` to metadata."
+ },
+ "F080:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `data.status` without importing `Status`."
+ },
+ "F080:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `start_timestamp` and `test_name_or_nodeid`, but current code uses `run_start` and `property`."
+ },
+ "F081:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `format()` without parameters, but the current code calls `format()` without arguments."
+ },
+ "F081:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the error handling added in the current code."
+ },
+ "F081:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `tools.all_files()`, but the current code uses `all_files()` directly."
+ },
+ "F081:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `n` is set to the length of the longest string in `VALID_STARTS`, but now it's the longest string across all values in `VALID_START"
+ },
+ "F082:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions removing redundant `# pragma: no cover` comments based on patterns from `.coveragerc`, but the current code uses `exclude_list` instead."
+ },
+ "F082:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `shed` with `--py39-plus`, but the current code uses `--py310-plus`."
+ },
+ "F082:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `should_format_file` and `should_format_doc_file`, which are removed in the current code."
+ },
+ "F082:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `tools.modified_files()` and `tools.all_files()`, but the current code uses `modified_files()` and `all_files()`."
+ },
+ "F083:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions fetching from 'origin/master', but current code uses 'origin/main'."
+ },
+ "F083:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `setup.py`, but current code uses `pyproject.toml`."
+ },
+ "F083:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions fetching from pyenv repo, but current code uses `uv python list`."
+ },
+ "F083:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `hypothesis-python/pyproject.toml`, but current code uses `hypothesis/pyproject.toml`."
+ },
+ "F083:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no filtering for '3.13t', but code explicitly skips it."
+ },
+ "F083:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `tools.ROOT`, but current code uses `ROOT`."
+ },
+ "F084:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `hp.RELEASE_FILE` being checked for existence before writing to it, but the current code does not check if the file exists before writing."
+ },
+ "F084:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `tools.ROOT`, but current code uses `ROOT`."
+ },
+ "F084:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation did not mention `update_gha_pins` being added."
+ },
+ "F084:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the order of `update_python_versions`, `update_pyodide_versions`, and their removal from the code."
+ },
+ "F087:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions setting `self.env.temp_data['_parser']`, but current code sets `publisher.parser` instead."
+ },
+ "F087:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `path.join`, but current code uses `os.path.join`."
+ },
+ "F087:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `self.env.temp_data['_parser']` was used instead of `self.env.current_document._parser`."
+ },
+ "F087:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `self.env.prepare_settings(docname)` without assignment to `env`."
+ },
+ "F087:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `os.path.isfile`, but current code uses `Path.is_file()`."
+ },
+ "F088:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions the function returns a value, but the current code does not return anything."
+ },
+ "F088:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `descname` handling before diff."
+ },
+ "F088:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the order of operations for rendering templates and writing files."
+ },
+ "F088:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `os.path.join` for file paths, but current code uses `Path` objects."
+ },
+ "F095:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions the function returns metadata about the extension, but the current code does not include any return value."
+ },
+ "F095:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no events added in the current code."
+ },
+ "F095:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states `setup` returns metadata without specifying the keys 'parallel_read_safe' and 'version'."
+ },
+ "F095:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `add_autodocumenter`, which was removed in the diff."
+ },
+ "F096:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling missing documents by logging warnings but not raising exceptions; current code raises warnings and continues processing."
+ },
+ "F096:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions deprecated 'nosignatures' option handling removed in current code."
+ },
+ "F096:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `dirname = posixpath.dirname(self.env.docname)`."
+ },
+ "F100:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling errors by logging warnings and skipping the problematic node, but the current code does not log warnings for rendering failures."
+ },
+ "F100:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the function directly extracts raw LaTeX text when `nowrap` is set; it now uses `node.get('no-wrap', node.get('nowrap', False))"
+ },
+ "F100:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the function raises `nodes.SkipNode` after appending to `self.body`."
+ },
+ "F101:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_fetch_inventory` being called with `target_uri=''`, but the current code uses `inv_location=filename`."
+ },
+ "F101:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `MockConfig` class usage instead of `_InvConfig`."
+ },
+ "F101:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the function returns 1 on success instead of 0."
+ },
+ "F102:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling exceptions by logging errors and continuing with other locations, but the current code logs warnings instead if all inventory locations fail."
+ },
+ "F102:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states function returns boolean indicating updates; current code logs warnings instead of returning them."
+ },
+ "F102:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `config` as type `Config`, but current code uses `_InvConfig`."
+ },
+ "F102:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention handling of `cache_dir` parameter."
+ },
+ "F104:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions returning early without yielding any pages, but code yields an index page even if no modules are present."
+ },
+ "F104:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions yielding tuples without parentheses, but current code uses them."
+ },
+ "F104:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `should_generate_module_page` but current code uses `should_generate_module_page(app, modname)`."
+ },
+ "F104:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `is_supported_builder(app.builder)`, but current code uses `is_supported_builder(env._builder_cls, env.config.viewcode_enable_epub)`."
+ },
+ "F105:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling global variables within functions, but current code does not address this specifically."
+ },
+ "F105:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the order of class check before typevar checks."
+ },
+ "F106:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions unspecified encoding message for pathlib methods, but current code does not handle this case."
+ },
+ "F106:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states mode_arg is always inferred using safe_infer before checking for default inference."
+ },
+ "F107:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions checking for `typing.Never`, but current code only checks for `TYPING_NORETURN`."
+ },
+ "F107:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the function checks for `os._exit()`, but current code does not explicitly check for it."
+ },
+ "F107:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling `StopIteration` but current code only catches `astroid.InferenceError`."
+ },
+ "F108:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions compression for small packets, but current code disables this behavior."
+ },
+ "F108:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_drain_helper` always being called when output size exceeds limit, but current code checks if `protocol._paused` before calling it."
+ },
+ "F108:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `compress` as an optional integer, but current code uses `int | None`."
+ },
+ "F108:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions RSV handling removed in current code."
+ },
+ "F109:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling WebSocket connections differently, but current code treats them the same as non-upgraded connections."
+ },
+ "F109:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `status_code_must_be_empty_body` was used instead of checking against `EMPTY_BODY_STATUS_CODES`."
+ },
+ "F109:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states payload type as Optional[StreamReader], not StreamReader | None."
+ },
+ "F109:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_reschedule_timeout` is always called first."
+ },
+ "F110:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions setting `Content-Type` for all POST methods, but code only sets it if not already present."
+ },
+ "F110:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `send` method handles errors explicitly."
+ },
+ "F110:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `self.body`, but current code uses `self._body`."
+ },
+ "F110:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the function returns a `ClientResponse` object, but the code shows it returns an instance of `response_class`."
+ },
+ "F111:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling 101 status code, but current code breaks on any 100-199 except 101."
+ },
+ "F111:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions processing cookies, but current code stores raw headers instead."
+ },
+ "F111:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `self.headers.getall` instead of `self.headers._md.getall`."
+ },
+ "F111:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the addition of `_on_chunk_received` handling for payload chunks."
+ },
+ "F113:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions returning `ResponseHandler`, but the current code returns `Optional[BaseProtocol]`."
+ },
+ "F113:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `ResponseHandler` return type, but current code returns `Optional[Connection]`."
+ },
+ "F113:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states connections are popped in reverse order, but the current code uses `popleft()`."
+ },
+ "F113:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the method returns `None` if no suitable connection can be found, but the code does not explicitly state this in the return type annotation."
+ },
+ "F113:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states method returns `None` if all connections are closed or exceed timeout; current code removes key from `_conns`."
+ },
+ "F114:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states function returns `Connection` object encapsulating connection details; current code directly returns `proto`."
+ },
+ "F114:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the function waits for a future to complete before checking for an existing connection in the pool."
+ },
+ "F114:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_reused_connection` method usage."
+ },
+ "F115:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling proxy headers from the original request, but the current code directly assigns `req.proxy_headers` to `headers` without merging them with existing hea"
+ },
+ "F115:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `Connection` class, but code uses `_ConnectTunnelConnection`."
+ },
+ "F115:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `ClientRequest` for `proxy_req`, but the current code uses `ClientRequestBase`."
+ },
+ "F115:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling proxy headers manually, but current code uses `_update_proxy_auth_header_and_build_proxy_req`."
+ },
+ "F116:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_get_fingerprint` check, but current code lacks this step."
+ },
+ "F116:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention handling of `ssl_shutdown_timeout`."
+ },
+ "F116:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `ssl_shutdown_timeout` being checked for `None`, but current code checks for truthiness directly."
+ },
+ "F116:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `client_error` as a parameter with a default value of `ClientConnectorError`, but the current code uses `type[Exception] = ClientConnectorError`."
+ },
+ "F116:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the condition for checking `tls_transport`."
+ },
+ "F117:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `aiohappyeyeballs.start_connection` handling multiple address families concurrently, but the current code does not explicitly show this behavior."
+ },
+ "F117:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `sock` being set to `None`, which is not present in the current code."
+ },
+ "F118:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions parsing from `lines[0]`, but the code starts parsing from `lines[1]`."
+ },
+ "F118:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the initial line index as 1 instead of 0."
+ },
+ "F118:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states max_field_size check was removed."
+ },
+ "F118:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the regex check for invalid characters in header value."
+ },
+ "F118:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `CIMultiDictProxy`, but the current code uses `HeadersDictProxy`."
+ },
+ "F119:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `feed_data` helper method, but current code uses `self.payload.feed_data`."
+ },
+ "F120:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling different URL forms, but current code only handles origin-form and absolute-form."
+ },
+ "F120:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `BadStatusLine` is raised for invalid method."
+ },
+ "F120:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no check for 'Host' header in HTTP/1.1 requests."
+ },
+ "F120:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions method validation but omits the new uppercase conversion."
+ },
+ "F121:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling empty chunks after compression but current code does not handle this case explicitly."
+ },
+ "F121:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `chunk` parameter only accepts `bytes`."
+ },
+ "F121:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_writelines` for chunked transfer encoding, but current code uses `_write_chunked_payload`."
+ },
+ "F121:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states function returns a value; current code does not return any value."
+ },
+ "F122:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `parse_content_disposition` returning `None`, but current code returns `(None, {})`."
+ },
+ "F123:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling leftover data as needed, but current code does not explicitly handle leftover data after parsing."
+ },
+ "F123:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_request_parser`, but current code uses `_parser`."
+ },
+ "F124:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling `AttributeError` differently than current code."
+ },
+ "F124:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states `start_time` is float, but current code uses Optional[float]."
+ },
+ "F124:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `start_time` parameter type as float, not Optional[float]."
+ },
+ "F125:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `parse_qsl` for non-multipart/form-data, but current code uses `parse_qs`."
+ },
+ "F125:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `field.decode`, but current code uses `field.decode_async`."
+ },
+ "F126:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions setting `_reader` before disabling keepalive, but code does it in reverse order."
+ },
+ "F126:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions FlowControlDataQueue instead of WebSocketDataQueue."
+ },
+ "F126:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states `protocol` is a string, but current code makes it Optional[str]."
+ },
+ "F126:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_reset_heartbeat` but current code does not show this method call."
+ },
+ "F126:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states method returns something; current code does not return anything."
+ },
+ "F128:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions helper methods like `_get_box_model` and `_align_size`, but the current code does not use them directly; instead, it uses `dock_widget._get"
+ },
+ "F128:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions processing offsets for constrained widgets, which is removed in the current code."
+ },
+ "F128:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The diff shows a new parameter `False` added to `_WidgetPlacement`, not mentioned in the explanation."
+ },
+ "F128:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_align_size` being used for alignment adjustments, but the current code no longer includes this call."
+ },
+ "F128:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `greedy` parameter added in the diff."
+ },
+ "F129:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_arrange_dock_widgets` being called with `dock_region`, but the current code calls it with `size.region`."
+ },
+ "F129:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions no handling of `styles.display`, which is now used to filter widgets."
+ },
+ "F129:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the `optimal` parameter and its effect on widget arrangement."
+ },
+ "F129:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `widget.log(placements)` which was removed in the diff."
+ },
+ "F130:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions setting up SIGWINCH handler before starting writer thread, but code does it in reverse order."
+ },
+ "F130:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_enable_mouse_support` twice in the current code, but only once in the explanation."
+ },
+ "F130:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions writing \"\\x1b[>1u\" without flags, while current code writes \"\\x1b[>{KITTY_PROTOCOL_FLAG}u\"."
+ },
+ "F131:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions calculating margins between non-overlay widgets, but the code calculates margins for all widgets, not just non-overlays."
+ },
+ "F131:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no handling of `offset`, while current code includes it."
+ },
+ "F131:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `greedy` parameter added in the diff."
+ },
+ "F132:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions calculating vertical spacing between widgets based on their margins, but the current code calculates margins for non-screen overlay widgets separately from oth"
+ },
+ "F132:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the new conditional processing of widget offsets based on styles."
+ },
+ "F132:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions processing offsets for non-overlay widgets, but the current code removes this step."
+ },
+ "F132:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the `parent.pre_layout(self)` call added in the diff."
+ },
+ "F132:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation does not mention the `greedy` parameter added in the recent change."
+ },
+ "F132:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `parent.app.size`, but current code uses `parent.app.viewport_size`."
+ },
+ "F133:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_forward_event` returns immediately for `Enter` and `Leave` events without posting the message."
+ },
+ "F133:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `widget.loading` check added in recent changes."
+ },
+ "F133:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `event.shift` for `MouseMove` events."
+ },
+ "F133:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_select_end` uses `event.offset`, while code now uses `event.screen_offset`."
+ },
+ "F133:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_forward_event` returns immediately for forwarded events; current code modifies event style before returning."
+ },
+ "F134:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling exceptions, but current code does not."
+ },
+ "F134:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the `_compositor_refresh()` call added in the diff."
+ },
+ "F134:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions auto-focus logic removed in recent change."
+ },
+ "F135:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling `NoScreen` exception but current code does not handle it."
+ },
+ "F135:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention `_refresh_styles_required` or `call_later`."
+ },
+ "F135:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the loop for ancestors in `_layout_required`."
+ },
+ "F136:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_populate()` being called before accessing `_lines`, but current code asserts `_lines` is not `None` after calling it."
+ },
+ "F136:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `component_class` can be `None`."
+ },
+ "F136:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states `_populate()` is always called first, but the current code only calls it if `_lines` is empty."
+ },
+ "F136:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_populate()` call, which is removed in current code."
+ },
+ "F136:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_render_option_content` but current code uses `_get_option_render`."
+ },
+ "F136:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the addition of `rich_style` in error handling."
+ },
+ "F137:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling circular references, but current code does not explicitly handle them."
+ },
+ "F138:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_approx_scalar` on each value, but current code uses `expected` attribute directly."
+ },
+ "F138:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_repr_compare` handles exceptions explicitly."
+ },
+ "F138:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the key comparison added in recent changes."
+ },
+ "F138:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the function checks for key set equality instead of key order."
+ },
+ "F139:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `schema_generator` deprecation warning, but current code does not handle this case."
+ },
+ "F139:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits handling of `populate_by_name` and related deprecation logic."
+ },
+ "F140:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling deprecated instances, but current code does not explicitly handle them."
+ },
+ "F140:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `_extract_metadata`, but the current code uses `_typing_extra.unpack_annotated`."
+ },
+ "F140:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling `dataclasses.Field` differently, but the current code merges metadata without distinguishing between `FieldInfo` and `dataclasses.Field`."
+ },
+ "F141:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `warnings` as a parameter but does not describe its possible values ('none', 'warn', 'error')."
+ },
+ "F141:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `fallback` parameter introduced in the diff."
+ },
+ "F141:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation states `by_alias` defaults to `False`, but current code sets it to `None`."
+ },
+ "F141:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `exclude_computed_fields`, which was added in the recent change but not in the original explanation."
+ },
+ "F142:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions the function can handle errors internally, which contradicts the current code."
+ },
+ "F142:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention `experimental_allow_partial` parameter."
+ },
+ "F142:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation did not mention support for bytearray in data parameter."
+ },
+ "F142:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `experimental_allow_partial` as boolean, but current code allows 'off', 'on', 'trailing-strings'."
+ },
+ "F142:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits `by_alias` and `by_name` parameters and their validation logic."
+ },
+ "F143:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions the function handling errors itself, which is false for the current code."
+ },
+ "F143:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention `experimental_allow_partial` parameter."
+ },
+ "F143:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation does not mention the `extra` parameter added in the diff."
+ },
+ "F143:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `context` as `dict[str, Any]`, but current code uses `Any`."
+ },
+ "F144:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions early returns, but current code has none."
+ },
+ "F144:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the condition for `io` in list comprehension."
+ },
+ "F144:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation refers to `interesting_examples`, but current code uses `interesting_test_cases`."
+ },
+ "F145:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions handling of float keys but current code does not convert floats to integer bit representation for all cases."
+ },
+ "F145:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation states the method returns `(value, buf)`, but the current code returns an `IRNode`."
+ },
+ "F145:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions returning an `IRNode`, but the current code returns just `value`."
+ },
+ "F145:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `ir_type` parameter name instead of `choice_type`."
+ },
+ "F146:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions returning cached values after 10 attempts, but code returns immediately without retrying."
+ },
+ "F146:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns a tuple instead of bytes."
+ },
+ "F146:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The function now returns a tuple of IRNode instead of bytes."
+ },
+ "F146:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims function returns bytes object, but current code returns tuple[ChoiceT, ...]."
+ },
+ "F146:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `ir_type` but current code uses `choice_type`."
+ },
+ "F147:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions early returns, but current code does not have any."
+ },
+ "F147:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `sort_key`, but current code uses `shortlex`."
+ },
+ "F147:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `ir_from_bytes` instead of `choices_from_bytes`."
+ },
+ "F147:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states the loop break condition."
+ },
+ "F147:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `has_existing_examples`, but current code uses `has_existing_test_cases`."
+ },
+ "F148:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions converting `v` to bytes using `int_to_bytes(v, len(existing))`, but the current code uses `int_to_bytes(v, len(self.current_data"
+ },
+ "F148:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `v` is converted to bytes; current code modifies values directly without converting to bytes."
+ },
+ "F148:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `BUFFER_SIZE_IR - ir_size_nodes(attempt_nodes)`, but current code uses `BUFFER_SIZE_IR - ir_size(attempt_nodes)`."
+ },
+ "F148:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `attempt_replace` replaces with an integer value `v`, but current code modifies existing values by adding `k`."
+ },
+ "F148:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `extend=BUFFER_SIZE_IR - ir_size(attempt_choices)`, which is not present in the current code."
+ },
+ "F149:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The seed parameter type was changed from int to Hashable."
+ },
+ "F149:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation claims `seed_all` saves states before seeding, but current code seeds first."
+ },
+ "F149:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `_most_recent_random_state_enter` and `_most_recent_random_state_exit`, which are removed in the current code."
+ },
+ "F149:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `seed_all` saving states for restoration, but current code uses `_seeded_state(seed)` to get state directly."
+ },
+ "F150:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `settings` as a parameter, but current code uses `@settings` decorator instead."
+ },
+ "F150:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no observability predicates setup, but current code sets them up."
+ },
+ "F151:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions filtering strategies by availability, but the current code does not explicitly filter them before drawing."
+ },
+ "F151:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `s.available(data)`, but current code uses `s._available(data)`."
+ },
+ "F151:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `s._available(data)`, but current code uses `not s.is_currently_empty(data)`."
+ },
+ "F151:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions an optimization for one strategy that is no longer present in the current code."
+ },
+ "F151:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation omits the caching of `__branch_sampler` for efficiency."
+ },
+ "F153:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `ctime` being part of the context, but it's not defined in the current code."
+ },
+ "F153:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `open` being used for file writing, but the current code uses `codecs.open`."
+ },
+ "F153:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `ensuredir(path.join(...))`, but current code uses `os.path.join(...)`."
+ },
+ "F153:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `codecs.open`, but the current code uses `open`."
+ },
+ "F154:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling deprecation warnings for `OptionParser`, but the current code uses `argparse.ArgumentParser` instead."
+ },
+ "F154:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `OptionParser` deprecation warning handling, but current code uses `argparse.ArgumentParser`."
+ },
+ "F154:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `OptionParser` deprecation handling removed in recent change."
+ },
+ "F154:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions `ManualPageWriter` being used, but the current code no longer uses it directly."
+ },
+ "F155:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions logging errors for unknown options, but the current code logs an error and returns immediately without further processing."
+ },
+ "F155:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the attribute used to access documenters."
+ },
+ "F155:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation incorrectly states the method returns an empty list when an unknown option is encountered, but the current code logs an error and continues processing."
+ },
+ "F155:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `_process_documenter_options` takes `doccls`, not `option_spec`."
+ },
+ "F156:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions `max_item_chars` but current code uses `max_chars`."
+ },
+ "F156:4": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `sig` is always a string, but code handles multiple signatures as a tuple."
+ },
+ "F157:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions cookie quoting check, but current code uses `BaseCookie` directly without checking `_quote_cookie`."
+ },
+ "F157:1": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions no check for cookie existence in `_cookies`."
+ },
+ "F157:2": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions SimpleCookie usage, but current code always uses BaseCookie."
+ },
+ "F157:3": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions SimpleCookie but current code uses BaseCookie exclusively."
+ },
+ "F157:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions cookie quoting check, absent in current code."
+ },
+ "F157:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions cookie quoting handling, absent in current code."
+ },
+ "F158:0": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- The explanation mentions handling duplicate singleton headers but does not specify raising `BadHttpMessage` for duplicates."
+ },
+ "F158:5": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation mentions duplicate singleton headers check removed in recent change."
+ },
+ "F158:6": {
+  "consistent": false,
+  "reason": "INCONSISTENT -- Explanation incorrectly states `getall()` was used for parsing connection tokens."
+ }
+}

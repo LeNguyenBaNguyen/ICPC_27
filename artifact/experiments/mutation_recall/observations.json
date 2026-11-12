@@ -1,0 +1,5002 @@
+{
+  "arithmetic-01:mutated": {
+    "task_id": "arithmetic-01:mutated",
+    "fixture_id": "arithmetic-01",
+    "arm": "mutated",
+    "qualname": "plus_1",
+    "old": "def plus_1(value: int) -> int:\n    return value + 1\n",
+    "current": "def plus_1(value: int) -> int:\n    return value - 1\n",
+    "claim": "plus_1 returns value plus 1.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 1",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 1",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 4919736000,
+      "load_duration": 4208827900,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 4.9496736000000965,
+    "prompt_sha256": "6e43c25d8196d0fde9234d57dad83abdde4cea891b95754cdbd13d76c3e38a7e"
+  },
+  "arithmetic-01:control": {
+    "task_id": "arithmetic-01:control",
+    "fixture_id": "arithmetic-01",
+    "arm": "control",
+    "qualname": "plus_1",
+    "old": "def plus_1(value: int) -> int:\n    return value + 1\n",
+    "current": "def plus_1(value: int) -> int:\n    return value + 1\n",
+    "claim": "plus_1 returns value plus 1.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 320391600,
+      "load_duration": 8084000,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.325992099999894,
+    "prompt_sha256": "cca25e1dd4f31b0cbe34b19e987e9802b3e0ef9c97d2123e730c4a473961b864"
+  },
+  "condition-01:mutated": {
+    "task_id": "condition-01:mutated",
+    "fixture_id": "condition-01",
+    "arm": "mutated",
+    "qualname": "band_1",
+    "old": "def band_1(value: int) -> str:\n    if value < 3:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_1(value: int) -> str:\n    if value >= 3:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_1 returns 'low' when value is below 3.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 3, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 3, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 735251400,
+      "load_duration": 9509700,
+      "prompt_eval_count": 455,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7569553000002998,
+    "prompt_sha256": "e700a3024ad62b6cad44a25fe8752647dcb5601a6d9a2469d1ca9911ffa3be94"
+  },
+  "condition-01:control": {
+    "task_id": "condition-01:control",
+    "fixture_id": "condition-01",
+    "arm": "control",
+    "qualname": "band_1",
+    "old": "def band_1(value: int) -> str:\n    if value < 3:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_1(value: int) -> str:\n    if value < 3:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_1 returns 'low' when value is below 3.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 323383500,
+      "load_duration": 8132400,
+      "prompt_eval_count": 388,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3551296000000548,
+    "prompt_sha256": "902af816da4222a6f2910b637815f4d2e78601722fc413cbbca7b4065cd81e66"
+  },
+  "exception-01:mutated": {
+    "task_id": "exception-01:mutated",
+    "fixture_id": "exception-01",
+    "arm": "mutated",
+    "qualname": "nonnegative_1",
+    "old": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-1')\n    return value\n",
+    "current": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_1 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 586060400,
+      "load_duration": 7787400,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5905098999996881,
+    "prompt_sha256": "45c06eb91c1d203dd62ffa12333330b1f783d1a924b6442d33159d4b24f58187"
+  },
+  "exception-01:control": {
+    "task_id": "exception-01:control",
+    "fixture_id": "exception-01",
+    "arm": "control",
+    "qualname": "nonnegative_1",
+    "old": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-1')\n    return value\n",
+    "current": "def nonnegative_1(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-1')\n    return value\n",
+    "claim": "nonnegative_1 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 310649200,
+      "load_duration": 9855900,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31522709999990184,
+    "prompt_sha256": "550da315fe5effe041ab8ec2480cf336ac91d1aee9ab2722b869047da58dcd8d"
+  },
+  "call-01:mutated": {
+    "task_id": "call-01:mutated",
+    "fixture_id": "call-01",
+    "arm": "mutated",
+    "qualname": "trim_1",
+    "old": "def trim_1(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_1(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_1 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 630247500,
+      "load_duration": 8045300,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6357701000001725,
+    "prompt_sha256": "5391bc0ea599dabf96f5eb61a8a26c3f0314d1a2fb6e3a509c5b3ebfeea6accf"
+  },
+  "call-01:control": {
+    "task_id": "call-01:control",
+    "fixture_id": "call-01",
+    "arm": "control",
+    "qualname": "trim_1",
+    "old": "def trim_1(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_1(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_1 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 306608400,
+      "load_duration": 9561500,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3118985999999495,
+    "prompt_sha256": "af90947affd8a5d955bf9b67ff9ed52f2bdb2a85982e0f457deee5483badacc2"
+  },
+  "arithmetic-02:mutated": {
+    "task_id": "arithmetic-02:mutated",
+    "fixture_id": "arithmetic-02",
+    "arm": "mutated",
+    "qualname": "plus_2",
+    "old": "def plus_2(value: int) -> int:\n    return value + 2\n",
+    "current": "def plus_2(value: int) -> int:\n    return value - 2\n",
+    "claim": "plus_2 returns value plus 2.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value changed from `value + 2` to `value - 2`",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value changed from `value + 2` to `value - 2`",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 796619500,
+      "load_duration": 10211300,
+      "prompt_eval_count": 427,
+      "eval_count": 24
+    },
+    "elapsed_seconds": 0.8150226999996448,
+    "prompt_sha256": "61f0d32d18b465263dbcf385a6ec33d91c83ce1bb537470bdb3a5d36f75306fe"
+  },
+  "arithmetic-02:control": {
+    "task_id": "arithmetic-02:control",
+    "fixture_id": "arithmetic-02",
+    "arm": "control",
+    "qualname": "plus_2",
+    "old": "def plus_2(value: int) -> int:\n    return value + 2\n",
+    "current": "def plus_2(value: int) -> int:\n    return value + 2\n",
+    "claim": "plus_2 returns value plus 2.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 304546100,
+      "load_duration": 7609600,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3316952999998648,
+    "prompt_sha256": "4aa14eb937d88f36c3dfb8521cb1219130694aa87755df1c706763f957a30654"
+  },
+  "condition-02:mutated": {
+    "task_id": "condition-02:mutated",
+    "fixture_id": "condition-02",
+    "arm": "mutated",
+    "qualname": "band_2",
+    "old": "def band_2(value: int) -> str:\n    if value < 6:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_2(value: int) -> str:\n    if value >= 6:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_2 returns 'low' when value is below 6.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 6, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 6, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 733196100,
+      "load_duration": 8223500,
+      "prompt_eval_count": 455,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7517370999999002,
+    "prompt_sha256": "17ea5722d88a0bb00fa3bb3f30a9cca69807d68ec897ff2ef5b155af07b08f17"
+  },
+  "condition-02:control": {
+    "task_id": "condition-02:control",
+    "fixture_id": "condition-02",
+    "arm": "control",
+    "qualname": "band_2",
+    "old": "def band_2(value: int) -> str:\n    if value < 6:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_2(value: int) -> str:\n    if value < 6:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_2 returns 'low' when value is below 6.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 322900900,
+      "load_duration": 9906800,
+      "prompt_eval_count": 388,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3268286999996235,
+    "prompt_sha256": "b9c7310ffa6918d9b355db2df7e6e887d5a8a5ab98a136479228cc39c6c9d30b"
+  },
+  "exception-02:mutated": {
+    "task_id": "exception-02:mutated",
+    "fixture_id": "exception-02",
+    "arm": "mutated",
+    "qualname": "nonnegative_2",
+    "old": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-2')\n    return value\n",
+    "current": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_2 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 587777500,
+      "load_duration": 8783400,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5921167000001333,
+    "prompt_sha256": "11261797a2499003243db31f17b0ad94a7fc02357e04cc117f5535695fdb74a0"
+  },
+  "exception-02:control": {
+    "task_id": "exception-02:control",
+    "fixture_id": "exception-02",
+    "arm": "control",
+    "qualname": "nonnegative_2",
+    "old": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-2')\n    return value\n",
+    "current": "def nonnegative_2(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-2')\n    return value\n",
+    "claim": "nonnegative_2 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 304140800,
+      "load_duration": 8924400,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3247734000001401,
+    "prompt_sha256": "ef80d0273e8c60c31cffd1a1671ad44c513675df79bbd1d76a08f8aa197a673f"
+  },
+  "call-02:mutated": {
+    "task_id": "call-02:mutated",
+    "fixture_id": "call-02",
+    "arm": "mutated",
+    "qualname": "trim_2",
+    "old": "def trim_2(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_2(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_2 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 632948300,
+      "load_duration": 9524100,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6376367000002574,
+    "prompt_sha256": "28d40fd1724690e248475fd508b04f41781734e32ac722bfccbd11531c1d2a33"
+  },
+  "call-02:control": {
+    "task_id": "call-02:control",
+    "fixture_id": "call-02",
+    "arm": "control",
+    "qualname": "trim_2",
+    "old": "def trim_2(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_2(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_2 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 298334900,
+      "load_duration": 8806500,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3185610999998971,
+    "prompt_sha256": "1e0c21b965d5b97ddd5a8f08e17370eb0f388f13b292393597dabb6875ce4eb7"
+  },
+  "arithmetic-03:mutated": {
+    "task_id": "arithmetic-03:mutated",
+    "fixture_id": "arithmetic-03",
+    "arm": "mutated",
+    "qualname": "plus_3",
+    "old": "def plus_3(value: int) -> int:\n    return value + 3\n",
+    "current": "def plus_3(value: int) -> int:\n    return value - 3\n",
+    "claim": "plus_3 returns value plus 3.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 3",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 3",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 581421300,
+      "load_duration": 8064100,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 0.6084191999998438,
+    "prompt_sha256": "75c5ff0d67c5a386e9a5f890d0df62fee6ed21319e9a279773fd3471028de246"
+  },
+  "arithmetic-03:control": {
+    "task_id": "arithmetic-03:control",
+    "fixture_id": "arithmetic-03",
+    "arm": "control",
+    "qualname": "plus_3",
+    "old": "def plus_3(value: int) -> int:\n    return value + 3\n",
+    "current": "def plus_3(value: int) -> int:\n    return value + 3\n",
+    "claim": "plus_3 returns value plus 3.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 303933200,
+      "load_duration": 9901600,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.308920400000261,
+    "prompt_sha256": "494a03524b6b3cc42694e08397e4e46531c0509d1a990a716d469a8a1753db7f"
+  },
+  "condition-03:mutated": {
+    "task_id": "condition-03:mutated",
+    "fixture_id": "condition-03",
+    "arm": "mutated",
+    "qualname": "band_3",
+    "old": "def band_3(value: int) -> str:\n    if value < 9:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_3(value: int) -> str:\n    if value >= 9:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_3 returns 'low' when value is below 9.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 9, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 9, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 742680100,
+      "load_duration": 9260500,
+      "prompt_eval_count": 455,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7475306999999702,
+    "prompt_sha256": "3fc5bf37a2115d7232426d5e0528ef6e28bf3da673268fcf8dd31e7b004e7991"
+  },
+  "condition-03:control": {
+    "task_id": "condition-03:control",
+    "fixture_id": "condition-03",
+    "arm": "control",
+    "qualname": "band_3",
+    "old": "def band_3(value: int) -> str:\n    if value < 9:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_3(value: int) -> str:\n    if value < 9:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_3 returns 'low' when value is below 9.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 321123600,
+      "load_duration": 7302600,
+      "prompt_eval_count": 388,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3479858000000604,
+    "prompt_sha256": "4507a70260cbd42a0d5a2e165f67ea40be8628c80109d8cfeb2eab03b5b4c339"
+  },
+  "exception-03:mutated": {
+    "task_id": "exception-03:mutated",
+    "fixture_id": "exception-03",
+    "arm": "mutated",
+    "qualname": "nonnegative_3",
+    "old": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-3')\n    return value\n",
+    "current": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_3 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 596730200,
+      "load_duration": 9062000,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6017787000000681,
+    "prompt_sha256": "a828a1aeeb23bf0b74a945a3c11d4feedbbe9d24201a4ba0d403d3f395443b1f"
+  },
+  "exception-03:control": {
+    "task_id": "exception-03:control",
+    "fixture_id": "exception-03",
+    "arm": "control",
+    "qualname": "nonnegative_3",
+    "old": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-3')\n    return value\n",
+    "current": "def nonnegative_3(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-3')\n    return value\n",
+    "claim": "nonnegative_3 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 308688900,
+      "load_duration": 8432000,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.322988400000213,
+    "prompt_sha256": "b436f8409e28c6046d0b4191e00005dbfe3c1718d7228979bb968b3bc36fcb18"
+  },
+  "call-03:mutated": {
+    "task_id": "call-03:mutated",
+    "fixture_id": "call-03",
+    "arm": "mutated",
+    "qualname": "trim_3",
+    "old": "def trim_3(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_3(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_3 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 626956100,
+      "load_duration": 9444600,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6319459999999708,
+    "prompt_sha256": "71783abe379a6ea01bc49588efb937c617348bcd3de6f018c0d303e6a2d21117"
+  },
+  "call-03:control": {
+    "task_id": "call-03:control",
+    "fixture_id": "call-03",
+    "arm": "control",
+    "qualname": "trim_3",
+    "old": "def trim_3(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_3(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_3 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 310671300,
+      "load_duration": 8918200,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31513810000024023,
+    "prompt_sha256": "1f6322631313db312c4835bf889075209bcc052f15dc329534769a5872e03361"
+  },
+  "arithmetic-04:mutated": {
+    "task_id": "arithmetic-04:mutated",
+    "fixture_id": "arithmetic-04",
+    "arm": "mutated",
+    "qualname": "plus_4",
+    "old": "def plus_4(value: int) -> int:\n    return value + 4\n",
+    "current": "def plus_4(value: int) -> int:\n    return value - 4\n",
+    "claim": "plus_4 returns value plus 4.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value changed from `value + 4` to `value - 4`",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value changed from `value + 4` to `value - 4`",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 817414000,
+      "load_duration": 9154800,
+      "prompt_eval_count": 427,
+      "eval_count": 24
+    },
+    "elapsed_seconds": 0.8214968000002045,
+    "prompt_sha256": "6884d22477c7b7f5aeb66f82fccea197dcb154d8a75846cdcdccd3cf3522a7b6"
+  },
+  "arithmetic-04:control": {
+    "task_id": "arithmetic-04:control",
+    "fixture_id": "arithmetic-04",
+    "arm": "control",
+    "qualname": "plus_4",
+    "old": "def plus_4(value: int) -> int:\n    return value + 4\n",
+    "current": "def plus_4(value: int) -> int:\n    return value + 4\n",
+    "claim": "plus_4 returns value plus 4.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 314304400,
+      "load_duration": 9153800,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3191418999999769,
+    "prompt_sha256": "5174707be732409a9ffc7a02dfa6c7b585d95f405546a964adbc37f5b9381f56"
+  },
+  "condition-04:mutated": {
+    "task_id": "condition-04:mutated",
+    "fixture_id": "condition-04",
+    "arm": "mutated",
+    "qualname": "band_4",
+    "old": "def band_4(value: int) -> str:\n    if value < 12:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_4(value: int) -> str:\n    if value >= 12:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_4 returns 'low' when value is below 12.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "The condition was changed from `< 12` to `>= 12`.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- The condition was changed from `< 12` to `>= 12`.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 840682000,
+      "load_duration": 8030200,
+      "prompt_eval_count": 459,
+      "eval_count": 24
+    },
+    "elapsed_seconds": 0.8580974000001333,
+    "prompt_sha256": "1a4696951dce4218311b43347f8ebc4cef9b89e955ac7fd7f41abb334608e4ec"
+  },
+  "condition-04:control": {
+    "task_id": "condition-04:control",
+    "fixture_id": "condition-04",
+    "arm": "control",
+    "qualname": "band_4",
+    "old": "def band_4(value: int) -> str:\n    if value < 12:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_4(value: int) -> str:\n    if value < 12:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_4 returns 'low' when value is below 12.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 322759500,
+      "load_duration": 8200000,
+      "prompt_eval_count": 390,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3273318000001382,
+    "prompt_sha256": "b88db681ce87f780885995aa0f08fd7b611efa8a6254ff93b2d034ab699da50e"
+  },
+  "exception-04:mutated": {
+    "task_id": "exception-04:mutated",
+    "fixture_id": "exception-04",
+    "arm": "mutated",
+    "qualname": "nonnegative_4",
+    "old": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-4')\n    return value\n",
+    "current": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_4 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return 0 instead of raising ValueError",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return 0 instead of raising ValueError",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 596206300,
+      "load_duration": 8334500,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6010479999999916,
+    "prompt_sha256": "566cf516f7fc9297de5be9737dabb84fad2c88640f2e2a8d51563c5e3924aa85"
+  },
+  "exception-04:control": {
+    "task_id": "exception-04:control",
+    "fixture_id": "exception-04",
+    "arm": "control",
+    "qualname": "nonnegative_4",
+    "old": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-4')\n    return value\n",
+    "current": "def nonnegative_4(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-4')\n    return value\n",
+    "claim": "nonnegative_4 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 316393000,
+      "load_duration": 9477700,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32108240000025035,
+    "prompt_sha256": "fb72f623c6b98b0b79413a34163213425fcc5a2b4b559e94cb7249aa06923ddb"
+  },
+  "call-04:mutated": {
+    "task_id": "call-04:mutated",
+    "fixture_id": "call-04",
+    "arm": "mutated",
+    "qualname": "trim_4",
+    "old": "def trim_4(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_4(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_4 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 641633600,
+      "load_duration": 8760300,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6475792999999612,
+    "prompt_sha256": "38f61ae5e555ac087525c0f2322bfdad4a98ad1f79cfc9ac07dd062214f26cd9"
+  },
+  "call-04:control": {
+    "task_id": "call-04:control",
+    "fixture_id": "call-04",
+    "arm": "control",
+    "qualname": "trim_4",
+    "old": "def trim_4(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_4(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_4 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 317433300,
+      "load_duration": 11983900,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3219343000000663,
+    "prompt_sha256": "9258ecec86ece0d9ea8ef4c7ff14653636b5db16fa113c35ea3641e9c5b71060"
+  },
+  "arithmetic-05:mutated": {
+    "task_id": "arithmetic-05:mutated",
+    "fixture_id": "arithmetic-05",
+    "arm": "mutated",
+    "qualname": "plus_5",
+    "old": "def plus_5(value: int) -> int:\n    return value + 5\n",
+    "current": "def plus_5(value: int) -> int:\n    return value - 5\n",
+    "claim": "plus_5 returns value plus 5.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 5",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 5",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 569619100,
+      "load_duration": 7847300,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 0.5949421000000257,
+    "prompt_sha256": "0b69a94e8c447246927f9685082247500d6c8df9970f04fcb009fdc4c826e194"
+  },
+  "arithmetic-05:control": {
+    "task_id": "arithmetic-05:control",
+    "fixture_id": "arithmetic-05",
+    "arm": "control",
+    "qualname": "plus_5",
+    "old": "def plus_5(value: int) -> int:\n    return value + 5\n",
+    "current": "def plus_5(value: int) -> int:\n    return value + 5\n",
+    "claim": "plus_5 returns value plus 5.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 296843300,
+      "load_duration": 9527000,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3135747999999694,
+    "prompt_sha256": "af7cabcb64e40188fa08ef239019a529ae55a1c8c1b5467ecf771f056ce7adf6"
+  },
+  "condition-05:mutated": {
+    "task_id": "condition-05:mutated",
+    "fixture_id": "condition-05",
+    "arm": "mutated",
+    "qualname": "band_5",
+    "old": "def band_5(value: int) -> str:\n    if value < 15:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_5(value: int) -> str:\n    if value >= 15:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_5 returns 'low' when value is below 15.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 15, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 15, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 730275400,
+      "load_duration": 7663100,
+      "prompt_eval_count": 459,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7516250000003311,
+    "prompt_sha256": "d8df4d4c0750d9690572a1ddb6df8753638546b95020e822899d7af61ad46c40"
+  },
+  "condition-05:control": {
+    "task_id": "condition-05:control",
+    "fixture_id": "condition-05",
+    "arm": "control",
+    "qualname": "band_5",
+    "old": "def band_5(value: int) -> str:\n    if value < 15:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_5(value: int) -> str:\n    if value < 15:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_5 returns 'low' when value is below 15.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 314623100,
+      "load_duration": 10856400,
+      "prompt_eval_count": 390,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31873099999984333,
+    "prompt_sha256": "52ac652d09c4f28a21992dfcf28ecf550e769a7935d665ca5c5fc19dc53f91bb"
+  },
+  "exception-05:mutated": {
+    "task_id": "exception-05:mutated",
+    "fixture_id": "exception-05",
+    "arm": "mutated",
+    "qualname": "nonnegative_5",
+    "old": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-5')\n    return value\n",
+    "current": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_5 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 572788800,
+      "load_duration": 8225400,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6163308000000143,
+    "prompt_sha256": "1a4ef7946824ce2b31cb1e2e55fcfadec58669bdf0c16a2021135eff56744d1f"
+  },
+  "exception-05:control": {
+    "task_id": "exception-05:control",
+    "fixture_id": "exception-05",
+    "arm": "control",
+    "qualname": "nonnegative_5",
+    "old": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-5')\n    return value\n",
+    "current": "def nonnegative_5(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-5')\n    return value\n",
+    "claim": "nonnegative_5 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 288195700,
+      "load_duration": 7502800,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.29288869999982126,
+    "prompt_sha256": "4c3bb2a7058af3a0228ee6dbfff209d500d4cfa9028fcfb4d373f016cac46bd2"
+  },
+  "call-05:mutated": {
+    "task_id": "call-05:mutated",
+    "fixture_id": "call-05",
+    "arm": "mutated",
+    "qualname": "trim_5",
+    "old": "def trim_5(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_5(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_5 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 618511600,
+      "load_duration": 12078900,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6227226000000883,
+    "prompt_sha256": "e3a754ea10384ea26eef9413dd8905e022a1313548ae24f17a6398fa06d8de70"
+  },
+  "call-05:control": {
+    "task_id": "call-05:control",
+    "fixture_id": "call-05",
+    "arm": "control",
+    "qualname": "trim_5",
+    "old": "def trim_5(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_5(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_5 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 291929000,
+      "load_duration": 7998100,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.2958592999998473,
+    "prompt_sha256": "ef8f8c10096b5854cdd7103fba222c654941dd1d9632e8e9b4a4d26eaac0dc28"
+  },
+  "arithmetic-06:mutated": {
+    "task_id": "arithmetic-06:mutated",
+    "fixture_id": "arithmetic-06",
+    "arm": "mutated",
+    "qualname": "plus_6",
+    "old": "def plus_6(value: int) -> int:\n    return value + 6\n",
+    "current": "def plus_6(value: int) -> int:\n    return value - 6\n",
+    "claim": "plus_6 returns value plus 6.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 6",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 6",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 556951100,
+      "load_duration": 7649100,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 0.5615050999999767,
+    "prompt_sha256": "804303c34759869123bff362cb620f02dec0ce1706df7be7e85c3baa6a27ce94"
+  },
+  "arithmetic-06:control": {
+    "task_id": "arithmetic-06:control",
+    "fixture_id": "arithmetic-06",
+    "arm": "control",
+    "qualname": "plus_6",
+    "old": "def plus_6(value: int) -> int:\n    return value + 6\n",
+    "current": "def plus_6(value: int) -> int:\n    return value + 6\n",
+    "claim": "plus_6 returns value plus 6.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 303143700,
+      "load_duration": 10990300,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31001400000013746,
+    "prompt_sha256": "3133f41fbf32656bd3efd273a950028b603585ab1c1b4dc1f4306137fda5404c"
+  },
+  "condition-06:mutated": {
+    "task_id": "condition-06:mutated",
+    "fixture_id": "condition-06",
+    "arm": "mutated",
+    "qualname": "band_6",
+    "old": "def band_6(value: int) -> str:\n    if value < 18:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_6(value: int) -> str:\n    if value >= 18:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_6 returns 'low' when value is below 18.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 18, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 18, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 763779600,
+      "load_duration": 8570000,
+      "prompt_eval_count": 459,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7916160999998283,
+    "prompt_sha256": "53ce3d0903bb16b67976f040061416bbfb8ff7bbfa591d5179adad3d4e45e25c"
+  },
+  "condition-06:control": {
+    "task_id": "condition-06:control",
+    "fixture_id": "condition-06",
+    "arm": "control",
+    "qualname": "band_6",
+    "old": "def band_6(value: int) -> str:\n    if value < 18:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_6(value: int) -> str:\n    if value < 18:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_6 returns 'low' when value is below 18.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 317048000,
+      "load_duration": 8264500,
+      "prompt_eval_count": 390,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3410299000001942,
+    "prompt_sha256": "aa229ac76498d67e55f4e9d5c2285625d11f468d362ba7f0348436364c1cc603"
+  },
+  "exception-06:mutated": {
+    "task_id": "exception-06:mutated",
+    "fixture_id": "exception-06",
+    "arm": "mutated",
+    "qualname": "nonnegative_6",
+    "old": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-6')\n    return value\n",
+    "current": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_6 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return 0 instead of raising ValueError",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return 0 instead of raising ValueError",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 581178800,
+      "load_duration": 9398900,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5852101000000403,
+    "prompt_sha256": "08691f11873ed9a9683e91e7eeaf746f85895cad39ebc7565f14ca1d006d17c5"
+  },
+  "exception-06:control": {
+    "task_id": "exception-06:control",
+    "fixture_id": "exception-06",
+    "arm": "control",
+    "qualname": "nonnegative_6",
+    "old": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-6')\n    return value\n",
+    "current": "def nonnegative_6(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-6')\n    return value\n",
+    "claim": "nonnegative_6 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 314469700,
+      "load_duration": 7825100,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3441358999998556,
+    "prompt_sha256": "d1890d34fafb8c797f8d41fba82d96a0b2ab85b67ae4c9ee1539133ce1451449"
+  },
+  "call-06:mutated": {
+    "task_id": "call-06:mutated",
+    "fixture_id": "call-06",
+    "arm": "mutated",
+    "qualname": "trim_6",
+    "old": "def trim_6(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_6(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_6 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 626813300,
+      "load_duration": 9263800,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6490672999998424,
+    "prompt_sha256": "a993f653f229fc73fe8da97033beb036810eb3e3be3d74d2ad6fe8b5e5379066"
+  },
+  "call-06:control": {
+    "task_id": "call-06:control",
+    "fixture_id": "call-06",
+    "arm": "control",
+    "qualname": "trim_6",
+    "old": "def trim_6(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_6(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_6 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305081900,
+      "load_duration": 8523600,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3101873999999043,
+    "prompt_sha256": "7c0652b020c4b47bf2705466f7baaec7a7ed425cfd0b1008da5f23e5a79a636b"
+  },
+  "arithmetic-07:mutated": {
+    "task_id": "arithmetic-07:mutated",
+    "fixture_id": "arithmetic-07",
+    "arm": "mutated",
+    "qualname": "plus_7",
+    "old": "def plus_7(value: int) -> int:\n    return value + 7\n",
+    "current": "def plus_7(value: int) -> int:\n    return value - 7\n",
+    "claim": "plus_7 returns value plus 7.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 7",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 7",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 592764100,
+      "load_duration": 9728900,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 0.5971928999997544,
+    "prompt_sha256": "0315fd9904826c2aad292393d3635850848e179480514ebe4c7d5c6ac7d3300d"
+  },
+  "arithmetic-07:control": {
+    "task_id": "arithmetic-07:control",
+    "fixture_id": "arithmetic-07",
+    "arm": "control",
+    "qualname": "plus_7",
+    "old": "def plus_7(value: int) -> int:\n    return value + 7\n",
+    "current": "def plus_7(value: int) -> int:\n    return value + 7\n",
+    "claim": "plus_7 returns value plus 7.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 304127200,
+      "load_duration": 8211400,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32822889999988547,
+    "prompt_sha256": "58950063781a8bb095f2ab21602652c762eb2f4a3e5fd3908e6477c276da1265"
+  },
+  "condition-07:mutated": {
+    "task_id": "condition-07:mutated",
+    "fixture_id": "condition-07",
+    "arm": "mutated",
+    "qualname": "band_7",
+    "old": "def band_7(value: int) -> str:\n    if value < 21:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_7(value: int) -> str:\n    if value >= 21:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_7 returns 'low' when value is below 21.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 21, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 21, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 763294500,
+      "load_duration": 8834800,
+      "prompt_eval_count": 459,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7676941999998235,
+    "prompt_sha256": "a53ba696dca4aae8aeb32845992c5a0df4a313b3b295985df1c6c0b53007876f"
+  },
+  "condition-07:control": {
+    "task_id": "condition-07:control",
+    "fixture_id": "condition-07",
+    "arm": "control",
+    "qualname": "band_7",
+    "old": "def band_7(value: int) -> str:\n    if value < 21:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_7(value: int) -> str:\n    if value < 21:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_7 returns 'low' when value is below 21.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 327977000,
+      "load_duration": 8593800,
+      "prompt_eval_count": 390,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.35078329999987545,
+    "prompt_sha256": "48d0a3fbb7e614c7f49f3bfdf93823484e64389310c777971443de486da98879"
+  },
+  "exception-07:mutated": {
+    "task_id": "exception-07:mutated",
+    "fixture_id": "exception-07",
+    "arm": "mutated",
+    "qualname": "nonnegative_7",
+    "old": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-7')\n    return value\n",
+    "current": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_7 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return 0 instead of raising ValueError",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return 0 instead of raising ValueError",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 590461100,
+      "load_duration": 10303500,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.595069599999988,
+    "prompt_sha256": "78991c40750f5e33b52f182966466df7ba41535cfe48a35bc2d266bd6b11c2d5"
+  },
+  "exception-07:control": {
+    "task_id": "exception-07:control",
+    "fixture_id": "exception-07",
+    "arm": "control",
+    "qualname": "nonnegative_7",
+    "old": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-7')\n    return value\n",
+    "current": "def nonnegative_7(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-7')\n    return value\n",
+    "claim": "nonnegative_7 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 299570000,
+      "load_duration": 8573800,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.30485540000017863,
+    "prompt_sha256": "749312656a3954f2b13278c11ef32cff7ab5a27290cd5e4005c73fd8d1d14df4"
+  },
+  "call-07:mutated": {
+    "task_id": "call-07:mutated",
+    "fixture_id": "call-07",
+    "arm": "mutated",
+    "qualname": "trim_7",
+    "old": "def trim_7(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_7(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_7 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 622789400,
+      "load_duration": 7424300,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6275439000000915,
+    "prompt_sha256": "28fdb11a92bf158ec90f52386d88dec6eb37be28e2a2c25b2f9b5c1e48d176f9"
+  },
+  "call-07:control": {
+    "task_id": "call-07:control",
+    "fixture_id": "call-07",
+    "arm": "control",
+    "qualname": "trim_7",
+    "old": "def trim_7(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_7(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_7 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 340020100,
+      "load_duration": 33895700,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.34430380000003424,
+    "prompt_sha256": "b8aa352b33fe0106af70c3b8ac5673e8f6a25a1d41711d0d7445cedfc4004b4a"
+  },
+  "arithmetic-08:mutated": {
+    "task_id": "arithmetic-08:mutated",
+    "fixture_id": "arithmetic-08",
+    "arm": "mutated",
+    "qualname": "plus_8",
+    "old": "def plus_8(value: int) -> int:\n    return value + 8\n",
+    "current": "def plus_8(value: int) -> int:\n    return value - 8\n",
+    "claim": "plus_8 returns value plus 8.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 8",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 8",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 571823400,
+      "load_duration": 7404800,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 0.5955942000000505,
+    "prompt_sha256": "f9250371fd354751852ef96ba991b639c5af41add7f458aeb659abbf1e93d813"
+  },
+  "arithmetic-08:control": {
+    "task_id": "arithmetic-08:control",
+    "fixture_id": "arithmetic-08",
+    "arm": "control",
+    "qualname": "plus_8",
+    "old": "def plus_8(value: int) -> int:\n    return value + 8\n",
+    "current": "def plus_8(value: int) -> int:\n    return value + 8\n",
+    "claim": "plus_8 returns value plus 8.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 302893000,
+      "load_duration": 7493600,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3070947999999589,
+    "prompt_sha256": "841e872755a4535f384f1a8793f650999005d2cb9ed8af5b9002336c3c350739"
+  },
+  "condition-08:mutated": {
+    "task_id": "condition-08:mutated",
+    "fixture_id": "condition-08",
+    "arm": "mutated",
+    "qualname": "band_8",
+    "old": "def band_8(value: int) -> str:\n    if value < 24:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_8(value: int) -> str:\n    if value >= 24:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_8 returns 'low' when value is below 24.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 24, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 24, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 751845300,
+      "load_duration": 8085800,
+      "prompt_eval_count": 459,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.8077500999997937,
+    "prompt_sha256": "c46e4a2c8a11916d86f14ad6d63a8f262df4e99b30312440775faa28b025aace"
+  },
+  "condition-08:control": {
+    "task_id": "condition-08:control",
+    "fixture_id": "condition-08",
+    "arm": "control",
+    "qualname": "band_8",
+    "old": "def band_8(value: int) -> str:\n    if value < 24:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_8(value: int) -> str:\n    if value < 24:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_8 returns 'low' when value is below 24.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 321100300,
+      "load_duration": 8617800,
+      "prompt_eval_count": 390,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.326390100000026,
+    "prompt_sha256": "4d930b1e0233ddad526191bf7f2dca38033b9ce1c3ae033bf71e5c0ada246403"
+  },
+  "exception-08:mutated": {
+    "task_id": "exception-08:mutated",
+    "fixture_id": "exception-08",
+    "arm": "mutated",
+    "qualname": "nonnegative_8",
+    "old": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-8')\n    return value\n",
+    "current": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_8 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 589689900,
+      "load_duration": 7999900,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5947133999998186,
+    "prompt_sha256": "3e063931c276d8ba6955c98d238cd9b7994fb5d19dedbfe3a42ffb0cf35700ea"
+  },
+  "exception-08:control": {
+    "task_id": "exception-08:control",
+    "fixture_id": "exception-08",
+    "arm": "control",
+    "qualname": "nonnegative_8",
+    "old": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-8')\n    return value\n",
+    "current": "def nonnegative_8(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-8')\n    return value\n",
+    "claim": "nonnegative_8 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 303085700,
+      "load_duration": 8150300,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3078789000001052,
+    "prompt_sha256": "df2e38ae9dc9fa38fd8459253931e1b677fe816e44fa86cb4638db93fed5f63a"
+  },
+  "call-08:mutated": {
+    "task_id": "call-08:mutated",
+    "fixture_id": "call-08",
+    "arm": "mutated",
+    "qualname": "trim_8",
+    "old": "def trim_8(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_8(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_8 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 622305900,
+      "load_duration": 7970900,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6270001000002594,
+    "prompt_sha256": "1cc1c7cc2cde452ff285ce7bb5bf18b6a502513d6c60da4a8ece4615c95644e8"
+  },
+  "call-08:control": {
+    "task_id": "call-08:control",
+    "fixture_id": "call-08",
+    "arm": "control",
+    "qualname": "trim_8",
+    "old": "def trim_8(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_8(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_8 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305919900,
+      "load_duration": 9151500,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3103458000000501,
+    "prompt_sha256": "c263e280f6ae925dcd9d73fe2672c80e96ebc54f1871915baa4abafa59b3f108"
+  },
+  "arithmetic-09:mutated": {
+    "task_id": "arithmetic-09:mutated",
+    "fixture_id": "arithmetic-09",
+    "arm": "mutated",
+    "qualname": "plus_9",
+    "old": "def plus_9(value: int) -> int:\n    return value + 9\n",
+    "current": "def plus_9(value: int) -> int:\n    return value - 9\n",
+    "claim": "plus_9 returns value plus 9.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 9",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 9",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 578667100,
+      "load_duration": 9099400,
+      "prompt_eval_count": 427,
+      "eval_count": 15
+    },
+    "elapsed_seconds": 0.6000552999998945,
+    "prompt_sha256": "d7e26d4bbf1da23b369760aa32e1a971fe8972affaf6615e3046b37ab18e4695"
+  },
+  "arithmetic-09:control": {
+    "task_id": "arithmetic-09:control",
+    "fixture_id": "arithmetic-09",
+    "arm": "control",
+    "qualname": "plus_9",
+    "old": "def plus_9(value: int) -> int:\n    return value + 9\n",
+    "current": "def plus_9(value: int) -> int:\n    return value + 9\n",
+    "claim": "plus_9 returns value plus 9.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 300036000,
+      "load_duration": 9111900,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3154822999999851,
+    "prompt_sha256": "222121c9f939a67477de5f8f69b6def694b196af9a3a4f9c62c93bea50e36fa7"
+  },
+  "condition-09:mutated": {
+    "task_id": "condition-09:mutated",
+    "fixture_id": "condition-09",
+    "arm": "mutated",
+    "qualname": "band_9",
+    "old": "def band_9(value: int) -> str:\n    if value < 27:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_9(value: int) -> str:\n    if value >= 27:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_9 returns 'low' when value is below 27.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 27, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 27, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 758342300,
+      "load_duration": 8262800,
+      "prompt_eval_count": 459,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7632520000001932,
+    "prompt_sha256": "52f6a56309afe4c1eb2e27b1ac86526bb40d30d2ca0fcdc65312970902127c0d"
+  },
+  "condition-09:control": {
+    "task_id": "condition-09:control",
+    "fixture_id": "condition-09",
+    "arm": "control",
+    "qualname": "band_9",
+    "old": "def band_9(value: int) -> str:\n    if value < 27:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_9(value: int) -> str:\n    if value < 27:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_9 returns 'low' when value is below 27.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 322768300,
+      "load_duration": 8620400,
+      "prompt_eval_count": 390,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3271335999997973,
+    "prompt_sha256": "c583c542b248b2a0c81a2180fdf5ad30339263a6bed1635d17cbfdb41293981b"
+  },
+  "exception-09:mutated": {
+    "task_id": "exception-09:mutated",
+    "fixture_id": "exception-09",
+    "arm": "mutated",
+    "qualname": "nonnegative_9",
+    "old": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-9')\n    return value\n",
+    "current": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_9 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return 0 instead of raising ValueError",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return 0 instead of raising ValueError",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 589634900,
+      "load_duration": 8709700,
+      "prompt_eval_count": 452,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5945173999998588,
+    "prompt_sha256": "e364610e9f2f975701b3315c6be06be356fb3f53b8032f6f1604193fc3c011a2"
+  },
+  "exception-09:control": {
+    "task_id": "exception-09:control",
+    "fixture_id": "exception-09",
+    "arm": "control",
+    "qualname": "nonnegative_9",
+    "old": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-9')\n    return value\n",
+    "current": "def nonnegative_9(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-9')\n    return value\n",
+    "claim": "nonnegative_9 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 308007300,
+      "load_duration": 7419800,
+      "prompt_eval_count": 386,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3425262999999177,
+    "prompt_sha256": "6e118999bd0135ceda9934bc3d75a9c0906a4d39f2a175ea3158ccbb5b183894"
+  },
+  "call-09:mutated": {
+    "task_id": "call-09:mutated",
+    "fixture_id": "call-09",
+    "arm": "mutated",
+    "qualname": "trim_9",
+    "old": "def trim_9(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_9(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_9 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 629596100,
+      "load_duration": 8474000,
+      "prompt_eval_count": 419,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6512935000000653,
+    "prompt_sha256": "c49ba9fdfa446b51f711484eb66421c9b1462e847779e93f644b9d6e92dd2d5b"
+  },
+  "call-09:control": {
+    "task_id": "call-09:control",
+    "fixture_id": "call-09",
+    "arm": "control",
+    "qualname": "trim_9",
+    "old": "def trim_9(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_9(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_9 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 304437700,
+      "load_duration": 8646500,
+      "prompt_eval_count": 366,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3093140000000858,
+    "prompt_sha256": "09a51233eb3ebb07b7cc439174152cd3ac5fc5d226ace0ef6b287fba19e0c819"
+  },
+  "arithmetic-10:mutated": {
+    "task_id": "arithmetic-10:mutated",
+    "fixture_id": "arithmetic-10",
+    "arm": "mutated",
+    "qualname": "plus_10",
+    "old": "def plus_10(value: int) -> int:\n    return value + 10\n",
+    "current": "def plus_10(value: int) -> int:\n    return value - 10\n",
+    "claim": "plus_10 returns value plus 10.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 10",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 10",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 640486700,
+      "load_duration": 8098800,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6454131000000416,
+    "prompt_sha256": "0f3d8ddc2f59c169cbef83cd74deffcb7be29755dc6f0953336a52376d0c0e3e"
+  },
+  "arithmetic-10:control": {
+    "task_id": "arithmetic-10:control",
+    "fixture_id": "arithmetic-10",
+    "arm": "control",
+    "qualname": "plus_10",
+    "old": "def plus_10(value: int) -> int:\n    return value + 10\n",
+    "current": "def plus_10(value: int) -> int:\n    return value + 10\n",
+    "claim": "plus_10 returns value plus 10.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 303557900,
+      "load_duration": 8641300,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.33473659999981464,
+    "prompt_sha256": "6515479192581cdb501575b7c9e0e4ae6835bf0f53be4865317a26f788eca4c3"
+  },
+  "condition-10:mutated": {
+    "task_id": "condition-10:mutated",
+    "fixture_id": "condition-10",
+    "arm": "mutated",
+    "qualname": "band_10",
+    "old": "def band_10(value: int) -> str:\n    if value < 30:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_10(value: int) -> str:\n    if value >= 30:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_10 returns 'low' when value is below 30.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 30, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 30, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 758710900,
+      "load_duration": 8304800,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7642366000000038,
+    "prompt_sha256": "e02a499fd0461a0379e101e6a33142c9c6383fcd20c381cd1e853f836a6ce27e"
+  },
+  "condition-10:control": {
+    "task_id": "condition-10:control",
+    "fixture_id": "condition-10",
+    "arm": "control",
+    "qualname": "band_10",
+    "old": "def band_10(value: int) -> str:\n    if value < 30:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_10(value: int) -> str:\n    if value < 30:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_10 returns 'low' when value is below 30.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 324716900,
+      "load_duration": 9064900,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32956370000010793,
+    "prompt_sha256": "8c816ce1614c0d7b7ea31b9ab0b3f309f85450fc065212a28caf7000e4bdcba6"
+  },
+  "exception-10:mutated": {
+    "task_id": "exception-10:mutated",
+    "fixture_id": "exception-10",
+    "arm": "mutated",
+    "qualname": "nonnegative_10",
+    "old": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-10')\n    return value\n",
+    "current": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_10 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 586556000,
+      "load_duration": 7965700,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5929934000000685,
+    "prompt_sha256": "960b9acd5bcd46e6845c6cdc21bc20dd2734e905e5d537db43d61b068c1686e2"
+  },
+  "exception-10:control": {
+    "task_id": "exception-10:control",
+    "fixture_id": "exception-10",
+    "arm": "control",
+    "qualname": "nonnegative_10",
+    "old": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-10')\n    return value\n",
+    "current": "def nonnegative_10(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-10')\n    return value\n",
+    "claim": "nonnegative_10 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 304923800,
+      "load_duration": 8909800,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3094685999999456,
+    "prompt_sha256": "08f23cae1ef0653c441252e46c097b2621ae17afd73cdd4f38b2da5d510aa963"
+  },
+  "call-10:mutated": {
+    "task_id": "call-10:mutated",
+    "fixture_id": "call-10",
+    "arm": "mutated",
+    "qualname": "trim_10",
+    "old": "def trim_10(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_10(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_10 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 622831000,
+      "load_duration": 8448500,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6277297000001454,
+    "prompt_sha256": "b71fa3d464a5f8a91a1b5638213820f8aa889ea77bfd94c686009e2fae06ebc7"
+  },
+  "call-10:control": {
+    "task_id": "call-10:control",
+    "fixture_id": "call-10",
+    "arm": "control",
+    "qualname": "trim_10",
+    "old": "def trim_10(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_10(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_10 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 308348100,
+      "load_duration": 8520200,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31249909999996817,
+    "prompt_sha256": "0ac60335cb0abd9e035d0adfb805e4873d99695530d5ffa55f0b5a040037f129"
+  },
+  "arithmetic-11:mutated": {
+    "task_id": "arithmetic-11:mutated",
+    "fixture_id": "arithmetic-11",
+    "arm": "mutated",
+    "qualname": "plus_11",
+    "old": "def plus_11(value: int) -> int:\n    return value + 11\n",
+    "current": "def plus_11(value: int) -> int:\n    return value - 11\n",
+    "claim": "plus_11 returns value plus 11.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 11 instead of value + 11",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 11 instead of value + 11",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 726620300,
+      "load_duration": 8846400,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7317140000000109,
+    "prompt_sha256": "6f80459d6219f841181731232668033c3fc1ee0d7d2bd6e2d4877c34d228c3e8"
+  },
+  "arithmetic-11:control": {
+    "task_id": "arithmetic-11:control",
+    "fixture_id": "arithmetic-11",
+    "arm": "control",
+    "qualname": "plus_11",
+    "old": "def plus_11(value: int) -> int:\n    return value + 11\n",
+    "current": "def plus_11(value: int) -> int:\n    return value + 11\n",
+    "claim": "plus_11 returns value plus 11.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305198300,
+      "load_duration": 9796100,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.33236299999998664,
+    "prompt_sha256": "76dadfc24a0eef7b04472b96c913ff4ab3c647c185b0e95fc721455548c3f35c"
+  },
+  "condition-11:mutated": {
+    "task_id": "condition-11:mutated",
+    "fixture_id": "condition-11",
+    "arm": "mutated",
+    "qualname": "band_11",
+    "old": "def band_11(value: int) -> str:\n    if value < 33:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_11(value: int) -> str:\n    if value >= 33:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_11 returns 'low' when value is below 33.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 33, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 33, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 754906000,
+      "load_duration": 7672900,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.76024550000011,
+    "prompt_sha256": "33b9375d21e807e20deb1b1a29a0fa46b3518da441a730154deb606513ee5597"
+  },
+  "condition-11:control": {
+    "task_id": "condition-11:control",
+    "fixture_id": "condition-11",
+    "arm": "control",
+    "qualname": "band_11",
+    "old": "def band_11(value: int) -> str:\n    if value < 33:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_11(value: int) -> str:\n    if value < 33:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_11 returns 'low' when value is below 33.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 319619400,
+      "load_duration": 7442100,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3238438000003043,
+    "prompt_sha256": "0ddda624b247f8c4d5e07dd30983ff8abe3ec7f0a4e435e729d236c3e2d8d98f"
+  },
+  "exception-11:mutated": {
+    "task_id": "exception-11:mutated",
+    "fixture_id": "exception-11",
+    "arm": "mutated",
+    "qualname": "nonnegative_11",
+    "old": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-11')\n    return value\n",
+    "current": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_11 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 586586700,
+      "load_duration": 8107800,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.602845200000047,
+    "prompt_sha256": "3a9fd59510a27ef34484228586dc1d860c42a54b9b58df55b08f4dea6a4acb3a"
+  },
+  "exception-11:control": {
+    "task_id": "exception-11:control",
+    "fixture_id": "exception-11",
+    "arm": "control",
+    "qualname": "nonnegative_11",
+    "old": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-11')\n    return value\n",
+    "current": "def nonnegative_11(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-11')\n    return value\n",
+    "claim": "nonnegative_11 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 308023800,
+      "load_duration": 8782000,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3128927000002477,
+    "prompt_sha256": "1209c6a2f87ce3d0e083d70891ff10271e26d15d24558862501870f62581121e"
+  },
+  "call-11:mutated": {
+    "task_id": "call-11:mutated",
+    "fixture_id": "call-11",
+    "arm": "mutated",
+    "qualname": "trim_11",
+    "old": "def trim_11(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_11(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_11 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 623244100,
+      "load_duration": 9081600,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.628197900000032,
+    "prompt_sha256": "cdbad51fcccaff34ad09e0fd1026f685ab6b8e6483dfe18a58314d39a8673f49"
+  },
+  "call-11:control": {
+    "task_id": "call-11:control",
+    "fixture_id": "call-11",
+    "arm": "control",
+    "qualname": "trim_11",
+    "old": "def trim_11(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_11(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_11 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305551000,
+      "load_duration": 9742400,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31002410000019154,
+    "prompt_sha256": "cfd2ba8fddcd727f9c95fbb35d5757d3aaa03d59865fd51251c03e730cef5d07"
+  },
+  "arithmetic-12:mutated": {
+    "task_id": "arithmetic-12:mutated",
+    "fixture_id": "arithmetic-12",
+    "arm": "mutated",
+    "qualname": "plus_12",
+    "old": "def plus_12(value: int) -> int:\n    return value + 12\n",
+    "current": "def plus_12(value: int) -> int:\n    return value - 12\n",
+    "claim": "plus_12 returns value plus 12.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 12",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 12",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 637748700,
+      "load_duration": 9130100,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6429884000003767,
+    "prompt_sha256": "98f5acab42351a7814bcc0e656ae9f4c52fce0cd479d0c5f08dde3b26a00fbb7"
+  },
+  "arithmetic-12:control": {
+    "task_id": "arithmetic-12:control",
+    "fixture_id": "arithmetic-12",
+    "arm": "control",
+    "qualname": "plus_12",
+    "old": "def plus_12(value: int) -> int:\n    return value + 12\n",
+    "current": "def plus_12(value: int) -> int:\n    return value + 12\n",
+    "claim": "plus_12 returns value plus 12.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305635500,
+      "load_duration": 8310200,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3102904999996099,
+    "prompt_sha256": "8fdb89779feb133cec745c83504f53448644f5e518270c38d1e569bd19f53042"
+  },
+  "condition-12:mutated": {
+    "task_id": "condition-12:mutated",
+    "fixture_id": "condition-12",
+    "arm": "mutated",
+    "qualname": "band_12",
+    "old": "def band_12(value: int) -> str:\n    if value < 36:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_12(value: int) -> str:\n    if value >= 36:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_12 returns 'low' when value is below 36.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 36, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 36, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 759400500,
+      "load_duration": 8667800,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7800398999997924,
+    "prompt_sha256": "4263c4f053770f1a267daad9a45e57df7e347d35630a698def67bdbad59e3d45"
+  },
+  "condition-12:control": {
+    "task_id": "condition-12:control",
+    "fixture_id": "condition-12",
+    "arm": "control",
+    "qualname": "band_12",
+    "old": "def band_12(value: int) -> str:\n    if value < 36:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_12(value: int) -> str:\n    if value < 36:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_12 returns 'low' when value is below 36.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 319913800,
+      "load_duration": 8142000,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3244852000002538,
+    "prompt_sha256": "a167ae2053122b9e6cdef430bd818945111cedce21f1895e1c1f01414329afe6"
+  },
+  "exception-12:mutated": {
+    "task_id": "exception-12:mutated",
+    "fixture_id": "exception-12",
+    "arm": "mutated",
+    "qualname": "nonnegative_12",
+    "old": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-12')\n    return value\n",
+    "current": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_12 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 588304300,
+      "load_duration": 7951300,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6102885999998762,
+    "prompt_sha256": "5445f983e5bfa6e9a2945550547c5930a4c000d8a9cfe6f4d3a4aded3ad8a0ea"
+  },
+  "exception-12:control": {
+    "task_id": "exception-12:control",
+    "fixture_id": "exception-12",
+    "arm": "control",
+    "qualname": "nonnegative_12",
+    "old": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-12')\n    return value\n",
+    "current": "def nonnegative_12(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-12')\n    return value\n",
+    "claim": "nonnegative_12 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 311985500,
+      "load_duration": 8431700,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3289285999999265,
+    "prompt_sha256": "77639cc6954f09074e5c8ed65a3ef105962e3e8d360bb387319a030c279a3e1e"
+  },
+  "call-12:mutated": {
+    "task_id": "call-12:mutated",
+    "fixture_id": "call-12",
+    "arm": "mutated",
+    "qualname": "trim_12",
+    "old": "def trim_12(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_12(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_12 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 620875700,
+      "load_duration": 7301700,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6261650000001282,
+    "prompt_sha256": "32234608210183e747470d2e50923eb79b77fb083b90cd3df92daed00d2d49a8"
+  },
+  "call-12:control": {
+    "task_id": "call-12:control",
+    "fixture_id": "call-12",
+    "arm": "control",
+    "qualname": "trim_12",
+    "old": "def trim_12(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_12(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_12 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 302064800,
+      "load_duration": 8772700,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.30594609999980094,
+    "prompt_sha256": "c8d49c4c24f55244773b625fd5fcac9d720259565d9f11b21fa560f31e2aded0"
+  },
+  "arithmetic-13:mutated": {
+    "task_id": "arithmetic-13:mutated",
+    "fixture_id": "arithmetic-13",
+    "arm": "mutated",
+    "qualname": "plus_13",
+    "old": "def plus_13(value: int) -> int:\n    return value + 13\n",
+    "current": "def plus_13(value: int) -> int:\n    return value - 13\n",
+    "claim": "plus_13 returns value plus 13.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 13",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 13",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 641106400,
+      "load_duration": 8727000,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6584339000000909,
+    "prompt_sha256": "e19f70aafe3a72b27ac2cfec61b613e5b95f5b7ee7e8d94adcdfdb230a3a4533"
+  },
+  "arithmetic-13:control": {
+    "task_id": "arithmetic-13:control",
+    "fixture_id": "arithmetic-13",
+    "arm": "control",
+    "qualname": "plus_13",
+    "old": "def plus_13(value: int) -> int:\n    return value + 13\n",
+    "current": "def plus_13(value: int) -> int:\n    return value + 13\n",
+    "claim": "plus_13 returns value plus 13.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 302778400,
+      "load_duration": 8077900,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3069586999999956,
+    "prompt_sha256": "07ff3039629aab5d512dac2b8fe03c8d3d610db6d2d90bb9d57d2b1153205f11"
+  },
+  "condition-13:mutated": {
+    "task_id": "condition-13:mutated",
+    "fixture_id": "condition-13",
+    "arm": "mutated",
+    "qualname": "band_13",
+    "old": "def band_13(value: int) -> str:\n    if value < 39:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_13(value: int) -> str:\n    if value >= 39:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_13 returns 'low' when value is below 39.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 39, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 39, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 754389700,
+      "load_duration": 9979500,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7831400000000031,
+    "prompt_sha256": "b0773789e40feacc9393d3a4872b18a047c6449dd13c10cdf4220ca1bf23d6f1"
+  },
+  "condition-13:control": {
+    "task_id": "condition-13:control",
+    "fixture_id": "condition-13",
+    "arm": "control",
+    "qualname": "band_13",
+    "old": "def band_13(value: int) -> str:\n    if value < 39:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_13(value: int) -> str:\n    if value < 39:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_13 returns 'low' when value is below 39.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 316400300,
+      "load_duration": 7668100,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3360205999997561,
+    "prompt_sha256": "f2dcbce2e39e0d158edd3543734fcf354e83a7cb5095e4ef0ccea102652d9044"
+  },
+  "exception-13:mutated": {
+    "task_id": "exception-13:mutated",
+    "fixture_id": "exception-13",
+    "arm": "mutated",
+    "qualname": "nonnegative_13",
+    "old": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-13')\n    return value\n",
+    "current": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_13 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 591022000,
+      "load_duration": 9080100,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5954012000001967,
+    "prompt_sha256": "cdd3adf7217c8aaf5ea2c963edf451bdd91dd2849fac6a10c679964ce9b1021a"
+  },
+  "exception-13:control": {
+    "task_id": "exception-13:control",
+    "fixture_id": "exception-13",
+    "arm": "control",
+    "qualname": "nonnegative_13",
+    "old": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-13')\n    return value\n",
+    "current": "def nonnegative_13(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-13')\n    return value\n",
+    "claim": "nonnegative_13 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305988500,
+      "load_duration": 8774300,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3098565000000235,
+    "prompt_sha256": "28456eded255e5045d0830235e98d915ddd52015aa16856c50490a2d2c1e0e9b"
+  },
+  "call-13:mutated": {
+    "task_id": "call-13:mutated",
+    "fixture_id": "call-13",
+    "arm": "mutated",
+    "qualname": "trim_13",
+    "old": "def trim_13(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_13(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_13 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 623357500,
+      "load_duration": 8153200,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6280815000000075,
+    "prompt_sha256": "632b80a3a082b8c1858f87dc39db3351f73d5c72f796a502bb6626a25aa6fb65"
+  },
+  "call-13:control": {
+    "task_id": "call-13:control",
+    "fixture_id": "call-13",
+    "arm": "control",
+    "qualname": "trim_13",
+    "old": "def trim_13(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_13(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_13 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 301424000,
+      "load_duration": 8137700,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3269829999999274,
+    "prompt_sha256": "4e87f67a726f620cf798961de6b476f13aa12d8dd3e08a5de6ec15485d45d512"
+  },
+  "arithmetic-14:mutated": {
+    "task_id": "arithmetic-14:mutated",
+    "fixture_id": "arithmetic-14",
+    "arm": "mutated",
+    "qualname": "plus_14",
+    "old": "def plus_14(value: int) -> int:\n    return value + 14\n",
+    "current": "def plus_14(value: int) -> int:\n    return value - 14\n",
+    "claim": "plus_14 returns value plus 14.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 14",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 14",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 650418300,
+      "load_duration": 9143800,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6752094999997098,
+    "prompt_sha256": "943bf6d5a358ff10f0431ef0f53e483dd92000ce9180b2ba173c71fdc751c887"
+  },
+  "arithmetic-14:control": {
+    "task_id": "arithmetic-14:control",
+    "fixture_id": "arithmetic-14",
+    "arm": "control",
+    "qualname": "plus_14",
+    "old": "def plus_14(value: int) -> int:\n    return value + 14\n",
+    "current": "def plus_14(value: int) -> int:\n    return value + 14\n",
+    "claim": "plus_14 returns value plus 14.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 314583700,
+      "load_duration": 7922100,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31876640000018597,
+    "prompt_sha256": "99c5cf00d5ec3602ade200d4408a503c1bd9fb8273672a56c52bd27843d7438f"
+  },
+  "condition-14:mutated": {
+    "task_id": "condition-14:mutated",
+    "fixture_id": "condition-14",
+    "arm": "mutated",
+    "qualname": "band_14",
+    "old": "def band_14(value: int) -> str:\n    if value < 42:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_14(value: int) -> str:\n    if value >= 42:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_14 returns 'low' when value is below 42.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 42, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 42, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 760587000,
+      "load_duration": 8537400,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7649320999998963,
+    "prompt_sha256": "071dc65f12f6350a21bf446a68b410a3de702b29eeb1c7e8b45b62eab80d9f6b"
+  },
+  "condition-14:control": {
+    "task_id": "condition-14:control",
+    "fixture_id": "condition-14",
+    "arm": "control",
+    "qualname": "band_14",
+    "old": "def band_14(value: int) -> str:\n    if value < 42:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_14(value: int) -> str:\n    if value < 42:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_14 returns 'low' when value is below 42.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 313154500,
+      "load_duration": 11136900,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3411524000002828,
+    "prompt_sha256": "58b25c8a0726ad9b1fd31d5409180ce9182666441c79a6688771ac6e4cf533e6"
+  },
+  "exception-14:mutated": {
+    "task_id": "exception-14:mutated",
+    "fixture_id": "exception-14",
+    "arm": "mutated",
+    "qualname": "nonnegative_14",
+    "old": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-14')\n    return value\n",
+    "current": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_14 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return 0 instead of raising ValueError",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return 0 instead of raising ValueError",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 566875400,
+      "load_duration": 7908100,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5713895999997476,
+    "prompt_sha256": "1f79d46a326beadc719667089518a19fafed520a40272784fd74bf6f5642d36f"
+  },
+  "exception-14:control": {
+    "task_id": "exception-14:control",
+    "fixture_id": "exception-14",
+    "arm": "control",
+    "qualname": "nonnegative_14",
+    "old": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-14')\n    return value\n",
+    "current": "def nonnegative_14(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-14')\n    return value\n",
+    "claim": "nonnegative_14 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 307791800,
+      "load_duration": 9607300,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32575809999980265,
+    "prompt_sha256": "d18a0aee15c399ab7c4ba749337de0fe3e77edc272072fe202bbaa3aefe73c3c"
+  },
+  "call-14:mutated": {
+    "task_id": "call-14:mutated",
+    "fixture_id": "call-14",
+    "arm": "mutated",
+    "qualname": "trim_14",
+    "old": "def trim_14(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_14(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_14 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 605485100,
+      "load_duration": 7795900,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.610024500000236,
+    "prompt_sha256": "68f53abe08354ec2b99762fdbe7b7d19296aadc7bcad64b0213fdd2fe9316ebb"
+  },
+  "call-14:control": {
+    "task_id": "call-14:control",
+    "fixture_id": "call-14",
+    "arm": "control",
+    "qualname": "trim_14",
+    "old": "def trim_14(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_14(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_14 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 284948800,
+      "load_duration": 7599600,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.34322530000008555,
+    "prompt_sha256": "d8108c3a42834ca2151b03a3b7cd4212b9c863a3ed1ab3e234389be60c6ce1fd"
+  },
+  "arithmetic-15:mutated": {
+    "task_id": "arithmetic-15:mutated",
+    "fixture_id": "arithmetic-15",
+    "arm": "mutated",
+    "qualname": "plus_15",
+    "old": "def plus_15(value: int) -> int:\n    return value + 15\n",
+    "current": "def plus_15(value: int) -> int:\n    return value - 15\n",
+    "claim": "plus_15 returns value plus 15.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 15",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 15",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 615094600,
+      "load_duration": 7164100,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6195273000002999,
+    "prompt_sha256": "e6cde51b1ff7f3c2d00e6d0888cd0c080a63cfe0562cf8cc6bc94aced0a37672"
+  },
+  "arithmetic-15:control": {
+    "task_id": "arithmetic-15:control",
+    "fixture_id": "arithmetic-15",
+    "arm": "control",
+    "qualname": "plus_15",
+    "old": "def plus_15(value: int) -> int:\n    return value + 15\n",
+    "current": "def plus_15(value: int) -> int:\n    return value + 15\n",
+    "claim": "plus_15 returns value plus 15.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 318350000,
+      "load_duration": 8336100,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.323204700000133,
+    "prompt_sha256": "a849fddf93203fd37f5bf494e8e003d97b02b9875dd61825dccd1022153594a7"
+  },
+  "condition-15:mutated": {
+    "task_id": "condition-15:mutated",
+    "fixture_id": "condition-15",
+    "arm": "mutated",
+    "qualname": "band_15",
+    "old": "def band_15(value: int) -> str:\n    if value < 45:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_15(value: int) -> str:\n    if value >= 45:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_15 returns 'low' when value is below 45.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 45, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 45, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 745210400,
+      "load_duration": 9117300,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7642267000001084,
+    "prompt_sha256": "710dc953830680b5bbda9f7ae858b5d9695be8528194002eba41cc1199274590"
+  },
+  "condition-15:control": {
+    "task_id": "condition-15:control",
+    "fixture_id": "condition-15",
+    "arm": "control",
+    "qualname": "band_15",
+    "old": "def band_15(value: int) -> str:\n    if value < 45:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_15(value: int) -> str:\n    if value < 45:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_15 returns 'low' when value is below 45.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 308791500,
+      "load_duration": 9050200,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.33531429999993634,
+    "prompt_sha256": "63c724f670dd4bd4327011a02a3a1d40e7482bb3db7238b8eca7456e7204a847"
+  },
+  "exception-15:mutated": {
+    "task_id": "exception-15:mutated",
+    "fixture_id": "exception-15",
+    "arm": "mutated",
+    "qualname": "nonnegative_15",
+    "old": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-15')\n    return value\n",
+    "current": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_15 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 571808000,
+      "load_duration": 8608000,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5780721000000995,
+    "prompt_sha256": "02b0e561af0e3a15e5ad7611446b63887f2cc876fd19522136333f935b9efd53"
+  },
+  "exception-15:control": {
+    "task_id": "exception-15:control",
+    "fixture_id": "exception-15",
+    "arm": "control",
+    "qualname": "nonnegative_15",
+    "old": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-15')\n    return value\n",
+    "current": "def nonnegative_15(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-15')\n    return value\n",
+    "claim": "nonnegative_15 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 302569400,
+      "load_duration": 7384100,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3071191999997609,
+    "prompt_sha256": "1f2bf139353f77e5c218427be24f27a3db97f1f4cbd66f1c970531872fac4273"
+  },
+  "call-15:mutated": {
+    "task_id": "call-15:mutated",
+    "fixture_id": "call-15",
+    "arm": "mutated",
+    "qualname": "trim_15",
+    "old": "def trim_15(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_15(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_15 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 614897600,
+      "load_duration": 9248100,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6318139999998493,
+    "prompt_sha256": "26fda0e59207df8ae5148b84c65ee8159771f33082053e55fc3f47ee71041725"
+  },
+  "call-15:control": {
+    "task_id": "call-15:control",
+    "fixture_id": "call-15",
+    "arm": "control",
+    "qualname": "trim_15",
+    "old": "def trim_15(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_15(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_15 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 290143300,
+      "load_duration": 8216400,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.294621499999721,
+    "prompt_sha256": "d552ecfa553bf5a412fe411f122967410023d5fbd8c9f5a2725fda3c9f556196"
+  },
+  "arithmetic-16:mutated": {
+    "task_id": "arithmetic-16:mutated",
+    "fixture_id": "arithmetic-16",
+    "arm": "mutated",
+    "qualname": "plus_16",
+    "old": "def plus_16(value: int) -> int:\n    return value + 16\n",
+    "current": "def plus_16(value: int) -> int:\n    return value - 16\n",
+    "claim": "plus_16 returns value plus 16.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 16",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 16",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 624872600,
+      "load_duration": 8594100,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6296525000002475,
+    "prompt_sha256": "123bc2582fcbbad3aa207fcc0863658751ee423663137f44053fcce3c508d73c"
+  },
+  "arithmetic-16:control": {
+    "task_id": "arithmetic-16:control",
+    "fixture_id": "arithmetic-16",
+    "arm": "control",
+    "qualname": "plus_16",
+    "old": "def plus_16(value: int) -> int:\n    return value + 16\n",
+    "current": "def plus_16(value: int) -> int:\n    return value + 16\n",
+    "claim": "plus_16 returns value plus 16.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 297048700,
+      "load_duration": 7517200,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3215126000000055,
+    "prompt_sha256": "251af936a7c2dfeb2eea3ae49d204391b8634a3b5b79030108de49d8da90b3ee"
+  },
+  "condition-16:mutated": {
+    "task_id": "condition-16:mutated",
+    "fixture_id": "condition-16",
+    "arm": "mutated",
+    "qualname": "band_16",
+    "old": "def band_16(value: int) -> str:\n    if value < 48:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_16(value: int) -> str:\n    if value >= 48:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_16 returns 'low' when value is below 48.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 48, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 48, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 776017300,
+      "load_duration": 9763500,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7996831999998903,
+    "prompt_sha256": "7570031cbc17da15e28974d90633df53deea0872bb0dde4c96b6184575b844aa"
+  },
+  "condition-16:control": {
+    "task_id": "condition-16:control",
+    "fixture_id": "condition-16",
+    "arm": "control",
+    "qualname": "band_16",
+    "old": "def band_16(value: int) -> str:\n    if value < 48:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_16(value: int) -> str:\n    if value < 48:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_16 returns 'low' when value is below 48.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 320553100,
+      "load_duration": 8724500,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3247716999999284,
+    "prompt_sha256": "1f0b92fff09ca9b946c2a3e8a99618afa41493251a251dc6e189b0cb7395bb49"
+  },
+  "exception-16:mutated": {
+    "task_id": "exception-16:mutated",
+    "fixture_id": "exception-16",
+    "arm": "mutated",
+    "qualname": "nonnegative_16",
+    "old": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-16')\n    return value\n",
+    "current": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_16 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 601049900,
+      "load_duration": 9642800,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6059881000001042,
+    "prompt_sha256": "93b105e0cc4b1302579d4b61e6973968a5021899e04e97fadf4fcb53a3b5c695"
+  },
+  "exception-16:control": {
+    "task_id": "exception-16:control",
+    "fixture_id": "exception-16",
+    "arm": "control",
+    "qualname": "nonnegative_16",
+    "old": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-16')\n    return value\n",
+    "current": "def nonnegative_16(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-16')\n    return value\n",
+    "claim": "nonnegative_16 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 306733200,
+      "load_duration": 8246200,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31074850000004517,
+    "prompt_sha256": "72843a129e82b1621487ca92394a37b5ff5b2bb8bad27a06bc271fa806822d5c"
+  },
+  "call-16:mutated": {
+    "task_id": "call-16:mutated",
+    "fixture_id": "call-16",
+    "arm": "mutated",
+    "qualname": "trim_16",
+    "old": "def trim_16(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_16(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_16 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 627110400,
+      "load_duration": 8311600,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6514130999998997,
+    "prompt_sha256": "dd62dff8368d742de3f83e27c827008d6dc459e9c273b227046409df5ec162da"
+  },
+  "call-16:control": {
+    "task_id": "call-16:control",
+    "fixture_id": "call-16",
+    "arm": "control",
+    "qualname": "trim_16",
+    "old": "def trim_16(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_16(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_16 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 317592900,
+      "load_duration": 9157900,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3225348999999369,
+    "prompt_sha256": "340a60b58a0790ea84cc654a446fb9daa6f38a1e06731dbcd13c7968af7644b0"
+  },
+  "arithmetic-17:mutated": {
+    "task_id": "arithmetic-17:mutated",
+    "fixture_id": "arithmetic-17",
+    "arm": "mutated",
+    "qualname": "plus_17",
+    "old": "def plus_17(value: int) -> int:\n    return value + 17\n",
+    "current": "def plus_17(value: int) -> int:\n    return value - 17\n",
+    "claim": "plus_17 returns value plus 17.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 17 instead of value + 17",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 17 instead of value + 17",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 744923200,
+      "load_duration": 8135700,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7496650999996746,
+    "prompt_sha256": "bc77bdbada26d9cbbb8133cef5ca5c80fb18728aa8716b34c9a8aebf59fe788a"
+  },
+  "arithmetic-17:control": {
+    "task_id": "arithmetic-17:control",
+    "fixture_id": "arithmetic-17",
+    "arm": "control",
+    "qualname": "plus_17",
+    "old": "def plus_17(value: int) -> int:\n    return value + 17\n",
+    "current": "def plus_17(value: int) -> int:\n    return value + 17\n",
+    "claim": "plus_17 returns value plus 17.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 316205400,
+      "load_duration": 12089700,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3224574000000757,
+    "prompt_sha256": "0d5b2a039f84fcc900e1a2284e29a774f6ffd2126b0d90de0ab19b7923263d98"
+  },
+  "condition-17:mutated": {
+    "task_id": "condition-17:mutated",
+    "fixture_id": "condition-17",
+    "arm": "mutated",
+    "qualname": "band_17",
+    "old": "def band_17(value: int) -> str:\n    if value < 51:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_17(value: int) -> str:\n    if value >= 51:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_17 returns 'low' when value is below 51.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 51, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 51, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 765737000,
+      "load_duration": 8277300,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7704877999999553,
+    "prompt_sha256": "33f59f2d094def86e737a2e4cc6345c979386d206d693d80d051eafdcdadf4d4"
+  },
+  "condition-17:control": {
+    "task_id": "condition-17:control",
+    "fixture_id": "condition-17",
+    "arm": "control",
+    "qualname": "band_17",
+    "old": "def band_17(value: int) -> str:\n    if value < 51:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_17(value: int) -> str:\n    if value < 51:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_17 returns 'low' when value is below 51.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 330540600,
+      "load_duration": 9114500,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3970556999997825,
+    "prompt_sha256": "616141a418b71db8bf166ea26b56b1d2b1746ab90dd5d4e2a6c0ca9d78c438e0"
+  },
+  "exception-17:mutated": {
+    "task_id": "exception-17:mutated",
+    "fixture_id": "exception-17",
+    "arm": "mutated",
+    "qualname": "nonnegative_17",
+    "old": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-17')\n    return value\n",
+    "current": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_17 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 608704200,
+      "load_duration": 14379600,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6344801999998708,
+    "prompt_sha256": "303b1a6e42c4a07838572d89d162c03e612835567a9a2b7ce465ba919a672e41"
+  },
+  "exception-17:control": {
+    "task_id": "exception-17:control",
+    "fixture_id": "exception-17",
+    "arm": "control",
+    "qualname": "nonnegative_17",
+    "old": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-17')\n    return value\n",
+    "current": "def nonnegative_17(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-17')\n    return value\n",
+    "claim": "nonnegative_17 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 294695300,
+      "load_duration": 3688400,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.2973627999999735,
+    "prompt_sha256": "73c8e3a73ea1270692e54f6a431699dca9c704bae5c3bbd151cc94f3aac8b21b"
+  },
+  "call-17:mutated": {
+    "task_id": "call-17:mutated",
+    "fixture_id": "call-17",
+    "arm": "mutated",
+    "qualname": "trim_17",
+    "old": "def trim_17(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_17(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_17 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 613503400,
+      "load_duration": 3962700,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6368984000000637,
+    "prompt_sha256": "af838fc9c79c90557f6df018deb6b91a12455d96617872858d37ec6392f49d29"
+  },
+  "call-17:control": {
+    "task_id": "call-17:control",
+    "fixture_id": "call-17",
+    "arm": "control",
+    "qualname": "trim_17",
+    "old": "def trim_17(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_17(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_17 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 297610800,
+      "load_duration": 3768700,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.30046420000007856,
+    "prompt_sha256": "d1be96bd4f4500cf1d72793accfcde0313911b73d3c730eee4951629dcd6fb30"
+  },
+  "arithmetic-18:mutated": {
+    "task_id": "arithmetic-18:mutated",
+    "fixture_id": "arithmetic-18",
+    "arm": "mutated",
+    "qualname": "plus_18",
+    "old": "def plus_18(value: int) -> int:\n    return value + 18\n",
+    "current": "def plus_18(value: int) -> int:\n    return value - 18\n",
+    "claim": "plus_18 returns value plus 18.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 18",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 18",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 623786000,
+      "load_duration": 3795800,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6432471000002806,
+    "prompt_sha256": "eaa7c90ba303b55ed512e39000294ee4f95c7d27f4d43103de7dcfe7adaabe7c"
+  },
+  "arithmetic-18:control": {
+    "task_id": "arithmetic-18:control",
+    "fixture_id": "arithmetic-18",
+    "arm": "control",
+    "qualname": "plus_18",
+    "old": "def plus_18(value: int) -> int:\n    return value + 18\n",
+    "current": "def plus_18(value: int) -> int:\n    return value + 18\n",
+    "claim": "plus_18 returns value plus 18.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 303545300,
+      "load_duration": 4143500,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.30849680000028457,
+    "prompt_sha256": "87d1a38efa0c27045eadc7f30e548ab88e4d24dc20a899096faabf4d65dafb51"
+  },
+  "condition-18:mutated": {
+    "task_id": "condition-18:mutated",
+    "fixture_id": "condition-18",
+    "arm": "mutated",
+    "qualname": "band_18",
+    "old": "def band_18(value: int) -> str:\n    if value < 54:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_18(value: int) -> str:\n    if value >= 54:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_18 returns 'low' when value is below 54.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 54, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 54, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 758460800,
+      "load_duration": 5164500,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7610471999996662,
+    "prompt_sha256": "ee526da324d3b1ad79239009d42d2644f27b8877a7cddd458c3577a7216bb580"
+  },
+  "condition-18:control": {
+    "task_id": "condition-18:control",
+    "fixture_id": "condition-18",
+    "arm": "control",
+    "qualname": "band_18",
+    "old": "def band_18(value: int) -> str:\n    if value < 54:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_18(value: int) -> str:\n    if value < 54:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_18 returns 'low' when value is below 54.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 321467000,
+      "load_duration": 3237200,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32574320000003354,
+    "prompt_sha256": "762b17f29481e372a53c904e4dd9a91b8a9a42d11ddf4640daf5c2370c13e858"
+  },
+  "exception-18:mutated": {
+    "task_id": "exception-18:mutated",
+    "fixture_id": "exception-18",
+    "arm": "mutated",
+    "qualname": "nonnegative_18",
+    "old": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-18')\n    return value\n",
+    "current": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_18 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 596019200,
+      "load_duration": 8968100,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6001375000000735,
+    "prompt_sha256": "fe7fc09086620eac06f1cc55f0d0f23bcc80234a199d984e9b5034d762fbb4db"
+  },
+  "exception-18:control": {
+    "task_id": "exception-18:control",
+    "fixture_id": "exception-18",
+    "arm": "control",
+    "qualname": "nonnegative_18",
+    "old": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-18')\n    return value\n",
+    "current": "def nonnegative_18(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-18')\n    return value\n",
+    "claim": "nonnegative_18 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 314161300,
+      "load_duration": 8746900,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31824090000009164,
+    "prompt_sha256": "eee816815b449353a2af9474aa960a162c83dd4a61e56d7548c5f7ff55c416d4"
+  },
+  "call-18:mutated": {
+    "task_id": "call-18:mutated",
+    "fixture_id": "call-18",
+    "arm": "mutated",
+    "qualname": "trim_18",
+    "old": "def trim_18(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_18(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_18 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 637463200,
+      "load_duration": 8873100,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6592799000000014,
+    "prompt_sha256": "4b7fc9fe98d733c82ffa810ef9fcad3323a7af7365cafa1d80e871e7e4fa6a4b"
+  },
+  "call-18:control": {
+    "task_id": "call-18:control",
+    "fixture_id": "call-18",
+    "arm": "control",
+    "qualname": "trim_18",
+    "old": "def trim_18(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_18(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_18 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 325371000,
+      "load_duration": 13438300,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3539120999998886,
+    "prompt_sha256": "a3d07c4e49b3b5850cb55d0048e5de87388b5c8ad8e90aaa963642782c61faba"
+  },
+  "arithmetic-19:mutated": {
+    "task_id": "arithmetic-19:mutated",
+    "fixture_id": "arithmetic-19",
+    "arm": "mutated",
+    "qualname": "plus_19",
+    "old": "def plus_19(value: int) -> int:\n    return value + 19\n",
+    "current": "def plus_19(value: int) -> int:\n    return value - 19\n",
+    "claim": "plus_19 returns value plus 19.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 19 instead of value + 19",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 19 instead of value + 19",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 747742500,
+      "load_duration": 11118300,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7737835000002633,
+    "prompt_sha256": "c33c00b37166a9174a951b8d3e0f796d6937c70d50c8ae04772f8f979a62443b"
+  },
+  "arithmetic-19:control": {
+    "task_id": "arithmetic-19:control",
+    "fixture_id": "arithmetic-19",
+    "arm": "control",
+    "qualname": "plus_19",
+    "old": "def plus_19(value: int) -> int:\n    return value + 19\n",
+    "current": "def plus_19(value: int) -> int:\n    return value + 19\n",
+    "claim": "plus_19 returns value plus 19.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 316519700,
+      "load_duration": 8305600,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32102290000011635,
+    "prompt_sha256": "612836ab914dadac710079b28bfabf3b803cf4e72076a5cd9c4bbf9b0b3dee1d"
+  },
+  "condition-19:mutated": {
+    "task_id": "condition-19:mutated",
+    "fixture_id": "condition-19",
+    "arm": "mutated",
+    "qualname": "band_19",
+    "old": "def band_19(value: int) -> str:\n    if value < 57:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_19(value: int) -> str:\n    if value >= 57:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_19 returns 'low' when value is below 57.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 57, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 57, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 773513400,
+      "load_duration": 10339400,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7785416000001533,
+    "prompt_sha256": "bff5f4a8a59dd85e0f725d40406b4a65816b574862423172cb69b4dfe7dbef96"
+  },
+  "condition-19:control": {
+    "task_id": "condition-19:control",
+    "fixture_id": "condition-19",
+    "arm": "control",
+    "qualname": "band_19",
+    "old": "def band_19(value: int) -> str:\n    if value < 57:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_19(value: int) -> str:\n    if value < 57:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_19 returns 'low' when value is below 57.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 348146400,
+      "load_duration": 10413600,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.36812300000019604,
+    "prompt_sha256": "469c8648d17e6f61daceece80a1a7f92dbf7524d3f91c73aa17ffa8c0c8acead"
+  },
+  "exception-19:mutated": {
+    "task_id": "exception-19:mutated",
+    "fixture_id": "exception-19",
+    "arm": "mutated",
+    "qualname": "nonnegative_19",
+    "old": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-19')\n    return value\n",
+    "current": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_19 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 610812400,
+      "load_duration": 8001600,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.6159652000001188,
+    "prompt_sha256": "8144693bfed9d6c9b91e8e2a8edcc442519ff4952fc6845f0173e2fa903dc83d"
+  },
+  "exception-19:control": {
+    "task_id": "exception-19:control",
+    "fixture_id": "exception-19",
+    "arm": "control",
+    "qualname": "nonnegative_19",
+    "old": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-19')\n    return value\n",
+    "current": "def nonnegative_19(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-19')\n    return value\n",
+    "claim": "nonnegative_19 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 321382800,
+      "load_duration": 8284700,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32560590000002776,
+    "prompt_sha256": "78cc9704cee9f12a3c8ad014f272c2747dec8b395495a171cd1865dc543e3c9a"
+  },
+  "call-19:mutated": {
+    "task_id": "call-19:mutated",
+    "fixture_id": "call-19",
+    "arm": "mutated",
+    "qualname": "trim_19",
+    "old": "def trim_19(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_19(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_19 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 642870900,
+      "load_duration": 8177200,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.647426699999869,
+    "prompt_sha256": "932aa16d9dd29e6217febebfb40ed27e8ca6d0074b1af56cfff3e625bba5a7b1"
+  },
+  "call-19:control": {
+    "task_id": "call-19:control",
+    "fixture_id": "call-19",
+    "arm": "control",
+    "qualname": "trim_19",
+    "old": "def trim_19(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_19(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_19 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305021700,
+      "load_duration": 6880300,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32325029999992694,
+    "prompt_sha256": "046f648039e699878e3d79f43f23219bff0d2089880d174f1a26a248bf2fae90"
+  },
+  "arithmetic-20:mutated": {
+    "task_id": "arithmetic-20:mutated",
+    "fixture_id": "arithmetic-20",
+    "arm": "mutated",
+    "qualname": "plus_20",
+    "old": "def plus_20(value: int) -> int:\n    return value + 20\n",
+    "current": "def plus_20(value: int) -> int:\n    return value - 20\n",
+    "claim": "plus_20 returns value plus 20.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 20 instead of value + 20",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 20 instead of value + 20",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 744988800,
+      "load_duration": 9812400,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7625054999998611,
+    "prompt_sha256": "d684fa7dbfc315b50941c498cc593cefac474e4be0c98080663dd29247121d4b"
+  },
+  "arithmetic-20:control": {
+    "task_id": "arithmetic-20:control",
+    "fixture_id": "arithmetic-20",
+    "arm": "control",
+    "qualname": "plus_20",
+    "old": "def plus_20(value: int) -> int:\n    return value + 20\n",
+    "current": "def plus_20(value: int) -> int:\n    return value + 20\n",
+    "claim": "plus_20 returns value plus 20.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 306450100,
+      "load_duration": 7735500,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31170350000002145,
+    "prompt_sha256": "de06d36ef63997d61a2fc31ceecae066dcbafd39be30a58d021bd6424d8d78e7"
+  },
+  "condition-20:mutated": {
+    "task_id": "condition-20:mutated",
+    "fixture_id": "condition-20",
+    "arm": "mutated",
+    "qualname": "band_20",
+    "old": "def band_20(value: int) -> str:\n    if value < 60:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_20(value: int) -> str:\n    if value >= 60:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_20 returns 'low' when value is below 60.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 60, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 60, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 765592600,
+      "load_duration": 11706700,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7704618000002483,
+    "prompt_sha256": "f5dee7d3d2eae9f2887b13c93e5ae6f90334c9c2e9681d74710bc66fb25dc26a"
+  },
+  "condition-20:control": {
+    "task_id": "condition-20:control",
+    "fixture_id": "condition-20",
+    "arm": "control",
+    "qualname": "band_20",
+    "old": "def band_20(value: int) -> str:\n    if value < 60:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_20(value: int) -> str:\n    if value < 60:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_20 returns 'low' when value is below 60.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 326647400,
+      "load_duration": 7862400,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.33149390000016865,
+    "prompt_sha256": "923db5d27410f6963cd7a71e7954fc29860056cca4208e59b9024775dd058730"
+  },
+  "exception-20:mutated": {
+    "task_id": "exception-20:mutated",
+    "fixture_id": "exception-20",
+    "arm": "mutated",
+    "qualname": "nonnegative_20",
+    "old": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-20')\n    return value\n",
+    "current": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_20 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 594635800,
+      "load_duration": 9068700,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.622231499999998,
+    "prompt_sha256": "5304ac1e87d196198014c664378910fa4cb3fa39da31bd5c52c3b987a00d9336"
+  },
+  "exception-20:control": {
+    "task_id": "exception-20:control",
+    "fixture_id": "exception-20",
+    "arm": "control",
+    "qualname": "nonnegative_20",
+    "old": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-20')\n    return value\n",
+    "current": "def nonnegative_20(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-20')\n    return value\n",
+    "claim": "nonnegative_20 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 309734800,
+      "load_duration": 9606900,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31409339999981967,
+    "prompt_sha256": "cb8aaa62b49f9f0b6fda64a5b8fccd7d7bf8b12ecae41468b8e9136a6edc00ae"
+  },
+  "call-20:mutated": {
+    "task_id": "call-20:mutated",
+    "fixture_id": "call-20",
+    "arm": "mutated",
+    "qualname": "trim_20",
+    "old": "def trim_20(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_20(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_20 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 628004500,
+      "load_duration": 7428700,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6440681000003678,
+    "prompt_sha256": "6c25a833903db8db1718bc7683ce2e2d36e9c4406d787a7424b0c10dc7f73554"
+  },
+  "call-20:control": {
+    "task_id": "call-20:control",
+    "fixture_id": "call-20",
+    "arm": "control",
+    "qualname": "trim_20",
+    "old": "def trim_20(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_20(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_20 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 311231900,
+      "load_duration": 7593400,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3154592999999295,
+    "prompt_sha256": "5e1c2082f2d3430eee12782e99b0dfd7f42e9e7e7034764e799c92f3c96dade9"
+  },
+  "arithmetic-21:mutated": {
+    "task_id": "arithmetic-21:mutated",
+    "fixture_id": "arithmetic-21",
+    "arm": "mutated",
+    "qualname": "plus_21",
+    "old": "def plus_21(value: int) -> int:\n    return value + 21\n",
+    "current": "def plus_21(value: int) -> int:\n    return value - 21\n",
+    "claim": "plus_21 returns value plus 21.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 21 instead of value + 21",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 21 instead of value + 21",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 725341500,
+      "load_duration": 7257200,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.729231499999969,
+    "prompt_sha256": "d2edb41f33b44f41e5bd6c7dfef89a2100f597c32bb2087b42869f2c7d509e93"
+  },
+  "arithmetic-21:control": {
+    "task_id": "arithmetic-21:control",
+    "fixture_id": "arithmetic-21",
+    "arm": "control",
+    "qualname": "plus_21",
+    "old": "def plus_21(value: int) -> int:\n    return value + 21\n",
+    "current": "def plus_21(value: int) -> int:\n    return value + 21\n",
+    "claim": "plus_21 returns value plus 21.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 309659100,
+      "load_duration": 7902200,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32699219999994966,
+    "prompt_sha256": "7c9f35537a3d7a08412a1cb8f559ca740979eb9e57823fd8489c5c4e1d0a8bb8"
+  },
+  "condition-21:mutated": {
+    "task_id": "condition-21:mutated",
+    "fixture_id": "condition-21",
+    "arm": "mutated",
+    "qualname": "band_21",
+    "old": "def band_21(value: int) -> str:\n    if value < 63:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_21(value: int) -> str:\n    if value >= 63:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_21 returns 'low' when value is below 63.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 63, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 63, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 760205300,
+      "load_duration": 8467300,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7656305999998949,
+    "prompt_sha256": "ceeb1590f66648201c8d478f313a73f37db6fe24b7f65a2e05771eb1a9a452db"
+  },
+  "condition-21:control": {
+    "task_id": "condition-21:control",
+    "fixture_id": "condition-21",
+    "arm": "control",
+    "qualname": "band_21",
+    "old": "def band_21(value: int) -> str:\n    if value < 63:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_21(value: int) -> str:\n    if value < 63:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_21 returns 'low' when value is below 63.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 332570500,
+      "load_duration": 7619400,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.35643100000015693,
+    "prompt_sha256": "7673ce1e56474f12bbd767b165e67a07dea412fd512ee943e26f27fa40bb65a9"
+  },
+  "exception-21:mutated": {
+    "task_id": "exception-21:mutated",
+    "fixture_id": "exception-21",
+    "arm": "mutated",
+    "qualname": "nonnegative_21",
+    "old": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-21')\n    return value\n",
+    "current": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_21 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 594786600,
+      "load_duration": 7583300,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5992731000001186,
+    "prompt_sha256": "ae2346ce27ad313a03883eab84b6e7715070ae7f891011871a7ab3f87b114f14"
+  },
+  "exception-21:control": {
+    "task_id": "exception-21:control",
+    "fixture_id": "exception-21",
+    "arm": "control",
+    "qualname": "nonnegative_21",
+    "old": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-21')\n    return value\n",
+    "current": "def nonnegative_21(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-21')\n    return value\n",
+    "claim": "nonnegative_21 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 306820600,
+      "load_duration": 7746100,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.311482199999773,
+    "prompt_sha256": "c0a277766e64d37037a7c2d8d8548d8d79c27d4a5beabe5060957a6bca616c74"
+  },
+  "call-21:mutated": {
+    "task_id": "call-21:mutated",
+    "fixture_id": "call-21",
+    "arm": "mutated",
+    "qualname": "trim_21",
+    "old": "def trim_21(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_21(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_21 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 622076900,
+      "load_duration": 9644000,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6275469000001976,
+    "prompt_sha256": "1deef834c45f1ce2ee8dd1321213755bfa0ac84621112d38a09aa2a1a52e5a8b"
+  },
+  "call-21:control": {
+    "task_id": "call-21:control",
+    "fixture_id": "call-21",
+    "arm": "control",
+    "qualname": "trim_21",
+    "old": "def trim_21(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_21(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_21 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 307315400,
+      "load_duration": 8353800,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3561353999998573,
+    "prompt_sha256": "4fe85b5c8d25ed419671726149968dbb4296b92b373372ae2a6ee86d53d4f6c3"
+  },
+  "arithmetic-22:mutated": {
+    "task_id": "arithmetic-22:mutated",
+    "fixture_id": "arithmetic-22",
+    "arm": "mutated",
+    "qualname": "plus_22",
+    "old": "def plus_22(value: int) -> int:\n    return value + 22\n",
+    "current": "def plus_22(value: int) -> int:\n    return value - 22\n",
+    "claim": "plus_22 returns value plus 22.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 22 instead of value + 22",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 22 instead of value + 22",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 723321300,
+      "load_duration": 8534300,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7277834999999868,
+    "prompt_sha256": "a79d0595d56982f00f1cf16b6446f7ae01252dd291d41a53aea01cf075023ec5"
+  },
+  "arithmetic-22:control": {
+    "task_id": "arithmetic-22:control",
+    "fixture_id": "arithmetic-22",
+    "arm": "control",
+    "qualname": "plus_22",
+    "old": "def plus_22(value: int) -> int:\n    return value + 22\n",
+    "current": "def plus_22(value: int) -> int:\n    return value + 22\n",
+    "claim": "plus_22 returns value plus 22.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 306762400,
+      "load_duration": 9695000,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31124769999996715,
+    "prompt_sha256": "42175e41164354b2fe774ea757e7a60d781da27460d5a46cb667a41f06a64c03"
+  },
+  "condition-22:mutated": {
+    "task_id": "condition-22:mutated",
+    "fixture_id": "condition-22",
+    "arm": "mutated",
+    "qualname": "band_22",
+    "old": "def band_22(value: int) -> str:\n    if value < 66:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_22(value: int) -> str:\n    if value >= 66:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_22 returns 'low' when value is below 66.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 66, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 66, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 754554800,
+      "load_duration": 7692800,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7747024000000238,
+    "prompt_sha256": "9c0c38eed666f63939ab10f76b725dd62a144dde45c91717ed70caf255e17206"
+  },
+  "condition-22:control": {
+    "task_id": "condition-22:control",
+    "fixture_id": "condition-22",
+    "arm": "control",
+    "qualname": "band_22",
+    "old": "def band_22(value: int) -> str:\n    if value < 66:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_22(value: int) -> str:\n    if value < 66:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_22 returns 'low' when value is below 66.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 337734000,
+      "load_duration": 6613100,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3656466999996155,
+    "prompt_sha256": "880421b1f4cc4e2ddfe265715eb4f65408cab6f41fc99c1c3d27a2197ed3e25e"
+  },
+  "exception-22:mutated": {
+    "task_id": "exception-22:mutated",
+    "fixture_id": "exception-22",
+    "arm": "mutated",
+    "qualname": "nonnegative_22",
+    "old": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-22')\n    return value\n",
+    "current": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_22 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 580733800,
+      "load_duration": 7781000,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5868506000001616,
+    "prompt_sha256": "0e73247aa91451b134faf92cb101937cb214e8d0172095c43b3017ae8ab99ffd"
+  },
+  "exception-22:control": {
+    "task_id": "exception-22:control",
+    "fixture_id": "exception-22",
+    "arm": "control",
+    "qualname": "nonnegative_22",
+    "old": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-22')\n    return value\n",
+    "current": "def nonnegative_22(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-22')\n    return value\n",
+    "claim": "nonnegative_22 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 305406300,
+      "load_duration": 9125300,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3097968000001856,
+    "prompt_sha256": "add6c53d009acaa6f00254b1c2a0bb07a17cfdf87a86472bf62d0d41943244c6"
+  },
+  "call-22:mutated": {
+    "task_id": "call-22:mutated",
+    "fixture_id": "call-22",
+    "arm": "mutated",
+    "qualname": "trim_22",
+    "old": "def trim_22(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_22(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_22 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 627393700,
+      "load_duration": 9731800,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6321010999999999,
+    "prompt_sha256": "8f842de2b8586562e3d05ec0600808ffbdf8dd177ecab5bcecc82646bea761c7"
+  },
+  "call-22:control": {
+    "task_id": "call-22:control",
+    "fixture_id": "call-22",
+    "arm": "control",
+    "qualname": "trim_22",
+    "old": "def trim_22(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_22(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_22 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 309616100,
+      "load_duration": 8884100,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3137626000002456,
+    "prompt_sha256": "22c18f062e8702a4bfa988252e72ae06071f30c45f34084b9896711a83727474"
+  },
+  "arithmetic-23:mutated": {
+    "task_id": "arithmetic-23:mutated",
+    "fixture_id": "arithmetic-23",
+    "arm": "mutated",
+    "qualname": "plus_23",
+    "old": "def plus_23(value: int) -> int:\n    return value + 23\n",
+    "current": "def plus_23(value: int) -> int:\n    return value - 23\n",
+    "claim": "plus_23 returns value plus 23.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 23 instead of value + 23",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 23 instead of value + 23",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 721753100,
+      "load_duration": 8194300,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7262361000002784,
+    "prompt_sha256": "9fef6f0d7516d2a2fb6b3832dbce23923e1b11a6e1dc2d83196438fa8ea0a188"
+  },
+  "arithmetic-23:control": {
+    "task_id": "arithmetic-23:control",
+    "fixture_id": "arithmetic-23",
+    "arm": "control",
+    "qualname": "plus_23",
+    "old": "def plus_23(value: int) -> int:\n    return value + 23\n",
+    "current": "def plus_23(value: int) -> int:\n    return value + 23\n",
+    "claim": "plus_23 returns value plus 23.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 298804900,
+      "load_duration": 8644900,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3270508000000518,
+    "prompt_sha256": "dd80409e1f5d7b405c90c698c807a55359e633e56c6a686106e6efb204dd348c"
+  },
+  "condition-23:mutated": {
+    "task_id": "condition-23:mutated",
+    "fixture_id": "condition-23",
+    "arm": "mutated",
+    "qualname": "band_23",
+    "old": "def band_23(value: int) -> str:\n    if value < 69:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_23(value: int) -> str:\n    if value >= 69:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_23 returns 'low' when value is below 69.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 69, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 69, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 736401400,
+      "load_duration": 7984600,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7399995000000672,
+    "prompt_sha256": "e0ce7c219bc1c8105d6f04c8de4b5a1f399af8fa1ab9d975f4a130ae417f0f7c"
+  },
+  "condition-23:control": {
+    "task_id": "condition-23:control",
+    "fixture_id": "condition-23",
+    "arm": "control",
+    "qualname": "band_23",
+    "old": "def band_23(value: int) -> str:\n    if value < 69:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_23(value: int) -> str:\n    if value < 69:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_23 returns 'low' when value is below 69.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 324628700,
+      "load_duration": 11132000,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3519703000001755,
+    "prompt_sha256": "d80cfa85986f430fb3e1d32aef506ca31ae648d3c15995e2bb40f4c4809fa186"
+  },
+  "exception-23:mutated": {
+    "task_id": "exception-23:mutated",
+    "fixture_id": "exception-23",
+    "arm": "mutated",
+    "qualname": "nonnegative_23",
+    "old": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-23')\n    return value\n",
+    "current": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_23 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 575207200,
+      "load_duration": 8828900,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.580116299999645,
+    "prompt_sha256": "5bee07d50af39ef4717b2ac257ca64ecb29b8792700a22449c31d45b94127155"
+  },
+  "exception-23:control": {
+    "task_id": "exception-23:control",
+    "fixture_id": "exception-23",
+    "arm": "control",
+    "qualname": "nonnegative_23",
+    "old": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-23')\n    return value\n",
+    "current": "def nonnegative_23(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-23')\n    return value\n",
+    "claim": "nonnegative_23 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 301252600,
+      "load_duration": 8794100,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31720750000022235,
+    "prompt_sha256": "03e8fe4fda1511a67315e2588146c00474fc4273cfd956ee2d486a83507a9d7d"
+  },
+  "call-23:mutated": {
+    "task_id": "call-23:mutated",
+    "fixture_id": "call-23",
+    "arm": "mutated",
+    "qualname": "trim_23",
+    "old": "def trim_23(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_23(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_23 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 603741500,
+      "load_duration": 8717000,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6087233999996897,
+    "prompt_sha256": "c154ee24c2165cf43311c7f212221ebfa8afe7779257b16c3151c1acc5ee0952"
+  },
+  "call-23:control": {
+    "task_id": "call-23:control",
+    "fixture_id": "call-23",
+    "arm": "control",
+    "qualname": "trim_23",
+    "old": "def trim_23(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_23(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_23 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 292708000,
+      "load_duration": 7745400,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.29829760000029637,
+    "prompt_sha256": "530ff6a4ae5d6f378b8e06c30a7d40c087cabc8a20fc484d4c1e88407c9dfd04"
+  },
+  "arithmetic-24:mutated": {
+    "task_id": "arithmetic-24:mutated",
+    "fixture_id": "arithmetic-24",
+    "arm": "mutated",
+    "qualname": "plus_24",
+    "old": "def plus_24(value: int) -> int:\n    return value + 24\n",
+    "current": "def plus_24(value: int) -> int:\n    return value - 24\n",
+    "claim": "plus_24 returns value plus 24.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value is now value - 24",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value is now value - 24",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 622384800,
+      "load_duration": 7753600,
+      "prompt_eval_count": 437,
+      "eval_count": 16
+    },
+    "elapsed_seconds": 0.6269732999999178,
+    "prompt_sha256": "e7a96456017e8d52ec65c486e608084e16ca6209a126371945287f56f3c7cf54"
+  },
+  "arithmetic-24:control": {
+    "task_id": "arithmetic-24:control",
+    "fixture_id": "arithmetic-24",
+    "arm": "control",
+    "qualname": "plus_24",
+    "old": "def plus_24(value: int) -> int:\n    return value + 24\n",
+    "current": "def plus_24(value: int) -> int:\n    return value + 24\n",
+    "claim": "plus_24 returns value plus 24.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 295604500,
+      "load_duration": 8331400,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3138378999997258,
+    "prompt_sha256": "70ad552683d05280b648856c8fb87ab1249928f1e2643161c80525d26e1b645f"
+  },
+  "condition-24:mutated": {
+    "task_id": "condition-24:mutated",
+    "fixture_id": "condition-24",
+    "arm": "mutated",
+    "qualname": "band_24",
+    "old": "def band_24(value: int) -> str:\n    if value < 72:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_24(value: int) -> str:\n    if value >= 72:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_24 returns 'low' when value is below 72.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 72, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 72, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 731467600,
+      "load_duration": 7853700,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7361626000001706,
+    "prompt_sha256": "2c80925706fdd8294830703c3983581b94ae5a6fcc5b6f366bc4c7d179e08a8c"
+  },
+  "condition-24:control": {
+    "task_id": "condition-24:control",
+    "fixture_id": "condition-24",
+    "arm": "control",
+    "qualname": "band_24",
+    "old": "def band_24(value: int) -> str:\n    if value < 72:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_24(value: int) -> str:\n    if value < 72:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_24 returns 'low' when value is below 72.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 318971200,
+      "load_duration": 8044500,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.32322389999990264,
+    "prompt_sha256": "b55e00dbb04a34dee958ddf280b2055684abe7225c9f29273ee01db2a07c8e58"
+  },
+  "exception-24:mutated": {
+    "task_id": "exception-24:mutated",
+    "fixture_id": "exception-24",
+    "arm": "mutated",
+    "qualname": "nonnegative_24",
+    "old": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-24')\n    return value\n",
+    "current": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_24 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 571700100,
+      "load_duration": 8611300,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5770545000000311,
+    "prompt_sha256": "f4bc727b3fa28c4b2136c9415d80374e6db10ed4a07b1750de187f5d2ebfc74f"
+  },
+  "exception-24:control": {
+    "task_id": "exception-24:control",
+    "fixture_id": "exception-24",
+    "arm": "control",
+    "qualname": "nonnegative_24",
+    "old": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-24')\n    return value\n",
+    "current": "def nonnegative_24(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-24')\n    return value\n",
+    "claim": "nonnegative_24 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 295810600,
+      "load_duration": 8700400,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.31344080000008034,
+    "prompt_sha256": "ead7afc0e37552cf65c07689caa8f288ce9a1276776a5d412fce91a5f4aec006"
+  },
+  "call-24:mutated": {
+    "task_id": "call-24:mutated",
+    "fixture_id": "call-24",
+    "arm": "mutated",
+    "qualname": "trim_24",
+    "old": "def trim_24(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_24(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_24 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 613652100,
+      "load_duration": 8967000,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6188023999998222,
+    "prompt_sha256": "08ff7f8843e9ea85b765eb88d2bd6c663bba7d75a53edf00680e1dca9a10f762"
+  },
+  "call-24:control": {
+    "task_id": "call-24:control",
+    "fixture_id": "call-24",
+    "arm": "control",
+    "qualname": "trim_24",
+    "old": "def trim_24(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_24(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_24 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 291491200,
+      "load_duration": 8617200,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.2957358999997268,
+    "prompt_sha256": "500e875302ea5efcda196d8a2ae93513ea6d2691c8ff24e49942469c9b134fb2"
+  },
+  "arithmetic-25:mutated": {
+    "task_id": "arithmetic-25:mutated",
+    "fixture_id": "arithmetic-25",
+    "arm": "mutated",
+    "qualname": "plus_25",
+    "old": "def plus_25(value: int) -> int:\n    return value + 25\n",
+    "current": "def plus_25(value: int) -> int:\n    return value - 25\n",
+    "claim": "plus_25 returns value plus 25.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "return value - 25 instead of value + 25",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- return value - 25 instead of value + 25",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 732379800,
+      "load_duration": 7178300,
+      "prompt_eval_count": 437,
+      "eval_count": 20
+    },
+    "elapsed_seconds": 0.7558692000002338,
+    "prompt_sha256": "da8585932a07e403a17032ade6a8f504624b9c94214a2e510b47df1226308964"
+  },
+  "arithmetic-25:control": {
+    "task_id": "arithmetic-25:control",
+    "fixture_id": "arithmetic-25",
+    "arm": "control",
+    "qualname": "plus_25",
+    "old": "def plus_25(value: int) -> int:\n    return value + 25\n",
+    "current": "def plus_25(value: int) -> int:\n    return value + 25\n",
+    "claim": "plus_25 returns value plus 25.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 295875100,
+      "load_duration": 3840300,
+      "prompt_eval_count": 377,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.29969389999996565,
+    "prompt_sha256": "317305abc5b9fcbafdbafae3aca7d9159fc61fba734915ce8410aab7dd9156c0"
+  },
+  "condition-25:mutated": {
+    "task_id": "condition-25:mutated",
+    "fixture_id": "condition-25",
+    "arm": "mutated",
+    "qualname": "band_25",
+    "old": "def band_25(value: int) -> str:\n    if value < 75:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_25(value: int) -> str:\n    if value >= 75:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_25 returns 'low' when value is below 75.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "Return 'low' when value >= 75, not below.",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- Return 'low' when value >= 75, not below.",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 736650500,
+      "load_duration": 8325400,
+      "prompt_eval_count": 464,
+      "eval_count": 21
+    },
+    "elapsed_seconds": 0.7566901000000144,
+    "prompt_sha256": "d662800026a908d33abb943f2c421539474b20b71dfcbe4141c5f1de3e9104a0"
+  },
+  "condition-25:control": {
+    "task_id": "condition-25:control",
+    "fixture_id": "condition-25",
+    "arm": "control",
+    "qualname": "band_25",
+    "old": "def band_25(value: int) -> str:\n    if value < 75:\n        return 'low'\n    return 'high'\n",
+    "current": "def band_25(value: int) -> str:\n    if value < 75:\n        return 'low'\n    return 'high'\n",
+    "claim": "band_25 returns 'low' when value is below 75.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 310027800,
+      "load_duration": 7031500,
+      "prompt_eval_count": 394,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3145696000001408,
+    "prompt_sha256": "ebc1b659dae0d2da4f89a2dfda9333f68d27f83d07ae988481fb43702fd4f18a"
+  },
+  "exception-25:mutated": {
+    "task_id": "exception-25:mutated",
+    "fixture_id": "exception-25",
+    "arm": "mutated",
+    "qualname": "nonnegative_25",
+    "old": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-25')\n    return value\n",
+    "current": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        return 0\n    return value\n",
+    "claim": "nonnegative_25 raises ValueError for negative values.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "raises ValueError changed to return 0",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- raises ValueError changed to return 0",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 573355800,
+      "load_duration": 8513600,
+      "prompt_eval_count": 458,
+      "eval_count": 14
+    },
+    "elapsed_seconds": 0.5776257000002261,
+    "prompt_sha256": "f2f885f0d69adcccea4adac03ddd70db5a374153658fbfc95c2e237085ffcc49"
+  },
+  "exception-25:control": {
+    "task_id": "exception-25:control",
+    "fixture_id": "exception-25",
+    "arm": "control",
+    "qualname": "nonnegative_25",
+    "old": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-25')\n    return value\n",
+    "current": "def nonnegative_25(value: int) -> int:\n    if value < 0:\n        raise ValueError('negative-25')\n    return value\n",
+    "claim": "nonnegative_25 raises ValueError for negative values.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 292970500,
+      "load_duration": 8222400,
+      "prompt_eval_count": 392,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.2972128999999768,
+    "prompt_sha256": "1221a086ec05b168018e478d014e6b0af15845c2722d892bae08e0afc79adb21"
+  },
+  "call-25:mutated": {
+    "task_id": "call-25:mutated",
+    "fixture_id": "call-25",
+    "arm": "mutated",
+    "qualname": "trim_25",
+    "old": "def trim_25(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_25(text: str) -> str:\n    return text.lower()\n",
+    "claim": "trim_25 returns text after calling strip.",
+    "expected": "contradicted",
+    "verdict": {
+      "status": "contradicted",
+      "evidence": "now returns text.lower() instead of text.strip()",
+      "parsed": true
+    },
+    "response": "S1: contradicted -- now returns text.lower() instead of text.strip()",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 615939100,
+      "load_duration": 6884800,
+      "prompt_eval_count": 424,
+      "eval_count": 17
+    },
+    "elapsed_seconds": 0.6204822999998214,
+    "prompt_sha256": "29ec35cf23fc2e87f972c893bddb177afd83544096c2f9af999dd6a8e332627c"
+  },
+  "call-25:control": {
+    "task_id": "call-25:control",
+    "fixture_id": "call-25",
+    "arm": "control",
+    "qualname": "trim_25",
+    "old": "def trim_25(text: str) -> str:\n    return text.strip()\n",
+    "current": "def trim_25(text: str) -> str:\n    return text.strip()\n",
+    "claim": "trim_25 returns text after calling strip.",
+    "expected": "supported",
+    "verdict": {
+      "status": "supported",
+      "evidence": "",
+      "parsed": true
+    },
+    "response": "S1: supported",
+    "response_meta": {
+      "done_reason": "stop",
+      "total_duration": 302717100,
+      "load_duration": 8649600,
+      "prompt_eval_count": 370,
+      "eval_count": 5
+    },
+    "elapsed_seconds": 0.3067323000000215,
+    "prompt_sha256": "3158c2600393fe8b23fbb798fc3ca0d738bd1f8e973848efd6426b4d924302fb"
+  }
+}

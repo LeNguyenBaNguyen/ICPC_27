@@ -1,0 +1,48 @@
+{
+  "estimand": "Single-rater human-label sensitivity replacing all observed Qwen-CON rows through effective touch 6; not semantic truth.",
+  "audit_event_rows": 218,
+  "unique_audited_event_keys": 218,
+  "covered_qwen_con_observations": 208,
+  "claims": 1354,
+  "primary_S6_reproduced": 0.8451786093520215,
+  "human_label_S6_unresolved_censored": 0.9246564319718418,
+  "human_label_S6_unresolved_event": 0.9232457850681111,
+  "function_cluster_bootstrap_95": {
+    "unresolved_censored": [
+      0.9058808955715129,
+      0.9417087949007341
+    ],
+    "unresolved_event": [
+      0.9044199282752972,
+      0.9402291148720224
+    ]
+  },
+  "human_verdict_counts": {
+    "supported": 114,
+    "contradicted": 102,
+    "unresolved": 2
+  },
+  "resolved_contradiction_ppv": 0.4722222222222222,
+  "resolved_contradiction_ppv_wilson_95": [
+    0.40671370386425354,
+    0.5387015055126668
+  ],
+  "recall_assumption_S6": {
+    "assumption": "Divide the event-scenario cumulative hazard by homogeneous recall; illustrative, not identified.",
+    "values": {
+      "0.7": 0.8921817468217547,
+      "0.88": 0.9132462111928838,
+      "1.0": 0.9232457850681111
+    }
+  },
+  "two_rater_overlap": {
+    "n": 55,
+    "new_rater_contradicted": 23,
+    "a1_a2_both_contradicted": 55,
+    "matrix": {
+      "new_supported__a1_contradicted__a2_contradicted": 32,
+      "new_contradicted__a1_contradicted__a2_contradicted": 23
+    }
+  },
+  "limitation": "Single-rater labels and homogeneous recall scenarios do not identify semantic truth or rater-error uncertainty."
+}

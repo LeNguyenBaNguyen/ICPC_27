@@ -1,0 +1,961 @@
+case_id,rater_id,verdict,confidence,reason,needs_external_context,mutation_id,mutation_type,expected_affected,detected_by_rater,claim,diff
+DISAG_001,Rater R3,supported,cao,Hàm trực tiếp gọi các hàm bổ trợ _compare_eq_any và các hàm so sánh chuyên biệt trong thân hàm.,no,,cross_model_disagreement,,,"`assertrepr_compare` relies on several helper functions such as `_compare_eq_any`, `_notin_text`, and others.",
+DISAG_002,Rater R3,supported,cao,"Hàm xử lý ép kiểu cho các cấu hình path, args, linelist, bool bằng các phương thức ép kiểu tương ứng.",no,,cross_model_disagreement,,,"`Config._getini` handles different types of configuration values such as paths, arguments, line lists, booleans, and strings by coercing them into the appropriate format.",
+DISAG_003,Rater R3,supported,cao,Hàm tính toán và quyết định danh sách tham số cuối cùng thông qua việc kết hợp các nguồn parser và self.args.,no,,cross_model_disagreement,,,"It decides on the final list of arguments and their source based on various factors like known arguments, test paths, invocation directory, and root path.",
+DISAG_004,Rater R3,supported,cao,"Chữ ký hàm addini nhận chính xác 4 tham số: name, help, type, default (kèm self).",no,,cross_model_disagreement,,,"`addini` takes four parameters: `name`, `help`, `type`, and `default`.",
+DISAG_005,Rater R3,supported,cao,"Trong khối xử lý file ini, hàm kiểm tra section 'pytest' tồn tại trong cấu hình.",no,,cross_model_disagreement,,,"For `.ini` files, it looks for a `[pytest]` section.",
+DISAG_006,Rater R3,supported,cao,Tham số ids trong hàm fixture được dùng để truyền ID cho các tham số kiểm thử.,no,,cross_model_disagreement,,,The parameter 'ids' represents the fixture's IDs.,
+DISAG_007,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`showhelp` lists ini-options found in configuration files like `pytest.ini`, `tox.ini`, `setup.cfg`, or `pyproject.toml`.",
+DISAG_008,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`complete_dataclass` ensures that all fields are properly set up.,
+DISAG_009,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`collect_dataclass_fields` skips fields without an initializer and no default values.,
+DISAG_010,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`GenerateSchema._apply_annotations` applies arguments from `Annotated` or from `FieldInfo` to a schema.,
+DISAG_011,Rater R3,supported,cao,Hàm bao bọc schema logic thông qua tham số transform_inner_schema cho phép các phép biến đổi lồng nhau.,no,,cross_model_disagreement,,,"_apply_annotations wraps the inner schema generation logic for each annotation, allowing for nested transformations.",
+DISAG_012,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_apply_single_annotation relies on helper functions like import_cached_field_info to import necessary classes.,
+DISAG_013,Rater R3,supported,cao,Các thuộc tính phân giải được cập nhật và gộp vào đối tượng field_info trong quá trình build schema.,no,,cross_model_disagreement,,,New attributes from resolved annotations are merged into field_info.,
+DISAG_014,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_namedtuple_schema generates an arguments schema for the fields of the NamedTuple using the _generate_parameter_schema method.,
+DISAG_015,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_typed_dict_schema takes two parameters: typed_dict_cls and origin.,
+DISAG_016,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`match_type` handles more complex types such as dates, times, decimals, UUIDs, URLs, and IP addresses using specific helper methods.",
+DISAG_017,Rater R3,supported,cao,Hàm kiểm tra cls.__pydantic_complete__ và trả về None ngay nếu schema đã hoàn chỉnh mà không cần force.,no,,cross_model_disagreement,,,BaseModel.model_rebuild returns None if the schema is already 'complete'.,
+DISAG_018,Rater R3,supported,cao,Hàm trả về False khi quá trình build schema con gặp lỗi hoặc thất bại trong việc hoàn thiện model.,no,,cross_model_disagreement,,,BaseModel.model_rebuild returns False if rebuilding was not successful.,
+DISAG_019,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,The function returns True if the content is changed.,
+DISAG_020,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,`convert_one_fmt_off_pair` returns `True` if a pair was converted.,
+DISAG_021,Rater R3,supported,cao,"Hàm trả về kiểu bool, trả về True nếu chuyển đổi thành công comment pair và False ở các điều kiện dừng sớm.",no,,cross_model_disagreement,,,"`convert_one_fmt_off_pair` returns `True` if a pair was successfully converted, otherwise `False`.",
+DISAG_022,Rater R3,supported,cao,Hàm khởi tạo đối tượng ProcessPoolExecutor trong khối try chính và fallback sang ThreadPoolExecutor nếu gặp lỗi.,no,,cross_model_disagreement,,,`reformat_many` uses a `ProcessPoolExecutor` to reformat multiple files.,
+DISAG_023,Rater R3,supported,cao,Hàm khởi tạo đối tượng ProcessPoolExecutor trong khối try chính và fallback sang ThreadPoolExecutor nếu gặp lỗi.,no,,cross_model_disagreement,,,`reformat_many` attempts to create a `ProcessPoolExecutor` for parallel processing.,
+DISAG_024,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`schedule_formatting` accepts an object parameter `report` for reporting the status of each file.,
+DISAG_025,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The function relies on several helper functions or methods, including `_maybe_wrap_cms_in_parens`, `normalize_invisible_parens` (recursively), `maybe_make_parens_invisible_in_atom`, `wrap_in_parentheses`, `remove_with_parens`, `_normalize_import_from`, and others.",
+DISAG_026,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"It handles various edge cases, such as when the previous line is a class definition, an import statement, or a docstring.",
+DISAG_027,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"Otherwise, it checks that no commas exist at the same depth level as the multiline string, indicating that the multiline string can be inlined without splitting.",
+DISAG_028,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"After writing all text, the function waits for the subprocess to complete.",
+DISAG_029,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`type`: the type to use to check the value against.,
+DISAG_030,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"_transform_attrs has side effects, including modifying the order of attributes based on their default values and keyword-only status.",
+DISAG_031,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function converts parsed command-line arguments into requirements.,
+DISAG_032,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`make_requirement_preparer` does not handle errors or exceptions itself but logs warnings about experimental feature usage.,
+DISAG_033,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`add_options` inserts the index-related option group at the beginning of the parser's option groups.,
+DISAG_034,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The purpose of `DownloadCommand.run` is to download Python packages specified by the user without installing them.,
+DISAG_035,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"For each requirement, it determines whether to save as a linked requirement or add to the list of requirements to build.",
+DISAG_036,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"It then iterates over each requirement, checking if it should be reinstalled.",
+DISAG_037,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If so, it attempts to uninstall the existing version before proceeding with the installation.",
+DISAG_038,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The purpose of `install` is to install a Python package as specified by an `InstallRequirement` object.,
+DISAG_039,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`make_testcase` does not handle exceptions or edge cases explicitly; instead, it relies on the robustness of the `ConjectureData` object and other components to provide accurate information.",
+DISAG_040,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`update_python_versions` filters these versions to select the newest stable ones, considering special cases for threading builds indicated by a 't' suffix.",
+DISAG_041,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The `upgrade_requirements` function calls `update_vendored_files` to update vendored libraries.,
+DISAG_042,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"Otherwise, it iterates over each changeset, categorizing them into library changes, API changes, or other changes based on their description name and document name.",
+DISAG_043,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The `run` method generates a summary table of items specified in its content.,
+DISAG_044,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"Otherwise, `wrap_displaymath` helper function formats the LaTeX code.",
+DISAG_045,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If all inventory locations fail, it logs a warning with the encountered issues.",
+DISAG_046,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`visit_assignname` takes one parameter, `node`, which represents an assignment node in the abstract syntax tree (AST).",
+DISAG_047,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If no encoding is found by position, it infers it using a keyword search.",
+DISAG_048,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`is_terminating_func` attempts to infer the actual function object from the call node.,
+DISAG_049,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function does not return any value; its primary purpose is to send data over the websocket connection.,
+DISAG_050,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If the parser indicates end-of-file (EOF), it resets the payload and parser state.",
+DISAG_051,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The `_get` method retrieves a connection from the pool associated with the given key.,
+DISAG_052,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If no existing connection is found in the pool, the function creates an asynchronous future and adds it to a list of waiters for that key.",
+DISAG_053,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If no existing connection is found in the pool, the function creates a placeholder object and adds it to the list of acquired connections.",
+DISAG_054,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`parse_headers` strips leading and trailing whitespace from the value and checks for invalid characters before adding it to the headers dictionary.,
+DISAG_055,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`feed_data` takes three parameters: `chunk`, `SEP`, and `CHUNK_EXT`.",
+DISAG_056,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`chunk` is a byte chunk of data to be processed.,
+DISAG_057,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,It sets a result on a waiter if applicable.,
+DISAG_058,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function has no side effects; it does not modify the input parameters or external state beyond returning a new arrangement result object.,
+DISAG_059,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function relies on helper functions like `resolve_box_models` to determine the box models for each child based on their styles and dimensions.,
+DISAG_060,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`render_line` ensures that the internal `_lines` attribute is populated by calling `_populate()`.,
+DISAG_061,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function uses helper methods like `repr_traceback` to format individual tracebacks.,
+DISAG_062,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`_repr_compare` collects keys of differing values into `different_ids`.,
+DISAG_063,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`annotation` represents the type annotation of the field.,
+DISAG_064,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function handles errors by raising a `PydanticUserError` if the annotation is the same as the default value.,
+DISAG_065,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The `context` parameter is additional context passed to the serializer.,
+DISAG_066,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`context` parameter provides additional information that might be needed during serialization.,
+DISAG_067,Rater R3,unresolved,vừa,Không có lệnh raise trực tiếp trong thân hàm; ngoại lệ có thể phát sinh từ callee hoặc middleware.,yes,,cross_model_disagreement,,,"If `warnings` is set to `'error'`, it raises a `PydanticSerializationError`. Otherwise, it logs warnings or ignores errors based on the specified setting.",
+DISAG_068,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The `strict` argument is a boolean indicating whether to strictly check types.,
+DISAG_069,Rater R3,unresolved,vừa,Không có lệnh raise trực tiếp trong thân hàm; ngoại lệ có thể phát sinh từ callee hoặc middleware.,yes,,cross_model_disagreement,,,`validate_json` raises exceptions if the data is invalid according to the schema rules.,
+DISAG_070,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_flaky_replay_to_failure iterates over the interesting origins from the err object.,
+DISAG_071,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The err object has an _interesting_origins attribute containing indices or keys to retrieve these examples.,
+DISAG_072,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The purpose of converting float values to their integer bit representations is to avoid hash collisions for distinct floating-point values like positive and negative zero.,
+DISAG_073,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,It checks if each document exists.,
+DISAG_074,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If a referenced document does not exist, it logs a warning and skips that entry.",
+DISAG_075,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The method determines the type of object being documented (e.g., module, class).",
+DISAG_076,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The chosen documenter is initialized with the target object name (from the directive's arguments).,
+DISAG_077,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"If the request URL scheme is not secure and there are specific origins treated as secure, it checks if the request origin matches any of these secure origins.",
+DISAG_078,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The primary side effect is modifying the configuration object with parsed values, but it also handles exceptions gracefully by ignoring help requests.","--- 
++++ 
+@@ -9,16 +9,14 @@
+         self._preparse(args, addopts=addopts)
+         self._parser.after_preparse = True  # type: ignore
+         try:
+-            args = self._parser.parse_setoption(
+-                args, self.option, namespace=self.option
+-            )
+-            self.args, self.args_source = self._decide_args(
+-                args=args,
+-                pyargs=self.known_args_namespace.pyargs,
+-                testpaths=self.getini(""testpaths""),
+-                invocation_dir=self.invocation_params.dir,
+-                rootpath=self.rootpath,
+-                warn=True,
+-            )
++            parsed = self._parser.parse(args, namespace=self.option)
+         except PrintHelp:
+-            pass
++            return
++        self.args, self.args_source = self._decide_args(
++            args=getattr(parsed, FILE_OR_DIR),
++            pyargs=self.known_args_namespace.pyargs,
++            testpaths=self.getini(""testpaths""),
++            invocation_dir=self.invocation_params.dir,
++            rootpath=self.rootpath,
++            warn=True,
++        )"
+DISAG_079,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The parameter 'nodeid' determines the visibility of the fixture in the collection tree.,"--- 
++++ 
+@@ -50,15 +50,23 @@
+         )
+ 
+         faclist = self._arg2fixturedefs.setdefault(name, [])
+-        if fixture_def.has_location:
++        # Insert the fixturedef into the list while maintaining a partial order
++        # based on visibility: a fixturedef whose visibility is more specific
++        # sorts after a more general one, so that it takes precedence in the
++        # override chain (the last applicable fixturedef in the list is used
++        # first, see getfixturedefs).
++        # fixturedefs with the same visibility keep registration order, i.e. the
++        # last registered wins.
++        # The order between non-comparable fixturedefs doesn't matter since they
++        # cannot be visible together.
++        # The idea is that a fixture that is defined closer to the item should
++        # take precedence.
++        for i, existing in enumerate(faclist):
++            if is_visibility_more_specific(existing, fixture_def):
++                faclist.insert(i, fixture_def)
++                break
++        else:
+             faclist.append(fixture_def)
+-        else:
+-            # fixturedefs with no location are at the front
+-            # so this inserts the current fixturedef after the
+-            # existing fixturedefs from external plugins but
+-            # before the fixturedefs provided in conftests.
+-            i = len([f for f in faclist if not f.has_location])
+-            faclist.insert(i, fixture_def)
+         if autouse:
+             if node is not None:
+                 self._node_autousenames.setdefault(node, []).append(name)"
+DISAG_080,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,External plugins' fixtures take precedence over conftests'.,"--- 
++++ 
+@@ -50,15 +50,23 @@
+         )
+ 
+         faclist = self._arg2fixturedefs.setdefault(name, [])
+-        if fixture_def.has_location:
++        # Insert the fixturedef into the list while maintaining a partial order
++        # based on visibility: a fixturedef whose visibility is more specific
++        # sorts after a more general one, so that it takes precedence in the
++        # override chain (the last applicable fixturedef in the list is used
++        # first, see getfixturedefs).
++        # fixturedefs with the same visibility keep registration order, i.e. the
++        # last registered wins.
++        # The order between non-comparable fixturedefs doesn't matter since they
++        # cannot be visible together.
++        # The idea is that a fixture that is defined closer to the item should
++        # take precedence.
++        for i, existing in enumerate(faclist):
++            if is_visibility_more_specific(existing, fixture_def):
++                faclist.insert(i, fixture_def)
++                break
++        else:
+             faclist.append(fixture_def)
+-        else:
+-            # fixturedefs with no location are at the front
+-            # so this inserts the current fixturedef after the
+-            # existing fixturedefs from external plugins but
+-            # before the fixturedefs provided in conftests.
+-            i = len([f for f in faclist if not f.has_location])
+-            faclist.insert(i, fixture_def)
+         if autouse:
+             if node is not None:
+                 self._node_autousenames.setdefault(node, []).append(name)"
+DISAG_081,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`showhelp` extracts the help text, type, and default value for each ini-option.",
+DISAG_082,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The side effects of this function are limited to outputting formatted text to the terminal, with no changes made to the configuration or state of the application.",
+DISAG_083,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`collect_dataclass_fields` has optional parameters for configuration settings (`config_wrapper`).,"--- 
++++ 
+@@ -1,18 +1,18 @@
+ def collect_dataclass_fields(
+     cls: type[StandardDataclass],
+     *,
++    config_wrapper: ConfigWrapper,
+     ns_resolver: NsResolver | None = None,
+     typevars_map: dict[Any, Any] | None = None,
+-    config_wrapper: ConfigWrapper | None = None,
+ ) -> dict[str, FieldInfo]:
+     """"""Collect the fields of a dataclass.
+ 
+     Args:
+         cls: dataclass.
++        config_wrapper: The config wrapper instance.
+         ns_resolver: Namespace resolver to use when getting dataclass annotations.
+             Defaults to an empty instance.
+         typevars_map: A dictionary mapping type variables to their concrete types.
+-        config_wrapper: The config wrapper instance.
+ 
+     Returns:
+         The dataclass fields.
+@@ -71,6 +71,7 @@
+                     )
+ 
+                 fields[ann_name] = field_info
++                update_field_from_config(config_wrapper, ann_name, field_info)
+ 
+                 if field_info.default is not PydanticUndefined and isinstance(
+                     getattr(cls, ann_name, field_info), FieldInfo_
+@@ -85,7 +86,7 @@
+             # Can't we juste use `_generics.replace_types`?
+             field.apply_typevars_map(typevars_map)
+ 
+-    if config_wrapper is not None and config_wrapper.use_attribute_docstrings:
++    if config_wrapper.use_attribute_docstrings:
+         _update_fields_from_docstrings(
+             cls,
+             fields,"
+DISAG_084,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The inner handler applies any JSON schema functions extracted from the annotations.,"--- 
++++ 
+@@ -11,9 +11,6 @@
+         (in other words, `GenerateSchema._annotated_schema` just unpacks `Annotated`, this process it).
+         """"""
+         annotations = list(_known_annotated_metadata.expand_grouped_metadata(annotations))
+-        res = self._get_prepare_pydantic_annotations_for_known_type(source_type, tuple(annotations))
+-        if res is not None:
+-            source_type, annotations = res
+ 
+         pydantic_js_annotation_functions: list[GetJsonSchemaFunction] = []
+ "
+DISAG_085,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_apply_single_annotation checks for a discriminator in the FieldInfo and applies it to the schema if present.,"--- 
++++ 
+@@ -49,47 +49,12 @@
+                 schema['schema'] = inner
+             return schema
+ 
+-        if schema['type'] == 'union' and any(
+-            choice['type'] == 'missing-sentinel' for choice in core_schema.iter_union_choices(schema)
+-        ):
+-            # Same behavior as for nullable schemas. This is a bit gross, but we have to support the same pattern
+-            filtered_choices = [
+-                choice
+-                for choice in schema['choices']
+-                if (choice[0] if isinstance(choice, tuple) else choice)['type'] != 'missing-sentinel'
+-            ]
+-            if len(filtered_choices) >= 2:
+-                # e.g. `Annotated[int | str | MISSING, Constraint(...)]`. We apply `Constraint(...)` to `int | str`,
+-                # and create a new union semantically equivalent to `Annotated[int | str, Constraint(...)] | MISSING`:
+-                filtered_union = core_schema.union_schema(filtered_choices)
+-                filtered_union = self._apply_single_annotation(filtered_union, metadata)
+-                new_union = schema.copy()
+-                new_union['choices'] = [
+-                    filtered_union,
+-                    next(
+-                        choice
+-                        for choice in schema['choices']
+-                        if (choice[0] if isinstance(choice, tuple) else choice)['type'] == 'missing-sentinel'
+-                    ),
+-                ]
+-                return new_union
+-            elif len(filtered_choices) == 1:
+-                # e.g. `Annotated[int | MISSING, Constraint(...)]`. We apply `Constraint(...)` to `int`, and reconstruct
+-                # a new union preserving the order.
+-                inner = filtered_choices[0][0] if isinstance(filtered_choices[0], tuple) else filtered_choices[0]
+-                inner = self._apply_single_annotation(inner, metadata)
+-
+-                # Create a new union schema, preserving the order of the union:
+-                new_union = schema.copy()
+-                new_union['choices'] = [
+-                    (inner, choice[1])
+-                    if isinstance(choice, tuple) and choice[0]['type'] != 'missing-sentinel'
+-                    else inner
+-                    if not isinstance(choice, tuple) and choice['type'] != 'missing-sentinel'
+-                    else choice
+-                    for choice in schema['choices']
+-                ]
+-                return new_union
++        if schema['type'] == 'missing-sentinel' and (inner := schema.get('schema')) is not None:
++            # Same behavior as for nullable schemas: metadata is automatically applied to the inner schema
++            inner = self._apply_single_annotation(inner, metadata)
++            if inner:
++                schema['schema'] = inner
++            return schema
+ 
+         original_schema = schema
+         ref = schema.get('ref')"
+DISAG_086,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function checks if the field's annotation needs further evaluation.,"--- 
++++ 
+@@ -1,32 +1,6 @@
+ def _common_field_schema(  # C901
+         self, name: str, field_info: FieldInfo, decorators: DecoratorInfos
+     ) -> _CommonField:
+-        # Update FieldInfo annotation if appropriate:
+-        FieldInfo = import_cached_field_info()
+-        if not field_info.evaluated:
+-            # TODO Can we use field_info.apply_typevars_map here?
+-            try:
+-                evaluated_type = _typing_extra.eval_type(field_info.annotation, *self._types_namespace)
+-            except NameError as e:
+-                raise PydanticUndefinedAnnotation.from_name_error(e) from e
+-            evaluated_type = replace_types(evaluated_type, self._typevars_map)
+-            field_info.evaluated = True
+-            if not has_instance_in_type(evaluated_type, PydanticRecursiveRef):
+-                new_field_info = FieldInfo.from_annotation(evaluated_type)
+-                field_info.annotation = new_field_info.annotation
+-
+-                # Handle any field info attributes that may have been obtained from now-resolved annotations
+-                for k, v in new_field_info._attributes_set.items():
+-                    # If an attribute is already set, it means it was set by assigning to a call to Field (or just a
+-                    # default value), and that should take the highest priority. So don't overwrite existing attributes.
+-                    # We skip over ""attributes"" that are present in the metadata_lookup dict because these won't
+-                    # actually end up as attributes of the `FieldInfo` instance.
+-                    if k not in field_info._attributes_set and k not in field_info.metadata_lookup:
+-                        setattr(field_info, k, v)
+-
+-                # Finally, ensure the field info also reflects all the `_attributes_set` that are actually metadata.
+-                field_info.metadata = [*new_field_info.metadata, *field_info.metadata]
+-
+         source_type, annotations = field_info.annotation, field_info.metadata
+ 
+         def set_discriminator(schema: CoreSchema) -> CoreSchema:"
+DISAG_087,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_namedtuple_schema replaces any type variables in the annotations with their concrete types using the replace_types helper function.,"--- 
++++ 
+@@ -32,6 +32,7 @@
+                     self._generate_parameter_schema(
+                         field_name,
+                         annotation,
++                        source=AnnotationSource.NAMED_TUPLE,
+                         default=namedtuple_cls._field_defaults.get(field_name, Parameter.empty),
+                     )
+                     for field_name, annotation in annotations.items()"
+DISAG_088,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,typed_dict_cls is the TypedDict class itself.,"--- 
++++ 
+@@ -34,6 +34,8 @@
+                 )
+ 
+             try:
++                # if a typed dictionary class doesn't have config, we use the parent's config, hence a default of `None`
++                # see https://github.com/pydantic/pydantic/issues/10917
+                 config: ConfigDict | None = get_attribute_from_bases(typed_dict_cls, '__pydantic_config__')
+             except AttributeError:
+                 config = None
+@@ -53,9 +55,7 @@
+                     field_docstrings = None
+ 
+                 try:
+-                    annotations = _typing_extra.get_cls_type_hints(
+-                        typed_dict_cls, ns_resolver=self._ns_resolver, lenient=False
+-                    )
++                    annotations = _typing_extra.get_cls_type_hints(typed_dict_cls, ns_resolver=self._ns_resolver)
+                 except NameError as e:
+                     raise PydanticUndefinedAnnotation.from_name_error(e) from e
+ "
+DISAG_089,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`match_type` falls back to `_unknown_type_schema` if none of the conditions are met and arbitrary types are not allowed.,
+DISAG_090,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`match_type` uses `get_origin` to extract the underlying type for generic types and calls `_match_generic_type`.,
+DISAG_091,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`complete_model_class` handles errors by catching exceptions like `PydanticUndefinedAnnotation` and `CollectedInvalid`, setting up mock models in these cases.","--- 
++++ 
+@@ -25,10 +25,6 @@
+         PydanticUndefinedAnnotation: If `PydanticUndefinedAnnotation` occurs in`__get_pydantic_core_schema__`
+             and `raise_errors=True`.
+     """"""
+-    if config_wrapper.defer_build:
+-        set_model_mocks(cls)
+-        return False
+-
+     typevars_map = get_model_typevars_map(cls)
+     gen_schema = GenerateSchema(
+         config_wrapper,
+@@ -52,7 +48,12 @@
+         set_model_mocks(cls)
+         return False
+ 
+-    # debug(schema)
++    # This needs to happen *after* model schema generation, as the return type
++    # of the properties are evaluated and the `ComputedFieldInfo` are recreated:
++    cls.__pydantic_computed_fields__ = {k: v.info for k, v in cls.__pydantic_decorators__.computed_fields.items()}
++
++    set_deprecated_descriptors(cls)
++
+     cls.__pydantic_core_schema__ = schema
+ 
+     cls.__pydantic_validator__ = create_schema_validator("
+DISAG_092,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,"If rebuilding fails and `raise_errors` is true, `model_rebuild` will raise an error; otherwise, it returns `False`.","--- 
++++ 
+@@ -45,7 +45,6 @@
+         config = {**cls.model_config, 'defer_build': False}
+         return _model_construction.complete_model_class(
+             cls,
+-            cls.__name__,
+             _config.ConfigWrapper(config, check=False),
+             raise_errors=raise_errors,
+             ns_resolver=ns_resolver,"
+DISAG_093,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`json_schemas` does not explicitly catch exceptions; instead, it assumes that any issues will be raised by the underlying methods it calls.",
+DISAG_094,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,`json_schemas` returns a tuple where the first element is a dictionary mapping input keys to JSON schemas.,
+DISAG_095,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The function `TypeAdapter.json_schemas` takes multiple arguments including `inputs`, `by_alias`, `title`, `description`, `ref_template`, and `schema_generator`.","--- 
++++ 
+@@ -7,6 +7,7 @@
+         title: str | None = None,
+         description: str | None = None,
+         ref_template: str = DEFAULT_REF_TEMPLATE,
++        union_format: Literal['any_of', 'primitive_type_array'] = 'any_of',
+         schema_generator: type[GenerateJsonSchema] = GenerateJsonSchema,
+     ) -> tuple[dict[tuple[JsonSchemaKeyT, JsonSchemaMode], JsonSchemaValue], JsonSchemaValue]:
+         """"""Generate a JSON schema including definitions from multiple type adapters.
+@@ -19,6 +20,14 @@
+             title: The title for the schema.
+             description: The description for the schema.
+             ref_template: The format string used for generating $ref strings.
++            union_format: The format to use when combining schemas from unions together. Can be one of:
++
++                - `'any_of'`: Use the [`anyOf`](https://json-schema.org/understanding-json-schema/reference/combining#anyOf)
++                keyword to combine schemas (the default).
++                - `'primitive_type_array'`: Use the [`type`](https://json-schema.org/understanding-json-schema/reference/type)
++                keyword as an array of strings, containing each type of the combination. If any of the schemas is not a primitive
++                type (`string`, `boolean`, `null`, `integer` or `number`) or contains constraints/metadata, falls back to
++                `any_of`.
+             schema_generator: The generator class used for creating the schema.
+ 
+         Returns:
+@@ -31,7 +40,9 @@
+                     element, along with the optional title and description keys.
+ 
+         """"""
+-        schema_generator_instance = schema_generator(by_alias=by_alias, ref_template=ref_template)
++        schema_generator_instance = schema_generator(
++            by_alias=by_alias, ref_template=ref_template, union_format=union_format
++        )
+ 
+         inputs_ = []
+         for key, mode, adapter in inputs:"
+DISAG_096,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,`json_schemas` returns a tuple where the first element is a dictionary mapping input keys to JSON schemas.,"--- 
++++ 
+@@ -7,6 +7,7 @@
+         title: str | None = None,
+         description: str | None = None,
+         ref_template: str = DEFAULT_REF_TEMPLATE,
++        union_format: Literal['any_of', 'primitive_type_array'] = 'any_of',
+         schema_generator: type[GenerateJsonSchema] = GenerateJsonSchema,
+     ) -> tuple[dict[tuple[JsonSchemaKeyT, JsonSchemaMode], JsonSchemaValue], JsonSchemaValue]:
+         """"""Generate a JSON schema including definitions from multiple type adapters.
+@@ -19,6 +20,14 @@
+             title: The title for the schema.
+             description: The description for the schema.
+             ref_template: The format string used for generating $ref strings.
++            union_format: The format to use when combining schemas from unions together. Can be one of:
++
++                - `'any_of'`: Use the [`anyOf`](https://json-schema.org/understanding-json-schema/reference/combining#anyOf)
++                keyword to combine schemas (the default).
++                - `'primitive_type_array'`: Use the [`type`](https://json-schema.org/understanding-json-schema/reference/type)
++                keyword as an array of strings, containing each type of the combination. If any of the schemas is not a primitive
++                type (`string`, `boolean`, `null`, `integer` or `number`) or contains constraints/metadata, falls back to
++                `any_of`.
+             schema_generator: The generator class used for creating the schema.
+ 
+         Returns:
+@@ -31,7 +40,9 @@
+                     element, along with the optional title and description keys.
+ 
+         """"""
+-        schema_generator_instance = schema_generator(by_alias=by_alias, ref_template=ref_template)
++        schema_generator_instance = schema_generator(
++            by_alias=by_alias, ref_template=ref_template, union_format=union_format
++        )
+ 
+         inputs_ = []
+         for key, mode, adapter in inputs:"
+DISAG_097,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"`convert_one_fmt_off_pair` relies on several helper functions such as `list_comments`, `_contains_fmt_skip_comment`, `generate_ignored_nodes`, and `preceding_leaf`.","--- 
++++ 
+@@ -6,6 +6,15 @@
+     Returns True if a pair was converted.
+     """"""
+     for leaf in node.leaves():
++        # Skip STANDALONE_COMMENT nodes that were created by fmt:off/on processing
++        # to avoid reprocessing them in subsequent iterations
++        if (
++            leaf.type == STANDALONE_COMMENT
++            and hasattr(leaf, ""fmt_pass_converted_first_leaf"")
++            and leaf.fmt_pass_converted_first_leaf is None
++        ):
++            continue
++
+         previous_consumed = 0
+         for comment in list_comments(leaf.prefix, is_endmarker=False, mode=mode):
+             should_process, is_fmt_off, is_fmt_skip = _should_process_fmt_comment("
+DISAG_098,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`schedule_formatting` is an asynchronous function.,"--- 
++++ 
+@@ -45,32 +45,41 @@
+             ): src
+             for src in sorted(sources)
+         }
+-        pending = tasks.keys()
++        pending = set(tasks)
+         try:
+             loop.add_signal_handler(signal.SIGINT, cancel, pending)
+             loop.add_signal_handler(signal.SIGTERM, cancel, pending)
+         except NotImplementedError:
+             # There are no good alternatives for these on Windows.
+             pass
++        # `asyncio.wait(..., return_when=FIRST_COMPLETED)` in a tight loop is
++        # quadratic in the number of files: every call re-registers completion
++        # callbacks on all pending tasks, so 10x the files means ~100x that
++        # bookkeeping (see #1951). A done callback per task costs O(1) per
++        # completion instead, and the queue preserves completion-order
++        # processing of results.
++        finished: asyncio.Queue[asyncio.Future[Any]] = asyncio.Queue()
++        for task in pending:
++            task.add_done_callback(finished.put_nowait)
+         while pending:
+-            done, _ = await asyncio.wait(pending, return_when=asyncio.FIRST_COMPLETED)
+-            for task in done:
+-                src = tasks.pop(task)
+-                if task.cancelled():
+-                    cancelled.append(task)
+-                elif exc := task.exception():
+-                    if report.verbose:
+-                        traceback.print_exception(type(exc), exc, exc.__traceback__)
+-                    report.failed(src, exc)
+-                else:
+-                    changed = Changed.YES if task.result() else Changed.NO
+-                    # If the file was written back or was successfully checked as
+-                    # well-formatted, store this information in the cache.
+-                    if write_back is WriteBack.YES or (
+-                        write_back is WriteBack.CHECK and changed is Changed.NO
+-                    ):
+-                        sources_to_cache.append(src)
+-                    report.done(src, changed)
++            task = await finished.get()
++            pending.discard(task)
++            src = tasks.pop(task)
++            if task.cancelled():
++                cancelled.append(task)
++            elif exc := task.exception():
++                if report.verbose:
++                    traceback.print_exception(type(exc), exc, exc.__traceback__)
++                report.failed(src, exc)
++            else:
++                changed = Changed.YES if task.result() else Changed.NO
++                # If the file was written back or was successfully checked as
++                # well-formatted, store this information in the cache.
++                if write_back is WriteBack.YES or (
++                    write_back is WriteBack.CHECK and changed is Changed.NO
++                ):
++                    sources_to_cache.append(src)
++                report.done(src, changed)
+         if cancelled:
+             await asyncio.gather(*cancelled, return_exceptions=True)
+         if sources_to_cache and not no_cache and cache is not None:"
+DISAG_099,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The function removes repeated, adjacent invisible parens from the atom `node` as they are redundant.","--- 
++++ 
+@@ -1,6 +1,8 @@
+ def maybe_make_parens_invisible_in_atom(
+     node: LN,
+     parent: LN,
++    mode: Mode,
++    features: Collection[Feature],
+     remove_brackets_around_comma: bool = False,
+ ) -> bool:
+     """"""If it's safe, make the parens in the atom `node` invisible, recursively.
+@@ -26,6 +28,25 @@
+             # and option to skip this check for `for` and `with` statements.
+             not remove_brackets_around_comma
+             and max_delimiter_priority_in_atom(node) >= COMMA_PRIORITY
++            # Skip this check in Preview mode in order to
++            # Remove parentheses around multiple exception types in except and
++            # except* without as. See PEP 758 for details.
++            and not (
++                Preview.remove_parens_around_except_types in mode
++                and Feature.UNPARENTHESIZED_EXCEPT_TYPES in features
++                # is a tuple
++                and is_tuple(node)
++                # has a parent node
++                and node.parent is not None
++                # parent is an except clause
++                and node.parent.type == syms.except_clause
++                # is not immediately followed by as clause
++                and not (
++                    node.next_sibling is not None
++                    and is_name_token(node.next_sibling)
++                    and node.next_sibling.value == ""as""
++                )
++            )
+         )
+         or is_tuple_containing_walrus(node)
+         or is_tuple_containing_star(node)
+@@ -66,6 +87,8 @@
+         maybe_make_parens_invisible_in_atom(
+             middle,
+             parent=parent,
++            mode=mode,
++            features=features,
+             remove_brackets_around_comma=remove_brackets_around_comma,
+         )
+ "
+DISAG_100,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"The function handles various edge cases, such as expressions with no delimiters or multiple delimiters of the same priority, by returning False in those scenarios.","--- 
++++ 
+@@ -1,6 +1,7 @@
+ def can_omit_invisible_parens(
+     rhs: RHSResult,
+     line_length: int,
++    mode: Mode,
+ ) -> bool:
+     """"""Does `rhs.body` have a shape safe to reformat without optional parens around it?
+ 
+@@ -63,6 +64,37 @@
+             and leaf.value
+         ):
+             closing_bracket = leaf
++
++    # For assignments to a subscripted target whose head is too long to fit
++    # (e.g. `x[long_key][another_long_key] = expr`), the target must be split
++    # at its subscript brackets no matter what, so optional parens around a
++    # RHS that fits on the resulting tail line (`] = expr`) are unnecessary.
++    # When the head fits on one line, paren-wrapping the RHS remains the
++    # preferred style and this check must not fire. It must also come before
++    # the delimiter_count > 1 early return below, which would otherwise
++    # reject bodies with multiple delimiters such as `10 - 5`.
++    if (
++        Preview.fix_unnecessary_parens_in_indexed_assignment in mode
++        and len(rhs.head.leaves) >= 3
++        and rhs.head.leaves[-2].type == token.EQUAL
++        # The target must actually end with a subscript: a visible `]`
++        # immediately before the `=`. Invisible parens (e.g. around tuple
++        # targets like `(x,) = ...`) have an empty value and don't count.
++        and rhs.head.leaves[-3].type == token.RSQB
++        and rhs.head.leaves[-3].value
++        # In annotated assignments (`x: dict[str, int] = ...`) the `]` before
++        # the `=` belongs to the annotation; splitting on the annotation's
++        # brackets would be wrong, so leave the optional parens alone.
++        and not _is_annotated_assignment(rhs.head)
++        # The head must be too long to fit, forcing the subscript split.
++        and not is_line_short_enough(rhs.head, mode=mode)
++    ):
++        # 4 extra characters for the `] = ` prefix on the tail line.
++        tail_line_length = 4 * line.depth + 4
++        for _index, _leaf, leaf_length in line.enumerate_with_length():
++            tail_line_length += leaf_length
++        if tail_line_length <= line_length:
++            return True
+ 
+     bt = line.bracket_tracker
+     if not bt.delimiters:"
+DISAG_101,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,"The function first checks if there are any standalone comments in the expression that would need to be separated onto their own lines. If so, it returns False because omitting the parentheses would prevent this separation.","--- 
++++ 
+@@ -1,6 +1,7 @@
+ def can_omit_invisible_parens(
+     rhs: RHSResult,
+     line_length: int,
++    mode: Mode,
+ ) -> bool:
+     """"""Does `rhs.body` have a shape safe to reformat without optional parens around it?
+ 
+@@ -63,6 +64,37 @@
+             and leaf.value
+         ):
+             closing_bracket = leaf
++
++    # For assignments to a subscripted target whose head is too long to fit
++    # (e.g. `x[long_key][another_long_key] = expr`), the target must be split
++    # at its subscript brackets no matter what, so optional parens around a
++    # RHS that fits on the resulting tail line (`] = expr`) are unnecessary.
++    # When the head fits on one line, paren-wrapping the RHS remains the
++    # preferred style and this check must not fire. It must also come before
++    # the delimiter_count > 1 early return below, which would otherwise
++    # reject bodies with multiple delimiters such as `10 - 5`.
++    if (
++        Preview.fix_unnecessary_parens_in_indexed_assignment in mode
++        and len(rhs.head.leaves) >= 3
++        and rhs.head.leaves[-2].type == token.EQUAL
++        # The target must actually end with a subscript: a visible `]`
++        # immediately before the `=`. Invisible parens (e.g. around tuple
++        # targets like `(x,) = ...`) have an empty value and don't count.
++        and rhs.head.leaves[-3].type == token.RSQB
++        and rhs.head.leaves[-3].value
++        # In annotated assignments (`x: dict[str, int] = ...`) the `]` before
++        # the `=` belongs to the annotation; splitting on the annotation's
++        # brackets would be wrong, so leave the optional parens alone.
++        and not _is_annotated_assignment(rhs.head)
++        # The head must be too long to fit, forcing the subscript split.
++        and not is_line_short_enough(rhs.head, mode=mode)
++    ):
++        # 4 extra characters for the `] = ` prefix on the tail line.
++        tail_line_length = 4 * line.depth + 4
++        for _index, _leaf, leaf_length in line.enumerate_with_length():
++            tail_line_length += leaf_length
++        if tail_line_length <= line_length:
++            return True
+ 
+     bt = line.bracket_tracker
+     if not bt.delimiters:"
+DISAG_102,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_pipepager handles additional KeyboardInterrupts gracefully to ensure the pager exits cleanly if interrupted.,"--- 
++++ 
+@@ -19,8 +19,11 @@
+     cmd_filepath = shutil.which(cmd)
+     if not cmd_filepath:
+         return False
+-    # Resolves symlinks and produces a normalized absolute path string.
+-    cmd_path = Path(cmd_filepath).resolve()
++
++    # Produces a normalized absolute path string.
++    # multi-call binaries such as busybox derive their identity from the symlink
++    # less -> busybox. resolve() causes them to misbehave. (eg. less becomes busybox)
++    cmd_path = Path(cmd_filepath).absolute()
+     cmd_name = cmd_path.name
+ 
+     import subprocess"
+DISAG_103,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,color is a boolean or None indicating whether color support should be enabled.,"--- 
++++ 
+@@ -19,8 +19,11 @@
+     cmd_filepath = shutil.which(cmd)
+     if not cmd_filepath:
+         return False
+-    # Resolves symlinks and produces a normalized absolute path string.
+-    cmd_path = Path(cmd_filepath).resolve()
++
++    # Produces a normalized absolute path string.
++    # multi-call binaries such as busybox derive their identity from the symlink
++    # less -> busybox. resolve() causes them to misbehave. (eg. less becomes busybox)
++    cmd_path = Path(cmd_filepath).absolute()
+     cmd_name = cmd_path.name
+ 
+     import subprocess"
+DISAG_104,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`docs` defines a helper method `get_sphinx_build_command` that constructs the command list for building Sphinx documentation of different kinds.,"--- 
++++ 
+@@ -1,6 +1,5 @@
+ @nox.session
+ def docs(session: nox.Session) -> None:
+-    session.install(""-e"", ""."")
+     session.install(""-r"", REQUIREMENTS[""docs""])
+ 
+     def get_sphinx_build_command(kind: str) -> List[str]:
+@@ -16,6 +15,7 @@
+             ""-c"", ""docs/html"",  # see note above
+             ""-d"", ""docs/build/doctrees/"" + kind,
+             ""-b"", kind,
++            ""--jobs"", ""auto"",
+             ""docs/"" + kind,
+             ""docs/build/"" + kind,
+         ]"
+DISAG_105,Rater R3,supported,vừa,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_build_session handles custom CA bundles and client certificates by setting the session's verify and cert attributes accordingly.,"--- 
++++ 
+@@ -35,14 +35,18 @@
+         if options.timeout or timeout:
+             session.timeout = timeout if timeout is not None else options.timeout
+ 
+-        # Handle configured proxies
+-        if options.proxy:
+-            session.proxies = {
+-                ""http"": options.proxy,
+-                ""https"": options.proxy,
+-            }
++        # An explicit --proxy (including """" to disable proxying) or --no-proxy-env
++        # makes the session ignore environment proxies; unset --proxy is None.
++        if options.proxy is not None or options.no_proxy_env:
++            if options.proxy:
++                session.proxies = {
++                    ""http"": options.proxy,
++                    ""https"": options.proxy,
++                }
+             session.trust_env = False
++            # Keep """" so an empty --proxy reaches build subprocesses.
+             session.pip_proxy = options.proxy
++            session.pip_no_proxy_env = options.no_proxy_env
+ 
+         # Determine if we can prompt the user for authentication or not
+         session.auth.prompting = not options.no_input"
+DISAG_106,Rater R3,contradicted,cao,"Định nghĩa hàm nhận thực tế 8 tham số (*, name, func, nodeid, scope, params, ids, autouse) nếu tính đầy đủ cả self trong class hoặc 8 tham số ngoài self.",no,,cross_model_disagreement,,,"FixtureManager._register_fixture takes 7 parameters: name, func, nodeid, scope, params, ids, and autouse.",
+DISAG_107,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function is named GenerateSchema._namedtuple_schema.,
+DISAG_108,Rater R3,contradicted,cao,"Chữ ký hàm complete_model_class chỉ nhận 6 tham số, mâu thuẫn với con số 7 tham số mà claim khẳng định.",no,,cross_model_disagreement,,,"`complete_model_class` is a function that takes seven parameters: `cls`, `cls_name`, `config_wrapper`, `raise_errors`, `ns_resolver`, and `create_model_module`.",
+DISAG_109,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`cls_name` parameter is the model or dataclass name.,
+DISAG_110,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"BaseModel.model_rebuild takes four parameters: force, raise_errors, _parent_namespace_depth, and _types_namespace.",
+DISAG_111,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `mode` with no default value specified.,
+DISAG_112,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `include` with no default value specified.,
+DISAG_113,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `exclude` with no default value specified.,
+DISAG_114,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `by_alias` with no default value specified.,
+DISAG_115,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `exclude_unset` with no default value specified.,
+DISAG_116,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `exclude_defaults` with no default value specified.,
+DISAG_117,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `exclude_none` with no default value specified.,
+DISAG_118,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `round_trip` with no default value specified.,
+DISAG_119,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `warnings` with no default value specified.,
+DISAG_120,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,The function `TypeAdapter.dump_python` has a parameter named `serialize_as_any` with no default value specified.,
+DISAG_121,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`left` and `right` are the operands being compared.,
+DISAG_122,Rater R3,supported,cao,Logic và kiểu dữ liệu trả về trong các lệnh return của hàm tương thích hoàn toàn với claim.,no,,cross_model_disagreement,,,"`Config._getini` looks for an override value; if none is found, it falls back to the default value specified in the configuration file or returns the default if the option is not set.",
+DISAG_123,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,"It supports three types of files: `.ini`, `.cfg`, and `.toml`. The function checks the file extension to determine how to parse it.",
+DISAG_124,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,_register_fixture creates a FixtureDef object encapsulating these details.,
+DISAG_125,Rater R3,supported,cao,"Các cấu trúc điều khiển, kiểu dữ liệu và thao tác logic trong code hàm phản ánh chính xác nội dung claim.",no,,cross_model_disagreement,,,`showhelp` writes the help information for command-line options using the `format_help` method of the `_parser.optparser`.,
+MUT_001,Rater R3,contradicted,cao,"Toán tử so sánh bị đổi từ strictly less than (< 3) sang less-than-or-equal (<= 3), khiến giá trị biên 3 bị gán sai nhãn ""low"".",no,MUT_BOUND_01,boundary_comparison,yes,yes,"band_1 returns ""low"" when value is strictly below 3.","--- original
++++ mutated
+@@ -1,4 +1,4 @@
+ def band_1(value: int) -> str:
+-    if value < 3:
++    if value <= 3:
+         return ""low""
+     return ""high"""
+MUT_002,Rater R3,contradicted,cao,"Toán tử đổi thành >= 0, khiến số 0 trả về True thay vì False như định nghĩa strictly positive của claim.",no,MUT_BOUND_02,boundary_comparison,yes,yes,check_positive returns True only for strictly positive integers (> 0).,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def check_positive(n: int) -> bool:
+-    return n > 0
++    return n >= 0"
+MUT_003,Rater R3,contradicted,cao,"Toán tử >= bị đổi thành >, làm mất hành vi kích hoạt khi buffer vừa đủ đạt max_size.",no,MUT_BOUND_03,boundary_comparison,yes,yes,paginate chunks items when the buffer reaches or exceeds max_size.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def paginate(buf: list, max_size: int) -> bool:
+-    return len(buf) >= max_size
++    return len(buf) > max_size"
+MUT_004,Rater R3,contradicted,cao,"Biên trên bị đổi thành < 100, loại bỏ giá trị hợp lệ 100% trái với mô tả claim.",no,MUT_BOUND_04,boundary_comparison,yes,yes,is_valid_percentage checks that value is less than or equal to 100.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def is_valid_percentage(val: float) -> bool:
+-    return 0 <= val <= 100
++    return 0 <= val < 100"
+MUT_005,Rater R3,contradicted,cao,Đổi toán tử nghiêm ngặt > thành >= khiến mốc thời gian vừa chạm timeout bị coi là đã hết hạn sớm.,no,MUT_BOUND_05,boundary_comparison,yes,yes,has_expired returns True when elapsed time exceeds timeout limit.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def has_expired(elapsed: float, timeout: float) -> bool:
+-    return elapsed > timeout
++    return elapsed >= timeout"
+MUT_006,Rater R3,contradicted,cao,Thứ tự short-circuit bị đảo ngược dẫn tới lỗi TypeError khi obj là None trước khi kiểm tra null.,no,MUT_COND_01,condition_ordering,yes,yes,safe_lookup checks obj is not None before accessing obj.items.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def safe_lookup(obj: Optional[dict]) -> bool:
+-    return obj is not None and ""key"" in obj
++    return ""key"" in obj and obj is not None"
+MUT_007,Rater R3,contradicted,cao,"Nhánh điểm >= 90 được đặt trước nhánh kiểm tra hợp lệ, khiến giá trị ngoại lệ như 999 trả về ""A"" thay vì ném ValueError.",no,MUT_COND_02,condition_ordering,yes,yes,evaluate_score validates boundary limits (0 to 100) before checking grade tier.,"--- original
++++ mutated
+@@ -1,6 +1,6 @@
+ def evaluate_score(s: int) -> str:
++    if s >= 90:
++        return ""A""
+     if not (0 <= s <= 100):
+         raise ValueError()
+-    if s >= 90:
+-        return ""A""
+     return ""B"""
+MUT_008,Rater R3,contradicted,cao,Thứ tự ưu tiên bị đảo lộn; default handler xử lý trước làm mất tính năng override của custom hook.,no,MUT_COND_03,condition_ordering,yes,yes,dispatch_handler prioritizes custom override hooks over default handlers.,"--- original
++++ mutated
+@@ -1,6 +1,6 @@
+ def dispatch(has_custom: bool, has_default: bool) -> str:
+-    if has_custom:
++    if has_default:
++        return ""default""
++    elif has_custom:
+         return ""custom""
+-    elif has_default:
+-        return ""default""
+     return ""none"""
+MUT_009,Rater R3,contradicted,cao,"Thứ tự kiểm tra logic bị tráo đổi, đánh giá phân quyền trước khi xác thực tính hợp lệ của token.",no,MUT_COND_04,condition_ordering,yes,yes,is_authorized verifies authentication token validity before checking role permissions.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def is_authorized(token_valid: bool, has_role: bool) -> bool:
+-    return token_valid and has_role
++    return has_role and token_valid"
+MUT_010,Rater R3,contradicted,cao,Kiểm tra db được đẩy lên trước cache làm vô hiệu hóa toàn bộ cơ chế cache hit.,no,MUT_COND_05,condition_ordering,yes,yes,process_query checks cache existence before executing expensive database fetch.,"--- original
++++ mutated
+@@ -1,6 +1,6 @@
+ def process_query(in_cache: bool, fetch_db: bool) -> str:
++    if fetch_db:
++        return ""db""
+     if in_cache:
+         return ""cache""
+-    if fetch_db:
+-        return ""db""
+     return ""empty"""
+MUT_011,Rater R3,contradicted,cao,"Loại ngoại lệ ném ra bị đổi từ ValueError thành TypeError, vi phạm đặc tả giao diện lỗi của hàm.",no,MUT_EXC_01,exception_type,yes,yes,validate_age raises ValueError when age is negative.,"--- original
++++ mutated
+@@ -1,4 +1,4 @@
+ def validate_age(age: int) -> int:
+     if age < 0:
+-        raise ValueError(""Invalid age"")
++        raise TypeError(""Invalid age"")
+     return age"
+MUT_012,Rater R3,contradicted,cao,Đổi ngoại lệ từ KeyError thành IndexError không phù hợp với kiểu truy xuất từ điển cấu hình.,no,MUT_EXC_02,exception_type,yes,yes,get_config raises KeyError when required section is missing.,"--- original
++++ mutated
+@@ -1,4 +1,4 @@
+ def get_config(cfg: dict, section: str) -> dict:
+     if section not in cfg:
+-        raise KeyError(section)
++        raise IndexError(section)
+     return cfg[section]"
+MUT_013,Rater R3,contradicted,cao,Khối catch ném ra RuntimeError thay vì bảo lưu chuẩn ValueError như claim tuyên bố.,no,MUT_EXC_03,exception_type,yes,yes,parse_int raises ValueError on malformed string tokens.,"--- original
++++ mutated
+@@ -2,4 +2,4 @@
+     try:
+         return int(s)
+     except ValueError:
+-        raise ValueError(f""Bad integer: {s}"")
++        raise RuntimeError(f""Bad integer: {s}"")"
+MUT_014,Rater R3,contradicted,cao,Ngoại lệ re-raise bị chuyển thành TimeoutError thay vì ConnectionError.,no,MUT_EXC_04,exception_type,yes,yes,open_connection catches OSError and re-raises ConnectionError.,"--- original
++++ mutated
+@@ -2,4 +2,4 @@
+     try:
+         connect(host)
+     except OSError as e:
+-        raise ConnectionError(host) from e
++        raise TimeoutError(host) from e"
+MUT_015,Rater R3,contradicted,cao,Thay đổi ngoại lệ kiểm tra từ AssertionError sang SystemError mâu thuẫn trực tiếp với claim.,no,MUT_EXC_05,exception_type,yes,yes,assert_ready raises AssertionError when state is uninitialized.,"--- original
++++ mutated
+@@ -1,3 +1,3 @@
+ def assert_ready(ready: bool) -> None:
+     if not ready:
+-        raise AssertionError(""Not ready"")
++        raise SystemError(""Not ready"")"
+MUT_016,Rater R3,contradicted,cao,Giá trị mặc định của tham số timeout bị thay đổi từ 30.0 sang 10.0.,no,MUT_DEF_01,default_parameter_value,yes,yes,fetch_data defaults to timeout of 30.0 seconds.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def fetch_data(url: str, timeout: float = 30.0) -> bytes:
++def fetch_data(url: str, timeout: float = 10.0) -> bytes:
+     return b"""""
+MUT_017,Rater R3,contradicted,cao,"Tham số mặc định strict bị đảo từ False thành True, làm thay đổi hành vi mặc định của hàm.",no,MUT_DEF_02,default_parameter_value,yes,yes,create_session defaults strict mode to False.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def create_session(name: str, strict: bool = False) -> dict:
++def create_session(name: str, strict: bool = True) -> dict:
+     return {""name"": name, ""strict"": strict}"
+MUT_018,Rater R3,contradicted,cao,"Default encoding bị đổi thành ""ascii"", gây lỗi giải mã đối với chuỗi ký tự UTF-8 thông thường.",no,MUT_DEF_03,default_parameter_value,yes,yes,"decode_payload uses ""utf-8"" as default encoding.","--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def decode_payload(data: bytes, encoding: str = ""utf-8"") -> str:
++def decode_payload(data: bytes, encoding: str = ""ascii"") -> str:
+     return data.decode(encoding)"
+MUT_019,Rater R3,contradicted,cao,"Tham số max_retries mặc định bị hạ xuống 0, làm mất toàn bộ khả năng retry mặc định.",no,MUT_DEF_04,default_parameter_value,yes,yes,retry_call defaults max_retries to 3 attempts.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def retry_call(fn: Callable, max_retries: int = 3) -> Any:
++def retry_call(fn: Callable, max_retries: int = 0) -> Any:
+     return fn()"
+MUT_020,Rater R3,contradicted,cao,"Giá trị mặc định case_sensitive chuyển thành False, ép text thành chữ thường ngầm định.",no,MUT_DEF_05,default_parameter_value,yes,yes,format_output defaults case_sensitive to True.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+-def format_output(text: str, case_sensitive: bool = True) -> str:
++def format_output(text: str, case_sensitive: bool = False) -> str:
+     return text if case_sensitive else text.lower()"
+MUT_021,Rater R3,contradicted,cao,"Phương thức callee bị đổi từ .strip() thành .rstrip(), giữ lại khoảng trắng ở đầu chuỗi (leading whitespace).",no,MUT_CALL_01,callee_or_kwarg,yes,yes,clean_text strips both leading and trailing whitespace from input.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def clean_text(s: str) -> str:
+-    return s.strip()
++    return s.rstrip()"
+MUT_022,Rater R3,contradicted,cao,"Hàm gọi đổi từ re.match thành re.search, khớp pattern ở bất kỳ vị trí nào thay vì chỉ ở đầu chuỗi.",no,MUT_CALL_02,callee_or_kwarg,yes,yes,match_prefix matches pattern strictly from the beginning of string using re.match.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def match_prefix(pat: str, text: str):
+-    return re.match(pat, text)
++    return re.search(pat, text)"
+MUT_023,Rater R3,contradicted,cao,Đối số sort_keys bị đổi từ True sang False làm mất tính xác định của thứ tự khóa.,no,MUT_CALL_03,callee_or_kwarg,yes,yes,serialize_canonical dumps JSON with keys sorted deterministically.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def serialize_canonical(obj: dict) -> str:
+-    return json.dumps(obj, sort_keys=True)
++    return json.dumps(obj, sort_keys=False)"
+MUT_024,Rater R3,contradicted,cao,"Keyword argument reverse bị đổi thành False, sắp xếp danh sách theo chiều tăng dần thay vì giảm dần.",no,MUT_CALL_04,callee_or_kwarg,yes,yes,sort_descending orders elements in descending sequence (reverse=True).,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def sort_descending(nums: list[int]) -> list[int]:
+-    return sorted(nums, reverse=True)
++    return sorted(nums, reverse=False)"
+MUT_025,Rater R3,contradicted,cao,"Phương thức get() an toàn bị thay bằng phép truy cập trực tiếp d[k], sẽ ném KeyError khi key vắng mặt.",no,MUT_CALL_05,callee_or_kwarg,yes,yes,safe_get retrieves dictionary value without raising KeyError when key is absent.,"--- original
++++ mutated
+@@ -1,2 +1,2 @@
+ def safe_get(d: dict, k: str, default=None):
+-    return d.get(k, default)
++    return d[k]"

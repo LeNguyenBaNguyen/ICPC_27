@@ -1,0 +1,3742 @@
+{
+ "F007": {
+  "bulk_claims": [
+   {
+    "text": "`showhelp` is a utility within the pytest framework.",
+    "type": "intent"
+   },
+   {
+    "text": "`showhelp` takes a single parameter, `config`, which is an instance of the `Config` class representing the current pytest configuration.",
+    "type": "structural"
+   },
+   {
+    "text": "`showhelp` retrieves a `TerminalReporter` plugin from the configuration's plugin manager.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`showhelp` writes the help information for command-line options using the `format_help` method of the `_parser.optparser`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`showhelp` lists ini-options found in configuration files like `pytest.ini`, `tox.ini`, `setup.cfg`, or `pyproject.toml`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`showhelp` extracts the help text, type, and default value for each ini-option.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`showhelp` raises a `TypeError` if the help text is missing for any option.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`showhelp` displays environment variables that can influence pytest's behavior, along with brief descriptions of their effects.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`showhelp` suggests commands to list available markers and fixtures.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`showhelp` relies on methods like `write`, `line`, and text wrapping utilities from the `TerminalReporter` and `textwrap` modules to format and display the information.",
+    "type": "structural"
+   },
+   {
+    "text": "`showhelp` handles missing help texts by raising exceptions but does not perform any other error handling for edge cases.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The side effects of this function are limited to outputting formatted text to the terminal, with no changes made to the configuration or state of the application.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `showhelp` is a utility within the pytest framework that displays comprehensive help information to users.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `showhelp` takes a single parameter, `config`, which is an instance of the `Config` class representing the current pytest configuration.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `showhelp` retrieves a `TerminalReporter` plugin from the configuration's plugin manager.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `showhelp` writes help information for command-line options using the `format_help` method of the `_parser.optparser`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `showhelp` lists ini-options found in configuration files such as `pytest.ini`, `tox.ini`, `setup.cfg`, or `pyproject.toml`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "For each ini-option, the function `showhelp` extracts the help text, type, and default value.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `showhelp` raises a `TypeError` if the help text is missing for any ini-option.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `showhelp` displays environment variables that can influence pytest's behavior, along with brief descriptions of their effects.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `showhelp` concludes by suggesting commands to list available markers and fixtures, explaining how these are displayed based on the current directory or specified file.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `showhelp` uses methods such as `write` and `line` from the `TerminalReporter` and text wrapping utilities from the `textwrap` module to format output.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `showhelp` performs no error handling for edge cases beyond raising exceptions for missing help texts.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The side effects of the function `showhelp` are limited to outputting formatted text to the terminal, with no changes made to the configuration or application state.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F008": {
+  "bulk_claims": [
+   {
+    "text": "`complete_dataclass` is a function that finalizes the setup of a class decorated with `dataclasses.dataclass()`.",
+    "type": "intent"
+   },
+   {
+    "text": "`complete_dataclass` takes parameters: `cls`, `config_wrapper`, `raise_errors`, `ns_resolver`, and `_force_build`.",
+    "type": "structural"
+   },
+   {
+    "text": "`complete_dataclass` returns `True` if the dataclass is successfully completed, or `False` otherwise.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`complete_dataclass` replaces the original `__init__` method with a new one that uses Pydantic's validation logic.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`complete_dataclass` sets up various attributes on the class, including its configuration and schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If there are undefined annotations and `raise_errors` is `True`, it raises a `PydanticUndefinedAnnotation`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`complete_dataclass` handles deprecation warnings for certain methods.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`complete_dataclass` ensures that all fields are properly set up.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If any errors occur during schema generation or validation, it may return early with `False` and optionally set mock behaviors on the class to handle undefined types gracefully.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`complete_dataclass` relies heavily on helper functions like `set_dataclass_fields`, `generate_pydantic_signature`, and `create_schema_validator`.",
+    "type": "structural"
+   },
+   {
+    "text": "`complete_dataclass` has significant side effects by modifying the class in place, adding new methods and attributes that are integral to Pydantic's data validation and serialization processes.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 11,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `complete_dataclass` finalizes the setup of a class that has already been decorated with `dataclasses.dataclass()`.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `complete_dataclass` integrates the dataclass into Pydantic's validation and serialization framework.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `complete_dataclass` takes a parameter `cls`, the class to be completed.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `complete_dataclass` takes a parameter `config_wrapper`, an instance encapsulating configuration settings.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `complete_dataclass` takes a parameter `raise_errors`, a flag indicating whether to raise exceptions on undefined annotations.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `complete_dataclass` takes a parameter `ns_resolver`, a namespace resolver for field collection and schema building.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `complete_dataclass` takes a parameter `_force_build`, a boolean to bypass deferred build conditions.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `complete_dataclass` returns `True` if the dataclass is successfully completed, and `False` otherwise.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `complete_dataclass` replaces the original `__init__` method of the class with a new one that uses Pydantic's validation logic.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `complete_dataclass` raises a `PydanticUndefinedAnnotation` if there are undefined annotations and `raise_errors` is `True`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `complete_dataclass` may return early with `False` if errors occur during schema generation or validation, optionally setting mock behaviors on the class to handle undefined types.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `complete_dataclass` relies on helper functions such as `set_dataclass_fields`, `generate_pydantic_signature`, and `create_schema_validator`.",
+    "type": "structural"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "structural"
+  ]
+ },
+ "F009": {
+  "bulk_claims": [
+   {
+    "text": "`collect_dataclass_fields` is a utility within the Pydantic library.",
+    "type": "intent"
+   },
+   {
+    "text": "`collect_dataclass_fields` takes a dataclass type (`cls`) as its primary input.",
+    "type": "structural"
+   },
+   {
+    "text": "`collect_dataclass_fields` has optional parameters for namespace resolution (`ns_resolver`).",
+    "type": "structural"
+   },
+   {
+    "text": "`collect_dataclass_fields` has optional parameters for type variable mapping (`typevars_map`).",
+    "type": "structural"
+   },
+   {
+    "text": "`collect_dataclass_fields` has optional parameters for configuration settings (`config_wrapper`).",
+    "type": "structural"
+   },
+   {
+    "text": "`collect_dataclass_fields` iterates over the class hierarchy of the provided dataclass.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`collect_dataclass_fields` collects fields that are defined within each base class.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`collect_dataclass_fields` evaluates field types using a namespace resolver to handle complex annotations correctly.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`collect_dataclass_fields` skips fields marked as `ClassVar`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`collect_dataclass_fields` skips fields without an initializer and no default values.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`collect_dataclass_fields` checks for compatibility between initialization flags if a field's default value is a Pydantic `FieldInfo` instance.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`collect_dataclass_fields` raises a `PydanticUserError` if there are conflicts in initialization flags.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `collect_dataclass_fields` is a utility within the Pydantic library for gathering and processing field information from Python dataclasses.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` takes a dataclass type `cls` as its primary input.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` accepts optional parameters `ns_resolver`, `typevars_map`, and `config_wrapper`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` iterates over the class hierarchy of the provided dataclass and collects fields defined within each base class.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` evaluates field types using a namespace resolver to handle complex annotations.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` skips fields marked as `ClassVar`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` skips fields that have no initializer and no default value.",
+    "type": "behavioural"
+   },
+   {
+    "text": "When a field's default value is a Pydantic `FieldInfo` instance, the function `collect_dataclass_fields` checks compatibility between initialization flags.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` raises a `PydanticUserError` when the initialization flags of a `FieldInfo` default conflict.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` applies type variable mappings to the collected fields.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` updates the collected fields from docstrings using the provided configuration wrapper.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `collect_dataclass_fields` returns a dictionary mapping field names to their corresponding `FieldInfo` objects.",
+    "type": "dataflow"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow"
+  ]
+ },
+ "F011": {
+  "bulk_claims": [
+   {
+    "text": "_apply_single_annotation is a method within the GenerateSchema class.",
+    "type": "structural"
+   },
+   {
+    "text": "_apply_single_annotation takes two parameters: schema and metadata.",
+    "type": "structural"
+   },
+   {
+    "text": "schema is a dictionary representing the core schema.",
+    "type": "structural"
+   },
+   {
+    "text": "metadata can be any type but is typically an instance of FieldInfo.",
+    "type": "structural"
+   },
+   {
+    "text": "_apply_single_annotation applies the provided metadata to the schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If metadata is an instance of FieldInfo, it iterates over its internal metadata and recursively applies each piece.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_apply_single_annotation checks for a discriminator in the FieldInfo and applies it to the schema if present.",
+    "type": "dataflow"
+   },
+   {
+    "text": "For nullable schemas, _apply_single_annotation applies the metadata to the inner schema instead.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the schema has a reference (ref) or is a definition reference, _apply_single_annotation creates a new reference string incorporating the metadata's representation and updates the schema accordingly.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_apply_single_annotation relies on helper functions like import_cached_field_info to import necessary classes.",
+    "type": "structural"
+   },
+   {
+    "text": "_apply_single_annotation relies on _known_annotated_metadata.apply_known_metadata to apply specific types of known metadata.",
+    "type": "structural"
+   },
+   {
+    "text": "_apply_single_annotation handles cases where the updated schema is not modified by returning the original schema.",
+    "type": "dataflow"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The `_apply_single_annotation` function is a method within the `GenerateSchema` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_apply_single_annotation` function processes metadata for a given schema in Pydantic's internal schema generation process.",
+    "type": "intent"
+   },
+   {
+    "text": "The `_apply_single_annotation` function takes a parameter `schema`, which is a dictionary representing the core schema.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_apply_single_annotation` function takes a parameter `metadata`, which can be any type but is typically an instance of `FieldInfo`.",
+    "type": "structural"
+   },
+   {
+    "text": "If the metadata is an instance of `FieldInfo`, the `_apply_single_annotation` function iterates over its internal metadata and recursively applies each piece.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_apply_single_annotation` function checks for a discriminator in the `FieldInfo` and applies it to the schema if present.",
+    "type": "behavioural"
+   },
+   {
+    "text": "For nullable schemas, the `_apply_single_annotation` function applies the metadata to the inner schema instead.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If the schema has a reference (`ref`) or is a definition reference, the `_apply_single_annotation` function creates a new reference string incorporating the metadata's representation and updates the schema accordingly.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_apply_single_annotation` function relies on `import_cached_field_info` to import necessary classes and `_known_annotated_metadata.apply_known_metadata` to apply specific types of known metadata.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_apply_single_annotation` function returns the original schema when the updated schema is not modified.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_apply_single_annotation` function does not raise exceptions and may return early when a new reference already exists in the definitions.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_apply_single_annotation` function modifies the schema dictionary in place and may add new entries to the `defs.definitions` dictionary when new references are created.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "dataflow"
+  ],
+  "types_second": [
+   "structural",
+   "intent",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F012": {
+  "bulk_claims": [
+   {
+    "text": "_common_field_schema is a function in Pydantic's schema generation process.",
+    "type": "intent"
+   },
+   {
+    "text": "_common_field_schema takes three parameters: name, field_info, and decorators.",
+    "type": "structural"
+   },
+   {
+    "text": "name is the name of the field.",
+    "type": "dataflow"
+   },
+   {
+    "text": "field_info is an instance of FieldInfo containing metadata about the field.",
+    "type": "dataflow"
+   },
+   {
+    "text": "decorators is a collection of decorators applied to the field.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_common_field_schema generates a schema for a given field.",
+    "type": "intent"
+   },
+   {
+    "text": "The function checks if the field's annotation needs further evaluation.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_typing_extra.eval_type and replace_types are used to resolve annotations.",
+    "type": "structural"
+   },
+   {
+    "text": "New attributes from resolved annotations are merged into field_info.",
+    "type": "dataflow"
+   },
+   {
+    "text": "Validators from decorators are converted into validator instances using _mode_to_validator.",
+    "type": "structural"
+   },
+   {
+    "text": "The function applies annotations and validators to generate a core schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the field has a discriminator, it is applied during schema generation.",
+    "type": "dataflow"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `GenerateSchema._common_field_schema` takes three parameters: `name`, `field_info`, and `decorators`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `name` parameter is the name of the field.",
+    "type": "structural"
+   },
+   {
+    "text": "The `field_info` parameter is an instance of `FieldInfo` containing metadata about the field.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_common_field_schema` function uses `_typing_extra.eval_type` and `replace_types` to resolve field annotations, updating `field_info` accordingly.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_common_field_schema` function merges new attributes derived from the resolved annotation into the existing `field_info`, with manually set attributes taking precedence.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_common_field_schema` function converts validators from decorators into validator instances using `_mode_to_validator`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_common_field_schema` function applies `_apply_discriminator_to_union` when the field has a discriminator.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_common_field_schema` function pushes down `each_item=True` validators for V1 compatibility and applies them separately using `apply_each_item_validators`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_common_field_schema` function applies field serializers and updates the field info with titles using an alias generator if one is provided.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_common_field_schema` function returns a `_common_field` instance containing the generated schema, serialization exclusion, validation and serialization aliases, frozen status, and metadata.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_common_field_schema` function modifies the `field_info` object in place when resolving annotations and merging attributes.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_common_field_schema` function is a core component of Pydantic's schema generation process that generates a schema for a given field.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "intent",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "dataflow"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F014": {
+  "bulk_claims": [
+   {
+    "text": "_namedtuple_schema is a function that generates a schema for a Python NamedTuple class using Pydantic's internal schema generation system.",
+    "type": "intent"
+   },
+   {
+    "text": "_namedtuple_schema takes two parameters: namedtuple_cls and origin.",
+    "type": "structural"
+   },
+   {
+    "text": "namedtuple_cls is the NamedTuple class to generate the schema for.",
+    "type": "structural"
+   },
+   {
+    "text": "origin is an optional parameter that can be used to specify a different origin class.",
+    "type": "structural"
+   },
+   {
+    "text": "_namedtuple_schema first checks if a schema has already been generated for the given NamedTuple class and returns it if available.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If not, _namedtuple_schema retrieves type hints for the fields of the NamedTuple using the get_cls_type_hints helper function.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If no annotations are found, it defaults to using Any as the type for each field.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_namedtuple_schema replaces any type variables in the annotations with their concrete types using the replace_types helper function.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_namedtuple_schema generates an arguments schema for the fields of the NamedTuple using the _generate_parameter_schema method.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_namedtuple_schema returns a call schema that represents the NamedTuple class, including a reference to the generated schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If a NameError is raised while retrieving type hints, it raises a PydanticUndefinedAnnotation exception with the original error as the cause.",
+    "type": "behavioural"
+   },
+   {
+    "text": "_namedtuple_schema relies on several helper functions and methods, including get_standard_typevars_map, replace_types, _generate_parameter_schema, and core_schema classes from Pydantic's internal schema generation system.",
+    "type": "structural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 11,
+  "second_claims": [
+   {
+    "text": "The function `_namedtuple_schema` generates a schema for a Python NamedTuple class using Pydantic's internal schema generation system.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_namedtuple_schema` takes a parameter `namedtuple_cls`, which is the NamedTuple class to generate the schema for.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_namedtuple_schema` takes an optional parameter `origin` that can be used to specify a different origin class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_namedtuple_schema` first checks whether a schema has already been generated for the given NamedTuple class and returns it if available.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_namedtuple_schema` retrieves type hints for the NamedTuple's fields using the `get_cls_type_hints` helper function.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_namedtuple_schema` defaults to using `Any` as the type for each field when no annotations are found.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_namedtuple_schema` replaces type variables in the annotations with their concrete types using the `replace_types` helper function.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_namedtuple_schema` generates an arguments schema for the NamedTuple fields using the `_generate_parameter_schema` method.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_namedtuple_schema` returns a call schema representing the NamedTuple class, including a reference to the generated schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_namedtuple_schema` raises a `PydanticUndefinedAnnotation` exception with the original error as the cause when a `NameError` is raised while retrieving type hints.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_namedtuple_schema` relies on `get_standard_typevars_map`, `replace_types`, `_generate_parameter_schema`, and `core_schema` classes from Pydantic's internal schema generation system.",
+    "type": "structural"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "structural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "structural"
+  ]
+ },
+ "F015": {
+  "bulk_claims": [
+   {
+    "text": "_typed_dict_schema generates a schema for a TypedDict class in Pydantic.",
+    "type": "intent"
+   },
+   {
+    "text": "_typed_dict_schema takes two parameters: typed_dict_cls and origin.",
+    "type": "structural"
+   },
+   {
+    "text": "typed_dict_cls is the TypedDict class itself.",
+    "type": "structural"
+   },
+   {
+    "text": "origin is an optional parameter that can override the TypedDict class.",
+    "type": "structural"
+   },
+   {
+    "text": "_typed_dict_schema returns a CoreSchema object representing the schema for the TypedDict.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_typed_dict_schema relies on several helper functions and methods, including import_cached_field_info, get_standard_typevars_map, get_attribute_from_bases, and _generate_td_field_schema.",
+    "type": "structural"
+   },
+   {
+    "text": "_typed_dict_schema uses decorators to manage additional behaviors like serialization and validation.",
+    "type": "intent"
+   },
+   {
+    "text": "If the TypedDict class is from the standard library on a Python version less than 3.12, _typed_dict_schema raises a PydanticUserError.",
+    "type": "behavioural"
+   },
+   {
+    "text": "_typed_dict_schema handles errors by catching exceptions such as NameError when resolving type hints and raising custom Pydantic errors.",
+    "type": "behavioural"
+   },
+   {
+    "text": "_typed_dict_schema has side effects: it updates the definitions in self.defs with the generated schema and returns a reference schema pointing to this definition.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 10,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `_typed_dict_schema` generates a schema for a `TypedDict` class in Pydantic.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_typed_dict_schema` exists to handle the complexities of TypedDicts, especially around tracking required/optional keys which are erased by Python's implementation details.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_typed_dict_schema` takes two parameters: `typed_dict_cls`, the TypedDict class itself, and `origin`, an optional parameter that can override the TypedDict class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` returns a `CoreSchema` object representing the schema for the TypedDict.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_typed_dict_schema` uses `import_cached_field_info` to get field information.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` uses `get_standard_typevars_map` to handle type variables and `get_attribute_from_bases` to fetch configuration settings.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` uses `_generate_td_field_schema` to create individual field schemas.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` uses decorators to manage additional behaviors such as serialization and validation.",
+    "type": "structural"
+   },
+   {
+    "text": "If the TypedDict class is from the standard library on a Python version less than 3.12, the function `_typed_dict_schema` raises a `PydanticUserError` advising users to use `typing_extensions.TypedDict` instead.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` catches `NameError` raised when resolving type hints and raises custom Pydantic errors in response.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` updates the definitions in `self.defs` with the generated schema.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_typed_dict_schema` returns a reference schema pointing to the definition it stored in `self.defs`.",
+    "type": "dataflow"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "structural",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F018": {
+  "bulk_claims": [
+   {
+    "text": "_generate_signature_parameters takes three parameters: init, fields, and config_wrapper.",
+    "type": "structural"
+   },
+   {
+    "text": "init is a callable representing the class's initializer method.",
+    "type": "structural"
+   },
+   {
+    "text": "fields is a dictionary of field information.",
+    "type": "structural"
+   },
+   {
+    "text": "config_wrapper is an object encapsulating configuration settings.",
+    "type": "structural"
+   },
+   {
+    "text": "_generate_signature_parameters iterates over the parameters of the init method, skipping the first one (presumably self).",
+    "type": "dataflow"
+   },
+   {
+    "text": "It checks if each parameter corresponds to a field in the model, excluding those with init=False.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If a parameter's annotation is 'Any', it replaces it with the actual Any type.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_generate_signature_parameters handles variable keyword arguments (**kwargs).",
+    "type": "dataflow"
+   },
+   {
+    "text": "It adds parameters for fields not present in the initializer, ensuring valid Python identifiers are used.",
+    "type": "dataflow"
+   },
+   {
+    "text": "It considers configuration settings like populate_by_name and extra to determine how to handle additional fields or extra keyword arguments.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If necessary, it generates a unique name for the variable keyword parameter to avoid conflicts with field names.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_generate_signature_parameters returns a dictionary of parameters suitable for signature generation.",
+    "type": "structural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `_generate_signature_parameters` generates a mapping of parameter names to `Parameter` objects for a Pydantic `BaseModel` or dataclass.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` takes three parameters: `init`, a callable representing the class's initializer method; `fields`, a dictionary of field information; and `config_wrapper`, an object encapsulating configuration settings.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` iterates over the parameters of the `init` method, skipping the first one.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` checks whether each parameter corresponds to a field in the model, excluding fields with `init=False`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` replaces a parameter annotation of `'Any'` with the actual `Any` type.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` handles variable keyword arguments (`**kwargs`).",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` adds parameters for fields not present in the initializer, using valid Python identifiers for their names.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` uses configuration settings such as `populate_by_name` and `extra` to determine how to handle additional fields or extra keyword arguments.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` generates a unique name for the variable keyword parameter when necessary to avoid conflicts with field names.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` relies on helper functions including `_field_name_for_signature` and `is_valid_identifier`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` returns a dictionary of parameters suitable for signature generation.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_generate_signature_parameters` does not handle exceptions and has no side effects beyond returning the parameter mapping.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F024": {
+  "bulk_claims": [
+   {
+    "text": "`create_model` dynamically generates a new Pydantic model class at runtime.",
+    "type": "intent"
+   },
+   {
+    "text": "`create_model` accepts various parameters to define the model's name, configuration, base classes, docstring, validators, and fields.",
+    "type": "structural"
+   },
+   {
+    "text": "`create_model` constructs a namespace with annotations, module information, and field definitions.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`create_model` uses Python's `types.prepare_class` to create the new class.",
+    "type": "structural"
+   },
+   {
+    "text": "`create_model` raises a `PydanticUserError` if both `__base__` and `__config__` are provided.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`create_model` warns if `__slots__` is used, as it is deprecated in this context.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`create_model` returns the newly created model class.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The returned model class can be instantiated like any other Pydantic model.",
+    "type": "intent"
+   }
+  ],
+  "n_bulk": 8,
+  "n_second": 9,
+  "second_claims": [
+   {
+    "text": "The function `create_model` dynamically generates a new Pydantic model class at runtime.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `create_model` accepts parameters that define the model's name, configuration, base classes, docstring, validators, and fields.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `create_model` constructs a namespace with annotations, module information, and field definitions.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `create_model` uses Python's `types.prepare_class` to create the new class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `create_model` raises a `PydanticUserError` if both `__base__` and `__config__` are provided.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `create_model` warns if `__slots__` is used.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `create_model` treats the use of `__slots__` as deprecated in this context.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `create_model` returns the newly created model class.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The model class returned by `create_model` can be instantiated like any other Pydantic model.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ]
+ },
+ "F028": {
+  "bulk_claims": [
+   {
+    "text": "_format_str_once formats a given string of Python source code according to specified formatting rules defined by the Mode object.",
+    "type": "intent"
+   },
+   {
+    "text": "_format_str_once takes three parameters: src_contents, mode, and lines.",
+    "type": "structural"
+   },
+   {
+    "text": "src_contents is the string of source code to be formatted.",
+    "type": "structural"
+   },
+   {
+    "text": "mode is an instance of Mode that contains configuration options for the formatter.",
+    "type": "structural"
+   },
+   {
+    "text": "lines is an optional collection of tuples representing lines that should remain unchanged during formatting.",
+    "type": "structural"
+   },
+   {
+    "text": "_format_str_once begins by parsing the source code into a syntax tree using lib2to3_parse.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_format_str_once determines the target Python versions based on either the explicitly provided versions in mode.target_versions or by inferring them from future imports and the syntax tree.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_format_str_once identifies which language features are supported by these versions, such as parenthesized context managers.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_format_str_once normalizes lines marked with # fmt: off using normalize_fmt_off.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If specific lines are to remain unchanged, _format_str_once applies this transformation using convert_unchanged_lines.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_format_str_once generates lines of formatted code using a LineGenerator object, which iterates over the syntax tree.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_format_str_once returns the formatted string of code.",
+    "type": "structural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `_format_str_once` formats a given string of Python source code according to formatting rules defined by the `Mode` object.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_format_str_once` takes a parameter `src_contents`, which is the string of source code to be formatted.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_format_str_once` takes a parameter `mode`, an instance of `Mode` that contains configuration options for the formatter.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_format_str_once` takes an optional parameter `lines`, a collection of tuples representing lines that should remain unchanged during formatting.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_format_str_once` parses the source code into a syntax tree using `lib2to3_parse`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_format_str_once` determines the target Python versions from the explicitly provided versions in `mode.target_versions`, or otherwise infers them from future imports and the syntax tree.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_format_str_once` identifies which language features are supported by the target Python versions, such as parenthesized context managers.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_format_str_once` normalizes lines marked with `# fmt: off` using `normalize_fmt_off`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_format_str_once` applies `convert_unchanged_lines` when specific lines are to remain unchanged.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_format_str_once` generates lines of formatted code using a `LineGenerator` object that iterates over the syntax tree, with an `EmptyLineTracker` managing empty lines between blocks of code.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_format_str_once` processes each line through `transform_line`, applying transformations based on supported features such as trailing commas in calls and definitions.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_format_str_once` collects the transformed lines into `LinesBlock` objects and combines them into a final list of formatted content.",
+    "type": "dataflow"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow"
+  ]
+ },
+ "F030": {
+  "bulk_claims": [
+   {
+    "text": "_generate_ignored_nodes_from_fmt_skip takes two parameters: `leaf` and `comment`.",
+    "type": "structural"
+   },
+   {
+    "text": "`leaf` is a `Leaf` node in the syntax tree.",
+    "type": "structural"
+   },
+   {
+    "text": "`comment` is a `ProtoComment` object representing the `# fmt: skip` comment.",
+    "type": "structural"
+   },
+   {
+    "text": "The function first checks if the comment is valid by comparing it with comments associated with the `leaf`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the comment is not valid or does not match, the function returns early without yielding any nodes.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function then determines whether to look for ignored nodes among the previous siblings of the `leaf` or within the parent suite node.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If there are previous siblings and they do not contain a newline character in their prefix, it collects these siblings as potential ignored nodes.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the `# fmt: skip` comment is on the line with an if/while/def/class statement (i.e., the colon line), it looks for ignored nodes among the previous siblings of the parent suite node.",
+    "type": "dataflow"
+   },
+   {
+    "text": "It also handles a special case for asynchronous statements by including the ASYNC token from the grandparent node.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function relies on the `list_comments` helper function to retrieve comments associated with the `leaf`.",
+    "type": "structural"
+   },
+   {
+    "text": "It yields the identified ignored nodes one by one using a generator.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function does not handle any exceptions or edge cases explicitly; instead, it returns early if the comment is invalid or does not match.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 11,
+  "second_claims": [
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` is designed to identify and yield all the `Leaf` nodes that should be ignored by the Black formatter due to a `# fmt: skip` comment.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` takes two parameters: `leaf`, which is a `Leaf` node in the syntax tree, and `comment`, which is a `ProtoComment` object representing the `# fmt: skip` comment.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` checks whether the comment is valid by comparing it with comments associated with the `leaf`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` returns early without yielding any nodes if the comment is not valid or does not match.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` collects the previous siblings of the `leaf` as potential ignored nodes if there are previous siblings and they do not contain a newline character in their prefix.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` looks for ignored nodes among the previous siblings of the parent suite node when the `# fmt: skip` comment is on the colon line of an if/while/def/class statement.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` includes the ASYNC token from the grandparent node as a special case for asynchronous statements.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` relies on the `list_comments` helper function to retrieve comments associated with the `leaf`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` yields the identified ignored nodes one by one using a generator.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` does not handle any exceptions or edge cases explicitly.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_generate_ignored_nodes_from_fmt_skip` has no side effects; it only reads from the input parameters and yields results without modifying them.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F038": {
+  "bulk_claims": [
+   {
+    "text": "_maybe_empty_lines is a method in the EmptyLineTracker class.",
+    "type": "structural"
+   },
+   {
+    "text": "_maybe_empty_lines takes one parameter: current_line, which is an instance of the Line class.",
+    "type": "structural"
+   },
+   {
+    "text": "_maybe_empty_lines returns a tuple containing two integers.",
+    "type": "structural"
+   },
+   {
+    "text": "The function first checks if the current line is at the top level (depth 0).",
+    "type": "dataflow"
+   },
+   {
+    "text": "It adjusts the maximum allowed empty lines based on whether the file is in .pyi mode.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function examines the leaves of the current line to determine how many leading newlines were present before the content.",
+    "type": "dataflow"
+   },
+   {
+    "text": "It caps this number to a maximum allowed value.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function maintains a stack (previous_defs) of previous definitions encountered during processing.",
+    "type": "structural"
+   },
+   {
+    "text": "This stack helps in determining the appropriate spacing between different code blocks and definitions.",
+    "type": "intent"
+   },
+   {
+    "text": "The function updates this stack by removing entries that are at the same or higher depth than the current line.",
+    "type": "dataflow"
+   },
+   {
+    "text": "It handles various edge cases, such as when the previous line is a class definition, an import statement, or a docstring.",
+    "type": "behavioural"
+   },
+   {
+    "text": "It adjusts the number of empty lines accordingly based on these conditions.",
+    "type": "dataflow"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` takes one parameter, `current_line`, which is an instance of the `Line` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` returns a tuple of two integers: the number of empty lines to insert before the current line and the number to insert after it.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` checks whether the current line is at depth 0 and adjusts the maximum allowed empty lines based on whether the file is in `.pyi` mode.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` examines the leaves of the current line to count the leading newlines present before the content and caps this count to a maximum allowed value.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` maintains a stack named `previous_defs` of previous definitions (functions or classes) encountered during processing.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` removes entries from the `previous_defs` stack that are at the same or higher depth than the current line.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` adjusts the number of empty lines when the previous line is a class definition, an import statement, or a docstring.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` delegates to the `_maybe_empty_lines_for_class_or_def` helper method when the current line is a decorator, a function definition, or a class definition.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` uses the `depth`, `is_docstring`, `is_def`, `is_class`, and `leaves` attributes of the `Line` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` uses the `mode` attribute to determine file-specific behaviour, particularly for `.pyi` files.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `EmptyLineTracker._maybe_empty_lines` does not raise exceptions and may return early with specific spacing values when certain conditions are met.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The primary side effect of the function `EmptyLineTracker._maybe_empty_lines` is modifying the `previous_defs` stack by adding or removing entries, which influences future line spacing decisions.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "intent",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F050": {
+  "bulk_claims": [
+   {
+    "text": "The `docs` function is a Nox session designed to build documentation for a project.",
+    "type": "intent"
+   },
+   {
+    "text": "`docs` installs the project in editable mode along with its documentation-specific dependencies.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`docs` defines a helper method `get_sphinx_build_command` that constructs the command list for building Sphinx documentation of different kinds.",
+    "type": "structural"
+   },
+   {
+    "text": "`get_sphinx_build_command` ensures that Sphinx uses the correct configuration directory by passing `-c docs/html`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`docs` runs `get_sphinx_build_command` for both 'html' and 'man' builds.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The results of the 'html' build are output to `docs/build/html`, and the 'man' build results are output to `docs/build/man`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`docs` does not have explicit error handling or early returns shown in the code.",
+    "type": "behavioural"
+   },
+   {
+    "text": "Any issues would likely be raised by the underlying Sphinx build process.",
+    "type": "intent"
+   },
+   {
+    "text": "The side effects of `docs` include installing dependencies, running external commands, and generating documentation files in the specified output directories.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 9,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The `docs` function is a Nox session.",
+    "type": "intent"
+   },
+   {
+    "text": "The `docs` function is designed to build documentation for a project.",
+    "type": "intent"
+   },
+   {
+    "text": "The `docs` function installs the project in editable mode.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `docs` function installs the project's documentation-specific dependencies.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `docs` function defines a helper method named `get_sphinx_build_command`.",
+    "type": "structural"
+   },
+   {
+    "text": "The helper method `get_sphinx_build_command` constructs the command list for building Sphinx documentation of different kinds, such as HTML and man pages.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The helper method `get_sphinx_build_command` passes `-c docs/html` so that Sphinx uses the correct configuration directory.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `-c docs/html` option addresses an issue with ReadTheDocs where separate configuration and source directories are not supported.",
+    "type": "intent"
+   },
+   {
+    "text": "The `docs` function runs the command built by `get_sphinx_build_command` for both \"html\" and \"man\" builds.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `docs` function outputs the HTML build results to `docs/build/html`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `docs` function outputs the man build results to `docs/build/man`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `docs` function has no explicit error handling or early returns.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "intent",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "intent",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "intent",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F053": {
+  "bulk_claims": [
+   {
+    "text": "_build_session is a method in the SessionCommandMixin class.",
+    "type": "structural"
+   },
+   {
+    "text": "_build_session takes three parameters: options, retries, and timeout.",
+    "type": "structural"
+   },
+   {
+    "text": "options is an object containing configuration settings.",
+    "type": "structural"
+   },
+   {
+    "text": "retries is an optional integer specifying how many times to retry failed requests.",
+    "type": "structural"
+   },
+   {
+    "text": "timeout is another optional integer setting the maximum time in seconds for a request to complete.",
+    "type": "structural"
+   },
+   {
+    "text": "_build_session checks if a cache directory is provided and ensures it's an absolute path.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_build_session creates an SSL context unless the 'legacy-certs' feature is enabled.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_build_session instantiates a new PipSession with various settings derived from options.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_build_session handles custom CA bundles and client certificates by setting the session's verify and cert attributes accordingly.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_build_session configures timeouts, proxies, and authentication prompting based on the provided options.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_build_session returns the configured PipSession instance.",
+    "type": "structural"
+   },
+   {
+    "text": "_build_session relies on helper functions like _create_truststore_ssl_context for creating SSL contexts.",
+    "type": "structural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `SessionCommandMixin._build_session` is a method of the `SessionCommandMixin` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_build_session` takes a parameter `options` containing configuration settings.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_build_session` takes an optional integer parameter `retries` specifying how many times to retry failed requests.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_build_session` takes an optional integer parameter `timeout` specifying the maximum time in seconds for a request to complete.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_build_session` checks whether a cache directory is provided and ensures it is an absolute path.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_build_session` creates an SSL context unless the \"legacy-certs\" feature is enabled.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_build_session` instantiates a `PipSession` with settings derived from `options`, including cache location, retries, trusted hosts, index URLs, and SSL context.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_build_session` sets the session's verify and cert attributes to handle custom CA bundles and client certificates.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_build_session` configures timeouts, proxies, and authentication prompting based on the provided options.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_build_session` relies on the helper `_create_truststore_ssl_context` to create SSL contexts.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_build_session` has no explicit error handling or early returns, so invalid paths or unsupported configurations could raise exceptions during execution.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_build_session` returns the configured `PipSession` instance, whose creation and configuration is its primary side effect and is used for subsequent pip network operations.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F054": {
+  "bulk_claims": [
+   {
+    "text": "`get_requirements` is a method in the `RequirementCommand` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`get_requirements` takes four parameters: `args`, `options`, `finder`, and `session`.",
+    "type": "structural"
+   },
+   {
+    "text": "`args` is a list of strings representing direct package requirements.",
+    "type": "structural"
+   },
+   {
+    "text": "`options` is an object containing various configuration options.",
+    "type": "structural"
+   },
+   {
+    "text": "`finder` is a `PackageFinder` instance used to locate packages.",
+    "type": "structural"
+   },
+   {
+    "text": "`session` is a `PipSession` for network operations.",
+    "type": "structural"
+   },
+   {
+    "text": "`get_requirements` processes constraints from files, direct command-line arguments, editable installations, and regular requirement files.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`get_requirements` converts each requirement into `InstallRequirement` objects using helper functions like `install_req_from_parsed_requirement`, `install_req_from_line`, and `install_req_from_editable`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`get_requirements` enables hash checking if any requirement specifies hash options.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`get_requirements` raises a `CommandError` if no requirements are provided, prompting the user to specify at least one package.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`get_requirements` returns a list of `InstallRequirement` objects representing all parsed requirements.",
+    "type": "dataflow"
+   }
+  ],
+  "n_bulk": 11,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `get_requirements` is a method of the `RequirementCommand` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `get_requirements` takes four parameters: `args`, `options`, `finder`, and `session`.",
+    "type": "structural"
+   },
+   {
+    "text": "The parameter `args` is a list of strings representing direct package requirements.",
+    "type": "structural"
+   },
+   {
+    "text": "The parameter `finder` is a `PackageFinder` instance used to locate packages.",
+    "type": "structural"
+   },
+   {
+    "text": "The parameter `session` is a `PipSession` used for network operations.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `get_requirements` parses command-line arguments into a list of `InstallRequirement` objects representing Python packages to be installed.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `get_requirements` processes constraints from files, direct command-line arguments, editable installations, and regular requirement files.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `get_requirements` converts each parsed requirement into an `InstallRequirement` object using helper functions such as `install_req_from_parsed_requirement`, `install_req_from_line`, and `install_req_from_editable`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `get_requirements` enables hash checking if any requirement specifies hash options.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `get_requirements` raises a `CommandError` if no requirements are provided.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `CommandError` raised by `get_requirements` prompts the user to specify at least one package.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `get_requirements` returns a list of `InstallRequirement` objects representing all parsed requirements.",
+    "type": "dataflow"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "intent",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow"
+  ]
+ },
+ "F055": {
+  "bulk_claims": [
+   {
+    "text": "`make_requirement_preparer` is a class method in the `RequirementCommand` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`make_requirement_preparer` creates and configures an instance of the `RequirementPreparer` class.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`make_requirement_preparer` takes several parameters, including a temporary build directory, command-line options, a build tracker, a session object, a package finder, and flags for using the user site and enabling certain features like lazy wheel downloads.",
+    "type": "structural"
+   },
+   {
+    "text": "`make_requirement_preparer` determines whether to use the legacy resolver or the resolvelib resolver based on the provided options.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`make_requirement_preparer` sets up logging warnings accordingly if experimental features are enabled with the legacy resolver.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`make_requirement_preparer` returns an instance of `RequirementPreparer` configured with all the necessary parameters for preparing package requirements.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`make_requirement_preparer` relies on helper methods like `determine_resolver_variant` to decide which resolver to use.",
+    "type": "structural"
+   },
+   {
+    "text": "`make_requirement_preparer` does not handle errors or exceptions itself but logs warnings about experimental feature usage.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`make_requirement_preparer` has no side effects; it only creates and returns a new object.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The purpose of `make_requirement_preparer` is to create and configure an instance of the `RequirementPreparer` class for preparing package requirements during the installation process.",
+    "type": "intent"
+   }
+  ],
+  "n_bulk": 10,
+  "n_second": 9,
+  "second_claims": [
+   {
+    "text": "The `make_requirement_preparer` function is a class method of the `RequirementCommand` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The `make_requirement_preparer` function creates and configures an instance of the `RequirementPreparer` class.",
+    "type": "intent"
+   },
+   {
+    "text": "The `make_requirement_preparer` function takes a temporary build directory, command-line options, a build tracker, a session object, a package finder, and flags for using the user site and enabling lazy wheel downloads as parameters.",
+    "type": "structural"
+   },
+   {
+    "text": "The `make_requirement_preparer` function determines whether to use the legacy resolver or the resolvelib resolver based on the provided options.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `make_requirement_preparer` function relies on the helper method `determine_resolver_variant` to decide which resolver to use.",
+    "type": "structural"
+   },
+   {
+    "text": "The `make_requirement_preparer` function logs warnings when experimental features are enabled with the legacy resolver.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `make_requirement_preparer` function returns an instance of `RequirementPreparer` configured with all the provided parameters.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `make_requirement_preparer` function does not handle errors or exceptions itself.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `make_requirement_preparer` function has no side effects beyond creating and returning a new object, aside from logging warnings about experimental feature usage.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ],
+  "types_second": [
+   "structural",
+   "intent",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F070": {
+  "bulk_claims": [
+   {
+    "text": "`fuzz_one_input` is a function in the Hypothesis testing framework.",
+    "type": "intent"
+   },
+   {
+    "text": "`fuzz_one_input` accepts a single parameter `buffer`.",
+    "type": "structural"
+   },
+   {
+    "text": "`buffer` can be a bytes-like object or an instance of `BinaryIO`.",
+    "type": "structural"
+   },
+   {
+    "text": "If `buffer` is an I/O stream, it reads up to a predefined size (`BUFFER_SIZE`).",
+    "type": "dataflow"
+   },
+   {
+    "text": "`fuzz_one_input` ensures the buffer is in a suitable format by converting it if necessary.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`fuzz_one_input` creates a `ConjectureData` object from the buffer.",
+    "type": "structural"
+   },
+   {
+    "text": "`fuzz_one_input` executes the test state once using the `execute_once` method.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If `execute_once` raises a `StopTest` or `UnsatisfiedAssumption` exception, the function returns `None`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`fuzz_one_input` captures any other exceptions during execution.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`fuzz_one_input` converts the buffer back to bytes if an exception occurs.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`fuzz_one_input` saves the new buffer to the database and updates the minimal failures record if there is no known minimal failure or if the current buffer is smaller.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If no exceptions are raised, `fuzz_one_input` returns the modified buffer as bytes.",
+    "type": "dataflow"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `fuzz_one_input` accepts a single parameter named `buffer`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `buffer` parameter can be a bytes-like object such as `bytes`, `bytearray`, or `memoryview`, or an instance of `BinaryIO`.",
+    "type": "structural"
+   },
+   {
+    "text": "If the `buffer` is an I/O stream, the function `fuzz_one_input` reads up to a predefined size `BUFFER_SIZE`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `fuzz_one_input` converts the `buffer` into a suitable format if necessary before further processing.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `fuzz_one_input` creates a `ConjectureData` object from the `buffer`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `fuzz_one_input` calls the `execute_once` method on the test state.",
+    "type": "structural"
+   },
+   {
+    "text": "If `execute_once` raises a `StopTest` or `UnsatisfiedAssumption` exception, the function `fuzz_one_input` returns `None`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If `execute_once` raises any exception other than `StopTest` or `UnsatisfiedAssumption`, the function `fuzz_one_input` captures it.",
+    "type": "behavioural"
+   },
+   {
+    "text": "When an exception is captured, the function `fuzz_one_input` converts the `buffer` back to bytes and checks whether a known minimal failure exists for the same origin.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If no minimal failure exists for the same origin, or the current buffer is smaller than the known failure by the sorting key, the function `fuzz_one_input` saves the new buffer to the database and updates the minimal failures record.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If no exceptions are raised, the function `fuzz_one_input` returns the modified `buffer` as bytes.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `fuzz_one_input` is a core component of the Hypothesis testing framework that fuzz tests an input buffer by executing it through a predefined state to find edge cases and bugs.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ]
+ },
+ "F072": {
+  "bulk_claims": [
+   {
+    "text": "`draw` is a function in the Hypothesis library.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw` takes three parameters: `strategy`, `label`, and `observe_as`.",
+    "type": "structural"
+   },
+   {
+    "text": "`strategy` is an instance of a search strategy that defines how to generate values.",
+    "type": "structural"
+   },
+   {
+    "text": "`label` is an optional integer for identifying the draw operation.",
+    "type": "structural"
+   },
+   {
+    "text": "`observe_as` is an optional string for observing the time taken by the draw operation.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw` returns a value generated by the provided strategy.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`draw` checks if it's being used within a `find` call and raises an `InvalidArgument` exception if not.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`draw` validates the strategy and checks for conditions like an empty strategy or exceeding maximum depth, marking the data as invalid in these cases.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If the draw is at the top level, it starts timing to measure performance accurately.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`draw` uses helper methods like `validate`, `do_draw`, and `start_example`/`stop_example` to manage the drawing process and track execution time.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw` handles exceptions by adding notes about errors during generation and re-raising them.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`draw` has several side effects, including modifying internal state such as `draw_times` for performance tracking and marking data validity.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `ConjectureData.draw` is a core method used to generate data from a given strategy during property-based testing.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `ConjectureData.draw` takes a parameter `strategy` which is an instance of a search strategy that defines how to generate values.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` takes an optional integer parameter `label` for identifying the draw operation.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` takes an optional string parameter `observe_as` for observing the time taken by the draw operation.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` returns a value generated by the provided strategy.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `ConjectureData.draw` checks whether it is being used within a `find` call and whether the strategy supports such usage.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` raises an `InvalidArgument` exception if the strategy does not support usage within a `find` call.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` checks for conditions such as an empty strategy or exceeding maximum depth and marks the data as invalid in these cases.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` starts timing when the draw is at the top level, to measure performance accurately.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` uses helper methods `validate`, `do_draw`, and `start_example`/`stop_example` to manage the drawing process.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` adds notes about errors during generation to exceptions it handles and then re-raises them.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `ConjectureData.draw` modifies internal state such as `draw_times` for performance tracking and marking data validity.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F073": {
+  "bulk_claims": [
+   {
+    "text": "`draw_float` is a method in the `ConjectureData` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw_float` generates a floating-point number within specified bounds.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`draw_float` accepts parameters such as `min_value`, `max_value`, and `allow_nan`.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw_float` supports optional arguments like `forced` and `smallest_nonzero_magnitude`.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw_float` relies on helper methods such as `_pooled_kwargs` for argument pooling.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw_float` relies on `_pop_ir_tree_node` for interaction with an internal representation tree if enabled.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw_float` uses `draw_float` from its provider for the actual value generation.",
+    "type": "structural"
+   },
+   {
+    "text": "`draw_float` ensures that any generated value adheres to the specified constraints.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`draw_float` records the draw operation for observation and debugging purposes.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If a forced value is provided, it must fall within the defined range; otherwise, an assertion error is raised.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`draw_float` does not handle exceptions internally but relies on assertions to enforce preconditions and postconditions.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`draw_float` has side effects by recording the drawn float in its observer and example record.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The `draw_float` function is a method of the `ConjectureData` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function generates a floating-point number within specified bounds for testing purposes.",
+    "type": "intent"
+   },
+   {
+    "text": "The `draw_float` function accepts parameters `min_value`, `max_value`, and `allow_nan`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function accepts an optional `forced` argument to specify a particular value.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function accepts an optional `smallest_nonzero_magnitude` argument to control the smallest non-zero magnitude of the float.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function calls the `_pooled_kwargs` helper method for argument pooling.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function calls the `_pop_ir_tree_node` helper method for interaction with an internal representation tree when enabled.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function calls `draw_float` on its provider to produce the actual value.",
+    "type": "structural"
+   },
+   {
+    "text": "The `draw_float` function ensures that any generated value adheres to the specified constraints.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If a forced value is provided, `draw_float` asserts that it falls within the defined range, raising an AssertionError otherwise.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `draw_float` function does not handle exceptions internally and relies on assertions to enforce preconditions and postconditions.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `draw_float` function records the drawn float in its observer and example record, which can be used for analysis or debugging.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "dataflow",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "structural",
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F074": {
+  "bulk_claims": [
+   {
+    "text": "`cached_test_function_ir` is part of the Hypothesis testing framework's internal engine.",
+    "type": "intent"
+   },
+   {
+    "text": "`cached_test_function_ir` accepts two parameters: `nodes`, which is a list of IRNode objects, and an optional boolean `error_on_discard` with a default value of False.",
+    "type": "structural"
+   },
+   {
+    "text": "`cached_test_function_ir` first attempts to retrieve a cached result using a key derived from the input nodes.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If no cached result is found, `cached_test_function_ir` simulates the test function execution with a no-op observer.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If `error_on_discard` is True, `cached_test_function_ir` uses a custom observer that raises an exception when a branch is killed due to discarding.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`cached_test_function_ir` retries with a fresh data instance if new behavior is encountered (indicated by a `PreviouslyUnseenBehaviour` exception).",
+    "type": "behavioural"
+   },
+   {
+    "text": "If successful, `cached_test_function_ir` caches and returns the result.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`cached_test_function_ir` executes the test function directly if no cached result is found or if new behavior is encountered.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`cached_test_function_ir` caches both the IR tree key and buffer key for future use after executing the test function directly.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`cached_test_function_ir` returns the result as a `ConjectureResult`.",
+    "type": "structural"
+   },
+   {
+    "text": "`cached_test_function_ir` relies on several helper methods such as `_cache_key_ir`, `new_conjecture_data_ir`, and `test_function`.",
+    "type": "structural"
+   },
+   {
+    "text": "`cached_test_function_ir` handles exceptions by catching `KeyError` when no cached result is found and `PreviouslyUnseenBehaviour` during simulation.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `ConjectureRunner.cached_test_function_ir` is part of the Hypothesis testing framework's internal engine.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `ConjectureRunner.cached_test_function_ir` accepts a parameter `nodes`, which is a list of IRNode objects.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `ConjectureRunner.cached_test_function_ir` accepts an optional boolean parameter `error_on_discard` that determines whether to raise an exception if the test function discards a generated example.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `ConjectureRunner.cached_test_function_ir` first attempts to retrieve a cached result using a key derived from the input nodes.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `ConjectureRunner.cached_test_function_ir` catches `KeyError` when no cached result is found.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If no cached result is found, the function `ConjectureRunner.cached_test_function_ir` simulates the test function execution with a no-op observer to avoid unnecessary overhead.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If `error_on_discard` is set to True, the function `ConjectureRunner.cached_test_function_ir` uses a custom observer that raises an exception when a branch is killed due to discarding.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If a `PreviouslyUnseenBehaviour` exception is raised during simulation, the function `ConjectureRunner.cached_test_function_ir` retries with a fresh data instance.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If the retry succeeds, the function `ConjectureRunner.cached_test_function_ir` caches and returns the result.",
+    "type": "dataflow"
+   },
+   {
+    "text": "Otherwise, the function `ConjectureRunner.cached_test_function_ir` executes the test function directly, caching both the IR tree key and buffer key for future use.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `ConjectureRunner.cached_test_function_ir` returns the result as a `ConjectureResult`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The primary side effect of the function `ConjectureRunner.cached_test_function_ir` is caching results to improve performance for repeated test runs with the same input nodes.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ]
+ },
+ "F080": {
+  "bulk_claims": [
+   {
+    "text": "`make_testcase` is a function that constructs a detailed test case report for Hypothesis.",
+    "type": "intent"
+   },
+   {
+    "text": "`make_testcase` accepts several parameters: `start_timestamp`, `test_name_or_nodeid`, `data`, `how_generated`, `string_repr`, `arguments`, `timing`, `coverage`, `phase`, and `backend_metadata`.",
+    "type": "structural"
+   },
+   {
+    "text": "`status_reason` is determined based on the `data.interesting_origin`, whether the test is in the 'shrink' phase with an overrun status, or by extracting a reason from the `data.events`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`make_testcase` constructs and returns a dictionary containing all these details, formatted according to Hypothesis's internal schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`make_testcase` relies on several attributes and methods of the `ConjectureData` object, such as `interesting_origin`, `status`, `target_observations`, and `events`.",
+    "type": "structural"
+   },
+   {
+    "text": "`make_testcase` uses `_system_metadata()`, an external helper function, to include system-level metadata in the report.",
+    "type": "structural"
+   },
+   {
+    "text": "`make_testcase` does not handle exceptions or edge cases explicitly; instead, it relies on the robustness of the `ConjectureData` object and other components to provide accurate information.",
+    "type": "behavioural"
+   },
+   {
+    "text": "There are no side effects from this function; it is purely a data aggregation and transformation tool that returns a structured dictionary representing the test case.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 8,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The make_testcase function constructs a detailed test case report for Hypothesis, a Python library used for property-based testing.",
+    "type": "intent"
+   },
+   {
+    "text": "The make_testcase function accepts a parameter start_timestamp, which marks when the test execution began.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function accepts a parameter test_name_or_nodeid, identifying the test being run.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function accepts a parameter data, an instance of ConjectureData containing observations and events from the test execution.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function accepts a parameter how_generated, describing the method used to generate the test case.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function accepts parameters string_repr, arguments, timing, coverage, phase, and backend_metadata.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function determines status_reason based on data.interesting_origin, on whether the phase is shrink with an overrun status, or by extracting a reason from data.events.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The make_testcase function uses the ConjectureData attributes interesting_origin, status, target_observations, and events.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function uses the external helper _system_metadata() to include system-level metadata in the report.",
+    "type": "structural"
+   },
+   {
+    "text": "The make_testcase function constructs and returns a dictionary containing all these details, formatted according to Hypothesis's internal schema.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The make_testcase function does not handle exceptions or edge cases explicitly, relying instead on the robustness of the ConjectureData object and other components.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The make_testcase function has no side effects and acts purely as a data aggregation and transformation tool.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F082": {
+  "bulk_claims": [
+   {
+    "text": "The `format` function determines which files have been modified since the last commit using the `tools.modified_files()` method.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the `requirements/tools.txt` file has changed, it sets a flag to format all files instead of just the modified ones.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function filters these files into two lists: one for Python source files and another for documentation files (`.rst`, `.md`).",
+    "type": "dataflow"
+   },
+   {
+    "text": "If no files need formatting, the function returns early.",
+    "type": "behavioural"
+   },
+   {
+    "text": "For each Python file, the function reads its contents line by line, removing any redundant `# pragma: no cover` comments that match patterns defined in the project's `.coveragerc` configuration file.",
+    "type": "dataflow"
+   },
+   {
+    "text": "It then writes the cleaned-up source back to the file, preserving the shebang line and adding a header if necessary.",
+    "type": "dataflow"
+   },
+   {
+    "text": "After processing Python files, the function runs several external tools to further format and lint the codebase.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`codespell` corrects spelling mistakes, `ruff` fixes style issues, and `shed` ensures compatibility with Python 3.9+.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function relies on helper functions like `should_format_file`, `should_format_doc_file`, and `pip_tool` to perform specific tasks.",
+    "type": "structural"
+   },
+   {
+    "text": "If no files are found that need formatting, the function exits without making any changes or raising exceptions.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 10,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `format` formats Python and documentation files in a project.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `format` determines which files have been modified since the last commit using the `tools.modified_files()` method.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `format` sets a flag to format all files instead of just the modified ones if the `requirements/tools.txt` file has changed.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `format` filters the files into a list of Python source files and a list of documentation files (`.rst`, `.md`).",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `format` returns early if no files need formatting.",
+    "type": "behavioural"
+   },
+   {
+    "text": "For each Python file, the function `format` reads its contents line by line and removes redundant `# pragma: no cover` comments matching patterns defined in the project's `.coveragerc` configuration file.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `format` writes the cleaned-up source back to each Python file, preserving the shebang line and adding a header if necessary.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `format` runs `codespell` to correct spelling mistakes.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `format` runs `ruff` to fix style issues.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `format` runs `shed` to ensure compatibility with Python 3.9+.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `format` relies on the helper functions `should_format_file`, `should_format_doc_file`, and `pip_tool` to perform specific tasks.",
+    "type": "structural"
+   },
+   {
+    "text": "If no files are found that need formatting, the function `format` exits without making any changes or raising exceptions.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F093": {
+  "bulk_claims": [
+   {
+    "text": "`handle_signature` is a method in the `JSObject` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`handle_signature` takes two parameters: `sig` and `signode`.",
+    "type": "structural"
+   },
+   {
+    "text": "`sig` is a string representing the signature of the JavaScript construct.",
+    "type": "structural"
+   },
+   {
+    "text": "`signode` is a node used by Sphinx to build the final HTML output.",
+    "type": "structural"
+   },
+   {
+    "text": "`handle_signature` returns a tuple containing two strings: the full name of the construct and its prefix.",
+    "type": "structural"
+   },
+   {
+    "text": "The function uses `rsplit` to separate the member name from its prefix, if present.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the signature contains an argument list, it parses this list using a helper function `_pseudo_parse_arglist`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function handles errors gracefully by catching `ValueError` exceptions when splitting the member name from its prefix.",
+    "type": "behavioural"
+   },
+   {
+    "text": "In cases of a `ValueError`, it defaults to using the entire signature as the member name without a prefix.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function modifies the `signode` by adding nodes that represent the parsed information.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function updates the Sphinx environment's reference context with the parsed prefix and full name.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The purpose of `handle_signature` is to break down complex signatures into manageable components for accurate documentation.",
+    "type": "intent"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `JSObject.handle_signature` parses JavaScript construct signatures into a member name and an argument list.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` takes a parameter `sig`, a string containing the signature of the JavaScript construct.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` takes a parameter `signode`, a node used by Sphinx to build the final HTML output.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` returns a tuple containing two strings: the full name of the construct and its prefix.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` uses `rsplit` to separate the member name from its prefix, if present.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` parses the argument list, when present in the signature, using the helper function `_pseudo_parse_arglist`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` checks configuration settings for maximum line length and whether to display parameters on a single line.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` catches `ValueError` exceptions raised when splitting the member name from its prefix.",
+    "type": "behavioural"
+   },
+   {
+    "text": "When a `ValueError` is caught in `JSObject.handle_signature`, the function uses the entire signature as the member name without a prefix.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` uses an early return when the signature does not contain an argument list.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` adds nodes representing the parsed information to `signode`, which are later rendered into HTML.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `JSObject.handle_signature` updates the Sphinx environment's reference context with the parsed prefix and full name.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ]
+ },
+ "F101": {
+  "bulk_claims": [
+   {
+    "text": "`inspect_main` is a debugging utility designed to print out the contents of an inventory file used by Sphinx's intersphinx extension.",
+    "type": "intent"
+   },
+   {
+    "text": "`inspect_main` accepts a single argument, `argv`, which should be a list containing one element: the path or URL to the inventory file.",
+    "type": "structural"
+   },
+   {
+    "text": "If no argument is provided, it prints an error message and returns 1.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function uses a mock configuration object to call `_fetch_inventory`, a helper function that retrieves the inventory data from the specified location.",
+    "type": "structural"
+   },
+   {
+    "text": "`inspect_main` iterates over the sorted keys of the inventory data, printing each key followed by its associated entries formatted with their display names and URL paths.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If a `ValueError` is raised during this process, it prints the error message and returns 1.",
+    "type": "behavioural"
+   },
+   {
+    "text": "For any other exceptions, it prints an unknown error message and also returns 1.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If no errors occur, it successfully returns 0.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`inspect_main` has side effects of printing to standard output and standard error based on its execution path.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 9,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The function `inspect_main` is a debugging utility that prints out the contents of an inventory file used by Sphinx's intersphinx extension.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `inspect_main` accepts a single argument named `argv`.",
+    "type": "structural"
+   },
+   {
+    "text": "The argument `argv` is expected to be a list containing one element, the path or URL to the inventory file.",
+    "type": "structural"
+   },
+   {
+    "text": "If no argument is provided to `inspect_main`, it prints an error message and returns 1.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `inspect_main` uses a mock configuration object to call `_fetch_inventory`.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `inspect_main` uses the helper `_fetch_inventory` to retrieve the inventory data from the specified location.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `inspect_main` iterates over the sorted keys of the inventory data.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `inspect_main` prints each inventory key followed by its associated entries, formatted with their display names and URL paths.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If a `ValueError` is raised during `inspect_main` execution, the function prints the error message and returns 1.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If any exception other than `ValueError` is raised during `inspect_main` execution, the function prints an unknown error message and returns 1.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If no errors occur in `inspect_main`, the function returns 0.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `inspect_main` has side effects of printing to standard output and standard error depending on its execution path.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "intent",
+   "structural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "behavioural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F105": {
+  "bulk_claims": [
+   {
+    "text": "`visit_assignname` is a method within the `NameChecker` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`visit_assignname` takes one parameter, `node`, which represents an assignment node in the abstract syntax tree (AST).",
+    "type": "structural"
+   },
+   {
+    "text": "`visit_assignname` examines the context of the assignment, such as whether it's at the module level, inside a comprehension, or within a function or class scope.",
+    "type": "dataflow"
+   },
+   {
+    "text": "Depending on the context, `visit_assignname` calls different helper methods like `_check_name` to validate the name against specific rules for inline variables, type variables, type aliases, classes, constants, and regular variables.",
+    "type": "structural"
+   },
+   {
+    "text": "`visit_assignname` does not return any value; instead, it emits messages through the `self._check_name` method if the assigned names violate certain naming conventions or other checks.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`visit_assignname` relies on several helper functions such as `_assigns_typevar`, `_assigns_typealias`, and `_redefines_import` to determine the type of assignment and whether it redefines an import.",
+    "type": "structural"
+   },
+   {
+    "text": "`visit_assignname` handles various edge cases, such as unbalanced tuple unpacking, by checking indices before accessing elements.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`visit_assignname` ensures that global variables introduced within functions are not mistakenly treated as local variables.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The purpose of `visit_assignname` is to enforce naming conventions and catch potential issues in Python code.",
+    "type": "intent"
+   }
+  ],
+  "n_bulk": 9,
+  "n_second": 10,
+  "second_claims": [
+   {
+    "text": "The function visit_assignname is a method within the NameChecker class.",
+    "type": "structural"
+   },
+   {
+    "text": "The function visit_assignname takes one parameter, node, which represents an assignment node in the abstract syntax tree (AST).",
+    "type": "structural"
+   },
+   {
+    "text": "The function visit_assignname examines the context of the assignment, such as whether it is at the module level, inside a comprehension, or within a function or class scope.",
+    "type": "behavioural"
+   },
+   {
+    "text": "Depending on the context, the function visit_assignname calls helper methods such as _check_name to validate the name against rules for inline variables, type variables, type aliases, classes, constants, and regular variables.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function visit_assignname does not return any value.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function visit_assignname emits messages through the self._check_name method when assigned names violate naming conventions or other checks.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function visit_assignname relies on helper functions _assigns_typevar, _assigns_typealias, and _redefines_import to determine the type of assignment and whether it redefines an import.",
+    "type": "structural"
+   },
+   {
+    "text": "The function visit_assignname handles unbalanced tuple unpacking by checking indices before accessing elements.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function visit_assignname ensures that global variables introduced within functions are not mistakenly treated as local variables.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function visit_assignname is crucial for enforcing naming conventions and catching potential issues in Python code.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "intent"
+  ]
+ },
+ "F111": {
+  "bulk_claims": [
+   {
+    "text": "`ClientResponse.start` is a method in the `ClientResponse` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`start` takes one parameter, `connection`, which is an instance of the `Connection` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`start` reads the HTTP message and payload from the connection's protocol.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`start` handles any `HttpProcessingError` exceptions by raising a `ClientResponseError`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`start` processes status codes in the 100-199 range (excluding 101) as informational responses.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`start` waits for a 100-continue response if applicable.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`start` sets up the response's version, status, reason, headers, payload, and cookies.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`start` returns the `ClientResponse` instance itself after completing these tasks.",
+    "type": "structural"
+   },
+   {
+    "text": "`start` relies on helper methods like `_response_eof` for handling end-of-file events on the payload.",
+    "type": "structural"
+   },
+   {
+    "text": "`start` uses logging to warn about issues loading cookies.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 10,
+  "n_second": 11,
+  "second_claims": [
+   {
+    "text": "The `ClientResponse.start` method takes one parameter, `connection`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `connection` parameter is an instance of the `Connection` class representing the network connection over which the response was received.",
+    "type": "structural"
+   },
+   {
+    "text": "The `ClientResponse.start` method reads the HTTP message and payload from the connection's protocol.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `ClientResponse.start` method handles any `HttpProcessingError` exceptions by raising a `ClientResponseError`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `ClientResponse.start` method processes status codes in the 100-199 range, excluding 101, as informational responses.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `ClientResponse.start` method waits for a 100-continue response if applicable.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `ClientResponse.start` method sets up the response's version, status, reason, headers, payload, and cookies once the final response is received.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `ClientResponse.start` method uses the helper method `_response_eof` to handle end-of-file events on the payload.",
+    "type": "structural"
+   },
+   {
+    "text": "The `ClientResponse.start` method uses logging to warn about issues loading cookies.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `ClientResponse.start` method returns the `ClientResponse` instance itself after completing its tasks.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `ClientResponse.start` method initiates the processing of an HTTP response received from a server.",
+    "type": "intent"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "structural",
+   "behavioural"
+  ],
+  "types_second": [
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "structural",
+   "behavioural",
+   "dataflow",
+   "intent"
+  ]
+ },
+ "F113": {
+  "bulk_claims": [
+   {
+    "text": "The `_get` method is part of the `BaseConnector` class.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_get` method accepts a single parameter named `key`, which is an instance of `ConnectionKey`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_get` method retrieves a connection from the pool associated with the given key.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The method first attempts to access the list of connections associated with the provided key from the `_conns` dictionary.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If the key does not exist in `_conns`, the method returns `None`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The method iterates over the connections in reverse order using `pop()`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "For each connection, the method checks if it is still active and within the keepalive timeout period defined by `_keepalive_timeout`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If a connection is found to be connected and within the timeout, it is returned immediately.",
+    "type": "behavioural"
+   },
+   {
+    "text": "If a connection is not active or exceeds the keepalive timeout, it is closed, and its transport is added to the `_cleanup_closed_transports` list for later cleanup if SSL is in use and automatic cleanup of closed transports is enabled.",
+    "type": "dataflow"
+   },
+   {
+    "text": "If all connections are either closed or exceed the keepalive timeout, the key is removed from the `_conns` dictionary.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The method returns `None` if no suitable connection can be found or reused.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The method catches `KeyError` when the key is not found in `_conns` and ensures that resources are cleaned up appropriately by closing transports and managing the cleanup list.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The `_get` method in the `BaseConnector` class retrieves a connection from the pool associated with a given key.",
+    "type": "intent"
+   },
+   {
+    "text": "The `_get` method accepts a single parameter `key`, which is an instance of `ConnectionKey`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_get` method attempts to access the list of connections for the provided key from the `_conns` dictionary.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_get` method returns `None` if the key does not exist in `_conns`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_get` method iterates over the connections for the key in reverse order using `pop()`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_get` method checks whether each connection is connected using `is_connected()` and within the keepalive timeout defined by `_keepalive_timeout`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_get` method returns a connection immediately if it is connected and within the keepalive timeout.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_get` method closes a connection that is not connected or exceeds the keepalive timeout using `close()`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_get` method adds a closed connection's transport to the `_cleanup_closed_transports` list only when SSL is in use and automatic cleanup of closed transports is enabled.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_get` method removes the key from the `_conns` dictionary when all its connections are closed or exceed the keepalive timeout.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_get` method returns `None` if no suitable connection can be found or reused.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_get` method catches `KeyError` when the key is not found in `_conns`.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F118": {
+  "bulk_claims": [
+   {
+    "text": "`parse_headers` is defined in `aiohttp/http_parser.py`.",
+    "type": "structural"
+   },
+   {
+    "text": "`parse_headers` takes a single parameter, `lines`, which is a list of bytes.",
+    "type": "structural"
+   },
+   {
+    "text": "`parse_headers` returns a tuple containing a `CIMultiDictProxy` object and a tuple of raw headers.",
+    "type": "structural"
+   },
+   {
+    "text": "`parse_headers` iterates over the lines, splitting each into a name-value pair using the colon as a delimiter.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`parse_headers` checks for invalid characters in the header name and ensures that the name does not exceed the maximum allowed size.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`parse_headers` strips leading and trailing whitespace from the value and checks for invalid characters before adding it to the headers dictionary.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`parse_headers` handles continuation lines by checking if the next line starts with a space or tab, indicating it should be appended to the current value.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`parse_headers` checks for line length limits and raises exceptions like `InvalidHeader` or `LineTooLong` if any issues are found.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`parse_headers` relies on helper methods such as `_lax` and regular expressions defined elsewhere in the code.",
+    "type": "structural"
+   },
+   {
+    "text": "`parse_headers` does not have any side effects; it only processes the input data and returns the parsed headers without modifying any external state.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 10,
+  "n_second": 10,
+  "second_claims": [
+   {
+    "text": "The function `parse_headers` in `aiohttp/http_parser.py` is responsible for parsing HTTP headers from a list of byte strings.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `parse_headers` takes a single parameter `lines`, which is a list of bytes representing each line of the header section.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `parse_headers` returns a tuple containing a `CIMultiDictProxy` object and a tuple of raw headers.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `parse_headers` iterates over the lines and splits each into a name-value pair using the colon as a delimiter.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `parse_headers` checks for invalid characters in the header name and ensures that the name does not exceed the maximum allowed size.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `parse_headers` strips leading and trailing whitespace from the header value and checks it for invalid characters before adding it to the headers dictionary.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `parse_headers` handles continuation lines by checking whether the next line starts with a space or tab, indicating it should be appended to the current value.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `parse_headers` checks line length limits and raises exceptions such as `InvalidHeader` or `LineTooLong` when issues are found.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `parse_headers` relies on helper methods such as `_lax` and regular expressions defined elsewhere in the code.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `parse_headers` has no side effects; it only processes the input data and returns the parsed headers without modifying any external state.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "structural",
+   "behavioural"
+  ]
+ },
+ "F126": {
+  "bulk_claims": [
+   {
+    "text": "The `_post_start` method is part of the `WebSocketResponse` class.",
+    "type": "structural"
+   },
+   {
+    "text": "`_post_start` takes three parameters: `request`, `protocol`, and `writer`.",
+    "type": "structural"
+   },
+   {
+    "text": "`request` is an instance of `BaseRequest`.",
+    "type": "structural"
+   },
+   {
+    "text": "`protocol` is a string indicating the WebSocket protocol version.",
+    "type": "structural"
+   },
+   {
+    "text": "`writer` is an instance of `WebSocketWriter`.",
+    "type": "structural"
+   },
+   {
+    "text": "`_post_start` sets up the WebSocket protocol.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`_post_start` initializes a data queue for reading messages using `FlowControlDataQueue`.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`_post_start` configures the request's protocol to use a WebSocket reader.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`_post_start` disables HTTP keepalive.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`_post_start` resets any heartbeat mechanisms.",
+    "type": "behavioural"
+   },
+   {
+    "text": "`_post_start` modifies the state of the `WebSocketResponse` instance by setting its `_ws_protocol`, `_writer`, and `_reader` attributes.",
+    "type": "dataflow"
+   },
+   {
+    "text": "`_post_start` asserts that the event loop (`_loop`) is not `None`.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 12,
+  "n_second": 12,
+  "second_claims": [
+   {
+    "text": "The `_post_start` method of the `WebSocketResponse` class initializes components needed for WebSocket communication after the initial HTTP handshake has completed.",
+    "type": "intent"
+   },
+   {
+    "text": "The `_post_start` method takes a `request` parameter, which is an instance of `BaseRequest`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_post_start` method takes a `protocol` parameter, which is a string indicating the WebSocket protocol version.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_post_start` method takes a `writer` parameter, which is an instance of `WebSocketWriter`.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_post_start` method sets up the WebSocket protocol.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_post_start` method initializes a `FlowControlDataQueue` as a data queue for reading messages.",
+    "type": "structural"
+   },
+   {
+    "text": "The `_post_start` method configures the request's protocol to use a `WebSocketReader`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_post_start` method disables HTTP keepalive so the connection is dedicated to WebSocket communication.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_post_start` method resets any heartbeat mechanisms.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_post_start` method asserts that the event loop (`_loop`) is not `None`.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The `_post_start` method does not return anything; it modifies the state of the `WebSocketResponse` instance by setting its `_ws_protocol`, `_writer`, and `_reader` attributes.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The `_post_start` method may start a heartbeat mechanism as a side effect.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "structural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "behavioural",
+   "dataflow",
+   "behavioural"
+  ]
+ },
+ "F128": {
+  "bulk_claims": [
+   {
+    "text": "_arrange_dock_widgets takes three parameters: dock_widgets, region, and viewport.",
+    "type": "structural"
+   },
+   {
+    "text": "dock_widgets is a sequence of widgets with non-empty docks.",
+    "type": "dataflow"
+   },
+   {
+    "text": "region is the area where these widgets should be docked.",
+    "type": "dataflow"
+   },
+   {
+    "text": "viewport is the size of the viewport.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_arrange_dock_widgets calculates the placement for each widget based on its docking edge (top, bottom, left, or right).",
+    "type": "dataflow"
+   },
+   {
+    "text": "_arrange_dock_widgets adjusts for margins and alignment.",
+    "type": "dataflow"
+   },
+   {
+    "text": "_arrange_dock_widgets returns a tuple containing a list of widget placements and additional spacing around them.",
+    "type": "structural"
+   },
+   {
+    "text": "_arrange_dock_widgets relies on helper methods like _get_box_model to determine widget dimensions.",
+    "type": "structural"
+   },
+   {
+    "text": "_arrange_dock_widgets relies on helper methods like _align_size for alignment adjustments.",
+    "type": "structural"
+   },
+   {
+    "text": "If an invalid docking edge is encountered, it raises an AssertionError.",
+    "type": "behavioural"
+   },
+   {
+    "text": "There are no side effects; the function only computes and returns data without modifying external state.",
+    "type": "behavioural"
+   }
+  ],
+  "n_bulk": 11,
+  "n_second": 11,
+  "second_claims": [
+   {
+    "text": "The function `_arrange_dock_widgets` arranges widgets that are docked within a specified region.",
+    "type": "intent"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` takes a parameter `dock_widgets`, which is a sequence of widgets with non-empty docks.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` takes a parameter `region`, the area where the widgets should be docked.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` takes a parameter `viewport`, the size of the viewport.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` calculates the placement for each widget based on its docking edge (top, bottom, left, or right).",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` adjusts widget placements for margins and alignment.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` uses the helper method `_get_box_model` to determine widget dimensions.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` uses the helper method `_align_size` for alignment adjustments.",
+    "type": "structural"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` returns a tuple containing a list of widget placements and additional spacing around them.",
+    "type": "dataflow"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` raises an `AssertionError` if an invalid docking edge is encountered.",
+    "type": "behavioural"
+   },
+   {
+    "text": "The function `_arrange_dock_widgets` has no side effects and only computes and returns data without modifying external state.",
+    "type": "behavioural"
+   }
+  ],
+  "types_bulk": [
+   "structural",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "structural",
+   "behavioural",
+   "behavioural"
+  ],
+  "types_second": [
+   "intent",
+   "structural",
+   "structural",
+   "structural",
+   "dataflow",
+   "dataflow",
+   "structural",
+   "structural",
+   "dataflow",
+   "behavioural",
+   "behavioural"
+  ]
+ }
+}

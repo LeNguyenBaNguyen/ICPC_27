@@ -1,0 +1,13 @@
+{
+  "primary_main_S6": 0.8451786093520215,
+  "human_weighted": {
+    "three_way_agreement": 0.9927197418287554,
+    "three_way_kappa": 0.9163564625576324
+  },
+  "supplemental_responses": {
+    "cross_family": 57,
+    "random_redraw_inference": 308,
+    "resurrection": 649,
+    "docstring_free": 786
+  }
+}

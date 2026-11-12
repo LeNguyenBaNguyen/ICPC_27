@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\caption{Tests of H1, H3 and H4 (95\% CIs in brackets).}
+\label{tab:tests}
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}p{0.50\columnwidth}p{0.47\columnwidth}@{}}
+\toprule
+\multicolumn{2}{@{}l}{\textit{H1: churn (1014 touches)}} \\
+$\rho$(function lines, share dying) & 0.25 [0.19, 0.31] \\
+AUC, function lines $\to$ any death & 0.68 [0.64, 0.73] \\
+HR per IQR of function lines & 1.56 [1.19, 2.03] \\
+Test $\rho<0.3$ (post hoc) & $p_{\mathrm{Holm}}{=}0.068$: inconclusive \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{H3: detectors (147 death / 141 clean touches)}} \\
+JIT v1, v2 flagged & all; v2 at $k{=}0$: 100\% \\
+JIT v3 graded, AUC & 0.58 [0.55, 0.61] \\
+Identifier check: touch / claim recall & 51.7\% / 29.2\% \\
+Identifier check: false alarms (touch) & 1.4\% \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{H4: 62 functions with both arms (106 vs.\ 11 deaths)}} \\
+Dead by $K$, LLM vs.\ doc & 16.4\% vs.\ 4.8\% \\
+Contradicted by $K$ incl.\ anchor & 17.3\% vs.\ 17.0\% \\
+HR LLM vs.\ doc, cloglog & 3.47 [1.94, 6.22] \\
+HR, delayed-entry Cox (43 doc fns) & 2.87 [0.47, 17.47] \\
+Sign-flip test; verdict (coded rule) & $p_{\mathrm{Holm}}{\le}0.001$: inconclusive \\
+\bottomrule
+\end{tabular}
+\end{table}

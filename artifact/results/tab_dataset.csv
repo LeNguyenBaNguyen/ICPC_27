@@ -1,0 +1,13 @@
+repo,anchor,functions,pairs,commits,with_docstring,llm_claims,doc_claims,random
+pytest,a1a4918,9,66,51,4,94,30,5
+pydantic,d5f37eb,20,171,96,18,223,125,2
+black,53a2190,15,123,88,10,165,36,2
+click,02046e7,5,41,28,4,56,18,3
+attrs,4580a74,1,6,6,1,9,5,0
+pip,4204359,16,125,69,4,181,16,7
+hypothesis,d16b183,19,172,95,5,196,25,6
+sphinx,c3968e9,12,96,64,3,131,7,11
+pylint,15a5ac0,3,24,23,3,32,4,8
+aiohttp,7d0f980,20,150,103,9,227,21,0
+textual,cc4e9c4,9,64,48,4,101,23,12
+others,,0,0,0,0,0,0,5

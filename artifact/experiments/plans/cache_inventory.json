@@ -1,0 +1,1139 @@
+{
+  "resurrection": {
+    "tasks": 649,
+    "plan_sha256": "68aa7371255318a7ac699180a059202b8b7e4d7c5f29b50dae455654a77f1e9c",
+    "exact_original_cache_hits": 163,
+    "exact_original_cache_misses": 486,
+    "by_role": {
+      "death_control": {
+        "tasks": 163,
+        "hits": 163
+      },
+      "followup": {
+        "tasks": 486,
+        "hits": 0
+      }
+    },
+    "hits": [
+      {
+        "task_id": "death:F000:2",
+        "role": "death_control",
+        "cache_file": "555809a82c5731829068c2a45ea5d489.json"
+      },
+      {
+        "task_id": "death:F000:1",
+        "role": "death_control",
+        "cache_file": "3d29c8ea7382309bbaa99114911e456f.json"
+      },
+      {
+        "task_id": "death:F000:6",
+        "role": "death_control",
+        "cache_file": "6749712d406eda80b9dc2090c9532077.json"
+      },
+      {
+        "task_id": "death:F001:3",
+        "role": "death_control",
+        "cache_file": "53dd29b785d3f14bdcc4e1cb9d72aadf.json"
+      },
+      {
+        "task_id": "death:F001:6",
+        "role": "death_control",
+        "cache_file": "7d114eaee738a29bbb9b300cb5863608.json"
+      },
+      {
+        "task_id": "death:F001:8",
+        "role": "death_control",
+        "cache_file": "59e04afb09dbd2453b134e5dd6d2b4ae.json"
+      },
+      {
+        "task_id": "death:F001:7",
+        "role": "death_control",
+        "cache_file": "5b563e539ac91a370111b98d1ab0016a.json"
+      },
+      {
+        "task_id": "death:F002:3",
+        "role": "death_control",
+        "cache_file": "09438daecef07df5427f9d7265f50b13.json"
+      },
+      {
+        "task_id": "death:F002:2",
+        "role": "death_control",
+        "cache_file": "d862c3509c6610c72412922192ad65cc.json"
+      },
+      {
+        "task_id": "death:F003:1",
+        "role": "death_control",
+        "cache_file": "bb741dffdfc340bd1fecb11c0faec877.json"
+      },
+      {
+        "task_id": "death:F003:3",
+        "role": "death_control",
+        "cache_file": "38a73678ae8f8f9385fa04da33554c36.json"
+      },
+      {
+        "task_id": "death:F003:4",
+        "role": "death_control",
+        "cache_file": "185610cef236669e1ac96b0c17d55118.json"
+      },
+      {
+        "task_id": "death:F004:4",
+        "role": "death_control",
+        "cache_file": "b175ad1258a4d6b0b642e15fde1a386b.json"
+      },
+      {
+        "task_id": "death:F005:4",
+        "role": "death_control",
+        "cache_file": "a0b8e56de8decdae26dd6347102381ec.json"
+      },
+      {
+        "task_id": "death:F007:1",
+        "role": "death_control",
+        "cache_file": "e36380645cc8dae78c3366c51dc739ca.json"
+      },
+      {
+        "task_id": "death:F009:1",
+        "role": "death_control",
+        "cache_file": "9c640e1227b18dc4a18a06bc9302c263.json"
+      },
+      {
+        "task_id": "death:F010:5",
+        "role": "death_control",
+        "cache_file": "c9bddf6b9247aeddff1460f59e89ba37.json"
+      },
+      {
+        "task_id": "death:F010:3",
+        "role": "death_control",
+        "cache_file": "1d51ef8f2cc1a1db11006800cde260b4.json"
+      },
+      {
+        "task_id": "death:F010:4",
+        "role": "death_control",
+        "cache_file": "9d7774c6195f69d2d032ffa6dd571a7b.json"
+      },
+      {
+        "task_id": "death:F011:3",
+        "role": "death_control",
+        "cache_file": "3da5047b2e58317094d3ecc601f26336.json"
+      },
+      {
+        "task_id": "death:F011:6",
+        "role": "death_control",
+        "cache_file": "640c5f1cca13189c68b8d5a45a158c12.json"
+      },
+      {
+        "task_id": "death:F012:4",
+        "role": "death_control",
+        "cache_file": "06863166c5389ed1fbaea06ccb834572.json"
+      },
+      {
+        "task_id": "death:F012:2",
+        "role": "death_control",
+        "cache_file": "29e010b5f9264b5070ecec8c6e7d0536.json"
+      },
+      {
+        "task_id": "death:F013:2",
+        "role": "death_control",
+        "cache_file": "9641281659fb8d98e17811b2c2d2e6f0.json"
+      },
+      {
+        "task_id": "death:F014:7",
+        "role": "death_control",
+        "cache_file": "6416aca623df7e58e470c447ce557a88.json"
+      },
+      {
+        "task_id": "death:F014:8",
+        "role": "death_control",
+        "cache_file": "85392f4de4bd1f643d813397e28844e7.json"
+      },
+      {
+        "task_id": "death:F014:3",
+        "role": "death_control",
+        "cache_file": "5a85fae600020546a3adea915efbc003.json"
+      },
+      {
+        "task_id": "death:F015:3",
+        "role": "death_control",
+        "cache_file": "e00179b926a9ac56bd18039447480cda.json"
+      },
+      {
+        "task_id": "death:F016:11",
+        "role": "death_control",
+        "cache_file": "29a0b4aec98424ef871979a991957c77.json"
+      },
+      {
+        "task_id": "death:F016:4",
+        "role": "death_control",
+        "cache_file": "1ed77774e005f554ebd04331280ec77a.json"
+      },
+      {
+        "task_id": "death:F017:3",
+        "role": "death_control",
+        "cache_file": "2181b8fef936413886912ddff1f21517.json"
+      },
+      {
+        "task_id": "death:F017:2",
+        "role": "death_control",
+        "cache_file": "3316f16b85131faa899afce1a22ca65c.json"
+      },
+      {
+        "task_id": "death:F018:1",
+        "role": "death_control",
+        "cache_file": "c69ba3be59baa8df1dff2d4dda120fec.json"
+      },
+      {
+        "task_id": "death:F018:2",
+        "role": "death_control",
+        "cache_file": "b3045b851a3debcef7e94c5bcfb2131e.json"
+      },
+      {
+        "task_id": "death:F020:8",
+        "role": "death_control",
+        "cache_file": "96ae8a13dddbbb170aa6e6f348f14af7.json"
+      },
+      {
+        "task_id": "death:F020:1",
+        "role": "death_control",
+        "cache_file": "98a2f3c1e534c9ed3954d7059d5554a0.json"
+      },
+      {
+        "task_id": "death:F020:5",
+        "role": "death_control",
+        "cache_file": "954f6333bebf68167ae9a4f0c9f72a3b.json"
+      },
+      {
+        "task_id": "death:F023:1",
+        "role": "death_control",
+        "cache_file": "35bd180d6d4e2eed53c45d42874abdc6.json"
+      },
+      {
+        "task_id": "death:F023:3",
+        "role": "death_control",
+        "cache_file": "5b751577230a5a80e33051d6e41002c1.json"
+      },
+      {
+        "task_id": "death:F026:5",
+        "role": "death_control",
+        "cache_file": "c6c81900a27f79972c46c27f0cc70c8e.json"
+      },
+      {
+        "task_id": "death:F027:4",
+        "role": "death_control",
+        "cache_file": "b237af4b22daf53fbd73610474088c6b.json"
+      },
+      {
+        "task_id": "death:F028:5",
+        "role": "death_control",
+        "cache_file": "52dde27d2a3f5bd382b8361c3efe0398.json"
+      },
+      {
+        "task_id": "death:F030:1",
+        "role": "death_control",
+        "cache_file": "003c5c507c174fc0fe72515626d8184e.json"
+      },
+      {
+        "task_id": "death:F030:10",
+        "role": "death_control",
+        "cache_file": "95cd54fa8db12d5f9d8930ae0a147d9e.json"
+      },
+      {
+        "task_id": "death:F031:6",
+        "role": "death_control",
+        "cache_file": "043b267d84c8e1a54d058e892c0cf572.json"
+      },
+      {
+        "task_id": "death:F031:5",
+        "role": "death_control",
+        "cache_file": "21144cd32b307743b3cde7a280979326.json"
+      },
+      {
+        "task_id": "death:F031:4",
+        "role": "death_control",
+        "cache_file": "8cf09dde0157ebd4095c2f18aeb8e9c6.json"
+      },
+      {
+        "task_id": "death:F032:3",
+        "role": "death_control",
+        "cache_file": "f0808870c35015bcc82a0128272928b4.json"
+      },
+      {
+        "task_id": "death:F032:4",
+        "role": "death_control",
+        "cache_file": "f5e958264de0e4c047da16ac282b528d.json"
+      },
+      {
+        "task_id": "death:F033:5",
+        "role": "death_control",
+        "cache_file": "880847a596d8ab8856040b66a1ea30bf.json"
+      },
+      {
+        "task_id": "death:F036:6",
+        "role": "death_control",
+        "cache_file": "d6262bb81e47b613ffb3f918a7122f86.json"
+      },
+      {
+        "task_id": "death:F037:6",
+        "role": "death_control",
+        "cache_file": "f7cd48de03d4ffa735b0a4121a36f2af.json"
+      },
+      {
+        "task_id": "death:F040:3",
+        "role": "death_control",
+        "cache_file": "517dcca0e2ded13ac70991da8c3f40c9.json"
+      },
+      {
+        "task_id": "death:F041:5",
+        "role": "death_control",
+        "cache_file": "665b69dfb7348134e4fc0146a79d4931.json"
+      },
+      {
+        "task_id": "death:F042:2",
+        "role": "death_control",
+        "cache_file": "51f5f79dcce155dc573862deed2ddd5f.json"
+      },
+      {
+        "task_id": "death:F043:3",
+        "role": "death_control",
+        "cache_file": "7a0a3f8166dac7f76c5774f7c1447f48.json"
+      },
+      {
+        "task_id": "death:F044:3",
+        "role": "death_control",
+        "cache_file": "fd99c73d7ac7d91143e118b0115d176f.json"
+      },
+      {
+        "task_id": "death:F044:2",
+        "role": "death_control",
+        "cache_file": "3fbc1c247b6a89c7ecedd8b37d1a5452.json"
+      },
+      {
+        "task_id": "death:F044:5",
+        "role": "death_control",
+        "cache_file": "2c8aa86472d5328db00293472fc1e604.json"
+      },
+      {
+        "task_id": "death:F044:1",
+        "role": "death_control",
+        "cache_file": "1935a94ac79de80cbddc3a4e5929d35d.json"
+      },
+      {
+        "task_id": "death:F045:2",
+        "role": "death_control",
+        "cache_file": "922c07815ce8dde50d77baf27f762401.json"
+      },
+      {
+        "task_id": "death:F045:6",
+        "role": "death_control",
+        "cache_file": "0e123584fd2eabc9ce5fcd3bca1c8e22.json"
+      },
+      {
+        "task_id": "death:F045:1",
+        "role": "death_control",
+        "cache_file": "1f25e673d16054db262f94fea27c57fa.json"
+      },
+      {
+        "task_id": "death:F046:5",
+        "role": "death_control",
+        "cache_file": "64d1e0746a162354ba2a8181025420cb.json"
+      },
+      {
+        "task_id": "death:F046:1",
+        "role": "death_control",
+        "cache_file": "0ec794389ef2846e09dc987b364a9206.json"
+      },
+      {
+        "task_id": "death:F046:4",
+        "role": "death_control",
+        "cache_file": "b795658486ae6834420283228d67470b.json"
+      },
+      {
+        "task_id": "death:F047:2",
+        "role": "death_control",
+        "cache_file": "f453966a51791cf8b6d3d8050bef6903.json"
+      },
+      {
+        "task_id": "death:F050:1",
+        "role": "death_control",
+        "cache_file": "7009d761c1f19d86dc28efdc1ae5c012.json"
+      },
+      {
+        "task_id": "death:F051:3",
+        "role": "death_control",
+        "cache_file": "8c62566087f836d481b26e2e2d79f85f.json"
+      },
+      {
+        "task_id": "death:F051:6",
+        "role": "death_control",
+        "cache_file": "c578c6d84ecbe6e7afd96e44b8114830.json"
+      },
+      {
+        "task_id": "death:F051:7",
+        "role": "death_control",
+        "cache_file": "6ea47732cf447e088b0a716b0e61422e.json"
+      },
+      {
+        "task_id": "death:F056:5",
+        "role": "death_control",
+        "cache_file": "c2f6c13cf9644c8c0a4750a57da14ec1.json"
+      },
+      {
+        "task_id": "death:F058:5",
+        "role": "death_control",
+        "cache_file": "59b5bdd8bc46aea08881d2a51683bc21.json"
+      },
+      {
+        "task_id": "death:F058:6",
+        "role": "death_control",
+        "cache_file": "e6dbede507b976449ebf9abed530a68f.json"
+      },
+      {
+        "task_id": "death:F059:7",
+        "role": "death_control",
+        "cache_file": "33ae276a952656d7cad36a1afc4c1461.json"
+      },
+      {
+        "task_id": "death:F059:1",
+        "role": "death_control",
+        "cache_file": "d09e574fe31c9811827fd383dee060b0.json"
+      },
+      {
+        "task_id": "death:F060:2",
+        "role": "death_control",
+        "cache_file": "75fd36bc4b9d9356faca2f2d565cf0a2.json"
+      },
+      {
+        "task_id": "death:F060:4",
+        "role": "death_control",
+        "cache_file": "87c41c05657113db24d09c6582e3b34d.json"
+      },
+      {
+        "task_id": "death:F060:3",
+        "role": "death_control",
+        "cache_file": "11b0625c215a2d35dee9953a3ff260fe.json"
+      },
+      {
+        "task_id": "death:F062:4",
+        "role": "death_control",
+        "cache_file": "7b246e51c512df1b6f6f23e8265f431f.json"
+      },
+      {
+        "task_id": "death:F063:4",
+        "role": "death_control",
+        "cache_file": "7dfc28757f49e74cec7f60b55d8cb754.json"
+      },
+      {
+        "task_id": "death:F064:6",
+        "role": "death_control",
+        "cache_file": "e482055f86097232f299c49c1a1a9d86.json"
+      },
+      {
+        "task_id": "death:F064:1",
+        "role": "death_control",
+        "cache_file": "dcc56bc22319f53281fc92e1303f2065.json"
+      },
+      {
+        "task_id": "death:F064:3",
+        "role": "death_control",
+        "cache_file": "dbdef0c957ca96d5acb80adede4aae4b.json"
+      },
+      {
+        "task_id": "death:F066:5",
+        "role": "death_control",
+        "cache_file": "4a736eb7c8660425cb17cb92c0b1dd68.json"
+      },
+      {
+        "task_id": "death:F069:3",
+        "role": "death_control",
+        "cache_file": "691299ebb23145a772406d3d54370789.json"
+      },
+      {
+        "task_id": "death:F070:2",
+        "role": "death_control",
+        "cache_file": "95a5741ffde775fdb3b30c907e62bf00.json"
+      },
+      {
+        "task_id": "death:F072:6",
+        "role": "death_control",
+        "cache_file": "f011097514d729bfccbee2494f8c1413.json"
+      },
+      {
+        "task_id": "death:F072:2",
+        "role": "death_control",
+        "cache_file": "3a1e8294df94f9d574d770bbf6c21230.json"
+      },
+      {
+        "task_id": "death:F078:1",
+        "role": "death_control",
+        "cache_file": "2e8bc0b9a601d5ae23f11538720bfada.json"
+      },
+      {
+        "task_id": "death:F080:5",
+        "role": "death_control",
+        "cache_file": "4a35b8f5fd835d39180d9a420cd16985.json"
+      },
+      {
+        "task_id": "death:F081:5",
+        "role": "death_control",
+        "cache_file": "a44d1da14b24bfc8a993463e09830784.json"
+      },
+      {
+        "task_id": "death:F082:6",
+        "role": "death_control",
+        "cache_file": "86cd6400bb910d64b0e7ad263d02be26.json"
+      },
+      {
+        "task_id": "death:F082:9",
+        "role": "death_control",
+        "cache_file": "81494ca1890a280140c8dce8815fee18.json"
+      },
+      {
+        "task_id": "death:F082:3",
+        "role": "death_control",
+        "cache_file": "2712689e1bca1a7adf5a01c96d42a1fe.json"
+      },
+      {
+        "task_id": "death:F082:4",
+        "role": "death_control",
+        "cache_file": "df344967cabce0681459ba93fd73d3ec.json"
+      },
+      {
+        "task_id": "death:F083:8",
+        "role": "death_control",
+        "cache_file": "cee0ee7731ee6890053e83f7bcac6fe2.json"
+      },
+      {
+        "task_id": "death:F083:2",
+        "role": "death_control",
+        "cache_file": "8b500cc6353614094c43ad726bf417ba.json"
+      },
+      {
+        "task_id": "death:F087:3",
+        "role": "death_control",
+        "cache_file": "c26d029e7771c8cdba943060d3c8d097.json"
+      },
+      {
+        "task_id": "death:F087:10",
+        "role": "death_control",
+        "cache_file": "54dc6ee0dc10bc9557202c74271e7013.json"
+      },
+      {
+        "task_id": "death:F087:2",
+        "role": "death_control",
+        "cache_file": "4d9e9105e26e0c1005f861a13d98e3cb.json"
+      },
+      {
+        "task_id": "death:F100:5",
+        "role": "death_control",
+        "cache_file": "547111c7425359a9d024f2abae184a60.json"
+      },
+      {
+        "task_id": "death:F101:2",
+        "role": "death_control",
+        "cache_file": "5b9a2abd1188ec09127be4db90512258.json"
+      },
+      {
+        "task_id": "death:F101:4",
+        "role": "death_control",
+        "cache_file": "de0705c4c20afafcbf8211cd252688ed.json"
+      },
+      {
+        "task_id": "death:F102:5",
+        "role": "death_control",
+        "cache_file": "dd2ad2f3804d0baca72a6413a77104c2.json"
+      },
+      {
+        "task_id": "death:F104:5",
+        "role": "death_control",
+        "cache_file": "a3089c71ac78bc9349cc2de174922af2.json"
+      },
+      {
+        "task_id": "death:F107:4",
+        "role": "death_control",
+        "cache_file": "fa42747550c4534245262baa408dd7c5.json"
+      },
+      {
+        "task_id": "death:F108:5",
+        "role": "death_control",
+        "cache_file": "cb7d6b812409ff8e11f84a2b04593947.json"
+      },
+      {
+        "task_id": "death:F108:6",
+        "role": "death_control",
+        "cache_file": "f69bde5fe04838d724b629d3c9c2eb6f.json"
+      },
+      {
+        "task_id": "death:F111:2",
+        "role": "death_control",
+        "cache_file": "49a99dba76480c07eab202f95d30237b.json"
+      },
+      {
+        "task_id": "death:F113:2",
+        "role": "death_control",
+        "cache_file": "e670448e0e4947461591b51bb2f53293.json"
+      },
+      {
+        "task_id": "death:F113:3",
+        "role": "death_control",
+        "cache_file": "ec22e5e50c28910539e6e35b0215874b.json"
+      },
+      {
+        "task_id": "death:F114:1",
+        "role": "death_control",
+        "cache_file": "7a68bfc9f01c0024db42a25727a9dc0a.json"
+      },
+      {
+        "task_id": "death:F114:3",
+        "role": "death_control",
+        "cache_file": "45e70f8f30a929a18e36830eca1377a1.json"
+      },
+      {
+        "task_id": "death:F115:5",
+        "role": "death_control",
+        "cache_file": "dcb7aa011603facbcf005451fb34d435.json"
+      },
+      {
+        "task_id": "death:F115:4",
+        "role": "death_control",
+        "cache_file": "aef13c41d39a9b25f8c67648d241a3ca.json"
+      },
+      {
+        "task_id": "death:F117:10",
+        "role": "death_control",
+        "cache_file": "a75d170ed2138c02317691ff4d8efab8.json"
+      },
+      {
+        "task_id": "death:F120:1",
+        "role": "death_control",
+        "cache_file": "1371fd706d301081c9b833d91eb8fb65.json"
+      },
+      {
+        "task_id": "death:F121:2",
+        "role": "death_control",
+        "cache_file": "e7e56f5434dfb8974bbdcc376ec8094a.json"
+      },
+      {
+        "task_id": "death:F121:4",
+        "role": "death_control",
+        "cache_file": "213e46f09f3609795f7111da320a8770.json"
+      },
+      {
+        "task_id": "death:F124:1",
+        "role": "death_control",
+        "cache_file": "4c255eeda1740a07144ebf5506f9e0cb.json"
+      },
+      {
+        "task_id": "death:F126:2",
+        "role": "death_control",
+        "cache_file": "e9a249389323c7b7f1861f614f2e28fc.json"
+      },
+      {
+        "task_id": "death:F126:1",
+        "role": "death_control",
+        "cache_file": "951b50da2135270775860d705f2c38cc.json"
+      },
+      {
+        "task_id": "death:F128:5",
+        "role": "death_control",
+        "cache_file": "33913c5e419a3b361619a56e2c69239b.json"
+      },
+      {
+        "task_id": "death:F129:5",
+        "role": "death_control",
+        "cache_file": "80034e1e1017ce9b8311fbc441aa8ad7.json"
+      },
+      {
+        "task_id": "death:F131:5",
+        "role": "death_control",
+        "cache_file": "55972c893ac3d869425f669aa666df75.json"
+      },
+      {
+        "task_id": "death:F131:1",
+        "role": "death_control",
+        "cache_file": "cdbe687e5276d777d1f8cba0624b48f3.json"
+      },
+      {
+        "task_id": "death:F132:5",
+        "role": "death_control",
+        "cache_file": "03e3fd76db4c02a528031a7f1ba8ef07.json"
+      },
+      {
+        "task_id": "death:F134:5",
+        "role": "death_control",
+        "cache_file": "a573cb8f67826e41d8ea64ea1f6e3c6a.json"
+      },
+      {
+        "task_id": "death:F135:2",
+        "role": "death_control",
+        "cache_file": "d8961f9dd309b280b91cf075bd3792d4.json"
+      },
+      {
+        "task_id": "death:F136:3",
+        "role": "death_control",
+        "cache_file": "f6b579b5c1eb92b794848dd7b400e533.json"
+      },
+      {
+        "task_id": "death:F136:1",
+        "role": "death_control",
+        "cache_file": "3882703b5773eeb75aec6a83ef31ecac.json"
+      },
+      {
+        "task_id": "death:F138:5",
+        "role": "death_control",
+        "cache_file": "7878b2ad9fc6cdbaebf8d179663fe15f.json"
+      },
+      {
+        "task_id": "death:F138:1",
+        "role": "death_control",
+        "cache_file": "3e30bd80898c3cfc8a091bc2d5ace00c.json"
+      },
+      {
+        "task_id": "death:F139:7",
+        "role": "death_control",
+        "cache_file": "e64c1c0f74591d700ead0796cfced4f4.json"
+      },
+      {
+        "task_id": "death:F140:1",
+        "role": "death_control",
+        "cache_file": "c6e5f6ccb328adb5e86f8ad8d339ebb9.json"
+      },
+      {
+        "task_id": "death:F140:4",
+        "role": "death_control",
+        "cache_file": "bfb7183ca0e564d3b35f6ba766728eec.json"
+      },
+      {
+        "task_id": "death:F142:1",
+        "role": "death_control",
+        "cache_file": "cb1d5a6690c71df189a458018536578f.json"
+      },
+      {
+        "task_id": "death:F142:2",
+        "role": "death_control",
+        "cache_file": "6dc607396842be1432104b0ef22ac3a3.json"
+      },
+      {
+        "task_id": "death:F142:5",
+        "role": "death_control",
+        "cache_file": "74ced1d4e01508891d866a138ac03cf8.json"
+      },
+      {
+        "task_id": "death:F143:1",
+        "role": "death_control",
+        "cache_file": "dea754fd14c11e69d85b2ed4d1b93d0d.json"
+      },
+      {
+        "task_id": "death:F144:5",
+        "role": "death_control",
+        "cache_file": "ce3c08b8d1972c83f71299108d8b47ac.json"
+      },
+      {
+        "task_id": "death:F145:2",
+        "role": "death_control",
+        "cache_file": "3cc6662515ceea757f741195d10e5fff.json"
+      },
+      {
+        "task_id": "death:F145:4",
+        "role": "death_control",
+        "cache_file": "d83d4d7a07324a46b8b8ed7853f249e8.json"
+      },
+      {
+        "task_id": "death:F145:1",
+        "role": "death_control",
+        "cache_file": "8a18884bb3fd2161a40001d1d45d4902.json"
+      },
+      {
+        "task_id": "death:F146:1",
+        "role": "death_control",
+        "cache_file": "c1f8fe409b575bb5241ea8fd4ac6b2fe.json"
+      },
+      {
+        "task_id": "death:F146:5",
+        "role": "death_control",
+        "cache_file": "e272db47247b5240c65552016ee5d343.json"
+      },
+      {
+        "task_id": "death:F147:5",
+        "role": "death_control",
+        "cache_file": "5db5989745d5865b6e5bc1f4791f563c.json"
+      },
+      {
+        "task_id": "death:F147:1",
+        "role": "death_control",
+        "cache_file": "24e97fd2f2e303a5e6b56fabb745057d.json"
+      },
+      {
+        "task_id": "death:F148:1",
+        "role": "death_control",
+        "cache_file": "1e069fbb3e6cea443b00384d0fde77a3.json"
+      },
+      {
+        "task_id": "death:F149:5",
+        "role": "death_control",
+        "cache_file": "616d1890f0e530366dd88f4605a57783.json"
+      },
+      {
+        "task_id": "death:F150:7",
+        "role": "death_control",
+        "cache_file": "316e4ac86f2661ca69472f887d87135c.json"
+      },
+      {
+        "task_id": "death:F151:1",
+        "role": "death_control",
+        "cache_file": "83255095dea5b53f721964a423455155.json"
+      },
+      {
+        "task_id": "death:F154:5",
+        "role": "death_control",
+        "cache_file": "d58910efa2a53f0eb2c9d288d7615e44.json"
+      },
+      {
+        "task_id": "death:F155:9",
+        "role": "death_control",
+        "cache_file": "2c47d3c46537593ce70806163fff5d55.json"
+      },
+      {
+        "task_id": "death:F155:11",
+        "role": "death_control",
+        "cache_file": "f37ea41d7e190918b27c4718222c0cf4.json"
+      },
+      {
+        "task_id": "death:F156:7",
+        "role": "death_control",
+        "cache_file": "85f2d32af5186efaeac5e3f6c242bb84.json"
+      },
+      {
+        "task_id": "death:F156:4",
+        "role": "death_control",
+        "cache_file": "7c1d524185a2f0f0449c6c35bee9a8ec.json"
+      },
+      {
+        "task_id": "death:F157:2",
+        "role": "death_control",
+        "cache_file": "1becf7f88ecba3549744f0ad5cdfd5ae.json"
+      },
+      {
+        "task_id": "death:F158:5",
+        "role": "death_control",
+        "cache_file": "fa83f1213b366b952cb43cdc62e35d7a.json"
+      },
+      {
+        "task_id": "death:R001:10",
+        "role": "death_control",
+        "cache_file": "32d4404d5b3f1de873f94e07de3b4709.json"
+      },
+      {
+        "task_id": "death:R001:11",
+        "role": "death_control",
+        "cache_file": "5b8ba052a61c40c5f27970735645f852.json"
+      },
+      {
+        "task_id": "death:R064:1",
+        "role": "death_control",
+        "cache_file": "fb5b6ac7385d2bc20c4b6b73916c4a2a.json"
+      }
+    ]
+  },
+  "cross_family": {
+    "tasks": 57,
+    "plan_sha256": "4933e66eb164430f231c3a761d8a952fee390987cac4088b2b6f5aa8cde90dfb",
+    "exact_original_cache_hits": 57,
+    "exact_original_cache_misses": 0,
+    "by_role": {
+      "cross_family": {
+        "tasks": 57,
+        "hits": 57
+      }
+    },
+    "hits": [
+      {
+        "task_id": "R068:0",
+        "role": "cross_family",
+        "cache_file": "8c4f2c001ea06adec3d9935fb3991061.json"
+      },
+      {
+        "task_id": "F079:4",
+        "role": "cross_family",
+        "cache_file": "f98236740d31ab79f4812deb2f9c7791.json"
+      },
+      {
+        "task_id": "F061:6",
+        "role": "cross_family",
+        "cache_file": "56861c9dd2748e81a897b7fd8dbb3097.json"
+      },
+      {
+        "task_id": "R058:0",
+        "role": "cross_family",
+        "cache_file": "3ca52270aa4d909d0fa3c69f0a0064d0.json"
+      },
+      {
+        "task_id": "R032:0",
+        "role": "cross_family",
+        "cache_file": "adc72c44760aebd30f4b820008dd2606.json"
+      },
+      {
+        "task_id": "R006:0",
+        "role": "cross_family",
+        "cache_file": "950762d6b4ab1c533b850939ca1c0825.json"
+      },
+      {
+        "task_id": "F002:2",
+        "role": "cross_family",
+        "cache_file": "d862c3509c6610c72412922192ad65cc.json"
+      },
+      {
+        "task_id": "F026:5",
+        "role": "cross_family",
+        "cache_file": "c6c81900a27f79972c46c27f0cc70c8e.json"
+      },
+      {
+        "task_id": "F033:7",
+        "role": "cross_family",
+        "cache_file": "ada337f217aabc318a2b52a4434402f6.json"
+      },
+      {
+        "task_id": "F128:6",
+        "role": "cross_family",
+        "cache_file": "1bb66b44e923001272b185b401f244d7.json"
+      },
+      {
+        "task_id": "F079:0",
+        "role": "cross_family",
+        "cache_file": "8df8011f17ac923671a6b530e33cb369.json"
+      },
+      {
+        "task_id": "R028:0",
+        "role": "cross_family",
+        "cache_file": "26785e83edc52b8e6b97c8c071b91d1a.json"
+      },
+      {
+        "task_id": "F125:0",
+        "role": "cross_family",
+        "cache_file": "946e57c06b2083ed636ce31224cfa158.json"
+      },
+      {
+        "task_id": "F158:0",
+        "role": "cross_family",
+        "cache_file": "917aa283ae1582d22a54a43efbb5e80c.json"
+      },
+      {
+        "task_id": "F023:2",
+        "role": "cross_family",
+        "cache_file": "14307afe5b78be01224a1eeb4dfc08ed.json"
+      },
+      {
+        "task_id": "F050:1",
+        "role": "cross_family",
+        "cache_file": "7009d761c1f19d86dc28efdc1ae5c012.json"
+      },
+      {
+        "task_id": "R024:0",
+        "role": "cross_family",
+        "cache_file": "085ed762b8649093c9e49f5bbc3c474b.json"
+      },
+      {
+        "task_id": "F106:0",
+        "role": "cross_family",
+        "cache_file": "0194f8b55bbb073e5dbde2e8092639d5.json"
+      },
+      {
+        "task_id": "F109:8",
+        "role": "cross_family",
+        "cache_file": "13a1ecf91d1983a883fac61e1e05a81f.json"
+      },
+      {
+        "task_id": "F017:3",
+        "role": "cross_family",
+        "cache_file": "2181b8fef936413886912ddff1f21517.json"
+      },
+      {
+        "task_id": "F065:0",
+        "role": "cross_family",
+        "cache_file": "8b704523bca0ba4cddb147edd0c34c25.json"
+      },
+      {
+        "task_id": "F014:8",
+        "role": "cross_family",
+        "cache_file": "85392f4de4bd1f643d813397e28844e7.json"
+      },
+      {
+        "task_id": "F136:0",
+        "role": "cross_family",
+        "cache_file": "dc0f0844364872d32043c423998ae4c1.json"
+      },
+      {
+        "task_id": "F108:7",
+        "role": "cross_family",
+        "cache_file": "7c75b4ecc90ce6f10c4753fbafeaa81e.json"
+      },
+      {
+        "task_id": "F010:0",
+        "role": "cross_family",
+        "cache_file": "92e9d0da5783adb564f6a992fbb90394.json"
+      },
+      {
+        "task_id": "R001:11",
+        "role": "cross_family",
+        "cache_file": "5b8ba052a61c40c5f27970735645f852.json"
+      },
+      {
+        "task_id": "F026:0",
+        "role": "cross_family",
+        "cache_file": "05d247ade7fe968f99e87e4f574c451a.json"
+      },
+      {
+        "task_id": "F143:2",
+        "role": "cross_family",
+        "cache_file": "98c661afb19073d1b90b8b8b8170a32e.json"
+      },
+      {
+        "task_id": "F031:6",
+        "role": "cross_family",
+        "cache_file": "043b267d84c8e1a54d058e892c0cf572.json"
+      },
+      {
+        "task_id": "F023:3",
+        "role": "cross_family",
+        "cache_file": "5b751577230a5a80e33051d6e41002c1.json"
+      },
+      {
+        "task_id": "R039:1",
+        "role": "cross_family",
+        "cache_file": "2cb36371ffcb77e6665ee8f13c0f5527.json"
+      },
+      {
+        "task_id": "F145:0",
+        "role": "cross_family",
+        "cache_file": "3bbf78be8cf8d6c55db535b42c5bcf05.json"
+      },
+      {
+        "task_id": "F151:5",
+        "role": "cross_family",
+        "cache_file": "fa6409897b80a242f1a4b8aad985350a.json"
+      },
+      {
+        "task_id": "F013:10",
+        "role": "cross_family",
+        "cache_file": "fb4c18f9ba5edd5241563053063d1b0a.json"
+      },
+      {
+        "task_id": "F142:1",
+        "role": "cross_family",
+        "cache_file": "cb1d5a6690c71df189a458018536578f.json"
+      },
+      {
+        "task_id": "F107:0",
+        "role": "cross_family",
+        "cache_file": "1afda4dc659e8cd343b3bdda0ebb2272.json"
+      },
+      {
+        "task_id": "F143:1",
+        "role": "cross_family",
+        "cache_file": "dea754fd14c11e69d85b2ed4d1b93d0d.json"
+      },
+      {
+        "task_id": "R075:0",
+        "role": "cross_family",
+        "cache_file": "9b9b63e7207234a2bed9b06076036897.json"
+      },
+      {
+        "task_id": "F057:0",
+        "role": "cross_family",
+        "cache_file": "42f99a7895dd8a5755b98be1aebfc07d.json"
+      },
+      {
+        "task_id": "F069:2",
+        "role": "cross_family",
+        "cache_file": "630963d251ce0f671132863cf2d4f961.json"
+      },
+      {
+        "task_id": "F121:0",
+        "role": "cross_family",
+        "cache_file": "8b098d63f5bffc6b71b28743f775c45d.json"
+      },
+      {
+        "task_id": "F048:1",
+        "role": "cross_family",
+        "cache_file": "e311ee1f894e82f669f571b300988217.json"
+      },
+      {
+        "task_id": "F131:6",
+        "role": "cross_family",
+        "cache_file": "fe1d571112244c93a0fa4ed425b0d072.json"
+      },
+      {
+        "task_id": "F140:0",
+        "role": "cross_family",
+        "cache_file": "8e0ca1143455b44d4bb4acfddfd89201.json"
+      },
+      {
+        "task_id": "F124:0",
+        "role": "cross_family",
+        "cache_file": "da672e832f5b929b0e2592aa912c5191.json"
+      },
+      {
+        "task_id": "F149:0",
+        "role": "cross_family",
+        "cache_file": "9be4486dc4db3d67009b3657e7d98e52.json"
+      },
+      {
+        "task_id": "R065:0",
+        "role": "cross_family",
+        "cache_file": "60ff195b7f65233e321d64b87e84169b.json"
+      },
+      {
+        "task_id": "F043:0",
+        "role": "cross_family",
+        "cache_file": "23a0807ebc2b5b583707b33cbb59480e.json"
+      },
+      {
+        "task_id": "F059:7",
+        "role": "cross_family",
+        "cache_file": "33ae276a952656d7cad36a1afc4c1461.json"
+      },
+      {
+        "task_id": "F003:0",
+        "role": "cross_family",
+        "cache_file": "dc7781260a99753a8f4f395ea63d6187.json"
+      },
+      {
+        "task_id": "F046:4",
+        "role": "cross_family",
+        "cache_file": "b795658486ae6834420283228d67470b.json"
+      },
+      {
+        "task_id": "F072:0",
+        "role": "cross_family",
+        "cache_file": "717fcc5f21bfbf03452a1864c38a1018.json"
+      },
+      {
+        "task_id": "R036:2",
+        "role": "cross_family",
+        "cache_file": "570d167316c5050af56ed8bd0bc863ea.json"
+      },
+      {
+        "task_id": "F096:0",
+        "role": "cross_family",
+        "cache_file": "364b9cf56c0a7b824c5ed6be9bf8b92f.json"
+      },
+      {
+        "task_id": "R024:3",
+        "role": "cross_family",
+        "cache_file": "896053e9a7c67d91e8ccbb2d52e58334.json"
+      },
+      {
+        "task_id": "F029:0",
+        "role": "cross_family",
+        "cache_file": "2d3307e421a08f18f5812cb6ae9a8a3b.json"
+      },
+      {
+        "task_id": "F051:8",
+        "role": "cross_family",
+        "cache_file": "90ef4664925c8c70f3f62808be3c24ad.json"
+      }
+    ]
+  },
+  "docstring_free": {
+    "generation_tasks": 65,
+    "exact_original_generation_cache_hits": 0
+  },
+  "interpretation": "Exact archived prompt/system/modeltag/seed keys only. Original responses are not mixed into freshcondition."
+}

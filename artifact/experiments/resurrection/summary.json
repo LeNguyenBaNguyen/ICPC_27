@@ -1,0 +1,86 @@
+{
+  "experiment": "resurrection",
+  "plan_sha256": "68aa7371255318a7ac699180a059202b8b7e4d7c5f29b50dae455654a77f1e9c",
+  "complete": true,
+  "completed_tasks": 649,
+  "planned_tasks": 649,
+  "fresh_calls_this_invocation": 82,
+  "cache_hits_this_invocation": 1,
+  "stop_reason": null,
+  "failed": false,
+  "error": null,
+  "quality_counts": {
+    "cached_responses": 649,
+    "cached_length_limited_responses": 0,
+    "failed_request_records": 0,
+    "rejected_length_limited_responses": 0
+  },
+  "unparsed_verdicts": 33,
+  "eligible_claims": 232,
+  "claims_with_fresh_death_recheck": 232,
+  "claims_with_at_least_one_followup": 232,
+  "stratified_claim_counts": {
+    "arm": {
+      "llm": {
+        "eligible_claims": 221,
+        "observed_followup_claims": 221,
+        "later_supported_claims": 116
+      },
+      "doc": {
+        "eligible_claims": 11,
+        "observed_followup_claims": 11,
+        "later_supported_claims": 5
+      }
+    },
+    "cohort": {
+      "main": {
+        "eligible_claims": 226,
+        "observed_followup_claims": 226,
+        "later_supported_claims": 120
+      },
+      "random": {
+        "eligible_claims": 6,
+        "observed_followup_claims": 6,
+        "later_supported_claims": 1
+      }
+    },
+    "type": {
+      "structural": {
+        "eligible_claims": 95,
+        "observed_followup_claims": 95,
+        "later_supported_claims": 44
+      },
+      "dataflow": {
+        "eligible_claims": 93,
+        "observed_followup_claims": 93,
+        "later_supported_claims": 55
+      },
+      "behavioural": {
+        "eligible_claims": 38,
+        "observed_followup_claims": 38,
+        "later_supported_claims": 17
+      },
+      "intent": {
+        "eligible_claims": 6,
+        "observed_followup_claims": 6,
+        "later_supported_claims": 5
+      }
+    },
+    "fresh_death_status": {
+      "contradicted": {
+        "eligible_claims": 219,
+        "observed_followup_claims": 219,
+        "later_supported_claims": 111
+      },
+      "supported": {
+        "eligible_claims": 13,
+        "observed_followup_claims": 13,
+        "later_supported_claims": 10
+      }
+    }
+  },
+  "claims_with_later_supported_verdict": 121,
+  "observed_claim_fraction_later_supported": 0.521551724137931,
+  "interpretation": "Later judge support after original contradiction; partial fractions are exposure-dependent and are not semantic resurrection rates.",
+  "quality_complete": false
+}

@@ -1,0 +1,41 @@
+\section{Preliminary Evaluation}\label{sec:eval}
+
+\textbf{Subjects and units.} We cloned 14 Python projects, pinned their heads, and anchored explanations at the last mainline commit before \XAnchorDate{}. The main cohort comprises \XNFunctions{} non-test functions from \XNRepos{} projects (6--120 lines, at least \XMinTouches{} future touches, seeded project cap of 20). Follow-up extends to \XKMax{} touches (Table~\ref{tab:dataset}). The count ledger distinguishes \XNPairs{} candidate function--commit touches, \XNEffectivePairs{} effective touches after formatting exclusions, and \XHOneNPairs{} at-risk function--touch rows used for churn analysis. Duplicate names and overload stubs are excluded; one later stub ends follow-up. To examine selection on future activity, we also sampled 80 eligible anchor functions, leaving \XNRandom{} after vendored-code exclusions; \XNRandomTouched{} are ever touched. Full eligibility, exclusions and a supplemental clean redraw are archived.
+
+\textbf{Models.} One model, \XBulkModel{}~\cite{hui2024qwen25coder} (temperature 0, cached), generates explanations (from code \emph{with} docstring, prompted to cover parameters, helpers and errors), decomposes, judges and runs the JIT checks; \XNExplAtClaimCap{} of \XNFunctions{} explanations hit the 12-claim cap, and the judge prompt (``written about an earlier version'') may prime. As a \emph{reliability proxy, not human annotation}, \XSecondModel{} re-judged identical claim lists (\XAJudgePairsValid{} of 125 pairs still valid, a stability-selected subset).
+
+\textbf{Protocol changes.} The anchor date, projects, touch threshold, project cap, judging format/context, JIT prompts, analysis models, random cohort, placebos, and exclusions changed after the study began. The complete dated change log and frozen inputs are in the artifact. Consequently, we do not treat $p$-values, Holm adjustment, or any stated decision rule as confirmatory evidence. The archived ledger contains \XNOllamaCalls{} local and \XNAnthropicCalls{} hosted calls; the separate reviewer-follow-up replay and mutation calls are reported in the artifact experiment ledgers.
+
+\input{generated/tab_dataset}
+
+\textbf{Initial judge-detected errors.} At the anchor the judge contradicted \XAnchorContradictedPctLlm\% of LLM claims and \XAnchorContradictedPctDoc\% of docstring claims. An older assistant-only audit lacks its claim-level labels and is not used for any result here. The separately released human-audit records, matrix and sampling weights are available in the artifact.
+
+\input{generated/tab_survival}
+\input{generated/fig_km}
+
+\textbf{When detections appear.} Table~\ref{tab:survival} and Fig.~\ref{fig:km} describe the future-active, trackable main cohort. Of \XMainN{} anchor-supported claims, \XMainDeaths{} receive a contradiction over follow-up to touch \XKMax{}. At six touches, $\hat S(6)=\XMainSK$ [\XMainSKLo,\XMainSKHi]; the 10\% detection threshold is reached at touch \XMainTNineZero{}. By touch \XKMax{}, $\hat S=\XMainSKmax$, so the median detection time is not observed. These results show detections emerging after initially supported explanations have been retained; they do not establish when the underlying claims became false. By touch six, 208 detections occur in 150 function--touch groups, including 97 in 39 groups with multiple detected claims, reinforcing the need to account for shared functions.
+
+\textbf{Activity and observation matter.} The random cohort contributes only \XRandomAtRiskOne{} claims in \XRandomFuncsAtRiskOne{} touched functions. By touch three, only \XRandomAtRiskThree{} claims in \XRandomFuncsAtRiskThree{} functions remain at risk; under our minimum of 30 claims in five functions, we report its curve only through touch \XRandomKReliable{} ($\hat S=\XRandomSKr$). Its high one-year freedom from detection (\XRandomSThreeSixFived{}, versus \XMainSThreeSixFived{} in the main cohort) therefore cannot be read as stronger claim durability: many functions receive no local edit. Counting removal/rename as an event changes the random estimate to \XRandomSThreeSixFivedRmdeath{} [\XRandomSThreeSixFivedRmdeathLo,\XRandomSThreeSixFivedRmdeathHi]. With few affected functions and selection on future activity, these contrasts do not establish a population ordering. Full calendar-time and competing-risk analyses are archived.
+
+\textbf{Sensitivity to observation rules.} Censoring before the first unresolved verdict gives $\hat S(6)=\XUnresolvedCensorS$; counting unresolved as an event gives \XUnresolvedEventS{} (primary \XMainSK{}; \XUnresolvedClaims{} affected claims). The choice matters, although these estimates remain much closer to each other than to the Llama replay below. Unchanged-code checks yield \XPlaceboNCon{} contradictions in \XPlaceboNLooks{} looks, all in anchor retests; real unchanged versions yield 0/\XPlaceboVersionsN{}. The constant-error placebo scenario gives $\hat S(6)=\XMainSKCorrected$ [\XMainSKCorrectedLo,\XMainSKCorrectedHi]. This small change is conditional on error transfer from unchanged to changed code; the human event review demonstrates why that assumption cannot calibrate the primary curve.
+
+\textbf{Which edits warrant attention?} Larger function edits are associated with more Qwen detections: HR \XLogLinesFnIqrHr{} [\XLogLinesFnIqrHrLo,\XLogLinesFnIqrHrHi] per inter-quartile range of lines changed. However, AUC \XHOneAucFn{} indicates only moderate discrimination over \XHOneNPairs{} analysis rows, \XHOneZeroShare\% of which have no event. Churn may help prioritize review, but these results do not establish an effective automatic refresh trigger. Claim-type contrasts are less stable: the apparent intent advantage (HR \XCloglogTyIntent{} [\XCloglogTyIntentLo,\XCloglogTyIntentHi] against data-flow) rests on \XHTwoIntentDeaths{} events, \XHTwoIntentDeathsClick{} in three click pager functions. We therefore infer no ordering by claim type.
+
+Whole-text prompts v1/v2 flag every queried touch, including unchanged anchors; v3 barely discriminates (AUC \XHThreeVThreeAuc{} [\XHThreeVThreeAucLo,\XHThreeVThreeAucHi]). This failed prompt diagnostic leaves comparison with published JIT detectors open. The docstring contrast is also descriptive because generator exposure, claim granularity and initial eligibility differ. All coefficients and negative results remain in the artifact.
+
+\textbf{Reliability and human audit.} Reweighted to the population strata (\XAFramePos{}/\XAFrameNeg{} touches with/without a death), the archived judges agree on \XAJudgeCommitAgreePct\% of verdicts ($\kappa=\XAJudgeCommitKappa$; $\kappa=\XAJudgeCommitKappaDead$ for contradicted vs.\ not). \XSecondModel{} confirms \XAJudgeCommitPrecision\% of bulk contradictions and contradicts \XAJudgeCommitSecondConWhereBulkNot\% of claims the bulk judge kept: this proxy disagrees in both directions and cannot calibrate $\hat S$. Separately, two self-reported blinded raters audited the same 400 records stratified by stage and bulk verdict. They agree on \XTwoRaterAgree\% ($\kappa=\XTwoRaterKappa$; weighted agreement \XTwoRaterWeightedAgree\%), with \XTwoRaterDisagreements{} disagreements resolved by a self-reported independent blinded adjudicator (Table~\ref{tab:audit}). The resulting reference labels all 134 sampled bulk-\textsc{con} records as \textsc{con}, yielding observed agreement 134/134 (exact 95\% lower limit 97.3\%) in that sampled stratum; among 297 resolved reference labels, bulk-\textsc{con} sensitivity is 134/137=97.8\%. These are not semantic PPV/recall: post-plan sampling, unresolved labels, self-reported blinding, and possible rater bias prevent that interpretation.
+
+\begin{table}[t]
+\centering\small
+\caption{Two-rater audit reference of 400 recorded judgments. Rows are bulk-model labels; columns are final audit labels.}
+\label{tab:audit}
+\begin{tabular}{lrrr}
+\toprule
+ & \textsc{sup} & \textsc{con} & \textsc{unr}\\
+\midrule
+Bulk \textsc{sup} & 132 & 1 & 0\\
+Bulk \textsc{con} & 0 & 134 & 0\\
+Bulk \textsc{unr} & 28 & 2 & 103\\
+\bottomrule
+\end{tabular}
+\end{table}
